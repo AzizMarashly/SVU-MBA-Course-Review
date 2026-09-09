@@ -1,4 +1,9 @@
-# .imt_work — handover notes for the IMT review generator
+# .review_generation_working_directory — handover notes for the IMT review generator
+
+> This directory was created under the name `.imt_work` by a prompt v0.4 run and renamed to the
+> standard name from prompt v0.5+. Its layout is the one described below, not the §0d layout of the
+> current prompt; this README plays the role of `STATE.md`. The settings used are in
+> `../PROJECT_SETTINGS.md`.
 
 Working files behind the two deliverables in the parent folder:
 
@@ -16,7 +21,7 @@ copies are in `../_old_versions/`. History is in `CHANGELOG.md`. Everything here
 3. Run:
 
 ```
-cd .imt_work/bank
+cd .review_generation_working_directory/bank
 python release.py
 ```
 
@@ -49,7 +54,7 @@ report. Only the standard library is needed. If you run the scripts by hand, set
 | `ocr/ch/chNN.txt` | Book OCR split per chapter. |
 | `ocr/bq_raw.txt` | OCR of the "أسئلة الكتاب" PDF. |
 | `tools/ocr.ps1` | Windows WinRT OCR (Arabic) for a folder of PNG pages. |
-| `tools/bookpages.py` | `python tools/bookpages.py 44 45` prints OCR text of a page range (run from `.imt_work`). |
+| `tools/bookpages.py` | `python tools/bookpages.py 44 45` prints OCR text of a page range (run from `.review_generation_working_directory`). |
 | `tools/grepbook.py` | `python tools/grepbook.py "عبارة"` finds which book pages contain a phrase. |
 
 Not kept (large, regenerable): rendered page PNGs of the book (~640 MB) and exam images (~200 MB),

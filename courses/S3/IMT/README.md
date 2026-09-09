@@ -7,25 +7,25 @@ Source material and generation state for the IMT review. The published page is
 |---|---|
 | Semester | 3 |
 | Published review | v1.3 (2026-09-09) — https://azizmarashly.github.io/SVU-MBA-Course-Review/S3/IMT/ |
-| Prompt used | v0.4, ASK mode, Arabic interface — the filled-in copy is `PROMPT_used_v0.4_IMT.md` |
+| Prompt used | v0.4, ASK mode, Arabic interface — settings in `PROJECT_SETTINGS.md` |
 | Latest prompt in repo | see `prompt/CHANGELOG.md`; v0.5+ features (handoff `STATE.md`, source appendix, per-question source labels) are **not** in this review yet |
 | Chapters in scope | 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12 (chapter 8 skipped by the owner) |
 | Bank | 292 questions: exam 107, textbook 142, other 50, generated 15; 24 low-confidence; 109/109 subsections covered |
-| Working directory | `.imt_work/` — read its `README.md`, it is the handoff document |
+| Working directory | `.review_generation_working_directory/` — read its `README.md`, it is the handoff document |
 
 ## What is in this folder
 
 | Path | What it is |
 |---|---|
-| `PROMPT_used_v0.4_IMT.md` | The exact prompt that produced the review, with PROJECT SETTINGS filled in. |
-| `.imt_work/README.md` | Handoff notes: folder map, release workflow, scoring rules, current state, open items. Start here. |
-| `.imt_work/bank/` | Question data per chapter (`bank_ch01.py` … `bank_ch12.py`, `bank_extra.py`), `build_bank.py`, `render_html.py`, `release.py`, `qa_blocks.py`. |
-| `.imt_work/bank.json`, `.imt_work/out.html` | Build outputs. `out.html` is byte-identical to the published `/S3/IMT/index.html`. |
-| `.imt_work/notes/ledger.md` | Source ledger: every input, duplicate groups, include/exclude decisions, chapter map. |
-| `.imt_work/notes/textbook_keys.md` | Book review questions per chapter with answer keys read from the book. |
-| `.imt_work/notes/f19_transcription.md` | Transcription of the handwritten F19 exam scan. |
-| `.imt_work/txt/`, `.imt_work/ocr/` | Text extraction of every input and full OCR of the textbook (page-separated). |
-| `.imt_work/source_index.txt` | Maps the short working names (`ex00`, `sum02`, …) to the real file names below. |
+| `PROJECT_SETTINGS.md` | The PROJECT SETTINGS table the review was generated with, plus values for settings added in later prompt versions. Paste it into the current prompt to resume. |
+| `.review_generation_working_directory/README.md` | Handoff notes: folder map, release workflow, scoring rules, current state, open items. Start here. |
+| `.review_generation_working_directory/bank/` | Question data per chapter (`bank_ch01.py` … `bank_ch12.py`, `bank_extra.py`), `build_bank.py`, `render_html.py`, `release.py`, `qa_blocks.py`. |
+| `.review_generation_working_directory/bank.json`, `.review_generation_working_directory/out.html` | Build outputs. `out.html` is byte-identical to the published `/S3/IMT/index.html`. |
+| `.review_generation_working_directory/notes/ledger.md` | Source ledger: every input, duplicate groups, include/exclude decisions, chapter map. |
+| `.review_generation_working_directory/notes/textbook_keys.md` | Book review questions per chapter with answer keys read from the book. |
+| `.review_generation_working_directory/notes/f19_transcription.md` | Transcription of the handwritten F19 exam scan. |
+| `.review_generation_working_directory/txt/`, `.review_generation_working_directory/ocr/` | Text extraction of every input and full OCR of the textbook (page-separated). |
+| `.review_generation_working_directory/source_index.txt` | Maps the short working names (`ex00`, `sum02`, …) to the real file names below. |
 | `المنهاج الٱكاديمي/` | The textbook (423 pages), the book-questions PDF, and the 14 slide decks. |
 | `اسئلة سابقة/` | Past exams: F17, F19 (scan), S24 and F24 (Telegram export), plus older-curriculum essay files (excluded, see ledger). |
 | `ملخصات سابقة/` | Two summaries: one used as an answer-key cross-check, one inspected and excluded (no questions). |
@@ -33,37 +33,37 @@ Source material and generation state for the IMT review. The published page is
 
 Not in the repository: `_old_versions/` (git history has every version) and the two versioned
 deliverables at the folder root (`…_v1.3.html`, `…_v1.3_bank.json`), which are identical to
-`.imt_work/out.html`, `.imt_work/bank.json` and the published page. `release.py` recreates them.
+`.review_generation_working_directory/out.html`, `.review_generation_working_directory/bank.json` and the published page. `release.py` recreates them.
 
 ## Exam sittings and sources
 
 F17 (27 questions), F19 (30, handwritten), S24 (32), F24 (40); textbook review questions per
 chapter; the Emad summary (S18, only items whose concept exists in the current book); the Asem
-summary as cross-check. Full detail and the reasons for every exclusion: `.imt_work/notes/ledger.md`.
+summary as cross-check. Full detail and the reasons for every exclusion: `.review_generation_working_directory/notes/ledger.md`.
 
 ## How to continue
 
 **Fix an answer or add questions**
 
-1. Edit the chapter file in `.imt_work/bank/` (`bank_ch05.py` for chapter 5, and so on).
-2. Bump `.imt_work/VERSION` and add a line at the top of `.imt_work/CHANGELOG.md`.
+1. Edit the chapter file in `.review_generation_working_directory/bank/` (`bank_ch05.py` for chapter 5, and so on).
+2. Bump `.review_generation_working_directory/VERSION` and add a line at the top of `.review_generation_working_directory/CHANGELOG.md`.
 3. Build and check:
    ```
-   cd .imt_work/bank
+   cd .review_generation_working_directory/bank
    set PYTHONUTF8=1
    python release.py        # must print "uncovered: 0"
    python qa_blocks.py
    ```
-4. Publish the page: copy `.imt_work/out.html` over `/S3/IMT/index.html` at the repository root.
+4. Publish the page: copy `.review_generation_working_directory/out.html` over `/S3/IMT/index.html` at the repository root.
 5. Update the version badge for IMT in the root `index.html`, then commit.
 
 **Add a new exam sitting or summary**
 
 1. Put the file in the matching subfolder (`اسئلة سابقة/` or `ملخصات سابقة/`).
-2. Open this folder in Claude Code and paste the prompt (latest version, or the
-   `PROMPT_used_*` copy). Tell it the file is new; it will extract, deduplicate against the bank,
+2. Open this folder in Claude Code, paste the latest prompt with the table from
+   `PROJECT_SETTINGS.md` in its settings section. Tell it the file is new; it will extract, deduplicate against the bank,
    verify against the book OCR, rescore, and rebuild.
-3. Add the file to `.imt_work/source_index.txt` and `.imt_work/notes/ledger.md` if the agent did not.
+3. Add the file to `.review_generation_working_directory/source_index.txt` and `.review_generation_working_directory/notes/ledger.md` if the agent did not.
 4. Release and publish as above.
 
 **Bring the review up to the latest prompt**

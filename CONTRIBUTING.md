@@ -19,7 +19,7 @@ Every review is rendered from a question bank kept in `courses/S<n>/<CODE>/`. Th
 `README.md` there says where the data lives and how to rebuild. For IMT, for example:
 
 1. Fork and clone the repository.
-2. Edit the chapter file, e.g. `courses/S3/IMT/.imt_work/bank/bank_ch05.py`. Keep the record
+2. Edit the chapter file, e.g. `courses/S3/IMT/.review_generation_working_directory/bank/bank_ch05.py`. Keep the record
    structure; the build asserts on it.
 3. Bump `VERSION`, add a changelog line, and run the release script (see the course README).
    The build must print `uncovered: 0` and the QA script must pass.
@@ -49,7 +49,7 @@ handles). Do not add material you are not allowed to share.
    time for a full textbook.
 2. When the review is finished, copy the folder to `courses/S<n>/<CODE>/`, without the archived
    versions and the duplicate deliverables, and write a course `README.md` modelled on
-   `courses/S3/IMT/README.md`. Keep the filled-in prompt as `PROMPT_used_v<X>_<CODE>.md`.
+   `courses/S3/IMT/README.md`. Save the filled-in PROJECT SETTINGS table as `PROJECT_SETTINGS.md`.
 3. Copy the review to `S<n>/<CODE>/index.html`.
 4. Add a course card in the root `index.html` (copy an existing card, keep the stats honest:
    they come from the bank's own counts).

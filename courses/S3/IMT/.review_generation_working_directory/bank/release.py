@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Build bank.json + out.html and publish them to the project folder with the version from ../VERSION
 in the file names. Older versioned copies are moved to ../../_old_versions/ so only the latest is shared.
-Usage (from .imt_work/bank):  python release.py
+Usage (from .review_generation_working_directory/bank):  python release.py
 Bump the version first by editing ../VERSION and adding a line to ../CHANGELOG.md."""
 import os, re, shutil, subprocess, sys, json
 HERE = os.path.dirname(os.path.abspath(__file__)); WORK = os.path.join(HERE, ".."); PROJ = os.path.join(WORK, "..")

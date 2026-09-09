@@ -1,7 +1,7 @@
 # courses/ — source material and generation state
 
 This folder holds **everything a generation run needs to be resumed or extended**: the course
-material that was fed to the prompt, the filled-in prompt that was used, and the working
+material that was fed to the prompt, the settings the prompt was run with, and the working
 directory the run left behind (extracted text, question bank, build scripts, notes, handoff).
 
 Nothing in here is published on the web site. The site only serves the finished review pages in
@@ -19,8 +19,8 @@ courses/
   S3/                          <- semester
     IMT/                       <- course code, same as the pages folder /S3/IMT/
       README.md                <- course handoff: state, sources, how to resume, how to publish
-      PROMPT_used_v0.4_IMT.md  <- the exact prompt (settings filled in) that produced the review
-      .imt_work/               <- working directory of the run (see its own README.md)
+      PROJECT_SETTINGS.md      <- the filled-in settings table the review was generated with
+      .review_generation_working_directory/               <- working directory of the run (see its own README.md)
       المنهاج الٱكاديمي/        <- textbook, book questions, slides
       اسئلة سابقة/              <- past exams
       ملخصات سابقة/             <- summaries
@@ -40,9 +40,9 @@ run resumed without any path changes. Two things are deliberately **not** mirror
 1. Clone the repository and open the course folder (e.g. `courses/S3/IMT/`) in Claude Code.
 2. Read the course `README.md` first, then the working directory's own `README.md` or `STATE.md`.
    They say which prompt version was used, what stage was reached, and the exact next step.
-3. Paste the prompt from `prompt/SVU-MBA-Course-Review-Generator.md` (latest) or the
-   `PROMPT_used_*.md` in the course folder (the version the run was built with; safer for small
-   fixes). The prompt's section 0d makes the agent look for the working directory and resume.
+3. Take the prompt from `prompt/SVU-MBA-Course-Review-Generator.md`, paste the table from the
+   course's `PROJECT_SETTINGS.md` over its PROJECT SETTINGS section, and run it. Section 0d of the
+   prompt makes the agent look for `.review_generation_working_directory` and resume.
 4. After regenerating, copy the new HTML to the pages folder and bump the version. The course
    `README.md` and `CONTRIBUTING.md` at the repository root give the exact commands.
 
