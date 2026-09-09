@@ -1,4 +1,4 @@
-# PROMPT — Complete Course Review Generator (v0.8)
+# PROMPT — Complete Course Review Generator (v0.9)
 
 > Reusable spec for building a consolidated, verified, interactive review file from a folder
 > of course material. Fill in **PROJECT SETTINGS**, then paste the whole document as your prompt.
@@ -11,9 +11,14 @@
 > and the repository tags (`v0.1`, `v0.2`, ...). Generated review pages for each course are
 > published from the same repository.
 >
-> **Licence:** CC BY-NC-SA 4.0 — attribution, non-commercial, share-alike. Full text and the
-> community pledge in `LICENSE.md` at the repository root; what it means for the output in §19.
+> **Licence:** CC BY-NC-SA 4.0 — attribution, non-commercial, share-alike — for the prompt **and
+> for every review file generated with it**. Full text in `LICENSE.md` at the repository root;
+> what it means for the output in §19.
 
+> **Changes in v0.9:** the generated review files carry the same CC BY-NC-SA 4.0 licence as the
+> prompt, as a condition: share freely, never sell. The notice and the "how to use" text say so
+> (§19); the former community pledge is replaced by these terms.
+>
 > **Changes in v0.8:** every review file lists the source files it was built from, as a
 > "Source files" appendix at the end and as short labels on each question (§11d).
 >
@@ -57,7 +62,7 @@
 | Output base name | `<<< title >>>` — files are named `<base>_v<NN>.<ext>`, see §0e |
 | Working directory | `.review_generation_working_directory` (inside the course folder, §0d) |
 | PDF / DOCX | `<<< ASK AT END (default) / ALWAYS / NEVER >>>` |
-| Spec version | `v0.8` — write this into the output metadata (§16) |
+| Spec version | `v0.9` — write this into the output metadata (§16) |
 
 ---
 
@@ -863,7 +868,7 @@ directory: the bank checkpoint, `STATE.md`, `VERSIONS.md`, the pilot file if one
 the archive of earlier versions (§0d). Plus a completion summary.
 
 **Every output file carries both versions** in its end-of-file metadata block — the spec version
-from the settings (e.g. `Generated from prompt v0.8`) and the deliverable version from its
+from the settings (e.g. `Generated from prompt v0.9`) and the deliverable version from its
 filename (e.g. `Review file v03`) — in the HTML footer, the PDF's last page, the DOCX's last
 section and the bank's header, so it is always clear which prompt produced which file and whether
 a copy is the latest.
@@ -927,27 +932,30 @@ whitespace, a clear separator between questions, and no decoration that competes
 
 ## 19. Licence and attribution in the generated files
 
-This prompt is licensed under **Creative Commons BY-NC-SA 4.0**; the full text and a community
-pledge live in `LICENSE.md` at the root of the repository. The generated files must carry that
+This prompt is licensed under **Creative Commons BY-NC-SA 4.0**, and **every review file generated
+with it is released under the same licence**: attribution, non-commercial, share-alike. The full
+text lives in `LICENSE.md` at the root of the repository. The generated files must carry that
 forward.
 
-- **Attribution notice in every deliverable.** The end-of-file metadata block (§16) contains a
-  fixed notice, in the interface language, with this content:
+- **Licence notice in every deliverable.** The end-of-file metadata block (§16) contains a fixed
+  notice, in the interface language, with this content:
 
   ```
   Generated with the SVU MBA Course Review Generator, prompt v<spec> · deliverable v<NN>
   Source and latest version: https://github.com/AzizMarashly/SVU-MBA-Course-Review
-  Prompt licence: CC BY-NC-SA 4.0 — share freely, credit the source, do not sell.
+  Licence of the prompt and of this file: CC BY-NC-SA 4.0 — share freely, credit the source,
+  never sell. Quoted textbook and exam content stays with its owners and is not covered.
   ```
 
-  The same three lines go into the PDF's last page and the DOCX's last section when those are
+  The same lines go into the PDF's last page and the DOCX's last section when those are
   produced, and as a comment at the top of `bank.json`.
-- **Community pledge in "how to use".** Add three short sentences at the end of the "how to use"
-  section (§11): share this file freely with other students of the course; keep the notice at the
-  end so they can find the source; do not sell it. Mark them as a request from the author, not a
-  condition.
-- **No licence claims over the course material.** Do not attach any licence statement to the
-  quoted textbook or exam content; the notice covers the prompt only. If the reader must respect
-  the textbook's copyright, say so in one sentence in the privacy note (§14).
+- **Licence terms in "how to use".** Add three short sentences at the end of the "how to use"
+  section (§11), marked as the licence conditions of this file: share it freely with other
+  students of the course, at no charge; keep the notice at the end so they can find the source;
+  selling it, or putting it behind a paywall or subscription, is not allowed.
+- **The licence covers the review's own contribution only.** Do not attach any licence statement
+  to the quoted textbook or exam content; say in the notice, and in one sentence in the privacy
+  note (§14), that the quoted material stays with its owners and the reader must respect its
+  copyright.
 - **Do not remove or reword the notice** when re-rendering, and check in §15 that every produced
   file contains it and that the version numbers in it match the filename.

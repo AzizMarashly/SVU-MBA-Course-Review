@@ -1,7 +1,8 @@
 # Licence — SVU MBA Course Review Generator
 
-The prompt `prompt/SVU-MBA-Course-Review-Generator.md`, every version of it in this repository, and any
-modified or translated version of it, are licensed under the
+The prompt `prompt/SVU-MBA-Course-Review-Generator.md`, every version of it in this repository, any
+modified or translated version of it, and every review file generated with it (see below), are
+licensed under the
 
 **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**
 
@@ -26,22 +27,29 @@ the prompt, under these conditions:
 No warranty. Answers produced by running the prompt may be wrong, and nothing is a prediction
 of any exam.
 
-## Community pledge — a request, not a licence term
+## Generated review files — same licence, same conditions
 
-The licence above governs the prompt. It does not, and legally cannot, govern the review files
-you generate with it. So this part is a request to everyone who uses it:
+Every review file produced with this prompt — the explanations, the selection and ordering of
+questions, the scoring, the structure and the page itself — is released under the **same
+CC BY-NC-SA 4.0 licence**. The prompt writes this into every generated file. Concretely:
 
-1. **Share your review files freely** with other students of the same course, at no charge,
-   through a link anyone in the course can reach.
-2. **Keep the attribution notice** that the prompt writes into every generated file, so the next
-   student can find the source and the latest version.
-3. **Never sell** a review file or put it behind a paywall.
-4. **Respect the course material.** Textbooks and exam papers belong to their authors and
-   institutions. Check that you may share what the review file quotes, and remove personal data
-   before publishing.
+1. **Share freely.** Copy the file, host it, send it to every student of the course, at no
+   charge.
+2. **Never sell it.** Do not sell a review file, put it behind a paywall or subscription, or
+   use it as the main value of a paid service. This is a licence condition, not a request.
+3. **Keep the attribution notice** at the end of the file so the next student can find the
+   source and the latest version.
+4. **Share alike.** If you change or extend a review file, publish your version under this same
+   licence with the same notice.
 
-If you improve the prompt, publish the improvement — that one is a licence obligation — and
-mention this repository as the source.
+**What the licence does not cover.** The textbook passages, exam questions and other course
+material that a review file quotes belong to their authors and institutions and are **not**
+licensed here — the licence applies only to the review's own contribution. Check that you may
+share what the file quotes, respect any takedown request, and remove personal data before
+publishing.
+
+If you improve the prompt, publish the improvement under this licence and mention this
+repository as the source.
 
 ---
 

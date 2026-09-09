@@ -4,7 +4,7 @@ importance scores, coverage audit and mechanical checks."""
 import importlib, json, os, re, sys, collections
 sys.path.insert(0, os.path.dirname(__file__))
 CHAPTERS = [1,2,3,4,5,6,7,9,10,11,12]
-SPEC = "v0.4"
+SPEC = "v0.9"
 VERSION = open(os.path.join(os.path.dirname(__file__), "..", "VERSION"), encoding="utf-8").read().strip()
 EXAM_CODES = {"F17","F19","S24","F24"}
 
@@ -147,7 +147,10 @@ def main():
       dict(source="EMAD/WAEL (S18-era)", book_chapter="older layout; mapped by content", evidence="e.g. Wael ch6 = culture"),
       dict(source="Exam recalls F17/F19/S24/F24", book_chapter="no chapter numbers; assigned by content to book subsection", evidence="content"),
     ]
-    out = dict(spec_version=SPEC, file_version=VERSION, title="مراجعه كامله لماده ال IMT", generated="2026-09-09",
+    notice = [f"Generated with the SVU MBA Course Review Generator, prompt {SPEC} · deliverable v{VERSION}",
+              "Source and latest version: https://github.com/AzizMarashly/SVU-MBA-Course-Review",
+              "Licence of the prompt and of this file: CC BY-NC-SA 4.0 — share freely, credit the source, never sell. Quoted textbook and exam content stays with its owners and is not covered."]
+    out = dict(_notice=notice, spec_version=SPEC, file_version=VERSION, title="مراجعه كامله لماده ال IMT", generated="2026-09-09",
                source_ledger=ledger, chapter_map=chapter_map,
                course="التسويق والتجارة الدولية — INTERNATIONAL MARKETING AND TRADING",
                chapters_in_scope=CHAPTERS, subsections=subs, questions=qs,

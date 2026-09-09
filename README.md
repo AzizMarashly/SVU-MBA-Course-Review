@@ -43,8 +43,9 @@ sessions work on this repository at once.
 
 ## Licence
 
-The prompt is licensed under [CC BY-NC-SA 4.0](LICENSE.md): credit the source, do not sell it,
-share improvements under the same licence. `LICENSE.md` also carries a community pledge for the
-generated review pages: share them freely with fellow students, keep the attribution notice, and
-respect the copyright of the course material they quote.
+The prompt and every generated review page are licensed under [CC BY-NC-SA 4.0](LICENSE.md):
+share them freely with fellow students, credit the source, never sell them or put them behind a
+paywall, and share changes under the same licence. The licence covers the review's own
+contribution only; the course material a page quotes stays with its owners, and its copyright
+must be respected.
 

@@ -3,6 +3,12 @@
 Each version is a git tag on this repository. Diff any two versions with a compare link such as
 https://github.com/AzizMarashly/SVU-MBA-Course-Review/compare/v0.5...v0.6
 
+## v0.9 — 2026-09-09
+- §19 / `LICENSE.md`: the generated review files are released under the same CC BY-NC-SA 4.0
+  licence as the prompt. "Share freely, never sell" becomes a licence condition of every review
+  file instead of a community pledge; the notice and the "how to use" text updated. Quoted
+  textbook and exam content remains outside the licence.
+
 ## v0.8 — 2026-09-09
 - §11d: every review file carries a "Source files" appendix listing every supplied file (kind,
   role, source group, pages or items, exclusion reason), and each question's source labels are

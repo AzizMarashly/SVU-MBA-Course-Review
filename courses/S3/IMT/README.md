@@ -6,12 +6,12 @@ Source material and generation state for the IMT review. The published page is
 | | |
 |---|---|
 | Semester | 3 |
-| Published review | v1.3 (2026-09-09) — https://azizmarashly.github.io/SVU-MBA-Course-Review/S3/IMT/ |
-| Prompt used | v0.4, ASK mode, Arabic interface — settings in `PROJECT_SETTINGS.md` |
-| Latest prompt in repo | see `prompt/CHANGELOG.md`; v0.5+ features (handoff `STATE.md`, source appendix, per-question source labels) are **not** in this review yet |
+| Published review | v1.4 (2026-09-09) — https://azizmarashly.github.io/SVU-MBA-Course-Review/S3/IMT/ |
+| Prompt used | bank built with v0.4, page rendered with v0.9; ASK mode, Arabic interface — settings in `PROJECT_SETTINGS.md` |
+| Latest prompt in repo | v0.9 — this review is in line with it (source-files appendix, per-question source labels, licence notice, `STATE.md`) |
 | Chapters in scope | 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12 (chapter 8 skipped by the owner) |
 | Bank | 292 questions: exam 107, textbook 142, other 50, generated 15; 24 low-confidence; 109/109 subsections covered |
-| Working directory | `.review_generation_working_directory/` — read its `README.md`, it is the handoff document |
+| Working directory | `.review_generation_working_directory/` — read its `STATE.md` (where the run stands) and `README.md` (folder map, workflow) |
 | Origin of the material | Student-run shared drive "SVU Files" (IMT folder) plus files circulated in the course groups. Unofficial; see `../../DISCLAIMER.md` for copyright and takedown. |
 
 ## What is in this folder
@@ -33,7 +33,7 @@ Source material and generation state for the IMT review. The published page is
 | `ملفات متعلقة بالمادة/` | Related files: a photo of recalled exam topics (used), chapters of an older textbook and two slide decks from another course (excluded). |
 
 Not in the repository: `_old_versions/` (git history has every version) and the two versioned
-deliverables at the folder root (`…_v1.3.html`, `…_v1.3_bank.json`), which are identical to
+deliverables at the folder root (`…_v1.4.html`, `…_v1.4_bank.json`), which are identical to
 `.review_generation_working_directory/out.html`, `.review_generation_working_directory/bank.json` and the published page. `release.py` recreates them.
 
 ## Exam sittings and sources
@@ -67,11 +67,12 @@ summary as cross-check. Full detail and the reasons for every exclusion: `.revie
 3. Add the file to `.review_generation_working_directory/source_index.txt` and `.review_generation_working_directory/notes/ledger.md` if the agent did not.
 4. Release and publish as above.
 
-**Bring the review up to the latest prompt**
+**Bring the review up to a newer prompt**
 
-The review predates prompt v0.5. The main gaps are the source-files appendix and per-question
-source labels (§11d) and the `STATE.md` handoff format (§0d). Both can be added by editing
-`render_html.py` and the notes; the bank data does not need to change.
+Done for v0.9 in review v1.4 (source-files appendix and per-question source labels, §11d; licence
+notice, §19; `STATE.md`, §0d). For a later prompt version, compare its changelog against
+`.review_generation_working_directory/STATE.md`, edit `render_html.py`, and release as above; the bank
+data normally does not need to change.
 
 ## Open items
 

@@ -19,7 +19,7 @@ working directory) are listed at the bottom with the values this run effectively
 | Interaction mode | `ASK` |
 | Pilot chapter | `NONE` |
 | PDF / DOCX | `ASK AT END` (never answered; none produced) |
-| Spec version | `v0.4` — the version this review was built with |
+| Spec version | `v0.9` — the bank was built with v0.4 and re-rendered with v0.9 (see the working directory `STATE.md`) |
 
 Values for settings that exist in the current prompt but not in v0.4:
 

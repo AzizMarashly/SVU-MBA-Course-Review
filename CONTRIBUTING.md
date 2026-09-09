@@ -70,9 +70,9 @@ changes generic: anything course-specific belongs in PROJECT SETTINGS, not in th
 - **Copyright.** Course material is here so reviews can be verified and regenerated. Do not
   redistribute it separately. If you hold rights to something here and want it removed, open an
   issue and it will be taken down. Full notice, in Arabic and English: `courses/DISCLAIMER.md`.
-- **Licence.** The prompt is CC BY-NC-SA 4.0. By contributing you agree your changes to it are
-  under the same licence. The community pledge in `LICENSE.md` applies to the review pages:
-  share them free, keep the attribution, do not sell them.
+- **Licence.** The prompt and the generated review pages are CC BY-NC-SA 4.0. By contributing
+  you agree your changes are under the same licence. For the review pages this means: share them
+  free, keep the attribution notice, never sell them (`LICENSE.md`).
 
 ## Git workflow
 

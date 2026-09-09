@@ -1,6 +1,11 @@
 {
- "spec_version": "v0.4",
- "file_version": "1.3",
+ "_notice": [
+  "Generated with the SVU MBA Course Review Generator, prompt v0.9 · deliverable v1.4",
+  "Source and latest version: https://github.com/AzizMarashly/SVU-MBA-Course-Review",
+  "Licence of the prompt and of this file: CC BY-NC-SA 4.0 — share freely, credit the source, never sell. Quoted textbook and exam content stays with its owners and is not covered."
+ ],
+ "spec_version": "v0.9",
+ "file_version": "1.4",
  "title": "مراجعه كامله لماده ال IMT",
  "generated": "2026-09-09",
  "source_ledger": [

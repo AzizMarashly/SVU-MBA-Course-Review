@@ -2,15 +2,16 @@
 
 > This directory was created under the name `.imt_work` by a prompt v0.4 run and renamed to the
 > standard name from prompt v0.5+. Its layout is the one described below, not the §0d layout of the
-> current prompt; this README plays the role of `STATE.md`. The settings used are in
-> `../PROJECT_SETTINGS.md`.
+> current prompt. `STATE.md` next to this file is the §0d handoff (stage checklist, decisions, open
+> items); this README is the folder map and workflow. The settings used are in `../PROJECT_SETTINGS.md`.
+> Since v1.4 the page is rendered under prompt v0.9 (source-files appendix, source labels, licence notice).
 
 Working files behind the two deliverables in the parent folder:
 
 - `../مراجعه كامله لماده ال IMT_vX.Y.html` — the single-file RTL review (spec v0.4, ASK mode, Arabic UI)
 - `../مراجعه كامله لماده ال IMT_vX.Y_bank.json` — the question bank the HTML is rendered from
 
-`X.Y` is the number in `VERSION` (currently 1.3). The project folder holds exactly one version; older
+`X.Y` is the number in `VERSION` (currently 1.4). The project folder holds exactly one version; older
 copies are in `../_old_versions/`. History is in `CHANGELOG.md`. Everything here is reproducible:
 `bank.json` and `out.html` in this folder are byte-identical to the published files.
 
@@ -26,7 +27,7 @@ python release.py
 ```
 
 `release.py` runs `build_bank.py` (asserts, scoring, coverage; must print `uncovered: 0`) and
-`render_html.py`, then copies the outputs to the project folder as `…_v1.3.html` / `…_v1.3_bank.json`
+`render_html.py`, then copies the outputs to the project folder as `…_v1.4.html` / `…_v1.4_bank.json`
 and moves the previous version into `../_old_versions/`. Run `python qa_blocks.py` for the mechanical QA
 report. Only the standard library is needed. If you run the scripts by hand, set `PYTHONUTF8=1` first.
 
