@@ -63,6 +63,7 @@
   .stat{display:flex;flex-direction:column;flex:1;min-width:0}
   .stat b{font-size:1.15rem}
   .stat small{color:var(--muted);font-size:.78rem}
+  .lowc{margin-top:10px;font-size:.8rem;color:var(--warn-text)}
   .cta{margin-top:16px;color:var(--accent-text);font-weight:600;font-size:.95rem}
   .card:hover .cta{text-decoration:underline}
 
@@ -128,6 +129,7 @@
   </div>
 
   <section id="courses">
+    <div id="course-list" data-static="1">
     <div class="sem-head">
       <h2>الفصل الثالث</h2>
       <span class="count">Semester 3 · مادتان</span>
@@ -143,7 +145,7 @@
         <div class="stats">
           <div class="stat"><b>292</b><small>سؤال</small></div>
           <div class="stat"><b>11</b><small>فصل</small></div>
-          <div class="stat"><b>107</b><small>سؤال دورات</small></div>
+          <div class="stat"><b>7</b><small>مصادر</small></div>
         </div>
         <div class="cta">افتح المراجعة ←</div>
       </a>
@@ -174,6 +176,7 @@
       </div>
       </div>
 
+    </div>
     </div>
     <p class="hint">💡 كل مراجعة ملف HTML واحد. حمّله وافتحه من هاتفك أو حاسوبك بلا إنترنت، أو أرسله لزملائك كما هو. ملاحظاتك وفلاترك تُحفَظ في المتصفح.</p>
     <div class="disclaimer">
@@ -242,5 +245,43 @@
   </div>
 </footer>
 
+<script>
+/* Course cards are rendered from courses.json, which scripts/build_course_index.py (and the
+   GitHub Action) rebuilds from every course's own question bank. The static cards above are only
+   the fallback for no-JS readers and for the moment before the fetch returns. */
+(function(){
+  var SEM_AR={1:'الفصل الأول',2:'الفصل الثاني',3:'الفصل الثالث',4:'الفصل الرابع',5:'الفصل الخامس',6:'الفصل السادس'};
+  function esc(x){return String(x==null?'':x).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function plural(n,one,two,many){return n===1?one:n===2?two:many;}
+  function card(c){
+    var stats=[
+      [c.questions,'سؤال'],
+      [c.chapters,plural(c.chapters,'فصل','فصلان','فصول')],
+      [c.sources,plural(c.sources,'مصدر','مصدران','مصادر')]
+    ];
+    var title=c.sources_path?('المصادر المستقلة: '+(c.source_ids||[]).join('، ')+(c.source_files?' · '+c.source_files+' ملفاً':'')):'';
+    var low=c.low_confidence?'<div class="lowc">⚠ '+c.low_confidence+' سؤالاً منخفض الثقة</div>':'';
+    return '<div class="cardwrap"><a class="card" href="'+esc(c.path)+'" title="'+esc(title)+'">'+
+      '<div class="top"><span class="code">'+esc(c.code)+'</span><span class="ver">v'+esc(c.version)+'</span></div>'+
+      '<h3>'+esc(c.name_ar||c.code)+'</h3><p class="en">'+esc(c.name_en||'')+'</p>'+
+      '<div class="stats">'+stats.map(function(s){return '<div class="stat"><b>'+esc(s[0])+'</b><small>'+s[1]+'</small></div>';}).join('')+'</div>'+
+      low+'<div class="cta">افتح المراجعة ←</div></a>'+
+      '<a class="dl" href="'+esc(c.path)+'index.html" download="'+esc(c.download_name)+'">⬇ تحميل ملف '+esc(c.code)+' للعمل بلا إنترنت</a></div>';
+  }
+  var soon='<div class="cardwrap"><div class="card soon"><div class="top"><span class="code">…</span><span class="ver">قريباً</span></div>'+
+    '<h3>مواد أخرى</h3><p class="en">More courses coming</p><div class="stats"><div class="stat"><small>تُضاف المراجعات تباعاً خلال الفصل</small></div></div></div></div>';
+  fetch('courses.json?'+Date.now().toString(36).slice(0,-2),{cache:'no-cache'}).then(function(r){return r.ok?r.json():Promise.reject(r.status);}).then(function(d){
+    var list=d.courses||[]; if(!list.length) return;
+    var bySem={}; list.forEach(function(c){(bySem[c.semester]=bySem[c.semester]||[]).push(c);});
+    var html=Object.keys(bySem).sort(function(a,b){return b-a;}).map(function(sem){
+      var cs=bySem[sem].sort(function(a,b){return a.code<b.code?-1:1;});
+      return '<div class="sem-head"><h2>'+(SEM_AR[sem]||'الفصل '+sem)+'</h2><span class="count">Semester '+sem+' · '+(cs.length>2?cs.length+' ':'')+plural(cs.length,'مادة واحدة','مادتان','مواد')+'</span></div>'+
+        '<p class="sub">اضغط على المادة لفتح المراجعة الكاملة. الأرقام تُقرأ من بنك أسئلة كل مادة.</p>'+
+        '<div class="grid">'+cs.map(card).join('')+soon+'</div>';
+    }).join('');
+    var el=document.getElementById('course-list'); el.innerHTML=html; el.removeAttribute('data-static');
+  }).catch(function(e){ if(window.console) console.warn('courses.json not loaded, static cards kept', e); });
+})();
+</script>
 </body>
 </html>

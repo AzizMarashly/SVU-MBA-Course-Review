@@ -1,0 +1,61 @@
+{
+  "generated_by": "scripts/build_course_index.py",
+  "courses": [
+    {
+      "semester": 3,
+      "code": "IMT",
+      "path": "S3/IMT/",
+      "title": "مراجعه كامله لماده ال IMT",
+      "name_ar": "التسويق والتجارة الدولية",
+      "name_en": "International Marketing and Trading",
+      "version": "1.4",
+      "spec_version": "v0.9",
+      "generated": "2026-09-09",
+      "questions": 292,
+      "questions_by_type": {
+        "exam": 107,
+        "other": 50,
+        "textbook": 142,
+        "generated": 15
+      },
+      "chapters": 11,
+      "sources": 7,
+      "source_ids": [
+        "BOOK",
+        "F17",
+        "F19",
+        "S24",
+        "F24",
+        "EMAD",
+        "ASEM"
+      ],
+      "source_files": 39,
+      "low_confidence": 24,
+      "data": "bank",
+      "sources_path": "courses/S3/IMT/",
+      "download_name": "مراجعه كامله لماده ال IMT_v1.4.html"
+    },
+    {
+      "semester": 3,
+      "code": "MIS",
+      "path": "S3/MIS/",
+      "title": "مراجعه كامله لماده ال MIS",
+      "name_ar": "نظم المعلومات الإدارية",
+      "name_en": "Management Information Systems",
+      "version": "0.1",
+      "generated": "2026-09-06",
+      "questions": 269,
+      "chapters": 8,
+      "sources": 4,
+      "source_ids": [
+        "BOOK",
+        "HAL_DAWRAT",
+        "F24",
+        "ASEM"
+      ],
+      "download_name": "مراجعه كامله لماده ال MIS-v0.1.html",
+      "note": "Hand-maintained: this course has no working directory in courses/ yet. Replace with a bank.json under courses/S3/MIS/ when the source material is added.",
+      "data": "manual"
+    }
+  ]
+}

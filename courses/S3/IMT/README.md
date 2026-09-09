@@ -56,7 +56,7 @@ summary as cross-check. Full detail and the reasons for every exclusion: `.revie
    python qa_blocks.py
    ```
 4. Publish the page: copy `.review_generation_working_directory/out.html` over `/S3/IMT/index.html` at the repository root.
-5. Update the version badge for IMT in the root `index.html`, then commit.
+5. Run `python scripts/build_course_index.py` from the repository root (or let the GitHub Action do it after the push) so the home page shows the new version and counts, then commit.
 
 **Add a new exam sitting or summary**
 

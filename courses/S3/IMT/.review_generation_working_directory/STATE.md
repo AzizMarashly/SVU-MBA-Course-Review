@@ -52,4 +52,4 @@ directory; this file only says where the run stands.
 
 Nothing pending. For a fix: edit the chapter file in `bank/`, bump `VERSION`, add a `CHANGELOG.md` line, run
 `python build_bank.py && python render_html.py && python qa_blocks.py` (with `PYTHONUTF8=1`) from `bank/`,
-copy `out.html` to `/S3/IMT/index.html`, update the version badge in the root `index.html`, and update this file.
+copy `out.html` to `/S3/IMT/index.html`, run `python scripts/build_course_index.py` at the repository root (refreshes `courses.json` for the home page), and update this file.

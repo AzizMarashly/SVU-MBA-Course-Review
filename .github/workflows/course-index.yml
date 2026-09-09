@@ -1,0 +1,53 @@
+name: Rebuild courses.json
+
+# Keeps the home page's course cards (questions, chapters, sources, version) in sync with the data.
+# Runs whenever a bank, a published page or a manual course.json changes, and commits courses.json
+# back to main if it differs. Contributors may also run scripts/build_course_index.py locally.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "courses/**/.review_generation_working_directory/bank.json"
+      - "S*/**/index.html"
+      - "S*/**/course.json"
+      - "courses/**"
+      - "scripts/build_course_index.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: course-index
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build courses.json
+        id: build
+        run: |
+          set +e
+          python scripts/build_course_index.py
+          echo "changed=$?" >> "$GITHUB_OUTPUT"
+          set -e
+
+      - name: Commit if changed
+        if: steps.build.outputs.changed == '1'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add courses.json
+          git commit -m "courses.json: rebuild from course data [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main

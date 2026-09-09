@@ -1,0 +1,13 @@
+{
+  "title": "مراجعه كامله لماده ال MIS",
+  "name_ar": "نظم المعلومات الإدارية",
+  "name_en": "Management Information Systems",
+  "version": "0.1",
+  "generated": "2026-09-06",
+  "questions": 269,
+  "chapters": 8,
+  "sources": 4,
+  "source_ids": ["BOOK", "HAL_DAWRAT", "F24", "ASEM"],
+  "download_name": "مراجعه كامله لماده ال MIS-v0.1.html",
+  "note": "Hand-maintained: this course has no working directory in courses/ yet. Replace with a bank.json under courses/S3/MIS/ when the source material is added."
+}
