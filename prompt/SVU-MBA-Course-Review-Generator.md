@@ -1,8 +1,13 @@
-# PROMPT — Complete Course Review Generator
+# PROMPT — Complete Course Review Generator (v0.2)
 
 > Reusable spec for building a consolidated, verified, interactive review file from a folder
 > of course material. Fill in **PROJECT SETTINGS**, then paste the whole document as your prompt.
 > Everything below the settings block is generic and works for any course.
+
+> **Changes in v0.2:** multiple choice is now the primary format (§3b, §9, §11b); answers and
+> explanations follow a fixed, non-repetitive template with bold keywords (§7); every chapter
+> opens with a two-line context summary (§11a); the HTML gains a single-select "reading mode"
+> filter by question section (§13a); QA checks for the new rules (§15).
 
 ---
 
@@ -14,6 +19,7 @@
 | Course / subject | `<<< e.g. نظم المعلومات الإدارية — Management Information Systems >>>` |
 | Chapters in scope | `<<< e.g. 1,2,3,5,7,8,9,10 >>>` |
 | Primary reference | `<<< exact filename of the textbook >>>` |
+| Expected exam format | `<<< e.g. MULTIPLE CHOICE (mostly) — see §3b >>>` |
 | Question language | `<<< ENGLISH / ARABIC / MIXED >>>` |
 | Explanation language | `<<< e.g. ARABIC >>>` |
 | HTML filename | `<<< title >>>.html` |
@@ -93,6 +99,29 @@ silently skipped.
 Questions that cannot be confidently assigned to a chapter go to an internal unresolved list,
 reported at the end.
 
+### 3b. Multiple choice is the primary format
+
+The exam is expected to be mostly multiple choice. The review must reflect that:
+
+- **Multiple-choice questions are the core of the document.** Within every section, multiple-choice
+  questions appear first, ordered by frequency (§10); other types follow.
+- **Keep every original multiple-choice question exactly as it was asked** — same stem, same
+  options, same option letters. Do not reorder or rewrite options.
+- **Convert other types into multiple choice where it can be done honestly.** A true/false,
+  fill-in-the-blank or short-answer question whose answer is a single fact from the book may be
+  rewritten as a 4-option multiple-choice question. Rules for conversion:
+  - the stem keeps the original wording as closely as possible;
+  - the correct option is the book's answer, verbatim or near-verbatim;
+  - distractors must be **real terms from the same chapter**, plausible but wrong — never invented
+    words, never "all of the above / none of the above" unless the source used them;
+  - mark the question as `converted from true/false` (or the original type) in the metadata, and
+    keep the original question text visible in small gray text beneath it.
+- **Do not convert** essay or matching questions, or anything whose answer is a list, a process,
+  or an explanation. Keep those in their original form, placed after the multiple-choice questions.
+- **Every generated question (§9) must be multiple choice** with 4 options.
+- Report in the completion summary: multiple choice originally / converted to multiple choice /
+  left in other formats.
+
 ---
 
 ## 4. Identify duplicate source files before counting frequency
@@ -111,7 +140,7 @@ why it was included or excluded.
 
 Merge variants of the same question into one canonical record holding:
 
-- id, chapter, question type, canonical wording, notable variants
+- id, chapter, question type (original and, if converted, current), canonical wording, notable variants
 - verified answer, repetition count, list of independent sources
 - reference page(s), and any ambiguity worth flagging
 
@@ -125,17 +154,54 @@ separate occurrence only if it is genuinely an independent sitting.
 ## 6. Edit conservatively
 
 Fix OCR damage, broken spacing and obvious typographic corruption. Never invent facts, options,
-or wording. If an option is missing from the source, say so — do not complete it.
+or wording. If an option is missing from the source, say so — do not complete it. The only
+permitted rewriting is the type conversion described in §3b, and it must be labelled.
 
 ---
 
-## 7. Verify every answer against the primary reference
+## 7. Verify every answer, then explain it briefly
 
-For each question provide: the answer, an explanation in the explanation language, why the
-correct option is correct, why the plausible distractors are wrong, the corrected version where
-the source was wrong, the chapter, the PDF page and the printed page.
+For each question, verify the answer against the primary reference, then write the answer block
+using the fixed template below. **Never cite a page you have not verified.**
 
-**Never cite a page you have not verified.**
+### 7a. Answer block template — fixed order, nothing else
+
+```
+✔ Answer: <option letter> — <option text>
+Why: <one or two sentences, in the explanation language>
+Remember: <2–5 bold keywords, or a short memory hook>
+Distractors: <one short clause per wrong option, only where it is plausibly confusing>
+Ref: ch. N · p. <printed> (PDF <n>)
+```
+
+Optional lines, only when they apply:
+
+```
+Book says: <the book's / source's original answer, when corrected>        ← red
+Other source: <contrary answer from a summary or key, labelled by source>  ← red
+Scientific correction: <when the material conflicts with established science>
+```
+
+### 7b. Writing rules for the answer block
+
+- **Say each thing once.** The answer line states the answer; the *Why* line does not repeat it;
+  the *Distractors* line does not restate the *Why*. If a line would only repeat another line,
+  drop it.
+- **Why** is at most two sentences and names the single concept that decides the question. Do not
+  summarise the whole topic. Do not open with "The correct answer is…" — the answer line already
+  did that.
+- **Remember** holds the words a reader needs to recognise the right option in the exam: the
+  defining term, the number, the name of the model, the contrast that separates it from its
+  nearest distractor. Keywords are always **bold**.
+- **Distractors** covers only the options a student is likely to confuse with the answer. Skip
+  options that are obviously wrong. One clause each, e.g. *"B — that is **TPS**, not MIS"*.
+- **Bold is for keywords only.** Bold the term, number or name that unlocks the answer — in the
+  *Why* line and the *Remember* line. Never bold whole sentences, never bold more than a few words
+  per line. Do not use bold anywhere in the question stem or options.
+- No filler phrases ("as we know", "it is important to note", "in other words"). Do not repeat
+  the question stem inside the explanation.
+- Target length for the whole block, excluding the optional lines: **40–80 words**. Go longer only
+  when a scientific correction or a conflict genuinely requires it.
 
 ---
 
@@ -147,8 +213,8 @@ every question it confirms.
 
 Cross-check its key against your verified answers item by item and **report the agreement rate**
 (e.g. "64 of 65 matched"). Where it disagrees with the book, the book wins, but **display both
-answers at the question** — yours as the answer, the contrary one clearly labelled as coming from
-another source, for comparison only.
+answers at the question** — yours as the answer, the contrary one on the `Other source:` line
+(§7a), for comparison only.
 
 ---
 
@@ -163,8 +229,9 @@ in the book untested.
    it. A mere mention inside an explanation does **not** count as coverage — report those
    separately as "mentioned but never asked".
 3. Report three numbers: directly asked / only in explanations / not covered at all.
-4. For every uncovered subsection, **write a new question yourself**, from the book's own wording,
-   with a page number you have verified.
+4. For every uncovered subsection, **write a new multiple-choice question yourself** (4 options,
+   distractors drawn from the same chapter — see §3b), from the book's own wording, with a page
+   number you have verified.
 5. Put these in a **separate, clearly labelled fourth section** so they never blend into the real
    exam questions. Give them a repetition count of zero and a source label meaning "generated".
    State in the document that they exist to close gaps and are **not** predictions of the exam.
@@ -179,10 +246,10 @@ Some chapters may be fully covered already; that is a valid and useful result.
 
 ## 10. Prioritise repeated questions
 
-Order questions so the most frequently repeated appear first within their section. Show
-`Frequency: N independent sources` with each question. Add a summary list of the most repeated
-questions near the start **with no answers exposed** — use a threshold that keeps the list useful
-(if most questions sit at 2 sources, list 3+).
+Order questions so the most frequently repeated appear first within their section (multiple
+choice first, then other types — §3b). Show `Frequency: N independent sources` with each question.
+Add a summary list of the most repeated questions near the start **with no answers exposed** — use
+a threshold that keeps the list useful (if most questions sit at 2 sources, list 3+).
 
 ---
 
@@ -194,6 +261,19 @@ table of contents → file metadata.
 **Keep the start of the file simple. Put all metadata and the table of contents at the end.**
 There is no separate answer-key section — every answer lives with its question.
 
+### 11a. Chapter opener — two-line context summary
+
+Every chapter starts with a short **"In this chapter"** box, before the first question:
+
+- **Two lines, no more.** Line 1: what the chapter is about, in one sentence. Line 2: the 3–6
+  terms, models or numbers the questions below keep returning to, in **bold**, comma-separated.
+- Written in the explanation language, from the book's own wording, and consistent with the
+  questions that follow — it is orientation, not a summary of the whole chapter.
+- Visually distinct from questions (a light box), and never collapsed: the reader must see it
+  before the first question.
+
+### 11b. Four sections inside each chapter
+
 Inside each chapter, order the questions in **four sections**:
 
 1. **Exam questions** (from past papers)
@@ -202,11 +282,13 @@ Inside each chapter, order the questions in **four sections**:
    concept exists in the current book and whose answer was re-verified from it)
 4. **Generated questions** (§9), with a short note explaining what they are
 
+Within each section: multiple choice first, then converted questions, then other types (§3b).
+
 **Make the type or types of each question explicit** — one question can be both an exam question
 and a textbook question. Sections 3 and 4 each carry a one-paragraph explanation of their origin.
 
-Per question, show: number and id, repetition count, question text, options, then the answer,
-explanation and reference.
+Per question, show: number and id, repetition count, section and type tags, question text,
+options, then the answer block (§7a).
 
 ---
 
@@ -235,9 +317,33 @@ A single self-contained `.html` file. Each answer is hidden behind a native
 - It must work in any browser on phone, tablet and desktop, offline, opened directly from disk.
 - No external assets, no CDN, no fonts to download — everything inline.
 - JavaScript may add optional extras only: search across questions and answers, chapter filter,
-  expand-all / collapse-all, a visible counter, and a light/dark toggle. All must degrade cleanly.
+  the reading-mode filter below, expand-all / collapse-all, a visible counter, and a light/dark
+  toggle. All must degrade cleanly.
 - Provide print styles that reveal every answer when printed.
 - Respect the reader's light/dark preference and offer a manual override.
+
+#### Reading-mode filter — one question section at a time
+
+The reader must be able to read the whole document **one section type at a time** — for example
+all textbook questions across every chapter first, then all exam questions — instead of chapter
+by chapter.
+
+- A sticky toolbar at the top holds a **single-select** control (segmented buttons or radio-style
+  chips): `All · Exam · Textbook · Other sources · Generated`. Optionally a second axis:
+  `All types · Multiple choice · Other types`.
+- Selecting a mode hides every question that does not belong to it, **across all chapters**, and
+  hides any chapter that ends up with no visible questions. Chapter headings and the two-line
+  chapter summary stay visible for chapters that still have questions.
+- A question tagged with two sections (e.g. exam + textbook) appears in both modes.
+- The visible counter updates to `N of M questions` for the current mode. The chapter filter and
+  the search combine with the mode (logical AND).
+- The current mode is remembered across reloads (e.g. `localStorage`) and reflected in the URL
+  hash, so a reader can bookmark "textbook only". With scripting disabled the page must still show
+  everything.
+- Implement by tagging every question element with data attributes (e.g. `data-section`,
+  `data-type`, `data-chapter`) and toggling a class on the root — no per-question DOM rebuilding.
+- Printing ignores the mode by default and prints everything; say so near the print
+  instructions.
 
 ### 13b. PDF — plain reading and printing copy
 
@@ -283,10 +389,23 @@ question inside the declared chapter scope; frequency equals the number of disti
 (generated questions excepted); no leftover markup artifacts (e.g. literal `**`) in any rendered
 output.
 
+**Answer blocks (§7):** every block follows the template order; no block exceeds the word target
+without an optional line justifying it; every *Remember* line contains at least one bold keyword;
+no bold inside stems or options; no *Why* line repeats the answer text. Run these as mechanical
+checks and report counts, then read a random sample of 20 blocks by eye.
+
+**Multiple choice (§3b):** every multiple-choice and generated question has exactly 4 options with
+one marked answer; every converted question carries its original type and original text; no
+distractor is a made-up term.
+
+**Chapter summaries (§11a):** every in-scope chapter has one, it is exactly two lines, and it sits
+before the first question.
+
 **HTML:** open it in a real browser and actually exercise it — confirm answers start hidden, that
 clicking reveals only that question, that the control's label changes state, that clicking again
-re-hides, that search and filter return correct counts, and that both themes render. Report what
-you tested.
+re-hides, that search and filter return correct counts, that each reading mode shows only its
+questions and the counter matches a manual count for at least one mode, that the mode survives a
+reload, and that both themes render. Report what you tested.
 
 **PDF:** verify structurally that no form fields, actions or scripts remain; render pages and
 inspect them visually; confirm the answers are present and the layout is correct.
@@ -306,10 +425,12 @@ The three files, plus a completion summary reporting:
 - files supplied, duplicates detected, independent sources counted
 - images found and images visually inspected
 - raw question occurrences, unique questions after deduplication
+- multiple choice originally / converted to multiple choice / left in other formats (§3b)
 - out-of-scope and unresolved questions, with reasons
 - per-chapter counts and per-section counts
 - book subsections audited and final coverage ratio; generated questions added
 - cross-check agreement rate against any summary answer key, and every conflict found
+- answer-block check results (§15) and average block length
 - page counts per format, and anything you could not test
 
 ---
@@ -334,5 +455,7 @@ Keep the focus on the question. Render secondary details — id, question type, 
 source list, page reference — in **gray, small, low-contrast text at the margins**, so the eye
 lands on the question first and review is fast. Answers use restrained colour coding: one colour
 for the correct answer, another for explanations, red reserved for corrections and conflicting
-answers. Generous whitespace, a clear separator between questions, and no decoration that competes
-with the content.
+answers. **Bold keywords** inside the answer block are the only emphasis in the explanation —
+nothing else competes with them. The chapter summary box uses a light tint and the same bold
+keyword style. Generous whitespace, a clear separator between questions, and no decoration that
+competes with the content.
