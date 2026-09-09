@@ -12,6 +12,7 @@ Source material and generation state for the IMT review. The published page is
 | Chapters in scope | 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12 (chapter 8 skipped by the owner) |
 | Bank | 292 questions: exam 107, textbook 142, other 50, generated 15; 24 low-confidence; 109/109 subsections covered |
 | Working directory | `.review_generation_working_directory/` — read its `README.md`, it is the handoff document |
+| Origin of the material | Student-run shared drive "SVU Files" (IMT folder) plus files circulated in the course groups. Unofficial; see `../../DISCLAIMER.md` for copyright and takedown. |
 
 ## What is in this folder
 

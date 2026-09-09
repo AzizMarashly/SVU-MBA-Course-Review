@@ -69,7 +69,7 @@ changes generic: anything course-specific belongs in PROJECT SETTINGS, not in th
 - **No personal data** anywhere in the repository, including file names and screenshots.
 - **Copyright.** Course material is here so reviews can be verified and regenerated. Do not
   redistribute it separately. If you hold rights to something here and want it removed, open an
-  issue and it will be taken down.
+  issue and it will be taken down. Full notice, in Arabic and English: `courses/DISCLAIMER.md`.
 - **Licence.** The prompt is CC BY-NC-SA 4.0. By contributing you agree your changes to it are
   under the same licence. The community pledge in `LICENSE.md` applies to the review pages:
   share them free, keep the attribution, do not sell them.

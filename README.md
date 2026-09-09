@@ -11,6 +11,7 @@ Course review pages for the SVU MBA program, hosted on GitHub Pages.
 | `prompt/` | The generator prompt, versioned, with its changelog. |
 | `courses/S<n>/<CODE>/` | Source material, the filled-in prompt, and the working directory of each run, so a review can be resumed or extended. See `courses/README.md`. Not served on the site. |
 | `CONTRIBUTING.md` | How to report mistakes, fix questions, add sources or courses. |
+| `courses/DISCLAIMER.md` | Unofficial project; origin of the course files, copyright and takedown notice (Arabic and English). |
 
 ## Adding a course
 
