@@ -1,19 +1,21 @@
-# PROMPT — Complete Course Review Generator (v0.3)
+# PROMPT — Complete Course Review Generator (v0.4)
 
 > Reusable spec for building a consolidated, verified, interactive review file from a folder
 > of course material. Fill in **PROJECT SETTINGS**, then paste the whole document as your prompt.
 > Everything below the settings block is generic and works for any course.
 
-> **Changes in v0.3:** exam questions are presented in multiple-choice form as a direction, not a
-> rule — book and other-source questions keep their original format (§3b); an **importance score**
-> derived from repetition and the teacher's focus areas orders the questions (§10); low-confidence
-> answers are flagged (§7c); the most-repeated list moves to the end, collapsed (§11c); HTML is the
-> only mandatory deliverable, PDF/DOCX are offered at the end (§13); the verified bank is saved as a
-> checkpoint file before rendering (§13d); the model asks before generating an unusually large
-> number of gap-filling questions (§9).
+> **Changes in v0.4:** pilot chapter for style approval before the full run (§0b); ASK / DECIDE
+> interaction mode so the prompt can run unattended (§0c); fixed base for the importance score
+> (§10b); interface language setting for toolbar, headings and answer-block labels (§7a, §12);
+> rule priority when instructions conflict (§0a); spec version recorded in the output (§16);
+> chapter-naming map between exam files and the book (§2a); UTF-8 without BOM for the checkpoint
+> (§13d); "how to use" must explain the three markers (§11).
 >
-> **Carried from v0.2:** fixed, non-repetitive answer template with bold keywords (§7); two-line
-> chapter opener (§11a); single-select reading-mode filter in the HTML (§13a).
+> **Carried from earlier versions:** exam questions leaning towards multiple choice as a
+> direction, not a rule (§3b); importance score and focus areas (§10); low-confidence flag (§7c);
+> fixed, non-repetitive answer template with bold keywords (§7); two-line chapter opener (§11a);
+> single-select reading-mode filter (§13a); collapsed reference lists at the end (§11c); HTML as
+> the only mandatory deliverable (§13); bank checkpoint before rendering (§13d).
 
 ---
 
@@ -28,9 +30,64 @@
 | Expected exam format | `<<< e.g. mostly MULTIPLE CHOICE >>>` |
 | Question language | `<<< ENGLISH / ARABIC / MIXED >>>` |
 | Explanation language | `<<< e.g. ARABIC >>>` |
+| Interface language | `<<< e.g. ARABIC — toolbar, headings, answer-block labels (§7a) >>>` |
+| Interaction mode | `<<< ASK (default) / DECIDE — see §0c >>>` |
+| Pilot chapter | `<<< chapter number, or NONE — see §0b >>>` |
 | HTML filename | `<<< title >>>.html` |
 | Bank checkpoint filename | `<<< title >>>_bank.json` |
 | PDF / DOCX | `<<< ASK AT END (default) / ALWAYS / NEVER >>>` |
+| Spec version | `v0.4` — write this into the output metadata (§16) |
+
+---
+
+## 0. Ground rules that govern everything below
+
+### 0a. Priority when rules conflict
+
+Instructions in this document will sometimes pull in different directions — brevity against
+"make the full idea clear", faithfulness against exam-like presentation. Resolve conflicts in
+this order, highest first:
+
+1. **Accuracy against the primary reference** — never trade it for anything below.
+2. **Faithfulness to the source wording** of questions and options.
+3. **Brevity and non-repetition** of answer blocks (§7).
+4. **Visual style and formatting** (§12, §18).
+
+When a rule lower on the list would force you to break one higher up, break the lower one and
+say so in the methodology.
+
+### 0b. Pilot chapter — approve the style before the full run
+
+If the settings name a pilot chapter, do the following before touching the other chapters:
+
+1. Run §1–§10 for the pilot chapter only, then render a complete HTML file for it with every
+   feature of §13a in place — chapter opener, four sections, answer blocks, reading modes,
+   reference lists.
+2. Stop and ask the user to review the style: answer-block length, keyword bolding, how
+   reconstructed exam questions read, the importance markers, the chapter opener.
+3. Apply their corrections to the pilot, and record them as additional rules in the methodology
+   so every later chapter follows them.
+4. Only then continue with the remaining chapters.
+
+In DECIDE mode (§0c) the pilot is still built and saved as a separate file, but the run
+continues without waiting; the user can review it afterwards.
+
+### 0c. Interaction mode — ASK or DECIDE
+
+The document names a small number of points where you stop and ask the user: the pilot review
+(§0b), generated-question volume (§9), and optional formats (§13e). Elsewhere you decide and
+state the decision.
+
+- **ASK** (default): stop at each of those points and wait.
+- **DECIDE**: never stop. Use these defaults, and list every default you applied in the
+  completion summary:
+  - pilot: build and save it, continue without waiting;
+  - generated questions: create them only for uncovered subsections that are focus areas
+    (§10a), plus at most three per chapter for other uncovered subsections;
+  - formats: HTML only, unless the settings say ALWAYS.
+
+You may still stop in DECIDE mode when genuinely blocked — corrupted extraction with no visual
+fallback, a missing primary reference, an unreadable scope — but not for preferences.
 
 ---
 
@@ -90,6 +147,16 @@ the course** whose topics do not exist in the current textbook.
   in the methodology, with the reason.
 - Do not discard them blindly: a question from another curriculum may still be usable if its
   concept genuinely exists in the current book — see §9.
+
+### 2a. Map the sources' chapter names to the book's
+
+Exam files, summaries and slides often number things differently from the book — "Lecture 3"
+may be the book's chapter 5, "Week 4" may span two chapters, and a summary may merge two
+chapters into one heading. Build a **chapter map** once, from evidence (headings, topics,
+page citations), before assigning any question to a chapter. Record it as a table in the
+methodology: source label → book chapter(s) → evidence. Every question is assigned through this
+map, never by guessing per question. Where a label cannot be mapped confidently, say so and put
+its questions on the unresolved list (§3).
 
 ---
 
@@ -178,6 +245,10 @@ using the fixed template below. **Never cite a page you have not verified.**
 
 ### 7a. Answer block template — fixed order, nothing else
 
+The labels shown below (*Answer, Why, Remember, Distractors, Ref* and the optional ones) are
+rendered in the **interface language** from the settings; the text after each label is in the
+explanation language. Keep the labels short and identical on every question.
+
 ```
 ✔ Answer: <option letter> — <option text>          (or the answer itself for non-MCQ)
 Why: <one or two sentences, in the explanation language>
@@ -263,7 +334,8 @@ in the book untested.
 5. **Before writing them, check the volume.** If the generated questions would exceed the number
    of real questions in a chapter, or exceed roughly a third of the whole bank, **stop and ask
    the user** whether to generate all of them, only the most important subsections, or none.
-   Show the per-chapter numbers when asking. There is no fixed cap — the user decides.
+   Show the per-chapter numbers when asking. There is no fixed cap — the user decides. In DECIDE
+   mode apply the §0c default instead of asking.
 6. Put these in a **separate, clearly labelled fourth section** so they never blend into the real
    exam questions. Give them a repetition count of zero and a source label meaning "generated".
    State in the document that they exist to close gaps and are **not** predictions of the exam.
@@ -292,20 +364,33 @@ methodology holds the full table.
 
 ### 10b. Importance score
 
-Give every question an **importance score from 1 to 5**, computed transparently and described in
-the methodology. Suggested weights — adjust if the material calls for it, but state what you used:
+Give every question an **importance score from 1 to 5**, computed from the fixed base below so
+that scores mean the same thing across courses and runs. Describe the computation in the
+methodology; if the material forces a deviation, state exactly what changed and why.
+
+**Base score, from the number of independent exam sources containing the question:**
+
+| Exam sources | Base |
+|---|---|
+| 0 (textbook or other sources only) | 1 |
+| 1 | 2 |
+| 2 | 3 |
+| 3 or more | 4 |
+
+**Bonuses, added to the base, total capped at 5:**
 
 | Signal | Effect |
 |---|---|
-| Repeated in N independent exam sources | strongest signal; scales with N |
 | Also appears as a textbook end-of-chapter question | +1 |
 | Its subsection is a focus area (§10a) | +1 |
-| Only appears in summaries / other sources | neutral |
-| Generated to fill a gap (§9) | fixed at 1 — never higher |
+| Generated to fill a gap (§9) | fixed at 1 — no base, no bonuses |
+
+So a question asked in one exam and also in the book scores 3; asked in two exams inside a
+focus area scores 4; asked in three exams, in the book, in a focus area scores 5.
 
 Render the score as a small gray marker next to the repetition count (e.g. `★★★★☆` or `4/5`),
 in the same low-contrast style as the other metadata. **The score is a study aid, not a
-prediction** — say so once in the "how to use" section.
+prediction** — say so once in the "how to use" section (§11).
 
 ### 10c. Ordering
 
@@ -318,11 +403,23 @@ sources` with each question as before.
 ## 11. Document structure
 
 Cover → how to use → scope and source summary → chapters → methodology → most repeated and most
-important (collapsed) → table of contents → file metadata.
+important (collapsed) → table of contents → file metadata (including the spec version, §16).
 
 **Keep the start of the file simple. Put all metadata, the reference lists and the table of
 contents at the end.** There is no separate answer-key section — every answer lives with its
 question.
+
+The **"how to use"** section is short, in the interface language, and explains the three markers
+the reader will meet on every question, each in one or two sentences:
+
+- **Frequency** — how many independent sources asked it.
+- **Importance** (★ 1–5) — what it is built from (§10b), and that it is a study aid, not a
+  prediction.
+- **⚠ Low confidence** — that it appears only where the answer rests on thin evidence (§7c), and
+  that its absence means the answer was verified normally.
+
+It also names the reading modes in the toolbar (§13a) and suggests a reading order: exam
+questions first, then textbook, then the rest.
 
 ### 11a. Chapter opener — two-line context summary
 
@@ -374,6 +471,12 @@ Right-to-left text right-aligned, left-to-right text left-aligned, with correct 
 direction on every paragraph — not just visual alignment. No reversed or misplaced punctuation.
 Use separate paragraph styles per direction, embed fonts, and never leave a heading orphaned from
 the content it introduces.
+
+Everything that is not question or explanation text — the toolbar, section headings, the
+"In this chapter" label, the answer-block labels (§7a), the "how to use" text, the methodology
+headings, button captions and the counter — is written in the **interface language** from the
+settings, and the page direction (`dir` on the root element) follows it. Question text keeps its
+own direction per paragraph regardless.
 
 Beware: in a bidirectional paragraph, justification is *logical*, not physical. Verify the
 rendered output rather than trusting the markup.
@@ -451,8 +554,10 @@ expanded.
 
 Before producing any output file, save the complete verified bank to the checkpoint filename
 from the settings: every canonical question with its fields from §5, the source ledger, the
-subsection coverage table and the focus-area ranking. Plain JSON (or Markdown tables if JSON is
-impractical), no personal data.
+subsection coverage table, the chapter map (§2a) and the focus-area ranking. Plain JSON (or
+Markdown tables if JSON is impractical), encoded **UTF-8 without a byte-order mark** so Arabic
+text survives every tool that reads it, no personal data. Include the spec version from the
+settings at the top of the file.
 
 This is the single source of truth for every rendered file. If a later fix is needed, edit the
 bank and re-render rather than patching the HTML by hand. Mention the checkpoint file in the
@@ -461,8 +566,9 @@ completion summary.
 ### 13e. Ask before producing PDF and DOCX
 
 When the HTML is finished and tested, **ask the user** whether they also want the PDF and/or the
-DOCX, unless the settings table says ALWAYS or NEVER. Produce only what they choose, from the
-same bank, and run the format-specific checks in §15 for whatever you produce.
+DOCX, unless the settings table says ALWAYS or NEVER, or the interaction mode is DECIDE (§0c,
+default HTML only). Produce only what they choose, from the same bank, and run the
+format-specific checks in §15 for whatever you produce.
 
 ---
 
@@ -497,6 +603,15 @@ options.
 **Chapter summaries (§11a):** every in-scope chapter has one, it is exactly two lines, and it sits
 before the first question.
 
+**Importance (§10b):** recompute every score from the bank with the fixed base and bonuses and
+confirm it matches what is rendered; no generated question scores above 1; no score exceeds 5.
+
+**Interface language (§12):** no toolbar caption, heading or answer-block label is in a language
+other than the interface language; the root `dir` matches it.
+
+**Metadata (§16):** every produced file carries the spec version; the bank file has no
+byte-order mark.
+
 **Ordering (§10c):** within every section, importance never increases going down the list; ties
 are broken by repetition. Verify mechanically.
 
@@ -520,8 +635,18 @@ audits produce false positives from legitimate content.
 
 ## 16. Deliverables
 
-The HTML file, the bank checkpoint, any requested PDF/DOCX, plus a completion summary reporting:
+The HTML file, the bank checkpoint, the pilot file if one was built, any requested PDF/DOCX,
+plus a completion summary.
 
+**Every output file carries the spec version** from the settings (e.g. `Generated from prompt
+v0.4`) in its end-of-file metadata block — the HTML footer, the PDF's last page, the DOCX's last
+section and the bank's header — so it is always clear which prompt produced which file.
+
+The completion summary reports:
+
+- the interaction mode used and, in DECIDE mode, every default applied (§0c)
+- the pilot chapter and the style corrections recorded from it (§0b)
+- the chapter map (§2a), with any labels that could not be mapped
 - files supplied, duplicates detected, independent sources counted
 - images found and images visually inspected
 - raw question occurrences, unique questions after deduplication
@@ -549,8 +674,9 @@ The HTML file, the bank checkpoint, any requested PDF/DOCX, plus a completion su
 - Work only on the supplied content unless external research is explicitly necessary for a
   scientific correction — and label it when you do.
 - Report honestly: if something failed, say so; if a step was skipped, say that.
-- Ask the user only at the two points named above (§9 volume, §13e formats) and when genuinely
-  blocked; otherwise decide and state the decision.
+- Ask the user only at the points named in §0c and when genuinely blocked; otherwise decide and
+  state the decision. In DECIDE mode, apply the defaults and never wait.
+- When two rules collide, follow the priority order in §0a and note it in the methodology.
 
 ---
 
