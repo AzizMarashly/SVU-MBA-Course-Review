@@ -3,31 +3,199 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SVU MBA Course Review</title>
+<title>مراجعات SVU MBA</title>
+<meta name="description" content="مراجعات كاملة وتفاعلية لمواد ماجستير إدارة الأعمال في الجامعة الافتراضية السورية، مبنية من الكتاب والدورات السابقة والملخصات.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%93%9A%3C/text%3E%3C/svg%3E">
 <style>
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:3rem auto;padding:0 1rem;background:#f7f7f8;color:#222}
-  h1{font-size:1.8rem}
-  h2{font-size:1.2rem;margin-top:2rem;color:#444}
-  ul{list-style:none;padding:0}
-  li{margin:.6rem 0}
-  a{display:block;padding:1rem 1.2rem;background:#fff;border:1px solid #ddd;border-radius:10px;text-decoration:none;color:#0b57d0;font-size:1.1rem}
-  a:hover{border-color:#0b57d0}
-  small{color:#666}
+  :root{
+    --bg:#f5f6fa; --card:#ffffff; --text:#1c1f2a; --muted:#5f6577; --line:#e3e6ee;
+    --accent:#2f5fe3; --accent-soft:#e8eefc; --accent-text:#1d47b8;
+    --shadow:0 1px 2px rgba(20,25,45,.05),0 8px 24px -12px rgba(20,25,45,.18);
+    --radius:16px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0f1117; --card:#181b24; --text:#e8eaf0; --muted:#9aa1b3; --line:#2a2f3d;
+      --accent:#6b8ff5; --accent-soft:#1c2540; --accent-text:#9db3ff;
+      --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Segoe UI",system-ui,-apple-system,"Noto Sans Arabic",Tahoma,Arial,sans-serif;line-height:1.7}
+  a{color:var(--accent-text)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+  header{border-bottom:1px solid var(--line);background:var(--card)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--text)}
+  .brand span{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--accent);color:#fff;font-size:18px}
+  .nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+  .nav ul a{text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:8px;font-size:.95rem}
+  .nav ul a:hover{background:var(--accent-soft);color:var(--accent-text)}
+
+  .hero{padding:56px 0 40px;text-align:center}
+  .hero h1{font-size:clamp(1.7rem,4vw,2.6rem);margin:0 0 12px;line-height:1.3}
+  .hero p{color:var(--muted);font-size:1.1rem;max-width:640px;margin:0 auto 24px}
+  .pills{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+  .pill{background:var(--accent-soft);color:var(--accent-text);padding:6px 14px;border-radius:999px;font-size:.9rem;font-weight:600}
+
+  section{padding:32px 0}
+  h2{font-size:1.45rem;margin:0 0 6px}
+  .sub{color:var(--muted);margin:0 0 22px}
+  .sem-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .sem-head .count{color:var(--muted);font-size:.95rem}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+  .card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:22px;text-decoration:none;color:var(--text);box-shadow:var(--shadow);transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .card .top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+  .code{font-family:ui-monospace,Consolas,monospace;font-weight:700;font-size:1.3rem;color:var(--accent-text);
+    background:var(--accent-soft);padding:4px 12px;border-radius:10px;letter-spacing:.5px}
+  .ver{font-size:.8rem;color:var(--muted);border:1px solid var(--line);padding:2px 9px;border-radius:999px}
+  .card h3{margin:0 0 4px;font-size:1.15rem}
+  .card .en{color:var(--muted);font-size:.9rem;margin:0 0 16px;direction:ltr;text-align:right}
+  .stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:14px;border-top:1px dashed var(--line)}
+  .stat{display:flex;flex-direction:column;flex:1;min-width:0}
+  .stat b{font-size:1.15rem}
+  .stat small{color:var(--muted);font-size:.78rem}
+  .cta{margin-top:16px;color:var(--accent-text);font-weight:600;font-size:.95rem}
+  .card:hover .cta{text-decoration:underline}
+
+  .card.soon{opacity:.6;border-style:dashed;box-shadow:none;cursor:default}
+  .card.soon:hover{transform:none;border-color:var(--line)}
+
+  .features{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media (max-width:560px){.features{grid-template-columns:1fr}}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+  .feat .ic{font-size:1.5rem;margin-bottom:6px}
+  .feat h4{margin:0 0 4px;font-size:1rem}
+  .feat p{margin:0;color:var(--muted);font-size:.92rem}
+
+  .about{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+  .about ol{margin:10px 0 0;padding-right:22px}
+  .about li{margin:4px 0}
+  .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .btn{display:inline-block;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid var(--line);color:var(--text);background:var(--bg)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn:hover{filter:brightness(1.05)}
+
+  .note{background:var(--accent-soft);border-radius:12px;padding:14px 18px;color:var(--accent-text);font-size:.95rem;margin-top:20px}
+
+  footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
+  footer a{color:var(--muted)}
 </style>
 </head>
 <body>
-<h1>مراجعات مواد ماجستير إدارة الأعمال - SVU</h1>
-<p><small>اختر المادة لفتح المراجعة الكاملة</small></p>
 
-<h2>الفصل الثالث - Semester 3</h2>
-<ul>
-  <li><a href="S3/IMT/">IMT - مراجعة كاملة (v1.3)</a></li>
-  <li><a href="S3/MIS/">MIS - مراجعة كاملة (v0.1)</a></li>
-</ul>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="./"><span>📚</span>مراجعات SVU MBA</a>
+    <ul>
+      <li><a href="#courses">المواد</a></li>
+      <li><a href="#how">كيف تُبنى</a></li>
+      <li><a href="#generator">المولّد</a></li>
+      <li><a href="https://github.com/AzizMarashly/SVU-MBA-Course-Review" target="_blank" rel="noopener">GitHub ↗</a></li>
+    </ul>
+  </div>
+</header>
 
-<h2>الأداة - The generator</h2>
-<ul>
-  <li><a href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/blob/main/prompt/SVU-MBA-Course-Review-Generator.md">البرومبت المستخدم لتوليد المراجعات - Course Review Generator prompt <small>(CC BY-NC-SA 4.0)</small></a></li>
-</ul>
+<main class="wrap">
+
+  <div class="hero">
+    <h1>مراجعات كاملة لمواد ماجستير إدارة الأعمال</h1>
+    <p>ملف واحد لكل مادة يجمع أسئلة الكتاب والدورات السابقة والملخصات، مع إجابات موثّقة من الكتاب ودرجة أهمية لكل سؤال.</p>
+    <div class="pills">
+      <span class="pill">الجامعة الافتراضية السورية</span>
+      <span class="pill">تفاعلي · يعمل بلا إنترنت</span>
+      <span class="pill">مجاني للطلاب</span>
+    </div>
+  </div>
+
+  <section id="courses">
+    <div class="sem-head">
+      <h2>الفصل الثالث</h2>
+      <span class="count">Semester 3 · مادتان</span>
+    </div>
+    <p class="sub">اضغط على المادة لفتح المراجعة الكاملة.</p>
+    <div class="grid">
+
+      <a class="card" href="S3/IMT/">
+        <div class="top"><span class="code">IMT</span><span class="ver">v1.3</span></div>
+        <h3>التسويق الدولي</h3>
+        <p class="en">International Marketing</p>
+        <div class="stats">
+          <div class="stat"><b>292</b><small>سؤال</small></div>
+          <div class="stat"><b>11</b><small>فصل</small></div>
+          <div class="stat"><b>107</b><small>سؤال دورات</small></div>
+        </div>
+        <div class="cta">افتح المراجعة ←</div>
+      </a>
+
+      <a class="card" href="S3/MIS/">
+        <div class="top"><span class="code">MIS</span><span class="ver">v0.1</span></div>
+        <h3>نظم المعلومات الإدارية</h3>
+        <p class="en">Management Information Systems</p>
+        <div class="stats">
+          <div class="stat"><b>269</b><small>سؤال</small></div>
+          <div class="stat"><b>8</b><small>فصول</small></div>
+          <div class="stat"><b>4</b><small>مصادر</small></div>
+        </div>
+        <div class="cta">افتح المراجعة ←</div>
+      </a>
+
+      <div class="card soon">
+        <div class="top"><span class="code">…</span><span class="ver">قريباً</span></div>
+        <h3>مواد أخرى</h3>
+        <p class="en">More courses coming</p>
+        <div class="stats"><div class="stat"><small>تُضاف المراجعات تباعاً خلال الفصل</small></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>ماذا تجد داخل كل مراجعة؟</h2>
+    <p class="sub">كل ملف HTML مستقل بالكامل، يمكن حفظه وفتحه على الهاتف أو الحاسوب بلا اتصال.</p>
+    <div class="features">
+      <div class="feat"><div class="ic">✅</div><h4>إجابات موثّقة</h4><p>كل إجابة مراجَعة على الكتاب مع رقم الصفحة، والأسئلة غير المؤكدة مُعلَّمة.</p></div>
+      <div class="feat"><div class="ic">🎯</div><h4>درجة أهمية</h4><p>تقييم لكل سؤال حسب تكراره في الدورات وتركيز المدرّس.</p></div>
+      <div class="feat"><div class="ic">🔍</div><h4>فلاتر ذكية</h4><p>صفّي حسب الفصل أو المصدر أو الأهمية، وطيّ الفصول لمراجعة سريعة.</p></div>
+      <div class="feat"><div class="ic">📝</div><h4>مصادر متعددة</h4><p>أسئلة الكتاب، الدورات السابقة، والملخصات المتداولة، مدمجة بلا تكرار.</p></div>
+    </div>
+  </section>
+
+  <section id="generator">
+    <div class="about">
+      <h2>مولّد المراجعات</h2>
+      <p class="sub">هذه الصفحات لا تُكتب يدوياً. تُبنى بواسطة برومبت مفتوح المصدر يعمل مع Claude Code على مجلد المادة.</p>
+      <ol>
+        <li>اجمع الكتاب والدورات السابقة والملخصات في مجلد واحد.</li>
+        <li>املأ جدول <b>PROJECT SETTINGS</b> في أعلى البرومبت (اسم المادة، الفصول، لغة الأسئلة…).</li>
+        <li>الصق البرومبت كاملاً في Claude Code داخل ذلك المجلد، واترك الباقي له.</li>
+      </ol>
+      <div class="btns">
+        <a class="btn primary" href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/blob/main/prompt/SVU-MBA-Course-Review-Generator.md" target="_blank" rel="noopener">اقرأ البرومبت (v0.7)</a>
+        <a class="btn" href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/blob/main/prompt/CHANGELOG.md" target="_blank" rel="noopener">سجل التغييرات</a>
+        <a class="btn" href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/blob/main/LICENSE.md" target="_blank" rel="noopener">الرخصة</a>
+      </div>
+      <div class="note">
+        🤝 <b>عهد المجتمع:</b> شارك المراجعات مجاناً مع زملائك، أبقِ إشارة المصدر داخل الملف، ولا تبعها أو تضعها خلف اشتراك. الكتب والدورات ملك لأصحابها.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    البرومبت مرخّص تحت <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ar" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> ·
+    الإجابات قد تحتوي أخطاء وليست تنبؤاً بأي امتحان ·
+    <a href="https://github.com/AzizMarashly/SVU-MBA-Course-Review" target="_blank" rel="noopener">المصدر على GitHub</a>
+  </div>
+</footer>
+
 </body>
 </html>
