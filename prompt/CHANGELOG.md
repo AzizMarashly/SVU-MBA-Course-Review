@@ -3,6 +3,11 @@
 Each version is a git tag on this repository. Diff any two versions with a compare link such as
 https://github.com/AzizMarashly/SVU-MBA-Course-Review/compare/v0.5...v0.6
 
+## v0.8 — 2026-09-09
+- §11d: every review file carries a "Source files" appendix listing every supplied file (kind,
+  role, source group, pages or items, exclusion reason), and each question's source labels are
+  numbers linking to that table. QA checks the appendix against the folder listing.
+
 ## v0.7 — 2026-09-09
 - Canonical source moved from a GitHub gist to this repository; links and the attribution
   notice updated. No other changes.

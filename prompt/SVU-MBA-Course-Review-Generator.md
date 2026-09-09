@@ -1,4 +1,4 @@
-# PROMPT — Complete Course Review Generator (v0.7)
+# PROMPT — Complete Course Review Generator (v0.8)
 
 > Reusable spec for building a consolidated, verified, interactive review file from a folder
 > of course material. Fill in **PROJECT SETTINGS**, then paste the whole document as your prompt.
@@ -14,6 +14,9 @@
 > **Licence:** CC BY-NC-SA 4.0 — attribution, non-commercial, share-alike. Full text and the
 > community pledge in `LICENSE.md` at the repository root; what it means for the output in §19.
 
+> **Changes in v0.8:** every review file lists the source files it was built from, as a
+> "Source files" appendix at the end and as short labels on each question (§11d).
+>
 > **Changes in v0.7:** canonical source moved from a gist to the repository above; links and
 > the attribution notice updated (§19). No other changes.
 >
@@ -54,7 +57,7 @@
 | Output base name | `<<< title >>>` — files are named `<base>_v<NN>.<ext>`, see §0e |
 | Working directory | `.review_generation_working_directory` (inside the course folder, §0d) |
 | PDF / DOCX | `<<< ASK AT END (default) / ALWAYS / NEVER >>>` |
-| Spec version | `v0.7` — write this into the output metadata (§16) |
+| Spec version | `v0.8` — write this into the output metadata (§16) |
 
 ---
 
@@ -486,8 +489,9 @@ sources` with each question as before.
 
 ## 11. Document structure
 
-Cover → how to use → scope and source summary → chapters → methodology → most repeated and most
-important (collapsed) → table of contents → file metadata (including the spec version, §16).
+Cover → how to use → scope and source summary → chapters → methodology → source files (§11d) →
+most repeated and most important (collapsed) → table of contents → file metadata (including the
+spec version, §16).
 
 **Keep the start of the file simple. Put all metadata, the reference lists and the table of
 contents at the end.** There is no separate answer-key section — every answer lives with its
@@ -547,6 +551,46 @@ answers exposed**:
 
 They are reference material for the last day before the exam, not the way into the document, so
 they stay closed until the reader opens them.
+
+### 11d. Source files — the reader must be able to see what the review was built from
+
+The review file names **every file it was built from**, so a reader can judge its coverage, find
+the original material, and notice when a source is missing or outdated.
+
+**Appendix "Source files"**, placed after the methodology and before the reference lists, inside
+its own collapsed `<details>` block, holding one table with a row per supplied file:
+
+| Column | Content |
+|---|---|
+| # | Running number, also used as the short label on questions (below) |
+| File name | Exactly as supplied, with its relative folder if the material was in subfolders |
+| Kind | Textbook · past exam · answer key · summary · slides · screenshot / photo · other |
+| Role | How it was used: primary reference · exam source · cross-check · excluded |
+| Source group | The independent-source id from the ledger (§4); duplicates and dependent copies share one id |
+| Pages / items | Pages read, or number of images inspected, or number of questions extracted |
+| Note | Reason for exclusion (§2), duplicate-of, extraction problems (§1a), curriculum mismatch |
+
+Rules:
+
+- **List every file, including excluded ones and duplicates.** An excluded file is listed with
+  its reason; a duplicate points to the file it duplicates. Nothing supplied is silently omitted.
+- The primary reference gets the first row and states the edition or year if the file shows it,
+  and whether printed and PDF page numbers match (§1).
+- File names are written as plain text, not links — the material is not published with the
+  review. Do not include full local paths, only the name and its folder inside the course folder.
+- No personal data: if a file name contains a student's or instructor's name, keep the name as
+  supplied only if it is needed to identify the file; otherwise describe the file instead
+  (e.g. "photos of the 2024 answer sheet, 6 images").
+- A one-line summary above the table: total files, independent sources, excluded files, images
+  inspected — the same numbers as the completion summary (§16), so the two never disagree.
+
+**Short source labels on each question.** The gray metadata line of every question already lists
+its sources; make them **the `#` numbers from this table**, e.g. `Sources: #3, #7, #12`, each
+linking to the table row, so a reader can trace any question back to a file in one click.
+Generated questions show `Source: generated (§9)`.
+
+The appendix is rendered in the interface language with the file names left exactly as they are.
+In the PDF and DOCX (if produced) it appears as a plain table at the same position.
 
 ---
 
@@ -761,6 +805,11 @@ options.
 **Chapter summaries (§11a):** every in-scope chapter has one, it is exactly two lines, and it sits
 before the first question.
 
+**Source files (§11d):** the appendix has exactly one row per file found in the course folder
+(compare against a directory listing, ignoring the working directory); every question's source
+labels resolve to rows in it; the summary numbers above the table equal those in the completion
+summary.
+
 **Importance (§10b):** recompute every score from the bank with the fixed base and bonuses and
 confirm it matches what is rendered; no generated question scores above 1; no score exceeds 5.
 
@@ -814,7 +863,7 @@ directory: the bank checkpoint, `STATE.md`, `VERSIONS.md`, the pilot file if one
 the archive of earlier versions (§0d). Plus a completion summary.
 
 **Every output file carries both versions** in its end-of-file metadata block — the spec version
-from the settings (e.g. `Generated from prompt v0.7`) and the deliverable version from its
+from the settings (e.g. `Generated from prompt v0.8`) and the deliverable version from its
 filename (e.g. `Review file v03`) — in the HTML footer, the PDF's last page, the DOCX's last
 section and the bank's header, so it is always clear which prompt produced which file and whether
 a copy is the latest.
@@ -826,7 +875,8 @@ The completion summary reports:
 - the interaction mode used and, in DECIDE mode, every default applied (§0c)
 - the pilot chapter and the style corrections recorded from it (§0b)
 - the chapter map (§2a), with any labels that could not be mapped
-- files supplied, duplicates detected, independent sources counted
+- files supplied, duplicates detected, independent sources counted — and confirmation that the
+  "Source files" appendix (§11d) lists every one of them
 - images found and images visually inspected
 - raw question occurrences, unique questions after deduplication
 - exam questions reconstructed into multiple choice (§3b)
