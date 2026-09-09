@@ -1,21 +1,27 @@
-# PROMPT — Complete Course Review Generator (v0.4)
+# PROMPT — Complete Course Review Generator (v0.5)
 
 > Reusable spec for building a consolidated, verified, interactive review file from a folder
 > of course material. Fill in **PROJECT SETTINGS**, then paste the whole document as your prompt.
 > Everything below the settings block is generic and works for any course.
-
-> **Changes in v0.4:** pilot chapter for style approval before the full run (§0b); ASK / DECIDE
-> interaction mode so the prompt can run unattended (§0c); fixed base for the importance score
-> (§10b); interface language setting for toolbar, headings and answer-block labels (§7a, §12);
-> rule priority when instructions conflict (§0a); spec version recorded in the output (§16);
-> chapter-naming map between exam files and the book (§2a); UTF-8 without BOM for the checkpoint
-> (§13d); "how to use" must explain the three markers (§11).
 >
-> **Carried from earlier versions:** exam questions leaning towards multiple choice as a
-> direction, not a rule (§3b); importance score and focus areas (§10); low-confidence flag (§7c);
-> fixed, non-repetitive answer template with bold keywords (§7); two-line chapter opener (§11a);
-> single-select reading-mode filter (§13a); collapsed reference lists at the end (§11c); HTML as
-> the only mandatory deliverable (§13); bank checkpoint before rendering (§13d).
+> **Version control:** this prompt lives in a GitHub gist; every version is a revision there.
+> Latest: https://gist.github.com/AzizMarashly/b1cbce8a2bf051c125bfbbdcc1f3e03f
+> History and diffs: https://gist.github.com/AzizMarashly/b1cbce8a2bf051c125bfbbdcc1f3e03f/revisions
+
+> **Changes in v0.5:** a working directory holds every intermediate file plus a handoff log so a
+> later agent resumes instead of restarting (§0d); every output file carries a version number in
+> its name and only the latest stays in the course folder (§0e, §16); chapters and question
+> sections collapse in the HTML (§13a); importance and repetition are filtered with sliders
+> instead of fixed buttons (§13a); the filter toolbar collapses into a one-line bar for phones
+> (§13a).
+>
+> **Carried from earlier versions:** rule priority (§0a); pilot chapter (§0b); ASK / DECIDE mode
+> (§0c); chapter map (§2a); exam questions leaning towards multiple choice as a direction, not a
+> rule (§3b); fixed, non-repetitive answer template with bold keywords (§7); low-confidence flag
+> (§7c); importance score with a fixed base and focus areas (§10); two-line chapter opener (§11a);
+> collapsed reference lists at the end (§11c); interface language (§12); single-select
+> reading-mode filter (§13a); HTML as the only mandatory deliverable (§13); bank checkpoint
+> (§13d).
 
 ---
 
@@ -33,10 +39,10 @@
 | Interface language | `<<< e.g. ARABIC — toolbar, headings, answer-block labels (§7a) >>>` |
 | Interaction mode | `<<< ASK (default) / DECIDE — see §0c >>>` |
 | Pilot chapter | `<<< chapter number, or NONE — see §0b >>>` |
-| HTML filename | `<<< title >>>.html` |
-| Bank checkpoint filename | `<<< title >>>_bank.json` |
+| Output base name | `<<< title >>>` — files are named `<base>_v<NN>.<ext>`, see §0e |
+| Working directory | `.review_generation_working_directory` (inside the course folder, §0d) |
 | PDF / DOCX | `<<< ASK AT END (default) / ALWAYS / NEVER >>>` |
-| Spec version | `v0.4` — write this into the output metadata (§16) |
+| Spec version | `v0.5` — write this into the output metadata (§16) |
 
 ---
 
@@ -62,7 +68,8 @@ If the settings name a pilot chapter, do the following before touching the other
 
 1. Run §1–§10 for the pilot chapter only, then render a complete HTML file for it with every
    feature of §13a in place — chapter opener, four sections, answer blocks, reading modes,
-   reference lists.
+   sliders, collapsible chapter and sections, reference lists. Save it in `pilot/` inside the
+   working directory (§0d, §0e).
 2. Stop and ask the user to review the style: answer-block length, keyword bolding, how
    reconstructed exam questions read, the importance markers, the chapter opener.
 3. Apply their corrections to the pilot, and record them as additional rules in the methodology
@@ -88,6 +95,71 @@ state the decision.
 
 You may still stop in DECIDE mode when genuinely blocked — corrupted extraction with no visual
 fallback, a missing primary reference, an unreadable scope — but not for preferences.
+
+### 0d. Working directory — everything intermediate lives there, and a later agent can resume
+
+**First action of every run:** look for the working directory named in the settings, inside the
+course folder.
+
+- **If it exists**, read its `STATE.md` before anything else, then continue from the last
+  completed stage. Do not re-extract, re-verify or re-score anything the state file marks as done
+  unless the source files have changed (compare the hashes in the ledger). Say in your first
+  progress update which stage you resumed from.
+- **If it does not exist**, create it and start from stage 1.
+
+Nothing intermediate is ever written to the course folder itself — only the final deliverables
+go there (§0e). The working directory holds, in fixed subfolders:
+
+| Path | Contents |
+|---|---|
+| `STATE.md` | The handoff file — see below |
+| `ledger.json` | Source ledger (§4): every file, its hash, group, type, include/exclude reason |
+| `chapter_map.md` | The chapter map (§2a) with evidence |
+| `extracted/<source-id>/` | Raw extracted text per source, OCR output, notes on what was read visually |
+| `bank.json` | The verified bank checkpoint (§13d) — the single source of truth |
+| `coverage.md` | Subsection audit, focus areas, generated-question decisions (§9, §10) |
+| `pilot/` | The pilot chapter file and the user's style corrections (§0b) |
+| `qa/` | Every QA check's output, with the counts reported in §15 |
+| `render/` | Scripts or templates used to turn `bank.json` into the deliverables |
+| `archive/` | Superseded deliverable versions (§0e) |
+| `VERSIONS.md` | Version log of deliverables (§0e) |
+
+**`STATE.md` is written for the next agent, not for the user.** Update it at the end of every
+stage, and before any stop for user input. It contains, in this order:
+
+1. Spec version, interaction mode, settings in force, and the date of the last update.
+2. A stage checklist — stages 1 to 15 of this document — each marked `done`, `in progress` (with
+   what remains) or `not started`, with the file(s) it produced.
+3. Decisions taken that are not obvious from the files: chapter-map judgements, excluded
+   sources, style corrections from the pilot, importance-weight deviations, DECIDE-mode defaults
+   applied.
+4. Known problems and open questions: unresolved questions, low-confidence ids, anything that
+   could not be tested.
+5. **"To continue":** the exact next step, in one or two sentences, so an agent with no memory of
+   this run can pick it up.
+
+Keep it factual and short. A state file that is out of date is worse than none — if you cannot
+finish a stage, record exactly where you stopped.
+
+### 0e. Deliverable versioning — the latest file is always the one in the course folder
+
+Every deliverable filename carries a two-digit version: `<base>_v01.html`, `<base>_v02.html`,
+and so on, with the same number across formats produced from the same bank
+(`<base>_v02.html`, `<base>_v02.pdf`, `<base>_v02.docx`).
+
+- The number increments **every time a deliverable is regenerated**, for any reason — a fixed
+  answer, a style change, a resumed run. Never overwrite a file in place.
+- **Only the latest version stays in the course folder.** When a new version is produced, move
+  the previous one into `archive/` in the working directory. Anyone looking at the course folder
+  then sees exactly one review file per format, and it is the latest.
+- The version number also appears **inside** the file: on the cover, in the browser title, and in
+  the end-of-file metadata next to the spec version (§16), so a copied or renamed file still
+  identifies itself.
+- `VERSIONS.md` in the working directory records, per version: number, date, which formats were
+  produced, what changed since the previous version (one to three lines), and which bank
+  checkpoint it was rendered from.
+- The pilot file (§0b) is versioned the same way but named `<base>_pilot_ch<N>_v01.html` and kept
+  in `pilot/`, never in the course folder.
 
 ---
 
@@ -418,8 +490,9 @@ the reader will meet on every question, each in one or two sentences:
 - **⚠ Low confidence** — that it appears only where the answer rests on thin evidence (§7c), and
   that its absence means the answer was verified normally.
 
-It also names the reading modes in the toolbar (§13a) and suggests a reading order: exam
-questions first, then textbook, then the rest.
+It also names the reading modes, the two sliders and the chapter collapse controls in the toolbar
+(§13a), notes that the importance slider at 2 or more hides generated questions, and suggests a
+reading order: exam questions first, then textbook, then the rest.
 
 ### 11a. Chapter opener — two-line context summary
 
@@ -497,10 +570,59 @@ A single self-contained `.html` file. Each answer is hidden behind a native
 - It must work in any browser on phone, tablet and desktop, offline, opened directly from disk.
 - No external assets, no CDN, no fonts to download — everything inline.
 - JavaScript may add optional extras only: search across questions and answers, chapter filter,
-  the reading-mode filter below, expand-all / collapse-all, a visible counter, and a light/dark
-  toggle. All must degrade cleanly.
-- Provide print styles that reveal every answer when printed.
+  the reading-mode filter and sliders below, expand-all / collapse-all, a visible counter, and a
+  light/dark toggle. All must degrade cleanly.
+- Provide print styles that reveal every answer and open every chapter and section when printed.
 - Respect the reader's light/dark preference and offer a manual override.
+
+#### Collapsible toolbar — filters must not eat the screen on a phone
+
+The toolbar holds several controls (reading mode, chapter filter, two sliders, search, expand /
+collapse buttons, theme, reset). On a phone that is most of the screen. Make it collapsible:
+
+- The sticky toolbar has **two parts**: a one-line **bar** that is always visible, and a
+  **filter panel** that opens and closes beneath it.
+- The always-visible bar contains only: the visible counter (`N of M`), a **Filters** toggle
+  button, and the search box (search may move into the panel on very narrow screens if it does
+  not fit).
+- The filter panel holds everything else: reading mode, chapter filter, importance and
+  repetition sliders, expand / collapse answers, expand / collapse chapters, theme toggle, and
+  Reset filters.
+- **Default state:** on narrow screens (phones) the panel starts closed; on wide screens it starts
+  open. The reader's last choice is remembered across reloads, per device.
+- When the panel is closed and any filter is active (mode not "All", a slider above its minimum,
+  a chapter selected), the Filters button shows a **badge** with the number of active filters and
+  a short summary next to the counter, e.g. `Exam · ★3+ · Ch. 5`, so the reader always knows why
+  some questions are missing.
+- The Filters button is a real `<button>` with `aria-expanded` and `aria-controls`; the panel is
+  a native `<details>` or a region toggled by class. Keyboard and screen readers must operate it.
+- Opening the panel must not push the content the reader is looking at off the screen: overlay
+  it below the bar, or scroll so the current question stays in view.
+- Touch targets in the panel are at least 44 px high; sliders are full width on narrow screens.
+- Without scripting the panel is open, static, and the filters simply do nothing (everything is
+  shown), as required above.
+
+#### Collapsible chapters and sections
+
+Chapters and the four question sections inside them (§11b) are collapsible, using the same
+native `<details>`/`<summary>` mechanism as the answers, so it works without scripting.
+
+- **Three levels:** chapter → section → answer. Each level collapses independently; collapsing a
+  chapter hides its sections and questions, collapsing a section hides only its questions.
+- **Default state on open:** chapters open, sections open, answers closed. The reader is meant to
+  see questions immediately, not a list of headings.
+- The chapter `<summary>` line shows the chapter number and title, and the number of visible
+  questions in it. The two-line chapter opener (§11a) sits **inside** the chapter, directly under
+  the summary line, so it is visible whenever the chapter is open and never separated from it.
+- The section `<summary>` line shows the section name and its visible question count.
+- The toolbar offers **Collapse all chapters** and **Expand all chapters** alongside the existing
+  expand-all / collapse-all for answers; the two pairs are independent, so a reader can keep every
+  chapter open but every answer closed.
+- Open/closed state per chapter is remembered across reloads (e.g. `localStorage`, keyed by
+  chapter id) so a reader can close chapters already revised and come back later to the same
+  view. Without scripting, everything opens as per the default.
+- Search and filters must **never leave a matching question hidden inside a collapsed parent**:
+  when a filter or search changes, open every chapter and section that contains a visible match.
 
 #### Reading-mode filter — one question section at a time
 
@@ -509,22 +631,46 @@ all textbook questions across every chapter first, then all exam questions — i
 by chapter.
 
 - A sticky toolbar at the top holds a **single-select** control (segmented buttons or radio-style
-  chips): `All · Exam · Textbook · Other sources · Generated`. Optionally a second axis:
-  `All · Importance 4+ · Repeated 2+`.
+  chips): `All · Exam · Textbook · Other sources · Generated`.
 - Selecting a mode hides every question that does not belong to it, **across all chapters**, and
   hides any chapter that ends up with no visible questions. Chapter headings and the two-line
   chapter summary stay visible for chapters that still have questions.
 - A question tagged with two sections (e.g. exam + textbook) appears in both modes.
-- The visible counter updates to `N of M questions` for the current mode. The chapter filter and
-  the search combine with the mode (logical AND).
+- The visible counter updates to `N of M questions` for the current mode. The chapter filter,
+  the sliders below and the search combine with the mode (logical AND).
 - The current mode is remembered across reloads (e.g. `localStorage`) and reflected in the URL
   hash, so a reader can bookmark "textbook only". With scripting disabled the page must still show
   everything.
 - Implement by tagging every question element with data attributes (e.g. `data-section`,
   `data-chapter`, `data-importance`, `data-freq`) and toggling a class on the root — no
   per-question DOM rebuilding.
-- Printing ignores the mode by default and prints everything; say so near the print
-  instructions.
+- Printing ignores the mode and the sliders by default and prints everything; say so near the
+  print instructions.
+
+#### Importance and repetition sliders
+
+Two range sliders in the same toolbar, each a **minimum threshold**:
+
+- **Importance ≥ N** — range 1 to 5, default 1 (show everything). The current value is shown as
+  stars next to the slider (`★★★☆☆`).
+- **Repeated in ≥ N sources** — range 0 to the highest repetition count in the bank, default 0.
+  The current value is shown as a number.
+
+Behaviour:
+
+- Moving a slider hides every question below the threshold, across all chapters, and hides
+  chapters and sections left empty. The counter and the per-chapter counts in the summary lines
+  update as the reader drags.
+- Both sliders combine with each other, the reading mode, the chapter filter and the search
+  (logical AND).
+- Values are remembered across reloads and reflected in the URL hash together with the reading
+  mode, so a link can carry "exam questions, importance 4+".
+- A single **Reset filters** control returns both sliders, the mode, the chapter filter and the
+  search to their defaults.
+- Use native `<input type="range">` with a visible label and accessible name; keyboard arrows
+  must move it. Without scripting the sliders are hidden and everything is shown.
+- Generated questions are pinned at importance 1 (§10b), so the importance slider at 2 or more
+  removes them — mention this in the "how to use" section.
 
 ### 13b. PDF — plain reading and printing copy (on request)
 
@@ -552,16 +698,16 @@ expanded.
 
 ### 13d. Bank checkpoint — save before rendering
 
-Before producing any output file, save the complete verified bank to the checkpoint filename
-from the settings: every canonical question with its fields from §5, the source ledger, the
+Before producing any output file, save the complete verified bank as `bank.json` in the working
+directory (§0d): every canonical question with its fields from §5, the source ledger, the
 subsection coverage table, the chapter map (§2a) and the focus-area ranking. Plain JSON (or
 Markdown tables if JSON is impractical), encoded **UTF-8 without a byte-order mark** so Arabic
 text survives every tool that reads it, no personal data. Include the spec version from the
-settings at the top of the file.
+settings and the deliverable version it will be rendered into (§0e) at the top of the file.
 
 This is the single source of truth for every rendered file. If a later fix is needed, edit the
-bank and re-render rather than patching the HTML by hand. Mention the checkpoint file in the
-completion summary.
+bank, bump the deliverable version and re-render from `render/` rather than patching the HTML by
+hand. Mention the checkpoint file in the completion summary.
 
 ### 13e. Ask before producing PDF and DOCX
 
@@ -619,8 +765,24 @@ are broken by repetition. Verify mechanically.
 clicking reveals only that question, that the control's label changes state, that clicking again
 re-hides, that search and filter return correct counts, that each reading mode shows only its
 questions and the counter matches a manual count for at least one mode, that the mode survives a
-reload, that the end-of-file reference lists start collapsed, and that both themes render. Report
-what you tested.
+reload, that the end-of-file reference lists start collapsed, and that both themes render.
+Also confirm, at a phone viewport width (about 390 px) as well as desktop: the filter panel
+starts closed on the phone width and open on desktop; the Filters button opens and closes it;
+with the panel closed and a filter active, the badge and summary show; the panel state survives a
+reload; chapters and sections open by default and collapse independently; collapse-all
+chapters and expand-all chapters work and do not touch answer state; a search hit inside a
+collapsed chapter opens that chapter; the importance slider at 5 shows exactly the questions the
+bank scores 5; the repetition slider at its maximum shows exactly the most-repeated questions;
+sliders, mode and chapter state survive a reload; Reset filters returns everything to default;
+the version number in the filename matches the one on the cover and in the metadata. Report what
+you tested.
+
+**Working directory (§0d):** `STATE.md` exists, every stage is marked, and the "To continue"
+line is accurate; no intermediate file was written to the course folder.
+
+**Versioning (§0e):** exactly one file per produced format in the course folder, all with the
+same version number; earlier versions are in `archive/`; `VERSIONS.md` has an entry for the
+current version.
 
 **PDF (if produced):** verify structurally that no form fields, actions or scripts remain; render
 pages and inspect them visually; confirm the answers are present and the layout is correct.
@@ -635,15 +797,20 @@ audits produce false positives from legitimate content.
 
 ## 16. Deliverables
 
-The HTML file, the bank checkpoint, the pilot file if one was built, any requested PDF/DOCX,
-plus a completion summary.
+In the course folder: the versioned HTML file and any requested PDF/DOCX (§0e). In the working
+directory: the bank checkpoint, `STATE.md`, `VERSIONS.md`, the pilot file if one was built, and
+the archive of earlier versions (§0d). Plus a completion summary.
 
-**Every output file carries the spec version** from the settings (e.g. `Generated from prompt
-v0.4`) in its end-of-file metadata block — the HTML footer, the PDF's last page, the DOCX's last
-section and the bank's header — so it is always clear which prompt produced which file.
+**Every output file carries both versions** in its end-of-file metadata block — the spec version
+from the settings (e.g. `Generated from prompt v0.5`) and the deliverable version from its
+filename (e.g. `Review file v03`) — in the HTML footer, the PDF's last page, the DOCX's last
+section and the bank's header, so it is always clear which prompt produced which file and whether
+a copy is the latest.
 
 The completion summary reports:
 
+- the working-directory path, whether the run was resumed and from which stage (§0d)
+- the deliverable version produced, and what changed since the previous one (§0e)
 - the interaction mode used and, in DECIDE mode, every default applied (§0c)
 - the pilot chapter and the style corrections recorded from it (§0b)
 - the chapter map (§2a), with any labels that could not be mapped
@@ -670,7 +837,10 @@ The completion summary reports:
 - **Do not fabricate missing choices, answers, citations, or page numbers.**
 - Send brief progress updates as you work.
 - Explain technical limitations **before** delivering an inferior substitute, not after.
-- **Preserve all attached source files unchanged.**
+- **Preserve all attached source files unchanged.** Write intermediate files only inside the
+  working directory (§0d); never leave temporary files in the course folder.
+- Update `STATE.md` before every stop and at every stage boundary, so an interrupted run can be
+  resumed by another agent.
 - Work only on the supplied content unless external research is explicitly necessary for a
   scientific correction — and label it when you do.
 - Report honestly: if something failed, say so; if a step was skipped, say that.
