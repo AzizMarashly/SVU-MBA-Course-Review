@@ -66,6 +66,12 @@
   .cta{margin-top:16px;color:var(--accent-text);font-weight:600;font-size:.95rem}
   .card:hover .cta{text-decoration:underline}
 
+  .cardwrap{display:flex;flex-direction:column;gap:8px}
+  .cardwrap .card{flex:1}
+  .dl{display:block;text-align:center;font-size:.9rem;font-weight:600;text-decoration:none;color:var(--accent-text);background:var(--accent-soft);border-radius:10px;padding:9px 12px}
+  .dl:hover{filter:brightness(1.05);text-decoration:underline}
+  .hint{color:var(--muted);font-size:.92rem;margin:18px 0 0}
+  code{font-family:ui-monospace,Consolas,monospace;font-size:.9em;background:var(--accent-soft);padding:1px 6px;border-radius:6px}
   .card.soon{opacity:.6;border-style:dashed;box-shadow:none;cursor:default}
   .card.soon:hover{transform:none;border-color:var(--line)}
 
@@ -102,6 +108,7 @@
       <li><a href="#courses">المواد</a></li>
       <li><a href="#how">كيف تُبنى</a></li>
       <li><a href="#generator">المولّد</a></li>
+      <li><a href="#contribute">ساهم</a></li>
       <li><a href="https://github.com/AzizMarashly/SVU-MBA-Course-Review" target="_blank" rel="noopener">GitHub ↗</a></li>
     </ul>
   </div>
@@ -128,6 +135,7 @@
     <p class="sub">اضغط على المادة لفتح المراجعة الكاملة.</p>
     <div class="grid">
 
+      <div class="cardwrap">
       <a class="card" href="S3/IMT/">
         <div class="top"><span class="code">IMT</span><span class="ver">v1.3</span></div>
         <h3>التسويق الدولي</h3>
@@ -139,7 +147,10 @@
         </div>
         <div class="cta">افتح المراجعة ←</div>
       </a>
+      <a class="dl" href="S3/IMT/index.html" download="مراجعه كامله لماده ال IMT_v1.3.html">⬇ تحميل ملف IMT للعمل بلا إنترنت</a>
+      </div>
 
+      <div class="cardwrap">
       <a class="card" href="S3/MIS/">
         <div class="top"><span class="code">MIS</span><span class="ver">v0.1</span></div>
         <h3>نظم المعلومات الإدارية</h3>
@@ -151,15 +162,20 @@
         </div>
         <div class="cta">افتح المراجعة ←</div>
       </a>
+      <a class="dl" href="S3/MIS/index.html" download="مراجعه كامله لماده ال MIS-v0.1.html">⬇ تحميل ملف MIS للعمل بلا إنترنت</a>
+      </div>
 
+      <div class="cardwrap">
       <div class="card soon">
         <div class="top"><span class="code">…</span><span class="ver">قريباً</span></div>
         <h3>مواد أخرى</h3>
         <p class="en">More courses coming</p>
         <div class="stats"><div class="stat"><small>تُضاف المراجعات تباعاً خلال الفصل</small></div></div>
       </div>
+      </div>
 
     </div>
+    <p class="hint">💡 كل مراجعة ملف HTML واحد. حمّله وافتحه من هاتفك أو حاسوبك بلا إنترنت، أو أرسله لزملائك كما هو. ملاحظاتك وفلاترك تُحفَظ في المتصفح.</p>
     <div class="disclaimer">
       <b>⚠️ اقرأ قبل الاعتماد على أي مراجعة:</b>
       هذه الملفات مُولَّدة بالذكاء الاصطناعي من مواد المادة، وقد رُوجعت جزئياً فقط. قد تحتوي إجابات خاطئة، أو أسئلة أُسيء فهمها، أو أرقام صفحات غير دقيقة.
@@ -190,13 +206,29 @@
         <li>الصق البرومبت كاملاً في Claude Code داخل ذلك المجلد، واترك الباقي له.</li>
       </ol>
       <div class="btns">
-        <a class="btn primary" href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/blob/main/prompt/SVU-MBA-Course-Review-Generator.md" target="_blank" rel="noopener">اقرأ البرومبت (v0.7)</a>
+        <a class="btn primary" href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/blob/main/prompt/SVU-MBA-Course-Review-Generator.md" target="_blank" rel="noopener">اقرأ البرومبت (v0.8)</a>
         <a class="btn" href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/blob/main/prompt/CHANGELOG.md" target="_blank" rel="noopener">سجل التغييرات</a>
         <a class="btn" href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/blob/main/LICENSE.md" target="_blank" rel="noopener">الرخصة</a>
       </div>
       <div class="note">
         🤝 <b>عهد المجتمع:</b> شارك المراجعات مجاناً مع زملائك، أبقِ إشارة المصدر داخل الملف، ولا تبعها أو تضعها خلف اشتراك. الكتب والدورات ملك لأصحابها.
       </div>
+    </div>
+  </section>
+
+  <section id="contribute">
+    <h2>ساهم في تحسين المراجعات</h2>
+    <p class="sub">هذا مشروع طلابي مفتوح. كل تصحيح يفيد من يأتي بعدك، ولا يحتاج أي تصحيح إلى خبرة برمجية.</p>
+    <div class="features">
+      <div class="feat"><div class="ic">🐞</div><h4>وجدت خطأً؟ أبلغ عنه</h4><p>افتح <a href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/issues/new" target="_blank" rel="noopener">بلاغاً على GitHub</a> واذكر المادة والفصل ونص السؤال، ورقم الصفحة في الكتاب إن أمكن. هذا يكفي.</p></div>
+      <div class="feat"><div class="ic">📄</div><h4>عندك دورة أو ملخص جديد؟</h4><p>أضفه إلى مجلد المادة في المستودع وشغّل البرومبت، أو أرسله في بلاغ وسيُدمج في الإصدار التالي. احذف أي بيانات شخصية أولاً.</p></div>
+      <div class="feat"><div class="ic">🛠️</div><h4>تريد تصحيح سؤال بنفسك؟</h4><p>بنك الأسئلة وملفات المصدر لكل مادة موجودة في مجلد <code>courses/</code> مع شرح خطوة بخطوة لإعادة البناء والنشر.</p></div>
+      <div class="feat"><div class="ic">🎓</div><h4>تريد إضافة مادة كاملة؟</h4><p>اجمع مواد المادة، شغّل البرومبت، ثم أضف المجلد والصفحة إلى المستودع. دليل المساهمة يشرح كل خطوة.</p></div>
+    </div>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">دليل المساهمة الكامل</a>
+      <a class="btn" href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/tree/main/courses" target="_blank" rel="noopener">ملفات المصدر لكل مادة</a>
+      <a class="btn" href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/issues" target="_blank" rel="noopener">البلاغات المفتوحة</a>
     </div>
   </section>
 

@@ -1,0 +1,39 @@
+ex00.docx	اسئلة سابقة\IMT_دورة f17 تسويق دولي⁩.docx
+ex01.pdf	اسئلة سابقة\_⁨أسئلة-تسويق-دولي_IMT(1)⁩.pdf
+ex02.pdf	اسئلة سابقة\_⁨ملخصIMT عماد جبور كامل⁩.pdf
+ex03.docx	اسئلة سابقة\imt exam(1).docx
+ex04.docx	اسئلة سابقة\imt exam.docx
+ex05.docx	اسئلة سابقة\imt-exam.docx
+ex06.docx	اسئلة سابقة\اسئلة(1).docx
+ex07.docx	اسئلة سابقة\اسئلة.docx
+ex08.docx	اسئلة سابقة\اسئلة_IMT.docx
+ex09.pdf	اسئلة سابقة\اسئلة_دورات_IMT.pdf
+ex10.pdf	اسئلة سابقة\أسئلة_دورات_F19_تسويق_دولي_MIS.pdf
+ex11.pdf	اسئلة سابقة\دورات  F19.pdf
+ex12.txt	اسئلة سابقة\دورات.txt
+ex13.docx	اسئلة سابقة\دورة f17 تسويق دولي.docx
+sum00.pdf	ملخصات سابقة\IMT_F19_وائل منصور.pdf
+sum02.pdf	ملخصات سابقة\_⁨ملخص_عاصم_التسويق_والتجارة_الدولية_IMT⁩.pdf
+rel00.jpg	ملفات متعلقة بالمادة\photo_2024-06-05_20-58-43.jpg
+rel01.pdf	ملفات متعلقة بالمادة\الفصل الأول.pdf
+rel02.pdf	ملفات متعلقة بالمادة\الفصل الثالث.pdf
+rel03.pdf	ملفات متعلقة بالمادة\الفصل الثاني.pdf
+rel04.pdf	ملفات متعلقة بالمادة\الفصل الخامس.pdf
+rel05.ppt	ملفات متعلقة بالمادة\شروط التجارة الدولية.ppt
+rel06.ppt	ملفات متعلقة بالمادة\شروط قيام التجارة والفاه الاقتصادي.ppt
+cur00.pdf	المنهاج الٱكاديمي\MBA-International Marketing and Trading-The Book.pdf
+cur02.pdf	المنهاج الٱكاديمي\_⁨أسئلة الكتاب - IMT⁩.pdf
+slide00.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch01(Nature of International Marketing).pdf
+slide01.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch02(International cultural and social environment).pdf
+slide02.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch03 (International marketing political).pdf
+slide03.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch04 (International marketing political).pdf
+slide04.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch05(International Marketing Economic).pdf
+slide05.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch06(Global Information Management and Global Marketing Research).pdf
+slide06.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch07 (International Markets- Entry Strategies).pdf
+slide07.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch08 (International Markets- Entry Strategies).pdf
+slide08.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch09(Product Strategies in International Markets).pdf
+slide09.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch10(New Products Development in International Markets).pdf
+slide10.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch11(Pricing Strategies in International Markets).pdf
+slide11.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch12(Distribution Strategies in International Markets).pdf
+slide12.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch13(Integrated Marketing Communication in International Markets).pdf
+slide13.pdf	المنهاج الٱكاديمي/Slides\MBA-International Marketing and Trading-Ch14(Integrated Marketing Communication Elements in International Markets).pdf

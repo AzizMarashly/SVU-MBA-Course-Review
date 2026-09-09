@@ -2,12 +2,25 @@
 
 Course review pages for the SVU MBA program, hosted on GitHub Pages.
 
+## Layout
+
+| Path | Contents |
+|---|---|
+| `S<n>/<CODE>/index.html` | The published review pages (GitHub Pages serves the repository root). |
+| `index.html` | The home page listing the courses. |
+| `prompt/` | The generator prompt, versioned, with its changelog. |
+| `courses/S<n>/<CODE>/` | Source material, the filled-in prompt, and the working directory of each run, so a review can be resumed or extended. See `courses/README.md`. Not served on the site. |
+| `CONTRIBUTING.md` | How to report mistakes, fix questions, add sources or courses. |
+
 ## Adding a course
 
-1. Create a folder under the semester folder, named after the course code (e.g. `S3/IMT/`).
-2. Put the review page in it as `index.html`.
-3. Add a link to it in the root `index.html`.
-4. Commit and push; GitHub Pages redeploys automatically.
+1. Run the prompt locally on the course material (see below).
+2. Copy the course folder to `courses/S<n>/<CODE>/` and write its `README.md` (model: `courses/S3/IMT/README.md`).
+3. Put the review page at `S<n>/<CODE>/index.html`.
+4. Add a card for it in the root `index.html`.
+5. Commit and push; GitHub Pages redeploys automatically.
+
+Details in `CONTRIBUTING.md`.
 
 ## The prompt that generates the pages
 
@@ -20,6 +33,12 @@ and renders a self-contained interactive HTML review.
 the top of the prompt, then paste the whole file as the prompt to Claude Code opened in that
 folder. See the prompt itself for the full process; `prompt/CHANGELOG.md` lists what changed in
 each version, and every version is a git tag (`v0.1`, `v0.2`, ...).
+
+## Contributing
+
+Mistakes are expected: the reviews are AI-generated. `CONTRIBUTING.md` explains how to report
+or fix one, add a new exam sitting, or add a course. Pull before you push; several people and
+sessions work on this repository at once.
 
 ## Licence
 

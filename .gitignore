@@ -1,5 +1,12 @@
-# intermediate files produced by the prompt (section 0d) - contain raw extracted source text
-.review_generation_working_directory/
+# Working directories ARE committed under courses/ so a run can be resumed (see courses/README.md).
+# Keep them out only when the prompt is run somewhere else in this repo.
+/.review_generation_working_directory/
+# archived deliverable versions: git history already has them
+courses/**/_old_versions/
+courses/**/archive/
+# large regenerable OCR page images
+courses/**/*.png
+__pycache__/
 # local scratch
 *.bak
 ~$*
