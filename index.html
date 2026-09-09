@@ -11,6 +11,7 @@
     --bg:#f5f6fa; --card:#ffffff; --text:#1c1f2a; --muted:#5f6577; --line:#e3e6ee;
     --accent:#2f5fe3; --accent-soft:#e8eefc; --accent-text:#1d47b8;
     --shadow:0 1px 2px rgba(20,25,45,.05),0 8px 24px -12px rgba(20,25,45,.18);
+    --warn-soft:#fff4e0; --warn-text:#8a4b00; --warn-line:#f3d9a8;
     --radius:16px;
   }
   @media (prefers-color-scheme: dark){
@@ -18,6 +19,7 @@
       --bg:#0f1117; --card:#181b24; --text:#e8eaf0; --muted:#9aa1b3; --line:#2a2f3d;
       --accent:#6b8ff5; --accent-soft:#1c2540; --accent-text:#9db3ff;
       --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -12px rgba(0,0,0,.6);
+      --warn-soft:#2e2412; --warn-text:#f3c77a; --warn-line:#5a4520;
     }
   }
   *{box-sizing:border-box}
@@ -82,6 +84,9 @@
   .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
   .btn:hover{filter:brightness(1.05)}
 
+  .pill.warn{background:var(--warn-soft);color:var(--warn-text)}
+  .disclaimer{margin-top:22px;background:var(--warn-soft);color:var(--warn-text);border:1px solid var(--warn-line);border-radius:12px;padding:14px 18px;font-size:.95rem;line-height:1.8}
+  .disclaimer a{color:inherit;font-weight:600}
   .note{background:var(--accent-soft);border-radius:12px;padding:14px 18px;color:var(--accent-text);font-size:.95rem;margin-top:20px}
 
   footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:.9rem;text-align:center}
@@ -106,11 +111,12 @@
 
   <div class="hero">
     <h1>مراجعات كاملة لمواد ماجستير إدارة الأعمال</h1>
-    <p>ملف واحد لكل مادة يجمع أسئلة الكتاب والدورات السابقة والملخصات، مع إجابات موثّقة من الكتاب ودرجة أهمية لكل سؤال.</p>
+    <p>ملف واحد لكل مادة يجمع أسئلة الكتاب والدورات السابقة والملخصات، مع إجابات مقترحة مرجَّعة إلى الكتاب ودرجة أهمية تقديرية لكل سؤال.</p>
     <div class="pills">
       <span class="pill">الجامعة الافتراضية السورية</span>
       <span class="pill">تفاعلي · يعمل بلا إنترنت</span>
       <span class="pill">مجاني للطلاب</span>
+      <span class="pill warn">⚠️ مُولَّد بالذكاء الاصطناعي · قد يحوي أخطاء</span>
     </div>
   </div>
 
@@ -154,16 +160,23 @@
       </div>
 
     </div>
+    <div class="disclaimer">
+      <b>⚠️ اقرأ قبل الاعتماد على أي مراجعة:</b>
+      هذه الملفات مُولَّدة بالذكاء الاصطناعي من مواد المادة، وقد رُوجعت جزئياً فقط. قد تحتوي إجابات خاطئة، أو أسئلة أُسيء فهمها، أو أرقام صفحات غير دقيقة.
+      استخدمها كأداة تنظيم ومراجعة إلى جانب الكتاب، لا كبديل عنه. إن وجدت خطأً، أبلغ عنه عبر
+      <a href="https://github.com/AzizMarashly/SVU-MBA-Course-Review/issues" target="_blank" rel="noopener">صفحة المشاكل على GitHub</a>
+      ليُصحَّح في الإصدار التالي.
+    </div>
   </section>
 
   <section id="how">
     <h2>ماذا تجد داخل كل مراجعة؟</h2>
     <p class="sub">كل ملف HTML مستقل بالكامل، يمكن حفظه وفتحه على الهاتف أو الحاسوب بلا اتصال.</p>
     <div class="features">
-      <div class="feat"><div class="ic">✅</div><h4>إجابات موثّقة</h4><p>كل إجابة مراجَعة على الكتاب مع رقم الصفحة، والأسئلة غير المؤكدة مُعلَّمة.</p></div>
-      <div class="feat"><div class="ic">🎯</div><h4>درجة أهمية</h4><p>تقييم لكل سؤال حسب تكراره في الدورات وتركيز المدرّس.</p></div>
+      <div class="feat"><div class="ic">✅</div><h4>إجابات مرجَّعة إلى الكتاب</h4><p>كل إجابة تشير إلى صفحة في الكتاب لتتحقق منها بنفسك. الأسئلة منخفضة الثقة مُعلَّمة، لكن قد توجد أخطاء غير مُعلَّمة أيضاً.</p></div>
+      <div class="feat"><div class="ic">🎯</div><h4>درجة أهمية تقديرية</h4><p>تقدير لكل سؤال حسب تكراره في الدورات السابقة، وليس تنبؤاً بما سيأتي في الامتحان.</p></div>
       <div class="feat"><div class="ic">🔍</div><h4>فلاتر ذكية</h4><p>صفّي حسب الفصل أو المصدر أو الأهمية، وطيّ الفصول لمراجعة سريعة.</p></div>
-      <div class="feat"><div class="ic">📝</div><h4>مصادر متعددة</h4><p>أسئلة الكتاب، الدورات السابقة، والملخصات المتداولة، مدمجة بلا تكرار.</p></div>
+      <div class="feat"><div class="ic">📝</div><h4>مصادر متعددة</h4><p>أسئلة الكتاب، الدورات السابقة، والملخصات المتداولة، مدمجة قدر الإمكان بلا تكرار.</p></div>
     </div>
   </section>
 
@@ -192,7 +205,7 @@
 <footer>
   <div class="wrap">
     البرومبت مرخّص تحت <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ar" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> ·
-    الإجابات قد تحتوي أخطاء وليست تنبؤاً بأي امتحان ·
+    المراجعات مُولَّدة بالذكاء الاصطناعي، قد تحتوي أخطاء، وليست تنبؤاً بأي امتحان ولا بديلاً عن الكتاب ·
     <a href="https://github.com/AzizMarashly/SVU-MBA-Course-Review" target="_blank" rel="noopener">المصدر على GitHub</a>
   </div>
 </footer>
