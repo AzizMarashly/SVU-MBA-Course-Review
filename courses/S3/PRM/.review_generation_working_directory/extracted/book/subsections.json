@@ -1,0 +1,650 @@
+{
+ "1": {
+  "1-1": {
+   "name": "مقدمة INTRODUCTION",
+   "page": 13,
+   "topics": []
+  },
+  "1-2": {
+   "name": "أهمية إدارة المشاريع THE IMPORTANCE OF PROJECT MANAGEMENT",
+   "page": 14,
+   "topics": [
+    "1-2-1 االهتمام المتزايد بإدارة المشاريع Growing Interest in Project Management (ص 17)"
+   ]
+  },
+  "1-3": {
+   "name": "تعريف المشروع PROJECT DEFINITION",
+   "page": 19,
+   "topics": [
+    "1-3-1 المشاريع ونظم اإلنتاج Projects and Production Systems (ص 21)",
+    "1-3-2 ما هو ليس مشروعا What a Project Is Not (ص 23)",
+    "1-3-3 ال برنامج مقابل المشروع Program Versus Project (ص 24)"
+   ]
+  },
+  "1-4": {
+   "name": "خصائص المشروع CHARACTERISTICS OF PROJECTS",
+   "page": 24,
+   "topics": [
+    "1-4-1 له هدف محدد Specific Goal (ص 25)",
+    "1-4-2 مؤقت Temporary (ص 25)",
+    "1-4-3 له منتج فريد Unique (ص 26)",
+    "1-4-4 له فريق عمل متنوّع Multi-skilled Team (ص 26)",
+    "1-4-5 له عدة قيود Multiple Constraints (ص 27)",
+    "1-4-6 مبني على العمل التدريجي Progressive Elaboration (ص 27)",
+    "1-4-7 عمل غير مألوف Unfamiliar (ص 27)",
+    "1-4-8 جزء من عملية Part of a Process (ص 28)",
+    "1-4-9 لها أهمية ثانوية Secondary Importance (ص 28)",
+    "1-4-10 معقّدة Complex (ص 28)",
+    "1-4-11 تعمل في بيئة ديناميكية Dynamic Environment (ص 28)",
+    "1-4-12 لها أحجام مختلفة Different Sizes (ص 29)",
+    "1-4-13 خارجية أو داخلية External or Internal (ص 29)",
+    "1-4-14 لهل منتج ملموس أو غير ملموس Tangible or Intangible Product (ص 29)",
+    "1-4-15 تتطلب شكل فريدا من أشكال اإلدارة Unique Form of Management (ص 29)",
+    "1-4-16 تعمل في كافة القطاعات All Sectors (ص 30)",
+    "1-4-17 للمشروع دورة حياة Project has a Life Cycle (ص 30)",
+    "1-4-18 المشا ريع مقابل األعمال التشغيلية Projects versus Operations (ص 30)",
+    "1-4-19 المهارات الشخصية والمهارات الصعبة Soft Skills and Hard Skills (ص 31)",
+    "1-4-20 السلطة والمسؤولية Authority and Responsibility (ص 32)"
+   ]
+  },
+  "1-5": {
+   "name": "أبعاد المشروع PROJECT DIMENSIONS",
+   "page": 33,
+   "topics": [
+    "1-5-1 األشخاص People (ص 34)",
+    "1-5-2 أصحاب المصلحة Stakeholders (ص 35)",
+    "1-5-3 المستخدمون النهائيون End-Users (ص 35)",
+    "1-5-4 ادة ق فرق Team Leaders (ص 35)",
+    "1-5-5 العملية Process (ص 35)",
+    "1-5-6 المنتج والتكنولوجيا Product and Technology (ص 36)"
+   ]
+  }
+ },
+ "2": {
+  "2-1": {
+   "name": "نجاح وفشل المشروع PROJECT SUCCESS AND FAILURE",
+   "page": 52,
+   "topics": []
+  },
+  "2-2": {
+   "name": "مدير المشروع PROJECT MANAGER",
+   "page": 55,
+   "topics": []
+  },
+  "2-3": {
+   "name": "ما هي إدارة المشاريع؟ PROJECT MANAGEMENT",
+   "page": 57,
+   "topics": []
+  },
+  "2-4": {
+   "name": "أهداف إدارة المشاريع OBJECTIVES OF PROJECT MANAGEMENT",
+   "page": 59,
+   "topics": [
+    "2-4-1 مفاضلة المثلث Triangle Trade-off (ص 59)",
+    "2-4-2 مهارات إدارة المشاريع Project Management Skills (ص 62)",
+    "2-4-3 برمجيات إدارة المشاريع Project Management Software (ص 63)",
+    "2-4-4 الفوائد المحتملة إلدارة المشاريع Potential Benefits of Project Management (ص 64)",
+    "2-4-5 التحديات المحتملة إلدارة المشاريع Potential Challenges of Project Management (ص 65)"
+   ]
+  },
+  "2-5": {
+   "name": "أصحاب المصلحة في المشروع PROJECT STAKEHOLDERS",
+   "page": 66,
+   "topics": [
+    "2-5-1 العمل مع أصحاب المصلحة Working with stakeholders (ص 66)",
+    "2-5-2 أدوار ومسؤوليات أصحاب المصلحة Stakeholder’s roles and responsibilities (ص 66)"
+   ]
+  },
+  "2-6": {
+   "name": "تاريخ إدارة المشاريع HISTORY OF PROJECT MANAGEMENT",
+   "page": 68,
+   "topics": []
+  }
+ },
+ "3": {
+  "3-1": {
+   "name": "مقدمة INTRODUCTION",
+   "page": 84,
+   "topics": []
+  },
+  "3-2": {
+   "name": "إدارة المشاريع واإلدارة اإلستراتيجية PROJECT MANAGEMENT AND STRATEGIC MANAGEMENT",
+   "page": 84,
+   "topics": []
+  },
+  "3-3": {
+   "name": "عملية اإلدارة اإلستراتيجية STRATEGIC MANAGEMENT PROCESS",
+   "page": 85,
+   "topics": []
+  },
+  "3-4": {
+   "name": "نظام أولويات المشروع PROJECT PRIORITY SYSTEM",
+   "page": 88,
+   "topics": [
+    "3-4-1 المشكلة األولى :فجوة التنفيذ Implementation Gap (ص 88)",
+    "3-4-2 المشكلة الثانية :سياسة المنظمة Organization Politics (ص 89)",
+    "3-4-3 المشكلة الثالثة :تضارب الموارد وتعدد المهام Resource Conflicts and Multitasking (ص 89)"
+   ]
+  },
+  "3-5": {
+   "name": "تصنيف المشاريع PROJECT CLASSIFICATION",
+   "page": 90,
+   "topics": [
+    "3-5-1 مشاريع االمتثال Compliance Projects (ص 90)",
+    "3-5-2 المشاريع التشغيلية Operational Projects (ص 91)",
+    "3-5-3 المشاريع اإلستراتيجية Strategic Projects - 91 (ص None)"
+   ]
+  },
+  "3-6": {
+   "name": "معايير االختيار SELECTION CRITERIA",
+   "page": 92,
+   "topics": [
+    "3-6-1 المعايير الماليةFinancial Criteria (ص 92)",
+    "3-6-2 المعايير غير المالية Non-Financial Criteria (ص 96)",
+    "3-6-3 نماذج متعدد المعايير الختيار المشاريع Multi-Criteria Model for Project Selection (ص 97)"
+   ]
+  },
+  "3-7": {
+   "name": "تطبيق نموذج االختيار APPLYING A SELECTION MODEL",
+   "page": 101,
+   "topics": [
+    "3-7-1 تصنيف المشاريع Project Classification (ص 101)",
+    "3-7-2 اختيار النموذج Selecting a Model (ص 101)",
+    "3-7-3 مصادر وطلب مقترحات المشاريع Sources and Solicitation of Project Proposals (ص 102)",
+    "3-7-4 ترتيب المقترحات واختيار المشاريع Ranking Proposals and Selection of Projects (ص 104)",
+    "3-7-5 دراسة الجدوى Feasability Study (ص 105)"
+   ]
+  }
+ },
+ "4": {
+  "4-1": {
+   "name": "مقدمة INTRODUCTION",
+   "page": 126,
+   "topics": []
+  },
+  "4-2": {
+   "name": "مراحل دورة حياة المشروع PROJECT LIFE CYCLE PHASES",
+   "page": 127,
+   "topics": [
+    "4-2-1 مرحلة التعريف Definition Phase (ص 129)",
+    "4-2-2 مرحلة التخطيط Planning Phase (ص 131)",
+    "4-2-3 مرحلة التنفيذ Execution Phase (ص 132)",
+    "4-2-4 مرحلة اإلغلق Closing Phase (ص 135)"
+   ]
+  },
+  "4-3": {
+   "name": "خصائص مراحل المشروع PROJECT PHASES CHARACTERISTICS",
+   "page": 136,
+   "topics": []
+  },
+  "4-4": {
+   "name": "إدارة المشاريع المهنية PROJECT MANAGEMENT PROFESSIONAL",
+   "page": 138,
+   "topics": [
+    "4-4-1 معهد إدارة المشاريع Project Management Institute (PMI) (ص 138)",
+    "4-4-2 الدليل المعرفي إلدارة المشاريع Project Management Body of Knowledge (PMBOK) (ص 139)"
+   ]
+  },
+  "4-5": {
+   "name": "المجاالت المعرفية إلدارة المشاريع PROJECT MANAGEMENT KNOWLEDGE AREAS",
+   "page": 145,
+   "topics": [
+    "4-5-1 إدارة تكامل المشروع Project Integration Management (ص 145)",
+    "4-5-2 إدارة نطاق المشروع Project Scope Management (ص 146)",
+    "4-5-3 إدارة الزمن في المشروع Project Time Management (ص 147)",
+    "4-5-4 إدارة تكلفة المشروع Project Cost Management (ص 147)",
+    "4-5-5 إدارة جودة المشروع Project Quality Management (ص 148)",
+    "4-5-6 إدارة الموارد البشرية للمشروع Project Human Resource Management (ص 148)",
+    "4-5-7 إدارة التواصل في المشروع Project Communication Management (ص 149)",
+    "4-5-8 إدارة المخاطر في مشروع Project Risk Management (ص 151)",
+    "4-5-9 إدارة المشتريات في المشروع Project Procurement Management (ص 152)",
+    "4-5-10 إدارة أصحاب المصلحة Project Stakeholder Management (ص 153)"
+   ]
+  }
+ },
+ "5": {
+  "5-1": {
+   "name": "مقدمة INTRODUCTION",
+   "page": 166,
+   "topics": []
+  },
+  "5-2": {
+   "name": "ميثاق المش روع PROJECT CHARTER",
+   "page": 166,
+   "topics": [
+    "5-2-1 ما هو ميثاق المشروع؟ (ص 166)",
+    "5-2-2 لماذا يُستخدم ميثاق المشروع؟ (ص 168)",
+    "5-2-3 مكونات ميثاق المشروع (ص 169)",
+    "5-2-4 خطوات إنشاء ميثاق المشروع Steps to Create a Project Charter (ص 174)"
+   ]
+  },
+  "5-3": {
+   "name": "تعر يف المشكلة أو الفرصة PROBLEM OR OPPORTUNITY DEFINITION",
+   "page": 176,
+   "topics": []
+  },
+  "5-4": {
+   "name": "تعريف نطاق المشروع PROJECT SCOPE DEFINITION",
+   "page": 177,
+   "topics": [
+    "5-4-1 بيان نطاق المشر وع Project Scope Statement (ص 178)",
+    "5-4-2 مكونات بيان نطاق المشروع Project Scope Statement Content (ص 178)",
+    "5-4-3 خطوات تطوير بيان نطاق المشرو ع Project Scope Statement (ص 180)"
+   ]
+  },
+  "5-5": {
+   "name": "وضع أهداف المشروع SETTING PROJECT GOALS",
+   "page": 182,
+   "topics": []
+  },
+  "5-6": {
+   "name": "تحديد أولويات المشروع SETTING PROJECT PRIORITIES",
+   "page": 184,
+   "topics": []
+  }
+ },
+ "6": {
+  "6-1": {
+   "name": "هيكل تقسيم العمل WORK BREAKDOWN STRUCTURE",
+   "page": 206,
+   "topics": [
+    "6-1-1 تعريف هيكل تقسيم العمل WBS Definition (ص 206)",
+    "6-1-2 خطوات تطوير هيكل تقسيم العمل Steps to Develop a Work Breakdown Structure (ص 210)",
+    "6-1-3 التجميعات الرئيسة في هيكل تقسيم العمل Major Groupings in the WBS (ص 211)",
+    "6-1-4 كيف يساعد هيكل تقسيم العمل مدير المشروع How WBS Helps the Project Manager (ص 212)",
+    "6-1-5 تطوير هيكل تقسيم العمل WBS Development (ص 213)",
+    "6-1-6 حزمة العمل Woark Package (ص 216)",
+    "6-1-7 هيكل تقسيم المنظمة Organization Breakdown Structure (ص 217)",
+    "6-1-8 ترميز هيكل تقسيم العمل Coding the WBS (ص 218)"
+   ]
+  },
+  "6-2": {
+   "name": "هيكل تقسيم العملية PROCESS BREAKDOWN STRUCTURE (PBS)",
+   "page": 219,
+   "topics": []
+  },
+  "6-3": {
+   "name": "مصفوفات المسؤولية RESPONSIBILITY MATRICES",
+   "page": 221,
+   "topics": []
+  },
+  "6-4": {
+   "name": "خطة التواصل في المشروع PROJECT COMMUNICATION PLAN",
+   "page": 223,
+   "topics": [
+    "6-4-1 تحليل أصحاب المصلحة Stakeholder Analysis (ص 225)",
+    "6-4-2 المعلومات المطلوبة Information Needs (ص 226)",
+    "6-4-3 مصادر المعلومات Sources of Information (ص 227)",
+    "6-4-4 وسائط نشر المعلومات Dissemination Modes (ص 227)",
+    "6-4-5 المسؤولية والتوقيت Responsibility and Timing (ص 227)"
+   ]
+  }
+ },
+ "7": {
+  "7-1": {
+   "name": "مق دمة INTRODUCTION",
+   "page": 240,
+   "topics": []
+  },
+  "7-2": {
+   "name": "مفهوم التخطيط PLANNING CONCEPT",
+   "page": 240,
+   "topics": [
+    "7-2-1 أهداف عملية التخطيط Planning Process Goals (ص 240)",
+    "7-2-2 عملية التخطيط Planning Process (ص 241)"
+   ]
+  },
+  "7-3": {
+   "name": "بيان العمل STATEMENT OF WORK (SOW)",
+   "page": 243,
+   "topics": []
+  },
+  "7-4": {
+   "name": "يكل ه تقسيم العمل WORK BREAKDOWN STRUCTURE",
+   "page": 244,
+   "topics": [
+    "7-4-1 مستوى تعريف هيكل تقسيم العمل Level of Definition of the WBS (ص 245)",
+    "7-4-2 ترقيم هيكل تقسيم العمل Numbering the WBS (ص 247)",
+    "7-4-3 تجزيء هيكل تقسيم العمل Dividing the WBS (ص 247)"
+   ]
+  },
+  "7-5": {
+   "name": "تقييم منطق المشروع PROJECT LOGIC EVALUATION (PLE)",
+   "page": 248,
+   "topics": []
+  },
+  "7-6": {
+   "name": "الجدول الزمني األولي DRAFT MASTER SCHEDULE (DMS)",
+   "page": 252,
+   "topics": [
+    "7-6-1 مفهوم الجدول الزمني األولي The Concept of Draft Master Schedule (ص 252)"
+   ]
+  },
+  "7-7": {
+   "name": "مخطط غانت GANTT CHART",
+   "page": 255,
+   "topics": [
+    "7-7-1 خصائص مخطط غانت Gantt Chart Characteristics (ص 258)",
+    "7-7-2 مخطط نقاط العلّم Milestone Chart (ص 258)"
+   ]
+  },
+  "7-8": {
+   "name": "المخطط الشبكي للمشروع PROJECT NETWORK DIAGRAM",
+   "page": 259,
+   "topics": [
+    "7-8-1 األنش طة على األسهم Activiy-On-Arrow (AOA) (ص 260)",
+    "7-8-2 األنشطة في العقد Activity-On-Node (AON) (ص 263)",
+    "7-8-3 علقات التبيعة بين األنشطة Dependancy between Activities (ص 265)",
+    "7-8-4 رسم المخطط الشبكي Project Network Drawing (ص 268)",
+    "7-8-5 منهجية رسم المخطط الشبكي Project Network Drawing Methodology (ص 268)"
+   ]
+  }
+ },
+ "8": {
+  "8-1": {
+   "name": "طريقة المسار الحرج CRITICAL PATH METHOD (CPM)",
+   "page": 283,
+   "topics": []
+  },
+  "8-2": {
+   "name": "تقدير مدة األنشطة ACTIVITY DURATION ESTIMATION",
+   "page": 284,
+   "topics": [
+    "8-2-1 الوقت المنقضي Elapsed Time (ص 285)",
+    "8-2-2 الجهد Effort (ص 285)",
+    "8-2-3 طرق تقدير مدة األنشطة Methods for Avtivity Duration Estimation (ص 286)",
+    "8-2-4 دقة التقديرات Accuracy of the Estimates (ص 290)",
+    "8-2-4 أهمية التقدير Importance of Estimation (ص 291)",
+    "8-2-5 إرشادات لتقدير مدد األنشطة Guidelines to Estimate Activity Durations (ص 292)"
+   ]
+  },
+  "8-3": {
+   "name": "تحديد تاريخ بداية وتاريخ نهاية كل نشاط DETERMINE THE START AND FINISH DATES OF EACH ACTIVITY",
+   "page": 294,
+   "topics": [
+    "8-3-1 طريق الذهاب نحو األمام Forward Pass (ص 296)",
+    "8-3-2 طريق العودة من الخلف Backward Pass (ص 297)"
+   ]
+  },
+  "8-4": {
+   "name": "حساب فترات العوم والمسار الحرج SLACK AND CRITICAL PATH CALCULATION",
+   "page": 298,
+   "topics": [
+    "8-4-1 كيفية تحديد المسار الحرج Procedure of Identifying the Critical Path (ص 300)",
+    "8-4-2 مثال تطبيقي Example (ص 301)",
+    "8-4-3 تحضير الجداول الزمنية Preparing the Schedule (ص 302)"
+   ]
+  },
+  "8-5": {
+   "name": "إعادة تخطيط المشروع PROJECT REPLANNING",
+   "page": 303,
+   "topics": [
+    "8-5-1 ضغط الجدول الزمني Schedule Compression (ص 304)",
+    "8-5-2 تحليل ضغط الجدول الزمني Schedule Compression Analysis (ص 306)",
+    "8-5-3 مثال Example (ص 309)"
+   ]
+  }
+ },
+ "9": {
+  "9-1": {
+   "name": "مقدمة INTRODUCTION",
+   "page": 327,
+   "topics": [
+    "9-1-1 تحديد المهارات المطلوبة Identifying the Required Skills (ص 328)",
+    "9-1-2 توظيف العاملين Hiring People (ص 328)",
+    "9-1-3 إسناد األشخاص على األنشطة Assigning People to Activities (ص 329)"
+   ]
+  },
+  "9-2": {
+   "name": "تقدير موارد النشاط ESTIMATE ACTIVITY RESOURCES",
+   "page": 330,
+   "topics": [
+    "9-2-1 القواعد االرشادية لتقدير موارد النشاط Activity resource estimation guidelines (ص 331)"
+   ]
+  },
+  "9-3": {
+   "name": "إنتاجية الموارد وتوافرها RESOURCE PRODUCTIVITY AND AVAILABILITY",
+   "page": 333,
+   "topics": [
+    "9-3-1 إنتاجية الموارد Resource Productivity (ص 333)",
+    "9-3-2 توافر الموارد Resource Availability (ص 334)"
+   ]
+  },
+  "9-4": {
+   "name": "تجم يع الموارد RESOURCE AGGREGATION",
+   "page": 335,
+   "topics": []
+  },
+  "9-5": {
+   "name": "استخدام الموارد RESOURCE UTILIZTION",
+   "page": 338,
+   "topics": []
+  },
+  "9-6": {
+   "name": "تسوية الموارد RESOURCE LEVELLING OR SMOOTHING",
+   "page": 339,
+   "topics": [
+    "9-6-1 أنواع القيود في تسوية الموارد Types of Constraints in Resource Levelling (ص 341)",
+    "9-6-2 تسوية الموارد في المشاريع مقيدة الزمن Resource Levelling in Time-Constraint Projects (ص 343)",
+    "9-6-3 تسوية الموارد في المشاريع مقيدة الموارد Resource Levelling in Resource-Constraint Projects (ص 347)"
+   ]
+  }
+ },
+ "10": {
+  "10-1": {
+   "name": "مقدمة INTRODUCTION",
+   "page": 368,
+   "topics": []
+  },
+  "10-2": {
+   "name": "متابعة المشاريع PROJECT CONTROL",
+   "page": 368,
+   "topics": []
+  },
+  "10-3": {
+   "name": "إعداد خطط الموازنة PREPARING THE BUDGET",
+   "page": 369,
+   "topics": [
+    "10-3-1 خطوات إعداد الموازنة Steps for Preparing the Budget (ص 369)",
+    "10-3-2 اإلظهار البياني للموازنة Visualize the Budget 370 (ص None)"
+   ]
+  },
+  "10-4": {
+   "name": "عملية مراقبة وضبط المشروع PROJECT MONITORING AND CONTROL PROCESS",
+   "page": 372,
+   "topics": [
+    "10-4-1 مبادئ المراقبة والضبط Monitoring and Controlling Principles (ص 373)",
+    "10-4-2 وضع خطة لمراقبة وضبط المشروع Setting a Plan to Control the Project (ص 374)",
+    "10-4-3 المعلومات عن الوضع الراهن Current Situation Information (ص 377)",
+    "10-4-4 االنحرافات Variances (ص 377)",
+    "10-4-5 التقارير Reports (ص 377)",
+    "10-4-6 اإلجراءات التصحيحية Corrective Actions (ص 378)"
+   ]
+  },
+  "10-5": {
+   "name": "متابعة المشاريع وإدارة القيمة الم كتسبة PROJECT CONTROL WITH EARNED VALUE ANALYSIS",
+   "page": 378,
+   "topics": [
+    "10-5-1 القيمة المكتسبة Earned Value (ص 379)",
+    "10-5-2 طريقة إدارة القيمة المكتسبة Earned Value Management Method (ص 381)",
+    "10-5-3 حساب االنحرافات ومؤشرات األداء Calculate Variances and Performance Indicators (ص 382)",
+    "10-5-4 جداول مساعدة باتخاذ القرار Tables for Decision Making (ص 388)"
+   ]
+  }
+ },
+ "11": {
+  "11-1": {
+   "name": "مقدمة INTRODUCTION",
+   "page": 402,
+   "topics": []
+  },
+  "11-2": {
+   "name": "أنواع الهياكل التنظيمية للمشاريع TYPES OF PROJECT ORGANIZATIONAL STRUCTURES",
+   "page": 402,
+   "topics": []
+  },
+  "11-3": {
+   "name": "الهيكل التنظيمي الوظيفي FUNCTIONAL STRUCTURE",
+   "page": 403,
+   "topics": [
+    "11-3-1 خصائص الهيكل التنظيمي الوظيفي Characteristics of Functional Strucure (ص 405)",
+    "11-3-2 ميزات الهيكل التنظيمي الوظيفي Advantages of Functional Strucure (ص 406)",
+    "11-3-3 مساوئ الهيكل التنظيمي الوظيفي Disadvantages of Functional Strucure (ص 406)"
+   ]
+  },
+  "11-4": {
+   "name": "الهيكل التنظيمي المشاري عي PURE PROJECT ORGANIZATION",
+   "page": 407,
+   "topics": [
+    "11-4-1 خصائص الهيكل الوظيفي المشاريعي Characteristics of Pure Project Organization (ص 410)",
+    "11-4-2 ميزات الهيكل الوظيفي المشاريعي Advantages of Pure Project Organization (ص 410)",
+    "11-4-3 مساوئ الهيكل الوظيفي المشاريعي Disadvantages of Pure Project Organization (ص 411)"
+   ]
+  },
+  "11-5": {
+   "name": "البنية التنظيمية المصفوفية للمشاريع MATRIX ORGANIZATION",
+   "page": 411,
+   "topics": [
+    "11-5-1 أشكال الهيكل التنظيمي المصفوفي Matrix Organization Forms (ص 416)",
+    "11-5-2 خصائص الهيكل التنظيمي المصفوفي Characteristics of Matrix Organization (ص 417)",
+    "11-5-3 ميزات الهيكل التنظيمي المصفوفي Advantages of Matrix Organization (ص 417)",
+    "11-5-4 مساوئ الهيكل التنظيمي المصفوفي Disadvantages of Matrix Organization (ص 418)"
+   ]
+  },
+  "11-6": {
+   "name": "اختيار الهيكل التنظيمي الصحيح SELECT THE RIGHT ORGANIZATIONAL STRUCTURE",
+   "page": 419,
+   "topics": []
+  }
+ },
+ "12": {
+  "12-1": {
+   "name": "مقدمة INTRODUCTION",
+   "page": 442,
+   "topics": []
+  },
+  "12-2": {
+   "name": "عملية إدارة المخاطر RISK MANAGEMENT PROCESS 443",
+   "page": null,
+   "topics": []
+  },
+  "12-3": {
+   "name": "تحديد المخاطر RISK IDENTIFICATION",
+   "page": 445,
+   "topics": [
+    "12-3-1 المصادر المحتملة للمخاطر Potential Sources of Risk (ص 448)",
+    "12-3-2 تحديد المخاطر المحتملة Potentila Risk Identification (ص 448)",
+    "12-3-3 تحديد المخاطر بشكل مستمر Continuous Risk Identification (ص 449)"
+   ]
+  },
+  "12-4": {
+   "name": "تقييم المخاطر RISK ASSESSMENT",
+   "page": 450,
+   "topics": [
+    "12-4-1 تحديد أولويات المخاطر Setting Risk Priorities (ص 450)",
+    "12-4-2 تحليل المخاطر Risk Analysis (ص 452)",
+    "12-4-3 تحليل االحتماالت Probabilities Analysis (ص 456)"
+   ]
+  },
+  "12-5": {
+   "name": "االستجابة للمخاطر RISK RESPONSE DEVELOPMENT",
+   "page": 457,
+   "topics": [
+    "12-5-1 التخطيط للستجابات Risk Response Planning (ص 457)",
+    "12-5-2 الردود المحتملة Potential Responses (ص 457)",
+    "12-5-3 مخرجات خطة االستجابة Risk Response Plan Deliverables (ص 460)"
+   ]
+  },
+  "12-6": {
+   "name": "مراقبة االس تجابة للمخاطر RISK RESPONSE CONTROL",
+   "page": 460,
+   "topics": []
+  }
+ },
+ "13": {
+  "13-1": {
+   "name": "مقدمة INTRODUCTION",
+   "page": 475,
+   "topics": []
+  },
+  "13-2": {
+   "name": "نموذج المراحل الخمسة لتطوير الفريق THE FIVE-STAGE TEAM DEVELOPMENT MODEL",
+   "page": 476,
+   "topics": [
+    "13-2-1 التشكيل Forming (ص 476)",
+    "13-2-2 اال قتحام Storming (ص 477)",
+    "13-2-3 التطبيع Norming (ص 478)",
+    "13-2-4 األداء Performing (ص 478)",
+    "13-2-5 االنفضاض Adjourning (ص 478)"
+   ]
+  },
+  "13-3": {
+   "name": "العوامل الظرفية التي تؤثر على تطور الفريق SITUATIONAL FACTORS AFFECTING TEAM DEVELOPMENT",
+   "page": 479,
+   "topics": []
+  },
+  "13-4": {
+   "name": "بناء فريق مشروع عالي األداء BUILDING HIGH-PERFORMANCE PROJECT TEAMS",
+   "page": 481,
+   "topics": [
+    "13-4-1 اختيار وتعيين فريق العمل Recruiting Project Members (ص 482)",
+    "13-4-2 قيادة اجتماعات المشروع Conducting Project Meetings (ص 485)",
+    "13-4-3 إنشاء هوية الفريق Establishing a Team Identity (ص 489)",
+    "13-4-4 إنشاء رؤية مشتركة Creating a Shared Vision (ص 491)",
+    "13-4-5 إدارة نظام المكافأت في مشروع Managing Project Reward Systems (ص 494)",
+    "13-4-6 قيادة عملية صنع القرار Orchestrating the Decision-Making Process (ص 496)",
+    "13-4-7 إدارة الخلفات والصراعات ضمن مشروع Managing Conflict within the Project (ص 498)",
+    "13-4-8 تجديد فريق المشروع Rejuvenating the Project Team (ص 501)"
+   ]
+  }
+ },
+ "14": {
+  "14-1": {
+   "name": "مقدمة INTRODUCTION",
+   "page": 523,
+   "topics": []
+  },
+  "14-2": {
+   "name": "أنشطة إنهاء المشروع PROJECT COLSURE AVTIVITIES",
+   "page": 524,
+   "topics": [
+    "14-2-1 ختام المشروع Wrapping up the Project (ص 524)",
+    "14-2-2 تقييم األداء وإدارة المشروع Evaluation of Performance and Management of the Project (ص 524)",
+    "14-2-3 الدروس المستفادة Retrospectives and Lesson Learned (ص 525)"
+   ]
+  },
+  "14-3": {
+   "name": "أنماط إغلق المشروع TYPES OF PROJECT CLOSURE",
+   "page": 525,
+   "topics": [
+    "14-3-1 اإلغلق العادي Normal (ص 526)",
+    "14-3-2 اإلغلق المبكّر Premature (ص 526)",
+    "14-3-3 اإلغلق األبدي Perpetual (ص 526)",
+    "14-3-4 فشل المشروع Failed Project (ص 527)",
+    "14-3-5 تغير األولويات Changed Priority (ص 527)"
+   ]
+  },
+  "14-4": {
+   "name": "أنشطة إغلق المشروع WRAP-UP CLOSURE ACTIVITIES",
+   "page": 527,
+   "topics": [
+    "14-4-1 الحصول على قبول التسليم من قبل الزبون Getting Delivery Acceptance from the Customer (ص 529)",
+    "14-4-2 إغلق وتحرير الموارد Shutting Down and Releasing Resources (ص 530)",
+    "14-4-3 كتابة التقرير النهائي للمشروع Creating a Final Report (ص 531)"
+   ]
+  },
+  "14-5": {
+   "name": "تقييم المشروع PROJECT EVALUATION",
+   "page": 531,
+   "topics": [
+    "14-5-1 تقييم فريق العمل Team Evaluation (ص 531)",
+    "14-5-2 مراجعة أداء األفراد وأعضاء الفريق ومدير المشروع Individual, Team Member, and Project Manager Performance Reviews (ص 533)"
+   ]
+  },
+  "14-6": {
+   "name": "الدروس والعبر المستخلصة RETROSPECTIVES AND LESSON LEARNED",
+   "page": 535,
+   "topics": []
+  }
+ }
+}

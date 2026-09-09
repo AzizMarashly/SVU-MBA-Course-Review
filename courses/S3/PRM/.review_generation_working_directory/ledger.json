@@ -1,0 +1,248 @@
+{
+ "note": "final after stage-3 helper reports (2026-09-09)",
+ "sources": [
+  {
+   "id": "BOOK",
+   "kind": "textbook",
+   "files": [
+    "الماده الاكاديميه/MBA - Project Management - The Book.pdf",
+    "الماده الاكاديميه/أسئلة الكتاب - PRM.pdf (dependent copy: the book's own review pages from an earlier print, page = book page − 2)"
+   ],
+   "md5": [
+    "a6e70b1326d164fecd97853269bb1854",
+    "e86c250c2060493e269cfb318f1f3eed"
+   ],
+   "type": "primary reference + end-of-chapter questions",
+   "decision": "included (authority)"
+  },
+  {
+   "id": "EX15",
+   "kind": "exam",
+   "files": [
+    "اسئلة سابقة/PM-112هام.docx",
+    "اسئلة سابقة/اسئلة-مشروعات.pdf",
+    "اسئلة سابقة/Pm-112- Q_A  by kifah (2).pdf (pages 4–5)"
+   ],
+   "md5": [
+    "ae87945e2ffd14c23d5874297422fb85",
+    "b2824b7b56e80cf87d98a80bbba1821a",
+    "5056d91cd3a1701857bd60e45eb0dc6c"
+   ],
+   "type": "exam recollection, one sitting circa 2015 (screenshot dated 2015-07-29, lecture video labelled F14); DOCX list + handwritten scan of the same list + a copy inside the kifah file",
+   "decision": "included as ONE independent exam source",
+   "items": "35 + 26 + 34 raw items"
+  },
+  {
+   "id": "KIFAH",
+   "kind": "exam",
+   "files": [
+    "اسئلة سابقة/Pm-112- Q_A  by kifah (2).pdf (pages 1–3)"
+   ],
+   "md5": [
+    "5056d91cd3a1701857bd60e45eb0dc6c"
+   ],
+   "type": "exam recollection of the sitting after EX15, with the student's own answers",
+   "decision": "included as an independent exam source",
+   "items": "21 raw items"
+  },
+  {
+   "id": "Y16",
+   "kind": "exam",
+   "files": [
+    "اسئلة سابقة/2016 pm  اسئلة دورات.docx"
+   ],
+   "md5": [
+    "b70233582191eaf53f50e1fa6b3f6a21"
+   ],
+   "type": "2016 sitting: recalled topics and a few items (Telegram-style)",
+   "decision": "included as an independent exam source (mostly topic evidence)",
+   "items": "11 raw items"
+  },
+  {
+   "id": "S19",
+   "kind": "exam",
+   "files": [
+    "اسئلة سابقة/أسئلة دورات_S19_محمد صوفي_1.pdf",
+    "اسئلة سابقة/أسئلة دورات_S19_محمد صوفي.pdf (non-book items)"
+   ],
+   "md5": [
+    "1c64a613048f5d0cc9e5957f97d81bd6",
+    "87ef74fe7605a4d56b6972902ddb3d4e"
+   ],
+   "type": "S19 sitting of 4 Feb 2020 recalled by one student (calculation paper) + the exam-recollection part of the same student's bank",
+   "decision": "included as ONE independent exam source",
+   "items": "42 + 53 raw items"
+  },
+  {
+   "id": "F24",
+   "kind": "exam",
+   "files": [
+    "اسئلة سابقة/أسئلة PRM فصل F24 مركز خارجي.txt"
+   ],
+   "md5": [
+    "543235f0888de2edd0dba1a185ca5240"
+   ],
+   "type": "F24 sitting, external centre, 43 numbered items + practical section",
+   "decision": "included as an independent exam source",
+   "items": "48 raw items"
+  },
+  {
+   "id": "TATI",
+   "kind": "exam",
+   "files": [
+    "اسئلة سابقة/الأسئلة التي تأتي في فحص ال PM (2).pdf"
+   ],
+   "md5": [
+    "6661e271beb1754d02885c8f0e8ddfb1"
+   ],
+   "type": "undated typed exam pool with highlighted answers, older-curriculum (PMBOK) vocabulary",
+   "decision": "included only for items whose concept exists in the current book",
+   "items": "52 raw items"
+  },
+  {
+   "id": "ASEM",
+   "kind": "crosscheck",
+   "files": [
+    "ملخصات سابقة/PRM_ملخص_عاصم_إدارة_المشاريع.pdf"
+   ],
+   "md5": [
+    "8dc8c83613bc7035b53f14ee99c1415b"
+   ],
+   "type": "summary of the current book with 20 book MCQs answered (underlined)",
+   "decision": "included as independent cross-check of textbook answers (§8)",
+   "items": "20 items"
+  },
+  {
+   "id": "EMAD",
+   "kind": "other",
+   "files": [
+    "ملخصات سابقة/عماد جبور.pdf"
+   ],
+   "md5": [
+    "d2ea9f9353970ce442e0601d59096f16"
+   ],
+   "type": "S18 question-and-answer study summary, 383 items, older curriculum layout",
+   "decision": "included only for items whose concept exists in the current book, re-verified",
+   "items": "383 items"
+  },
+  {
+   "id": "MURAJA",
+   "kind": "other",
+   "files": [
+    "ملخصات سابقة/مراجعه ادارة المشاريع.pdf"
+   ],
+   "md5": [
+    "bf17a57f14bca9912a980ca2b0da6466"
+   ],
+   "type": "20-item MCQ review set from another source, answers in red",
+   "decision": "included only for items whose concept exists in the current book, re-verified",
+   "items": "20 items"
+  },
+  {
+   "id": "SOUFI-XCHK",
+   "kind": "dependent",
+   "files": [
+    "اسئلة سابقة/أسئلة دورات_S19_محمد صوفي.pdf (67 book-copy items)"
+   ],
+   "md5": [
+    "87ef74fe7605a4d56b6972902ddb3d4e"
+   ],
+   "type": "book MCQs copied into a student bank with the student's highlights",
+   "decision": "not a source (student marks); disagreements reported only"
+  },
+  {
+   "id": "EXCLUDED-NOTES",
+   "kind": "notes",
+   "files": [
+    "ملخصات سابقة/PM112 arabic.docx",
+    "ملخصات سابقة/ملخص ادارة مشاريع.pdf",
+    "ملخصات سابقة/PM (2).docx",
+    "ملخصات سابقة/_⁨ملخص_سلايدات_إدارة_المشاريع_PRM⁩.pdf",
+    "ملخصات سابقة/إدارة الخطة الزمنية والمالية لمشروع وفق EVA Hisham_Harmalanee.pdf"
+   ],
+   "md5": [
+    "e8616bd6b3389bdc7ff194b1511a145f",
+    "2215890874d1736d12f1f250ca9aaa1f",
+    "dca480a3a3eb75e9c20ae563c12cdfc7",
+    "d403716586c50065ab23a367ca280766",
+    "87af6363aa2dcb9fa891df2ff9dc2802"
+   ],
+   "type": "lecture notes and summaries without questions: PM112 arabic.docx and ملخص ادارة مشاريع.pdf (older S18-era notes, 4 'exam question' topic pointers only), PM (2).docx (translated foreign slide deck), ملخص سلايدات (F23 transcription of the current slides), EVA note (F19 worked example)",
+   "decision": "excluded from the bank (no questions); reference only"
+  },
+  {
+   "id": "SLIDES",
+   "kind": "slides",
+   "files": [
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch01 (Introduction to Project Management I).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch02 (Introduction to Project Management II).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch03 (Project Selection).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch04 (Project Lifecycle).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch05 (Project Definition I).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch06 (Project Definition II).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch07 (Project Time Planning I).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch08 (Project Time Planning II).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch09 (Project Resource Planning).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch10 (Project Monitoring and Controling).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch11 (Project Organizational Structure).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch12 (Project Risk Management).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch13 (Project Team Management).pdf",
+    "الماده الاكاديميه/ملفات بوربوينت لمقرر إدارة المشروعات/MBA - Project Management - Ch14 (Project Closure).pdf"
+   ],
+   "md5": [
+    "0ec74f2f57df4f1192dfdf6f96d4ff8e",
+    "72eb12a15030b3e7ca08b9fc493458b4",
+    "622f02aeb6c8ced9af583378418fd6bf",
+    "777a719226f8b39537dccddcf0db2a59",
+    "ec99ea6a6483fdd6181be5c1f9d3794b",
+    "e5d39d028b5a0b3d33336adc7f04e47f",
+    "d5185cd53375bdefe022df8350fe493a",
+    "38c4ce03278ced9c59c5ca3cba34f51e",
+    "c733a985afd5bc11795b806e9095a890",
+    "047b7701d41e781639a463e54389d0a9",
+    "209ff2027093bde94d0bb9f4bf747845",
+    "0722d3e35e309d74ae955c031eb0a39f",
+    "995bb293c532c2e42e8a111241b22f70",
+    "abddd67479891ba6d29e907880941756"
+   ],
+   "type": "current course slides Ch01–Ch14 (د. إياد زوكار)",
+   "decision": "reference only, no questions"
+  },
+  {
+   "id": "EXCLUDED-IMT",
+   "kind": "other-course",
+   "files": [
+    "اسئلة سابقة/دورة f17 تسويق دولي.docx"
+   ],
+   "md5": [
+    "2a6c2f3b4c0c1215e7b1912676faee6e"
+   ],
+   "type": "F17 exam of International Marketing (IMT)",
+   "decision": "excluded: another course (misfiled)"
+  },
+  {
+   "id": "EXCLUDED-PMP",
+   "kind": "other",
+   "files": [
+    "متفرقات/خطة الإعداد PMP .pdf"
+   ],
+   "md5": [
+    "210bf11ea060fe3584c7480e9372869f"
+   ],
+   "type": "PMP certification preparation guide by an outside author",
+   "decision": "excluded: not course material"
+  },
+  {
+   "id": "ABOUT",
+   "kind": "notes",
+   "files": [
+    "about.txt"
+   ],
+   "md5": [
+    "66fc805986295bac4b5cc18e272979ae"
+   ],
+   "type": "two students' experience notes (exam format, workload)",
+   "decision": "context only (exam ~10 calculation items + theory)"
+  }
+ ]
+}

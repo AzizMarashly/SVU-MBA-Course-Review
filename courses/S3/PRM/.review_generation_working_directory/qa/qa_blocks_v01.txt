@@ -1,0 +1,43 @@
+avg block words (core lines): 71.1 | min 40 | max 236
+blocks > 80 words without justification (optional line/reconstruction/essay): 23
+   ('Q03-001', 83)
+   ('Q03-025', 88)
+   ('Q03-026', 100)
+   ('Q04-028', 82)
+   ('Q05-001', 83)
+   ('Q05-029', 83)
+   ('Q06-006', 84)
+   ('Q07-002', 95)
+   ('Q07-015', 84)
+   ('Q07-024', 121)
+   ('Q07-029', 124)
+   ('Q07-038', 140)
+   ('Q08-032', 81)
+   ('Q08-039', 98)
+   ('Q08-043', 84)
+   ('Q09-028', 98)
+   ('Q10-026', 113)
+   ('Q11-019', 107)
+   ('Q11-025', 119)
+   ('Q11-029', 101)
+   ('Q11-031', 100)
+   ('Q14-016', 89)
+   ('Q14-017', 86)
+blocks < 40 words: 0 []
+why starting with 'الإجابة الصحيحة': []
+why repeating full answer text: ['Q01-017', 'Q01-035', 'Q02-001', 'Q02-003', 'Q02-007', 'Q02-012', 'Q02-014', 'Q02-024', 'Q03-007', 'Q03-013', 'Q03-032', 'Q04-009', 'Q04-044', 'Q05-018', 'Q05-019', 'Q06-001', 'Q06-008', 'Q08-023', 'Q08-028', 'Q10-015', 'Q11-002', 'Q11-008', 'Q12-003', 'Q13-016', 'Q13-018', 'Q14-002', 'Q14-004', 'Q14-005', 'Q14-007', 'Q14-017']
+remember without bold: []
+bold in stem/options: []
+low_conf without reason: []
+reconstructed without original: []
+generated importance >1: []
+importance >5: []
+importance mismatches: []
+freq mismatches: []
+leftover literal ** count in stems: 0
+RANDOM SAMPLE IDS: ['Q05-032', 'Q03-019', 'Q07-013', 'Q10-025', 'Q01-025', 'Q02-003', 'Q13-014', 'Q08-044', 'Q02-014', 'Q06-019', 'Q09-022', 'Q01-030', 'Q08-029', 'Q04-020', 'Q01-020', 'Q02-010', 'Q07-033', 'Q07-025', 'Q02-001', 'Q04-034']
+source appendix rows: 35 | files on disk: 35
+  on disk but not in appendix: []
+  in appendix but not on disk: []
+  question source labels without a row: []
+  appendix summary files == rows: True

@@ -56,6 +56,43 @@
       "download_name": "مراجعه كامله لماده ال MIS-v0.1.html",
       "note": "Hand-maintained: this course has no working directory in courses/ yet. Replace with a bank.json under courses/S3/MIS/ when the source material is added.",
       "data": "manual"
+    },
+    {
+      "semester": 3,
+      "code": "PRM",
+      "path": "S3/PRM/",
+      "title": "مراجعه كامله لماده ال PRM",
+      "name_ar": "إدارة المشاريع",
+      "name_en": "Project Management",
+      "version": "01",
+      "spec_version": "v0.9",
+      "generated": "2026-09-09",
+      "questions": 442,
+      "questions_by_type": {
+        "exam": 166,
+        "other": 187,
+        "textbook": 145,
+        "generated": 21
+      },
+      "chapters": 14,
+      "sources": 10,
+      "source_ids": [
+        "BOOK",
+        "EX15",
+        "KIFAH",
+        "Y16",
+        "S19",
+        "F24",
+        "TATI",
+        "ASEM",
+        "EMAD",
+        "MURAJA"
+      ],
+      "source_files": 34,
+      "low_confidence": 69,
+      "data": "bank",
+      "sources_path": "courses/S3/PRM/",
+      "download_name": "مراجعه كامله لماده ال PRM_v01.html"
     }
   ]
 }

@@ -1,0 +1,37 @@
+[
+ {
+  "source": "Slides Ch01…Ch14 (ملفات بوربوينت لمقرر إدارة المشروعات)",
+  "book_chapter": "1…14 one-to-one",
+  "evidence": "deck titles equal the book chapter titles (Introduction I/II, Project Selection, Lifecycle, Definition I/II, Time Planning I/II, Resource Planning, Monitoring and Controlling, Organizational Structure, Risk, Team, Closure)"
+ },
+ {
+  "source": "أسئلة الكتاب - PRM.pdf",
+  "book_chapter": "same 14 chapters, in book order",
+  "evidence": "printed page numbers = book page − 2; first question identical to book p.40"
+ },
+ {
+  "source": "Exam recollections (2016, PM-112هام, kifah, F24, scan, Soufi, الأسئلة التي تأتي)",
+  "book_chapter": "no chapter labels; assigned by content to a book subsection",
+  "evidence": "content matched against the TOC and chapter text"
+ },
+ {
+  "source": "PM (2).docx — «محاضرة 14» = organisational structure",
+  "book_chapter": "11",
+  "evidence": "content: functional / projectised / matrix structures = book ch. 11 (lecture numbering differs from the book)"
+ },
+ {
+  "source": "ملخص ادارة مشاريع.pdf / PM112 arabic.docx — «المحاضرة n» (S18-era notes)",
+  "book_chapter": "not mapped",
+  "evidence": "excluded: older lecture numbering and vocabulary (CMM levels, Time to Market); no questions, so no mapping was needed"
+ },
+ {
+  "source": "ملخص عماد جبور (S18) — numbered items without chapter labels",
+  "book_chapter": "assigned by content to a book subsection",
+  "evidence": "older curriculum layout; only items whose concept exists in the current book were kept"
+ },
+ {
+  "source": "Exam sittings EX15 / KIFAH / Y16 / S19 / F24 / TATI",
+  "book_chapter": "no chapter labels; each item assigned by content through the TOC subsection titles",
+  "evidence": "see extracted/questions/*_report.md; 9 items unassignable → out-of-scope list"
+ }
+]

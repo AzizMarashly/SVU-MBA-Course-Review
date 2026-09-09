@@ -1,0 +1,1441 @@
+
+=== PAGE 521 ===
+ 
+- 521 - 
+ 
+ 
+Master of Business Administration
+ 
+ماجستير إدارة الأعمال 
+ 
+إدارة المشاريع 
+PROJECT MANAGEMENT 
+ 
+ الفصل
+الرابع عشر 
+إنهاء وإغلاق المشروع 
+Project Closure
+ 
+ 
+الدكتور إياد زوكار 
+ 
+
+=== PAGE 522 ===
+ 
+- 522 - 
+ 
+ا
+لفصل الرابع عشر :إنهاء وإغالق المشروع 
+عنوان الموضوع 
+إنهاء وإغ
+الق المشروع 
+-
+ 
+Project Closure
+ 
+كلمات مفتاحية 
+ المشروع–
+ 
+ ختام المشروع–
+ 
+ أنماط اإلغالق–
+ ت سليم المنتجات–
+ ت حرير الموارد–
+ 
+ تقييم األداء–
+ ا لدروس
+.المستفادة 
+ملخص الفصل 
+يتناول هذا الفصل المرحلة الرابعة واألخيرة من دورة حياة المشروع، وهي مرحلة إنهاء وإغالق المشروع . سيتم استعراض
+م ختلف
+.أنماط اإلغالق واألنشطة التي يتم تنفيذها في هذه المرحلة 
+ال مخرجات و
+األهداف التعليمية 
+:بعد قراءة هذا الفصل، سيتمكن الطالب من اإلجابة عن األسئلة التالية 
+1
+.
+ 
+.التنبه إلى أهمية إنهاء المشروع بشكل منهجي 
+2
+.
+ 
+.التعرف على أنشطة إنهاء وإغالق المشروع 
+3
+.
+ الت.عرف على آلية تقييم المشروع وفريق العمل 
+4
+.
+ 
+.التعرف على كيفية استخالص الدروس والعبر من تجربة المشروع 
+5
+.
+ 
+.التمييز بين مختلف أنماط إغالق المشروع 
+6
+.
+ 
+.التعرف على كيفية تسليم المنتجات للزبون وكتابة التقرير النهائي للمشروع وتحرير الموارد 
+ 
+ 
+
+=== PAGE 523 ===
+ 
+- 523 - 
+ 
+14
+-
+1
+ 
+ مقدمةIntroduction
+ 
+تضم مرح
+لة إغالق المشروع عدداً كبيراً من المهام. في الماضي، وخصوصاً فيما يتعلق بالمشاريع الصغيرة 
+ كان
+مدير المشروع هو المسؤول عن رؤية جميع المهام والخيوط المفتوحة تصل إلى نهاياتها، لكن هذا لم يعد ا ليوم
+صحيحاً. ففي المنظمات القائمة على المشاريع يكون هناك العديد من ا،لمشاريع التي تُنفّذ في وقت واحد 
+ ويتم
+ توزيع مسؤوليات إنهاء المشاريع بين مدير المشروع وفرق المشروع ومكتب إدارة المشروعPMO
+ 
+ و"لجنة
+المراجعة" وجهة مستقلة (مسهّل) لعمليات إدارة المعرفة والتغذية الراجعة. وتتداخل العديد من مهام عم لية اإلنهاء
+ واإلغالق أو تحدث في
+وقت واحد، لذلك تتطلب التنسيق والتعاون بين هذه الجهات. يبين الشكل (
+14
+-
+1
+) 
+.النواتج الرئيسة الثالث إلغالق المشروع 
+ 
+ المصدر(
+Larson, 2020
+)
+ 
+الشكل (
+14
+-
+1
+) 
+-
+ ا
+لنواتج الرئيسية إلغالق المشروع 
+ 
+ 
+
+=== PAGE 524 ===
+ 
+- 524 - 
+ 
+14
+-
+2
+ 
+ أنشطة إنهاء المشروعProject Colsure Avtivities
+ 
+14
+-
+2
+-
+1
+ 
+ ختام المشروعWrapping up the Project
+ 
+ تتجلى المهمة الختامية الكبرى في ضمان الموافقة على المشروع وقبوله من قبل الزبون. وتشمل األنشطة
+:الختامية األخرى ما يلي 
+-
+ 
+.الحسابات الختامية 
+-
+ 
+.دفع الفواتير 
+-
+ 
+.إعادة تعيين األفراد والمعدات 
+-
+ 
+.إيجاد فرص جديدة للعاملين في المشروع 
+-
+ 
+.إغالق المرافق 
+-
+ 
+.كتابة التقرير النهائي 
+ وتُستخدم قوائم التحققChecklists
+ 
+ على نطاق واسع لضمان عدم نسيان أية مهمة. وفي العديد من المنظمات
+ يتم تنفيذ العدد األكبر من مهام اإلغالق من قبل مكتب المشروع بالتنسيق مع مدير المشروع. وعادةً ما
+ي تم
+تكليف أحد العاملين في مكتب المشروع بإ عداد التقرير النهائي للمشروع، حيث يجمّع المدخالت من جميع
+ أصحاب المصلحة. أما في المنظمات والمشاريع الصغيرة، فتترك أنشطة اإلغالق لمدير المشروع أو لفريق
+.العمل 
+14
+-
+2
+-
+2
+ 
+ تقييم األداء وإدارة المشروعEvaluation of Performance and Management 
+of the Project
+ 
+تشمل عم
+لية التقييم الفريق ككل وأعضائه فراداً وكذلك مدير المشروع. ويمكن أن يوفّر الباعة والزبائن 
+ بعض
+المدخالت الخارجية لعملية التقييم. ويقدّم تقييم الالعبين الرئيسين في المشروع يوفر معلومات مهمة ل لمستقبل
+.على مستوى المنظمة 
+
+=== PAGE 525 ===
+ 
+- 525 - 
+ 
+14
+-
+2
+-
+3
+ 
+ الدروس المستفادةRetrospectives and Lesson Learned
+ 
+ يتم تصميم الدروس المستفادة والعبر المستخلصة لتحسين أداء المشاريع الحالية والمستقبلية. وفي معظم
+ا ألحيان
+ ًيتم اللجوء إلى طرف خارجي مستقل (مسهّل) لهذه المهمة. حيث يوفّر هذا المسهّل أيضاً إسهاماً كبيرا
+ف ي إعداد
+ التقرير النهائي الذي يتضمن الدر
+وس المستفادة. وينبغي إجراء مراجعات ما بعد انتهاء المشروع مع فريق 
+ العمل
+.إلدراك الثغرات والقضايا المعلّقة 
+14
+-
+3
+ 
+ أنماط إغالق المشروعTypes of Project Closure
+ 
+في بعض المشاريع قد ال تكون النهاية واضحة كما هو مأمول. على الرغم من أن نهاية المشروع تكون واضحة 
+ ّومعر
+فة بدقة في بيان نطاق المشروع، إال أن النهاية الفعلية قد تتوافق مع ذلك أو قد ال تتوافق. وتف يد عمليات
+ .المراجعة الدورية بالتنبؤ بالصعوبات التي يمكن أن تظهر عند إغالق المشاريع وباالنحرافات عن الخطط
+ه ناك
+:خمسة أنماط مختلفة إلغالق المشروع هي 
+-
+ 
+.اإلغالق العادي 
+-
+ اإل.غالق المبكّر 
+-
+ 
+.اإلغالق األبدي 
+-
+ 
+.فشل المشروع 
+-
+ 
+.تغير األولويات 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 526 ===
+ 
+- 526 - 
+ 
+14
+-
+3
+-
+1
+ 
+ اإلغالق العاديNormal
+ 
+ إن الظرف األكثر شيوعاً إلغالق المشروع هو مجرد إنجاز واكتمال المشروع. فبالنسبة للعديد من مشاريع
+التطوير، تتجلى النهاية في تسليم التصميم النهائي لإلنتاج وإنشاء خط لمنتج جديد أو لخدمة جديدة. وف ي
+مشاريع تكنولوجيا المعلومات الداخلية مثل تحديث وترقية نظام موجود أو إنشاء نظام جديد لمراقبة المخ ،زون
+ينتهي المشروع عندما يتم دمج ناتجه النهائي مع العمليات الجارية. مع ذلك ربما تحدث بعض التعديالت ف ي
+نطاق التكلفة والجدول الزمني أثناء 
+.مرحلة التنفيذ 
+14
+-
+3
+-
+2
+ 
+ اإلغالق المبكّرPremature
+ 
+ بالنسبة لبعض المشاريع، قد يتم االنتهاء من المشروع في وقت مبكر بعد أن يكون قد تم التخلي عن بعض
+ أجزاء مشروع (تقليص النطاق). على سبيل المثال، في مشروع تطوير منتج جديد، قد يُصرّ مدير التسويق
+ ألسباب متعلقة بالسو ق على إنتاج النماذج قبل إجراء االختبارات، ألن هناك ضغط لالنتهاء من المشروع و إرساله
+إلى اإلنتاج. ولكن قبل الخضوع لهذا النوع من الضغط، ينبغي مراجعة اآلثار والمخاطر المترتبة على هذا 
+ القرار
+بعناية وتقييمها من قبل اإلدارة العليا وجميع أصحاب المصلحة. قد تكون الف
+وائد من ذلك وهمية ومحدودة 
+ وتحمل
+.مخاطر كبيرة، وقد يكون هذا الطلب محق ويتم تحقيقه 
+14
+-
+3
+-
+3
+ 
+ اإلغالق األبديPerpetual
+ 
+تبدو بعض مشاريع أنها ال تنتهي أبداً. والسمة الرئيسة لهذا النوع من المشاريع هو اإلضافات المستمرة ، وهذا
+ما يشير إلى نطاق المشروع سيء التصميم. في 
+ مرحلة ما يوصي فريق المراجعة بوضع طريقة أو آلية إلنهاء
+وإغالق هذا النوع من المشاريع أو اعتبار ما تبقى مشروعاً جديداً. على سبيل المثال، يمكن أن تحلّ إض افة
+ميزة جديدة إلى المشروع القديم محل جزء من المشروع الذي يبدو دائم وتُعامل على أساس أنها مشروع جدي.د 
+
+=== PAGE 527 ===
+ 
+- 527 - 
+ 
+14
+-
+3
+-
+4
+ 
+ فشل المشروعFailed Project
+ 
+تكون المشاريع الفاشلة عادةً سهلة التحديد ومن السهل على فريق المراجعة إغالقها. ومع ذلك، ينبغي بذ ل كل
+ جهد ممكن إليضاح األسباب الفنية وغير اإلدارية إلنهاء المشروع. في أي حال ال ينبغي أن يُترك المشار كون
+في المشروع يشعرون بوصمة عا ر محرجة من العمل على مشروع فاشل، ألنه قد تفشل العديد من المشاريع
+.بسبب ظروف خارجة عن سيطرة فريق المشروع 
+14
+-
+3
+-
+5
+ 
+ تغير األولوياتChanged Priority
+ 
+غالباً ما تتغير أولويات المنظمة فتعدل توجهاتها االستراتيجية. على سبيل المثال، خالل األزمة المال ية عام
+2008، حوّل
+ت العديد من المؤسسات المالية تركيزها من المشاريع التي تسعى لجني المال إلى المشاريع ال تي
+ تؤدي إلى ضغط النفقات وتخفيف التكاليف. تقوم إدارة المنظمة بمراجعة أولويات اختيار المشاريع باستمر ار
+لتعكس التغيرات في االتجاه التنظيمي. وهذا ما يؤدي في بعض األحيان لتغيير في نطاق المشاريع الجارية 
+ أو
+إلغاء بعضها. فقد يبدأ المشروع بأولوية عالية ولكن من الممكن أن تتضاءل هذه األولوية أثناء دورة حي اته مع
+ تغير الظروف الداخلية والخارجية. وعندما تتغير األولويات سنحتاج إلى تغيير أو إلغاء المشاريع الجار.ية 
+14
+-
+4
+ 
+ أنشطة إغالق المشروعWrap-up Closure Activities
+ 
+ عند الوصول لمرحلة اإلغالق تكون التحديات الرئيسة لمدير المشروع وألعضاء الفريق قد زالت. ولكن تجميع
+ ،الخيوط وإنهاء األعمال وإغالق المشروع هي غالباً أعمال فيها بعض الصعوبة. إنها مثل حفلة انتهت لتوها
+من يريد المساعدة في تنظيف وتوضيب ا لمكان؟ إن معظم األعمال في هذه المرحلة غير عادية ومملة، ويشكّل
+ الدافع إلنجازها التحدي الرئيس. على سبيل المثال، ينظر العاملون في المشروع إلى جرد المعدات والمواد
+واستكمال التقارير النهائية على أنها مهام إدارية مملة، وخصوصاً أن طبيعة عملهم أثناء المشروع تركز ع لى
+ اإلنتاج أكثر منها على الدعم. والتحدي الكبير لمدير المشروع هو الحفاظ على فريق المشروع مركّزاً على أنشطة
+
+=== PAGE 528 ===
+ 
+- 528 - 
+ 
+ المشروع المتبقية وتسليمها للزبون حتى اكتمال المشروع. يسمح التواصل باكراً حول خطة اإلغالق والمراجعة
+ والجدول الزمني لفريق العمل قبول الحقيقة النفسية أن المشروع سينتهي واالستعداد للمضي قدماً. والسيناريو
+ المثالي هو أن تكون المهمة التالية ألعضاء الفريق جاهزة عندما يتم اإلعالن عن إنجاز المشروع. كما يحتاج
+ مدير المشروع إلى توخي الحذر للحفاظ على حماس فريق العمل النجاز المشروع والتقيّد بالمواعيد، والتي هي
+عرضة لع.دم التقيد بها خالل المراحل األخيرة من المشروع 
+يشمل تنفيذ عملية اإلغالق العديد من األنشطة الختامية. وتقوم العديد من المنظمات بتطوير قوائم طويل ة
+:إلغالق المشاريع مفيدة جداً لضمان أنه لم يتم تجاهل أي شيء. أهم هذه األنشطة الختامية ما يلي 
+50
+. الحصول على قبول التسل.يم من قبل الزبون 
+51
+. 
+.إغالق الموارد وتحرير ما تبقى منها الستخدامات جديدة 
+52
+. 
+.إعادة تكليف أعضاء فريق المشروع بأعمال جديدة 
+53
+. 
+.دفع الفواتير وإغالق الحسابات 
+54
+. 
+.تسليم المشروع للزبون 
+55
+. 
+.إعداد التقرير النهائي 
+ يمكن التخوّف من إدارة تفاصيل إغالق المشروع، فبعض المنظمات لديها قو ائم ألكثر من100
+ 
+ مهمة ختامية
+لمعالجة تفاصيل اإلغالق مثل المرافق والفرق والموظفين والزبون والبائعين والمشروع في حد ذاته. يبين 
+ الجدول
+(
+14
+-
+1
+) 
+.مثاالً عن جزء من قائمة التحقق إلغالق مشروع 
+
+=== PAGE 529 ===
+ 
+- 529 - 
+ 
+ 
+ المصدر(
+Larson, 2020
+)
+ 
+الجدول (
+14
+-
+1
+) 
+–
+ م
+ثال عن قائمة تحقق إلغالق مشروع 
+14
+-
+4
+-
+1
+ 
+ الحصول على قبول التسليم من قبل الزبونGetting Delivery Acceptance from 
+the Customer
+ 
+ يُعتبر الحصول على قبول التسليم من قبل الزبون أحد أهم أنشطة اإلغالق وأكثرها حراجةً. فالتسليم في
+ب عض
+المشاريع يتم بسالسة ودون أية تعقيدات، في حين يكون أكثر تعقيداً وصع
+وبةً في بعضها اآلخر. من الناح ية
+المثالية يجب أال تكون هناك مفاجآت، وهذا يتطلب نطاقاً معّرفاً بشكل جيد، ونظاماً فعاالً إلدارة ال تغيير بمشاركة
+نشيطة من الزبون مع ضرورة إشراك المستخدمين النهائيين لناتج المشروع والذي يُعتبر أمراً بالغ األهم ية لقبول
+.التسليم 
+ 
+ 
+
+=== PAGE 530 ===
+ 
+- 530 - 
+ 
+يج ب وضع شروط استكمال ونقل المشروع قبل البدء في المشروع. إن مشروع تطوير برنامج حاسوبي هو مثال
+،جيد على ضرورة العمل على التفاصيل في وقت مبكر. فإذا كان المستخدم لديه مشاكل في استخدام البرنامج 
+ فهل سيجمّد الزبون الدفعات المالية النهائية؟ من المسؤول عن دعم وتدريب
+المستخدم؟ إذا لم يتم تعريف 
+ هذه
+.ًالشروط بشكل واضح منذ البداية، فإن الحصول على قبول التسليم يمكن أن يكون صعبا 
+ هناك تكتيك آخر لتسليم المشروع عندما تتم االستعانة بطرف خارجي لتنفيذه يُعرف بـBOOT (Build, Own, 
+Operate, Transfer). في هذا النمط من المشاريع يقوم ا
+لمتعاقد أو المقاول ببناء المنتج وتملّكه وتشغي له لفترة
+ معينة من الزمن قبل نقله إلى الزبون. خالل هذا الفترة يتم حلّ مشاكل التشغيل ووضع شروط التسليم للز.بون 
+14
+-
+4
+-
+2
+ 
+ إغالق وتحرير المواردShutting Down and Releasing Resources
+ 
+ عادةً ما يتم تحرير فريق المشروع تدر
+يجياً خالل مرحلة اإلغالق. بالنسبة لبعض األفراد، تنتهي األنشط ة
+المسؤولين عنها قبل أن يتم تسليم المشروع للزبون أو للمستخدم، فيتم إنهاء عملهم بالمشروع وإعادة تك ليفهم
+بأعمال أو مشاريع جديدة أو العودة إلى عملهم الوظيفي حتى قبل أن ينتهي المشروع. أما أعضاء الفريق 
+المتبقيين بدوام كامل أو جزئي فيتم إعادة تكليفهم بعد إنجاز ما تبقى من المشروع، وخصوصاً فيما يتعل ق بأنشطة
+ اإلغالق. في بعض األحيان، قد يشارك بعض أعضاء الفريق بعمليات تشغيل منتج المشروع بعد انتهاء المشرو ع
+وتسليمه للزبون، وفي هذه الحالة سيحصلون على وظيفة تشغيل
+ية لدى الزبون. أما بالنسبة لألشخاص المتعا قد
+معهم فيتم إنهاء عقودهم مع انتهاء المشروع. وفي بعض الحاالت قد يكون هناك حاجة لمتابعة بعض األعمال 
+.مثل تشغيل المعدات أو النظم الجديدة ودعم المستخدمين وتدريبهم حتى بعد انتهاء المشروع 
+ 
+ 
+
+=== PAGE 531 ===
+ 
+- 531 - 
+ 
+14
+-
+4
+-
+3
+ كتابة التقرير النهائي لل مشروعCreating a Final Report
+ 
+يلخص التقرير النهائي أداء المشروع ويقدم معلومات مفيدة للتحسين المستمر. وعلى الرغم من أن محتويات 
+:التقرير النهائي تكون مخصصة للمشروع وللمنظمة، إال أنه يشمل عادةً الموضوعات التالية 
+-
+ 
+.الملخص التنفيذي 
+-
+ 
+.المراجعة والتحليل 
+-
+ 
+.التوصيات 
+-
+ ا.لدروس المستفادة 
+-
+ 
+.المالحق 
+14
+-
+5
+ تقييم المشروع 
+Project Evaluation
+ 
+إن الغرض من تقييم المشروع هو تقدير مدى نجاح فريق المشروع وأعضاء الفريق ومدير المشروع وتقييم أدا.ئهم 
+14
+-
+5
+-
+1
+ 
+ تقييم فريق العملTeam Evaluation
+ 
+إن تقييم األداء هو أمر ضروري لتشجيع التغيرات في ال
+سلوك ودعم تطور السيرورة المهنية لألفراد والتح سين
+المستمر من خالل التعلم التنظيمي. والتقييم يعني القياس وفقاً لمعايير محددة. ولكي تكون عملية التق ،ييم فعّالة
+.يجب تحديد التوقعات والمعايير والمقاييس والثقافة التنظيمية الداعمة والقيود قبل بدء المشروع 
+تشير األد:لة عموماً اليوم إلى أن تقييم األداء ال يتم بالشكل المطلوب، ويعود ذلك لسببين هما 
+-
+ 
+.ال يزال تقييم األفراد متروك للمشرفين على األقسام الوظيفية التي ينتمي إليها أعضاء الفريق 
+-
+ 
+.تركّز القياسات النموذجية ألداء الفريق على معامالت الزمن والتكلفة والمواصفات 
+ 
+ 
+ 
+
+=== PAGE 532 ===
+ 
+- 532 - 
+ 
+ومعظم الم نظمات ال تذهب إلى أبعد من هذه القياسات، وعلى الرغم من أنها مهمة وحاسمة، ينبغي على
+المنظمات النظر في تقييم عملية بناء الفريق وفعالية القرار الجماعي وعمليات حلّ المشاكل وتماسك الم جموعة
+والثقة بين أعضاء الفريق وجودة المعلومات المتبادلة. كما أن قياس رضا الزبائ
+ن والمستخدمين عن مخرجا ت
+المشروع غالباً ما يكون غائباً تماماً. ومع ذلك، يعتمد نجاح المشروع بشكل كبير على إرضاء هاتين الم ،جموعتين
+.وتكون جودة مخرجات المشروع من مسؤولية الفريق 
+ليكون تقييم فريق المشروع فعاالً ومفيداً يجب توفير مجموعة من الشروط قبل أن يبدأ المش
+روع والتي يم كن
+:صياغتها على شكل أسئلة نموذجية كما يلي 
+-
+ 
+ هل توجد معايير لقياس األداء؟ 
+-
+ هل أهداف المشروع واضحة للفريق ولألفراد؟ 
+-
+ هل المسؤوليات الفردية والجماعية ومعايير األداء معروفة من قبل جميع أعضاء الفريق؟ 
+-
+ 
+ هل مكافآت الفريق كافية؟ وهل ترسل هذه المكافآت إشارة
+واضحة من اإلدارة العليا حول أهمية العم ل
+كفريق؟ 
+-
+ هل المسار وظيفي واضح لمديري المشاريع الناجحة؟ 
+-
+ هل بإمكان الفريق إدارة الصعوبات على المدى القصير؟ 
+-
+ هل هناك مستوى عال نسبياً من الثقة النابعة من الثقافة التنظيمية؟ 
+-
+ 
+ يجب أن يتجاوز تقييم الفريق مواضـــــيع الزمن والتكلفة والمواصـــــفات، فهل هناك معايير تتجاوز هذه
+القيود؟ 
+سيدعم توفير هذه الشروط أي نهج لتقييم الفريق وأعضائه. وفي الممارسة العملية، تأخذ عملية تقييم الف ريق
+أشكاالً متعددة وخاصة عندما يتجاوز التقييم قيود الزمن والتكلفة والمواصفات، منها أن يقوم خبير است شاري أو
+موظف من 
+.قسم الموارد البشرية بإجراء مسح مباشر أو من خالل البريد اإللكتروني 
+ 
+
+=== PAGE 533 ===
+ 
+- 533 - 
+ 
+ يقتصر المسح عادة على أعضاء الفريق، ولكن في بعض الحاالت يمكن أن يشمل بعض أصحاب المصلحة
+في المشروع الذين يتفاعلون مع الفريق. يعرض الجدول (
+14
+-
+2
+) مثاالً على مسح جزئي. وبعد 
+ أن تتم جدولة
+النتائج
+، يجتمع الفريق مع الميسّر و / أو مع اإلدارة العليا بجلسة لمراجعة النتائج. حيث يجري الترك يز على
+ استخدام نتائج المسح لتقييم تطور الفريق ونقاط قوته وضعفه والدروس التي يمكن تطبيقها في المشاريع
+المستقبلية. تفيد نتائج مسوح تقييم الفريق في تغيير السلوك لدعم التوا
+صل ضمن الفريق والتحسين المست مر
+.ألدائه 
+ 
+ المصدر(
+Larson, 2020
+)
+ 
+الجدول (
+14
+-
+2
+ )
+–
+ مثال عن مسح جزئي لتقييم أدا
+ء الفريق 
+14
+-
+5
+-
+2
+ 
+ مراجعة أداء األفراد وأعضاء الفريق ومدير المشروعIndividual, Team Member, 
+and Project Manager Performance Reviews
+ 
+تختلف المنظمات في ا لمدى الذي يشارك فيه مديرو المشاريع في عملية تقييم أداء أعضاء الفريق. ففي
+ المنظمات التي تُدار فيها المشاريع ضمن التنظيم الوظيفيFunctional Organization، يكون المدير الوظيف ي
+هو المسؤول عن تقييم أداء أعضاء الفريق، وليس مدير المشروع، ولكنه قد يلتمس رأي مدير ال مشروع حول
+ .أداء بعض األفراد، ويتم اعتبار ذلك ضمن تقييم األداء العام للفرد ضمن المنظمة 
+ 
+
+=== PAGE 534 ===
+ 
+- 534 - 
+ 
+ وفي حال المنظمات التي تُدار فيها المشاريع ضمن التنظيم المصفوفي المتوازنBalanced Matrix 
+Organization، فيتشارك مدير المشروع والمدير الوظيفي في تقييم أداء الفرد. أمّا في حا
+ل المنظمات الت ي
+ تُدار فيها المشاريع ضمن التنظيم بالمشاريعPure Project Organization، يكون مدير المشروع هو المسؤول 
+عن تقييم أداء أعضاء فريق العمل. وفي الحاالت الثالث السابقة من المفيد عند تقييم األداء التماس ال رأي من
+ جميع األطراف واألشخاص الذين تأثروا بعمل
+الشخص أو الفريق، وهذا يشمل ليس فقط مدير المشروع والمدير 
+.الوظيفي ولكن أيضًا أقرانهم ومرؤوسيهم وحتى الزبائن والمستخدم النهائي 
+:لتقييم األداء عموماً وظيفتان هامتان 
+-
+ 
+.تحديد مواطن القوة والضعف لدى الفرد ووضع خطط عمل لتحسين أدائه 
+-
+ تقييم مدى إنجاز الشخص من أجل تحد.يد أو تعديل سوية أجره ومكافأته 
+ لكن هاتين الوظيفتين غير متوافقتين، فالعامل في حرصه على معرفة مقدار األجر التي سيحصل عليه سيميل
+.إلى عدم إبداء المالحظات البنّاءة حول الكيفية التي يمكن أن يحسّن من خاللها أداءه 
+ وبالمثل، يميل المديرون أكثر إلى تبرير قرارهم في االنخراط في مناقشة جادة حول كيف يمكن أن يحسّن
+الموظف أداءه. فمن الصعب أن يكون المدير مدرباً وقاضياً في نفس الوقت. ونتيجة لذلك، يُوصي العديد م ن
+ خبراء نظم تقييم األداء المنظمات بأن تفصل مراجعة األداء التي تركز على تحسين أداء الفرد عن عملية
+المراجعة الخاصة بت.وزيع المكافآت 
+ في بعض المنظمات المصفوفية، يقوم مديرو المشاريع بإجراء مراجعات األداء، في حين يقوم المديرون
+ الوظيفيون بمراجعات توزيع المكافآت. وفي حاالت أخرى، تكون مراجعة األداء جزء من عملية إغالق المشرو ،ع
+وتكون مراجعة توزيع المكافآت الهدف األساسي من تقييم ا
+ألداء السنوي. وتتجنب بعض المنظمات هذه المعض لة
+.من خالل تخصيص مكافآت للفريق ككل عن عمله في المشروع ومكافآت سنوية عن األداء الفردي 
+
+=== PAGE 535 ===
+ 
+- 535 - 
+ 
+14
+-
+6
+ 
+ الدروس والعبر المستخلصةRetrospectives and Lesson Learned
+ 
+تمثل الدروس والعبر المستخلصة تحليالً يتم إجراؤه أثناء وبعد فترة وجيزة من نهاية المشروع إليجاد م ا يمكن
+تعلمه من تجربة المشروع إيجاباً أو سلباً، أي ما هي األمور التي تمت على ما يُرام؟ وما هي األمور ا لتي لم
+تسر كما ينبغي؟ ولماذا؟ ووضع خطة عمل تضمن أن يتم استخدام الدروس المستفادة في تحسين إدارة المشاري ع
+المستقبلية. واألهد
+اف الرئيسة من هذه الدروس تكمن في إعادة استخدام الحلول ووقف األخطاء المتكررة ف ي
+.جميع أنحاء المنظمة 
+للدروس والعبر المستخلصة فائدة كبيرة على مستوى المنظمة وال أحد ينكر ذلك، ولكن ال تزال هناك العدي د من
+ العوائق التي تحول دون االستفادة بشكل فعّال من هذه الدروس:أهمها 
+-
+ 
+.ضيق الوقت 
+-
+ 
+ يتم تثبيت معظم الدروس المســـتفادة عند اكتمال المشـــروع، وعندها لن يحصـــل فريق المشـــروع على
+.التوجيهات أو الدعم بعد أن يتم اإلبالغ عن الدروس 
+-
+ 
+.ًتتحول الدروس المستفادة في كثير من األحيان إلى جلسات لوم يكون ضررها العاطفي كبيرا 
+-
+ 
+ نادراً ما تُستخدم الدر.وس المستفادة أثناء تنفيذ المشروع لتحسين العمل المتبقي في المشروع 
+-
+ غالباً ال يتم اســـتخدام الدروس المســـتفادة في المشـــاريع المســـتقبلية بســـبب فشـــل الثقافة التنظيمية ف ي
+.االعتراف بقيمة التعلم 
+إن المطلوب للتغلب على هذه العوائق هو منهجية وفلسفة إدارة لضمان تحديد الدروس المستفادة واستخدامه ،ا
+وأن تصبح جزءاً مهماً من الثقافة التنظيمية إلدارة المشاريع. والمفتاح هي تحويل الدروس المستفادة إ لى إجراءات
+.محددة وتعيين شخص لمتابعتها 
+ 
+ 
+ 
+
+=== PAGE 536 ===
+ 
+- 536 - 
+ 
+ لقد استخدم العسكريون الدروس المستفادة منذ فترة طويلة لتحسين عملياتهم بعد كل مناورة أو معركة. وظهرت
+ الدروس المستفادة كفلسفة عملية وإدارية قوية تستخدمها المنظمات القائمة على المشاريع في جميع أنحاء العالم
+.للتنقيب عن المعارف التي يمكن أن تقدمها هذه الدروس 
+*
+ 
+*
+ 
+*
+  
+
+=== PAGE 537 ===
+ 
+- 537 - 
+ 
+المراجع 
+(1) Erik W. Larson and Clifford F. Gray. Project Management the Managerial Process, 8th Ed, 
+2020, McGraw-Hill/Irwin. 
+ 
+(2) PMI. A Guide to the Project Management Body of Knowledge PMBOK, 6th Ed, 2017, 
+Project Management Institute Inc. 
+ 
+(3) Harold Kerzner. Project Management - A Systems Approach to Planning, Scheduling, and 
+Controlling, 12th Ed, 2017, John Wiley & Sons Inc. 
+ 
+(4) Wysocki, Robert K. Effective Project Management _ Traditional, Agile, Extreme, 8th Ed, 
+2019, John Wiley & Sons, Incorporated. 
+ 
+(5) Timothy J. Kloppenborg. Contemporary project management _ organize, lead, plan, perform, 
+4th Ed, 2019, Cengage Learning. 
+ 
+(6) Gary L Richardson_ Brad M Jackson. Project Management Theory and Practice, 3d Ed, 2018, 
+Auerbach Publications CRC Press. 
+ 
+(7) Te Wu. Optimizing Project Management, 2020, CRC Press. 
+ 
+(8) Kathy Schwalbe. Information Technology Project Management, 9th Ed, 2019, Cengage. 
+ 
+(9) Joachim Rossberg. Agile Project Management with Azure DevOps _ Concepts, Templates, 
+and Metrics, 2019, Apress. 
+ 
+(10) Harold Kerzner. Using the Project Management Maturity Model_ Strategic Planning for 
+Project Management, 3d Ed, 2019, Wiley John + Sons. 
+ 
+(11) Jeffrey K. Pinto. Project Management_ Achieving Competitive Advantage, 5th Ed, 2019, 
+Pearson Education, Inc. 
+ 
+(12) Harold Kerzner. Project Management Best Practices_ Achieving Global Excellence, 4th Ed, 
+2018, Wiley. 
+ 
+(13) Heldman, Kim. PMP Project Management Professional Exam Study Guide, 9th Ed, 2018, 
+John Wiley et Sons. 
+ 
+(14) Alexander Roberts, Dr WilliamWallace. Project Management, 2004, Edinburgg Business 
+School. 
+*
+ 
+*
+ 
+*
+ 
+ 
+
+=== PAGE 538 ===
+ 
+- 538 - 
+ 
+مراجعة 
+ أسئلة خيارات متعددة 
+1
+-
+ ؟ ما هو نمط إغالق المشروع الذي يتميز بأنه األكثر شيوعاً ويت
+م بمجرد إنجاز واكتمال المشروع 
+أ)
+ 
+ اإلغالق العاديNormal
+ 
+ب)
+ 
+ اإلغالق المبكّرPremature
+ 
+ت)
+ 
+ اإلغالق األبديPerpetual
+ 
+ث)
+ 
+ فشل المشروعFailed Project
+ 
+ 
+2
+-
+ م ا هو نمط إغالق المشروع الذي يتميز بأن االنتهاء من المشروع قد يتم في وقت مبكر بعد أن يكون قد تم التخلي عن
+بعض أجزاء مشروع من خ
+الل تقليص النطاق؟ 
+أ)
+ 
+ اإلغالق العاديNormal
+ 
+ب)
+ 
+ اإلغالق المبكّرPremature
+ 
+ت)
+ 
+ اإلغالق األبديPerpetual
+ 
+ث)
+ 
+ فشل المشروعFailed Project
+ 
+ 
+3
+-
+ م ا هو نمط اإلغالق الذي يتميز بأن المشروع يبدو أنه ال ينتهي أبداً. والسمة الرئيسة لهذا النوع من المشاريع هو
+اإلضافات المستمرة، وهذا ما يشير 
+.إلى نطاق المشروع سيء التصميم 
+أ)
+ 
+ اإلغالق العاديNormal
+ 
+ب)
+ 
+ اإلغالق المبكّرPremature
+ 
+ت)
+ 
+ اإلغالق األبديPerpetual
+ 
+ث)
+ 
+ فشل المشروعFailed Project
+ 
+ 
+4
+-
+ م.ا هو نمط اإلغالق الذي يتميز بسهولة اإلغالق بسبب فشل المشروع 
+أ)
+ 
+ اإلغالق العاديNormal
+ 
+ب)
+ 
+ اإلغالق المبكّرPremature
+ 
+ت)
+ 
+ اإلغالق األبديPerpetual
+ 
+ث)
+ 
+ فشل المشروعFailed Project
+ 
+
+=== PAGE 539 ===
+ 
+- 539 - 
+ 
+5
+-
+ 
+ ما هو نمط اإلغالق الذي يتميز بقيام إدارة المنظمة بمراجعة أولويات اختيار المشاريع باستمرار لتعكس التغيرات في
+.االتجاه التنظيمي. وهذا ما يؤدي في بعض األحيان لتغيير في نطاق المشاريع الجارية أو إلغاء بعضها 
+أ)
+ 
+ اإلغالق العاديNormal
+ 
+ب)
+ 
+ اإلغالق المبكّرPremature
+ 
+ت)
+ 
+ اإلغالق األبديPerpetual
+ 
+ث)
+ 
+ تغير األولوياتChanged Priority
+ 
+ 
+6
+-
+ م
+ا هو الخيار الذي ال يُعتبر من أنشطة إغالق المشروع؟ 
+أ)
+ 
+.تنفيذ إجراءات ضبط الجودة 
+ب)
+ 
+.الحصول على قبول التسليم من قبل الزبون 
+ت)
+ 
+.إغالق وتحرير الموارد 
+ث)
+ كتابة التقرير النهائي للمشروع.
+ 
+ 
+7
+-
+ م
+ا هو الخيار غير المعني بعملية تقييم فريق العمل؟ 
+أ)
+ 
+.تقييم عملية بناء الفريق 
+ب)
+ 
+.تقييم األداء الفردي لكل عضو من أعضاء الفريق 
+ت)
+ 
+.تقييم فعالية القرار الجماعي وعمليات حلّ المشاكل 
+ث)
+ 
+.تقييم تماسك المجموعة والثقة بين أعضاء الفريق 
+ 
+8
+-
+ م
+ا هو الخيار الذي ال يُعتبر من العوائق ا
+لتي تحول دون االستفادة بشكل فعّال من هذه الدروس؟ 
+أ)
+ 
+ يتم تثبيت معظم الدروس المستفادة عند اكتمال المشروع، وعندها لن يحصل فريق المشروع على التوجيهات أو
+.الدعم بعد أن يتم اإلبالغ عن الدروس 
+ب)
+ تتحول الدروس المستفادة في كثير من األحيان إلى جلسات لوم يكون ضررها العاطفي 
+.ًكبيرا 
+ت)
+ 
+.عدم االقتناع بأهمية التعلّم من الفشل 
+ث)
+ 
+.نادراً ما تُستخدم الدروس المستفادة أثناء تنفيذ المشروع لتحسين العمل المتبقي في المشروع 
+ 
+ 
+ 
+ 
+
+=== PAGE 540 ===
+ 
+- 540 - 
+ 
+9
+-
+ م
+ا هو الخيار الذي ال يُعتبر من وظائف تقييم أداء األفراد؟ 
+أ)
+ تحديد مواطن القوة والضعف لدى الفرد 
+ب)
+ 
+.وضع خطط عمل لتحسين أدائه 
+ت)
+ تقي.يم مدى إنجاز الشخص من أجل تحديد أو تعديل سوية أجره ومكافأته 
+ث)
+ 
+.نقل بعض األفراد إلى مشاريع أخرى أكثر أهمية أو أقل أهمية 
+ 
+10
+-
+ م اذا يُسمى تكتيك تسليم المشروع عندما يتم االستعانة بطرف خارجي لتنفيذه حيث يقوم المتعاقد أو المقاول ببناء المنتج
+وتملّكه وتشغيله لفترة معين
+ة من الزمن قبل نقله إلى الزبون؟ 
+أ)
+ 
+BOOT (Build, Own, Operate, Transfer)
+ 
+ب)
+ 
+BOOT (Be Operational and Ongoing Technology)
+ 
+ت)
+ 
+BOOT (Buy Open sOurce Technology)
+ 
+ث)
+ 
+BOOT (Best Outlook Odd Target)
+ 
+ 
+أ سئلة مقالية\ قضايا للمناقشة 
+1
+-
+ 
+.قارن بين مختلف أنماط إغالق المشاريع 
+2
+-
+ اذكر أنشطة إغالق المشروع بالتسلسل الزمني، وماذا يتم ضمن كل نشاط؟ 
+3
+-
+ ما هي الشروط التي يجب توفيرها قبل أن يبدأ المشروع ليكون تقييم الفريق فعاالً ومفيداً؟ 
+4
+-
+ ما أهمية الدروس المستفادة والعبر المستخلصة في عملية إغالق المشروع؟ 
+*
+ 
+*
+ 
+*
+ 
+ 
+
+=== PAGE 541 ===
+ 
+- 541 - 
+ 
+/ حالة عملية رقم1
+/
+ 
+عنوان الحالة العملية 
+Halo for Heroes II 
+نص الحالة العملية 
+You are a member of a project management practicum class. The major assignment for 
+this class is to plan and implement a fund-raising project that will raise at least $1,500 and 
+provide an opportunity to practice project management. You have joined a group of six 
+students who have decided to organize an event based on the popular Halo video game. 
+Your professor tells your group that they are in luck because another group did a similar 
+project last year. He hands you a copy of their post-project audit. 
+Project Halo Audit 
+Objective: To raise at least $1,000 for the National Military Families Association by 
+conducting a Halo video game tournament in Kleinsorge Hall on November 16 and 17. 
+Operation 
+See tournament information (below) for a detailed description on how the tournament was 
+managed. 
+Risk Management 
+Through risk assessment we were able to identify and mitigate potential risks to the 
+project. We were concerned with technical difficulties in setting up the gaming operations 
+in the different classrooms. We did a trial run three days before the tournament in one of 
+the classrooms to work out the mechanics of connecting consoles to the audio/video 
+equipment in the room. This made setting up things on the first day of the tournament 
+much easier. One surprise was that a few players failed to show up at designated times 
+and we wished we had their cell phone numbers to contact them. 
+Outcomes 
+Our final contestant count was marked at 100 contestants, for a total of $1,000 in ticket 
+sales. In addition, we received some cash donations from private sponsors, donated color 
+
+=== PAGE 542 ===
+ 
+- 542 - 
+ 
+fliers and equipment rental, 12 cases of Mountain Dew from Pepsi, and several smaller 
+incentives from local businesses. The total valuation of all ticket sales and donated items 
+was $3,113.43. We were unable to locate a business willing to sponsor any large prizes; 
+therefore, we had to purchase these out of our cash proceeds. After the purchase of all 
+prizes and repayment of $100.00 to Prof. X for our seed money, our final net proceeds 
+were $720.00. Despite not reaching our financial goal, the participants enjoyed the 
+experience and we learned a lot about managing a project. 
+Lessons Learned 
+Don’t advertise specific prizes until you have obtained them. We assumed we could get a 
+local retailer to donate the grand prize (Xbox 360) but ultimately we had to pay for it 
+ourselves. 
+A multimedia marketing campaign is needed to reach the target audience. We utilized 
+several different strategies to reach our target market, including a dedicated website and 
+PayPal signup, a donation drive web page extended on this site, physical kiosk signups, 
+the development and distribution of 2,500 color fliers, a MySpace page, a Facebook page, 
+and an announcement on the College of Business website. We actually had contestants 
+from as far away as Portland and Eugene. 
+Do a walk-through at least one day before the tournament. 
+Take time out to focus on the team. Team-building exercises we did in class, like “My 
+group as a car,” helped us resolve interpersonal issues before they became serious. 
+Many of us felt the grand prize was a deterrent, with many prospective players opting out 
+because they did not feel they were good enough at playing Halo to compete for such a 
+lofty prize. In retrospect, we felt we could have done just as well by using donated prizes, 
+like tickets for the local movie theaters and gift cards. 
+Next time we would set up a loser’s bracket so that players would have a chance to play 
+against others with comparable ability and win prizes. 
+You need luck or personal contacts to secure big sponsorships. We had neither. However, 
+we were surprised at how willing local businesses were to donate small prizes to the 
+project. 
+Take advantage of the contacts you have on your team. Despite our extensive marketing 
+campaign, roughly half of the participants were friends of ours. Your team’s social network 
+provides both opportunities and limitations. For example, we had no active member in the 
+
+=== PAGE 543 ===
+ 
+- 543 - 
+ 
+Greek community on campus to organize a competition across houses. 
+Tournament Information 
+Welcome to the Halo for Heroes Tournament! 
+By entering this tournament, you agree to the following rules and guidelines. 
+Important! 
+This tournament is open to the public and we encourage open competition between all 
+skill levels. The entire tournament will be played on projected screens in dark rooms. You 
+are more than welcome to bring your own controller to use during the tournament. 
+You will be able to make your custom profile on our system prior to playing, but we are 
+unable to allow any outside memory to be loaded onto the systems due to time constraints 
+and the “allow one to do it, allow all to do it” problem. 
+We hope you will have fun, and thanks for supporting Halo for Heroes and the National 
+Military Families Association, Inc. 
+Reservations 
+This tournament is by online reservation only on our website, halo4heroes.110mb.com. 
+Space is limited. If you are unable to register and purchase a ticket online, please contact 
+us. Once you have registered, an event manager will contact you by the e-mail address 
+you provide upon registration within 24 hours. You will be e-mailed a ticket confirmation 
+with an assigned play time, which you will need to enter the tournament. Please keep this, 
+as it has important tournament information. If you are unable to play during the assigned 
+time, please contact us immediately. 
+Arrival 
+Show up early! All players who enter the tournament must be ready to play by their 
+respective times as noted on their ticket confirmation. Please arrive at least 15 minutes 
+prior to the scheduled match time to check in. All players will need to check in at the front 
+lobby of Kleinsorge Hall. All players who are late will forfeit their chance of participating in 
+the tournament. We cannot guarantee parking around campus, so please take ample time 
+to arrive at the event on time. (See the vicinity map.) 
+Tournament Sequence 
+All tournament rounds will consist of three matches played on Halo 3® among four 
+
+=== PAGE 544 ===
+ 
+- 544 - 
+ 
+individual players. Game style will be “Free for All Slayer” with 25 kills to win the match 
+with a 10-minute time limit per match. All other game rules and options will be Halo 3® 
+default settings. The player with the highest cumulative kill count of all the matches will 
+advance to the next round. All the others will be eliminated from the tournament play. 
+Round 1 will be conducted on Friday, November 16, and Rounds 2 and 3 will be conducted 
+on Saturday, November 17. All play will be on projection screens. In order to judge the 
+tournament, after a match is over the event managers will need to record the scores. For 
+this reason, please be patient and wait until the event manager gives the okay to proceed 
+with the next game. Below is a map schedule so you can begin practicing. 
+Halo 3® Map Schedule 
+ 
+ 
+In the event that there is a tie, players will immediately play a single tie-breaking match. 
+“Free for All Slayer” with five kills to win the tie-breaker with a five-minute time limit. The 
+map for the tie-breaker will be “Construct.” Non-Tournament Play All players who did not 
+receive a position in the tournament can still play! There will be an area set up for non-
+tournament play. There is a $3.00 charge for all entrants into non-tournament play. 
+Under-Age Players 
+Players under the age of 17 must be accompanied by a parent or guardian. The parent or 
+guardian must also sign a Parental Release Authorization and bring it with the child to the 
+event. Any unaccompanied persons who are under age will not be allowed to participate 
+in the tournament. 
+General Rules 
+1. Do not damage any hardware and equipment. If you break it, you just bought it. 
+2. Conduct yourself in a respectful and supportive manner. 
+3. Unacceptable behavior will result in disqualification. 
+4. All disputes will be settled by the operators of the event. 
+Audience 
+
+=== PAGE 545 ===
+ 
+- 545 - 
+ 
+If you have been eliminated and would like to stay and watch the tournament, you are 
+welcome to do so. Family members and friends of contestants are also welcome to attend 
+as an audience. We ask that all audience members be supportive and respectful of all 
+contestants. We reserve the right to dismiss disruptive audience members from the 
+premises. 
+Prizes and Raffles 
+The winner of the tournament will receive an Xbox 360. Other finalists will receive various 
+prizes, including games, controllers, and gift certificates. All participants can participate in 
+the event raffles that will be held at the event. Contributions to enter the raffles and the 
+potential prizes will be disclosed at the event. 
+Refunds 
+This tournament is to benefit the American Military Families Association, Inc. There will 
+be no refunds under any circumstances. Any dispute must be brought to the attention of 
+the event managers for a decision. 
+CONTACT US 
+If you have any questions or concerns, contact one of the operators of the event or e-mail 
+us at halo4heroes@hotmail.com. If you need to speak to someone immediately, please 
+call 503-xxx-xxxx.  
+Thank you for your cooperation, have fun, and good luck!—Halo for Heroes 
+أسئلة الحالة العملية 
+Review the document and answer the following questions: 
+1. What are the two or three most valuable lessons you learned from this report and 
+why? 
+2. What are one or two important questions/issues that are missing from their report 
+that you wish were addressed? Explain why this information would be useful. 
+3. Briefly discuss the value of project audits based on this example. Imagine what it 
+would be like if you did not have the audit. 
+مراجع الحالة العملية 
+Erik W. Larson and Clifford F. Gray. Project Management the Managerial Process, 8th Ed, 2020, 
+
+=== PAGE 546 ===
+ 
+- 546 - 
+ 
+McGraw-Hill/Irwin. 
+ 
+/ حالة عملية رقم2
+/
+ 
+عنوان الحال
+ة العملية 
+Factory Expansion Project 
+نص الحالة العملية 
+Jacob Clemson is the owner of Digitsig, Inc., a growing Canadian electronics company. 
+The company has been receiving orders from customers worldwide, and sales have been 
+expanding rapidly. The factory is now working three shifts and is at capacity. Jacob had 
+to lease additional space in a building several miles away. He knows he must expand his 
+factory to keep up with growing demand, to increase efficiency, and to reduce the costs 
+associated with trucking materials and product back and forth between his factory and the 
+building he is leasing. The cost of the lease was very high because there just was not 
+much good available space in the area and Jacob was desperate to get additional space 
+right away, or he would not be able to keep up with demand and customers would go to 
+his competitors. 
+Jacob met Andy Gibson, part-owner of AG Contractors, at a recent business networking 
+event. He told Andy about his expansion needs. Andy said, “We can do that for you, Mr. 
+Clemson. We’ve done many similar projects. As you may know, business is booming in 
+the region, and getting a contractor won’t be easy. But it could be lucky we met because 
+we are just finishing up another project and could probably get working on yours if we can 
+get an agreement soon. 
+I’ve got four other proposals pending, and if they come in, we won’t be able to handle any 
+other projects. And like I said, I understand all the other contractors are just as busy. It 
+sounds like you really need to start on this factory expansion right away, and I think we 
+can help you out.” 
+Jacob became worried that he might not be able to get another contractor, and he did not 
+want to waste any more time. So he signed a contract with AG Contractors, for what he 
+
+=== PAGE 547 ===
+ 
+- 547 - 
+ 
+thought was a reasonable price, to design and build the expansion to his factory. The 
+expansion space would be used primarily for inventory storage of incoming materials and 
+finished goods. He agreed to a bonus clause in the contract to pay AG Contractors a 10 
+percent bonus if it completed the building in 12 months rather than the 15 months Andy 
+told him it would normally take. 
+It is now 14 months later. Andy Gibson and Gerri Penk, a recently hired project manager 
+for AG Contractors, walked into Jacob Clemson’s office. The receptionist asked, “May I 
+help you?” 
+Andy asked, “Is Jacob in?” “Yes, he is. Do you have an appointment?” responded the 
+receptionist. Andy hurried by the receptionist, saying, “I don’t need one. This will only take 
+a minute.” A surprised Gerri followed after him. He knocked on Mr. Clemson’s door once, 
+opened it, and walked in without waiting for a response. Astonished, Jacob Clemson 
+looked up and said, “I’m right in the middle of this important....” Andy interrupted. “This 
+will only take a minute. I just wanted to say that we got your factory expansion project 
+completed on time and within budget. We finished in 12 months, just like I knew we, I 
+mean, like I hoped we would. 
+I had to kick butt with some of our subcontractors, but that’s the way it goes in this 
+business. Sometimes you’ve got to be an SOB to get the job done. I’m sure you’re the 
+same way, Jacob, or you wouldn’t be where you’re at.” Jacob Clemson spoke up. “Well, 
+there were some problems....” 
+But Andy interrupted again. “In a big project like this, there are always problems, and some 
+people’s feathers get ruffled. But that always happens. Don’t be concerned about that. In 
+the end, it all worked out. I thought maybe we could go to lunch to celebrate, but we have 
+another meeting across town. Give me a call sometime, and maybe we can get together 
+and see if I can help you with any other projects you might have.” Andy then turned and 
+quickly left Jacob’s office, walking right past Gerri, who ran to catch up with him. 
+After they left, Jacob was somewhat stunned and became furious. He thought to himself, 
+“Another project? Over my dead body. An SOB? What kind of person does he think I am? 
+Getting the project done on time and within budget—does he think that is all that it’s 
+about? This project was a nightmare. It finished up costing about 50 percent more than 
+AG’s original price because of all the changes they came back with. They never asked, 
+never listened, never told me what was going on, and never returned my phone calls. 
+What a bunch of jerks! 
+
+=== PAGE 548 ===
+ 
+- 548 - 
+ 
+I’ll never do business with them again.” As Andy and Gerri walked to Andy’s car, he told 
+Gerri, “There you go, another satisfied AG customer. And a pretty naive one too,” Andy 
+chuckled. 
+“I knew we could get the project done in 12 months. But I knew he was desperate, and I 
+told him it would take 15 months, and then got him to agree to a bonus payment if we got 
+it done in 12 months.” 
+Gerri asked, “Andy, isn’t that unethical?” “Hey, business is booming for Digitsig; they have 
+plenty of money. Besides, it’s his problem for waiting so long before deciding on doing the 
+expansion anyway. 
+He was lucky we helped him out of a bind. But I’ve got to tell you, Gerri, I wondered why 
+he was building all that warehouse space for inventory when most other businesses are 
+going to just-in-time deliveries. But I wasn’t about to tell him that. It’s amazing he’s in 
+business at all. Oh, well, you’ll find out it’s a dogeat-dog world out there, Gerri.” 
+Gerri responded, “Andy, I got a sense that maybe Mr. Clemson wasn’t totally satisfied. I 
+mean he really didn’t say he was.” 
+“He didn’t say he wasn’t either,” snapped Andy. “Besides, he never seemed interested in 
+the project, he never asked to have any meetings, and when I tried to schedule a meeting, 
+he was too busy. And then his payments were always late—like he was anal or something. 
+Believe me, he’s tickled with what AG did. He was desperate to get the project done, and 
+we did it for him—on time and within budget. 
+And made a bunch of money on the project. So we both came out winners.” 
+“In fact, I’ll use old Jacob as a reference with the new customer we’ll be meeting this 
+afternoon to review their RFP. Customers always ask for references from previous 
+projects, but quite frankly, they hardly ever call them.” 
+“Hey, Gerri, you’ll learn that you’ve got to focus on the next customer and not worry about 
+the old ones. It works, believe me, or I wouldn’t be driving this Porsche. Maybe they didn’t 
+teach you that in MBA school, Gerri, but I learned from the school of hard knocks when I 
+took this business over from my father. 
+He was well liked in the community, and I’m just following in his footsteps.” 
+
+=== PAGE 549 ===
+ 
+- 549 - 
+ 
+أسئلة الحالة العملية 
+1. What should Andy Gibson have done differently in his meeting with Jacob Clemson 
+in Jacob’s office? 
+2. What are some things Andy could have done differently in his initial contact with 
+Jacob and during the project? 
+3. What are some things Jacob could have done differently from the time he met Andy 
+Gibson initially and during the project? 
+4. What should Gerri do? 
+مراجع الحالة العملية 
+Jack Gido, Jim Clements, and Rose Baker. Successful Project Management, Seventh Edition, 2018. 
+Cengage Learning. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+=== PAGE 550 ===
+ 
+- 550 - 
+ 
+/ حالة عملية رقم3
+/
+ 
+عنوان الحالة العملية 
+Market Research Report Project 
+نص الحالة العملية 
+Meghan has been a project manager for more than 10 years for Effective Market 
+Research. The president of the company, Allison, is very pleased with Meghan’s careful 
+attention to detail on every project. The portfolio of projects for Effective Market Research 
+has more than tripled since Meghan was hired as the project manager. 
+Meghan’s project team is composed of eight members, each with a specialty for market 
+research. In addition to doing excellent market research, the team’s customer comments 
+on the project evaluations usually have included a statement specifically related to how 
+well informed they were during the course of the project. 
+Meghan is very careful about the communication plan for each project. She gathers 
+information from the client and makes sure the client is satisfied with the project at each 
+project update meeting. 
+Christine, a director for the Upper Region Workforce Development Group, was at a 
+meeting and saw a copy of one of the reports for market research completed by Meghan’s 
+team. Funding was available for Christine to contract with a group to do market research 
+in her region. Several proposals that Christine wanted to write to get funding for workforce 
+development required the same type of information that was in the market research report. 
+Christine contacted the sales department for Effective Market Research to inquire about 
+purchasing a market research report for her region. The sales department confirmed a 
+face-to-face meeting time for Allison and Meghan to meet with Christine to discuss the 
+project requirements. 
+At the meeting, Christine described her information needs. Meghan listened carefully and 
+crafted a list of project deliverables. At the conclusion of the meeting, Allison and Meghan 
+developed a project proposal and sent the document to Christine for her review and 
+authorization. The Effective Market Research finance team worked with the Upper Region 
+
+=== PAGE 551 ===
+ 
+- 551 - 
+ 
+Workforce Development Group finance group to secure a fixed-price contract for the work. 
+Meghan and her team attended the first meeting with Christine and Christine’s new project 
+manager, Sarah. At the meeting, Christine stated, “My duties at Upper Region have 
+increased, and I am putting Sarah in charge of the market research project. Sarah is the 
+contact person for you and should receive all the communications. I just don’t have time 
+to deal with this project now.” 
+Meghan updated the communication plan to have all communications with Sarah for the 
+remaining scheduled project time. 
+Three weeks before the final report was due, Meghan sent a copy of the draft report to 
+Sarah to review. Three days later, Meghan received a note that said, “Meghan, the report 
+looks great! Christine and I talked about having a few more of the pictures from the region 
+that you took included in the report and having a short two-page summary document that 
+we could share with the region commissioners and local supervisors. I think that is all that 
+they will review.” 
+Meghan updated the project schedule and set a meeting with Sam, the graphic specialist 
+on the team, for the next day. “Sam, I received feedback from Upper Region to include 
+more of the images into the report. What do you think is best?” The two-page summary 
+was already being completed as one of the project deliverables. It was not part of the 
+three-week prior review documents. 
+“In the file, there are seven graphics that we haven’t used in the report. We can include 
+them as a collage on the cover and put each one on the page that shows the data for the 
+type of work being performed in the image. The report is being distributed electronically 
+according to the project communication plan, so the additional graphics will not raise the 
+production costs,” suggested Sam. 
+Meghan and Sam agreed on the technique. 
+Meghan sent Sarah the two-page summary and the new report for the final approval. 
+Sarah confirmed that all was good to go. The final report was sent to Sarah for distribution 
+within the Upper Region Workforce Development Group more than a week before the due 
+date. The finance team for Effective Market Research sent the final invoice for the last 25 
+percent of the project costs. 
+Meghan sent the project evaluation form to Sarah and met with her project team members. 
+Two days later, Meghan received the following e-mail, “Meghan, I did not approve this 
+
+=== PAGE 552 ===
+ 
+- 552 - 
+ 
+report, and it cannot be distributed. I see all kinds of problems in the report that must be 
+corrected before the report is OK.” The e-mail was from Christine. 
+Meghan was very careful to follow the directions of Christine and had approval from Sarah 
+for the final report. Meghan sent a note, “Christine, Please let me know the problems that 
+are in the report so that we can make corrections.” Meghan was a bit concerned that 
+Christine had responded in such a manner when the communication from Sarah had 
+suggested that Christine had approved the report. Sarah was supposed to be Meghan’s 
+contact. 
+أسئلة الحالة العملية 
+1. Did Meghan’s team satisfy the customer? Why or why not? 
+2. How should Meghan respond to the comments from Christine after Sarah had 
+given feedback and approval for the final report? 
+3. The project team had gone through the steps of closing this project. They have one 
+week of slack in the schedule before they would be causing another project to be 
+delayed. What should Meghan do with her team? 
+4. What should Meghan have done differently in the project? 
+مراجع الحالة العملية 
+Jack Gido, Jim Clements, and Rose Baker. Successful Project Management, Seventh Edition, 2018. 
+Cengage Learning. 
+*
+ 
+*
+ 
+*
+ 
+ 
+ 
+
+=== PAGE 553 ===
+ 
+- 553 - 
+ 
+المراجع 
+(1) Erik W. Larson and Clifford F. Gray. Project Management the Managerial Process, 8th Ed, 
+2020, McGraw-Hill/Irwin. 
+ 
+(2) PMI. A Guide to the Project Management Body of Knowledge PMBOK, 6th Ed, 2017, 
+Project Management Institute Inc. 
+ 
+(3) Harold Kerzner. Project Management - A Systems Approach to Planning, Scheduling, and 
+Controlling, 12th Ed, 2017, John Wiley & Sons Inc. 
+ 
+(4) Wysocki, Robert K. Effective Project Management _ Traditional, Agile, Extreme, 8th Ed, 
+2019, John Wiley & Sons, Incorporated. 
+ 
+(5) Timothy J. Kloppenborg. Contemporary project management _ organize, lead, plan, perform, 
+4th Ed, 2019, Cengage Learning. 
+ 
+(6) Gary L Richardson_ Brad M Jackson. Project Management Theory and Practice, 3d Ed, 2018, 
+Auerbach Publications CRC Press. 
+ 
+(7) Te Wu. Optimizing Project Management, 2020, CRC Press. 
+ 
+(8) Kathy Schwalbe. Information Technology Project Management, 9th Ed, 2019, Cengage. 
+ 
+(9) Joachim Rossberg. Agile Project Management with Azure DevOps _ Concepts, Templates, 
+and Metrics, 2019, Apress. 
+ 
+(10) Harold Kerzner. Using the Project Management Maturity Model_ Strategic Planning for 
+Project Management, 3d Ed, 2019, Wiley John + Sons. 
+ 
+(11) Jeffrey K. Pinto. Project Management_ Achieving Competitive Advantage, 5th Ed, 2019, 
+Pearson Education, Inc. 
+ 
+(12) Harold Kerzner. Project Management Best Practices_ Achieving Global Excellence, 4th Ed, 
+2018, Wiley. 
+ 
+(13) Heldman, Kim. PMP Project Management Professional Exam Study Guide, 9th Ed, 2018, 
+John Wiley et Sons. 
+ 
+(14) Alexander Roberts, Dr WilliamWallace. Project Management, 2004, Edinburgg Business 
+School. 
+ 
+(15) Pinto, J. K., and D. P. Slevin, “Critical Success Factors in Successful Project 
+
+=== PAGE 554 ===
+ 
+- 554 - 
+ 
+Implementation,” IEEE Transactions in Engineering Management, vol. 34, no. 1 (1987), pp. 
+22–27. 
+ 
+(16) Dalcher, D. and Brodie, L., Successful IT projects. Thomson Learning. Middesex University 
+Press, 2007 
+ 
+*
+ 
+*
+ 
+*
+ 
