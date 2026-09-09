@@ -63,7 +63,6 @@
   .stat{display:flex;flex-direction:column;flex:1;min-width:0}
   .stat b{font-size:1.15rem}
   .stat small{color:var(--muted);font-size:.78rem}
-  .lowc{margin-top:10px;font-size:.8rem;color:var(--warn-text)}
   .cta{margin-top:16px;color:var(--accent-text);font-weight:600;font-size:.95rem}
   .card:hover .cta{text-decoration:underline}
 
@@ -260,12 +259,11 @@
       [c.sources,plural(c.sources,'مصدر','مصدران','مصادر')]
     ];
     var title=c.sources_path?('المصادر المستقلة: '+(c.source_ids||[]).join('، ')+(c.source_files?' · '+c.source_files+' ملفاً':'')):'';
-    var low=c.low_confidence?'<div class="lowc">⚠ '+c.low_confidence+' سؤالاً منخفض الثقة</div>':'';
     return '<div class="cardwrap"><a class="card" href="'+esc(c.path)+'" title="'+esc(title)+'">'+
       '<div class="top"><span class="code">'+esc(c.code)+'</span><span class="ver">v'+esc(c.version)+'</span></div>'+
       '<h3>'+esc(c.name_ar||c.code)+'</h3><p class="en">'+esc(c.name_en||'')+'</p>'+
       '<div class="stats">'+stats.map(function(s){return '<div class="stat"><b>'+esc(s[0])+'</b><small>'+s[1]+'</small></div>';}).join('')+'</div>'+
-      low+'<div class="cta">افتح المراجعة ←</div></a>'+
+      '<div class="cta">افتح المراجعة ←</div></a>'+
       '<a class="dl" href="'+esc(c.path)+'index.html" download="'+esc(c.download_name)+'">⬇ تحميل ملف '+esc(c.code)+' للعمل بلا إنترنت</a></div>';
   }
   var soon='<div class="cardwrap"><div class="card soon"><div class="top"><span class="code">…</span><span class="ver">قريباً</span></div>'+
