@@ -1,0 +1,5 @@
+# intermediate files produced by the prompt (section 0d) - contain raw extracted source text
+.review_generation_working_directory/
+# local scratch
+*.bak
+~$*
