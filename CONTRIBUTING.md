@@ -26,6 +26,9 @@ Every review is rendered from a question bank kept in `courses/S<n>/<CODE>/`. Th
 4. Copy the new `out.html` over `S3/<CODE>/index.html`. The home page reads version and counts
    from `courses.json`; run `python scripts/build_course_index.py` to refresh it, or let the
    GitHub Action do it after the push.
+   Every published page carries the Cloudflare Web Analytics snippet (the `<script>` from
+   `static.cloudflareinsights.com` at the end of the file); keep it when you overwrite the page
+   or copy it from the home page `index.html`.
 5. Open a pull request. Say what you changed and cite the book page.
 
 If you cannot run Python, you can still open a pull request that edits only the chapter file and
@@ -51,7 +54,8 @@ handles). Do not add material you are not allowed to share.
 2. When the review is finished, copy the folder to `courses/S<n>/<CODE>/`, without the archived
    versions and the duplicate deliverables, and write a course `README.md` modelled on
    `courses/S3/IMT/README.md`. Save the filled-in PROJECT SETTINGS table as `PROJECT_SETTINGS.md`.
-3. Copy the review to `S<n>/<CODE>/index.html`.
+3. Copy the review to `S<n>/<CODE>/index.html` and append the Cloudflare Web Analytics snippet
+   found at the end of the home page `index.html`.
 4. Nothing to edit on the home page: `courses.json` is rebuilt from the course's `bank.json`
    (run `python scripts/build_course_index.py`, or let the GitHub Action do it). A course
    without a bank in `courses/` needs a hand-written `S<n>/<CODE>/course.json` instead; see
