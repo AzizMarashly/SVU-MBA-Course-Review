@@ -40,5 +40,5 @@
 
 ## 5. To continue
 Nothing pending. For a fix: edit `render/bank_chNN.py`, bump `VERSION` (two digits), add a row to `VERSIONS.md`, run from `render/`:
-`set PYTHONUTF8=1 && python release.py && python qa_blocks.py` (previous deliverable moves to `archive/`), copy `out.html` to `/S3/PRM/index.html`,
-run `python scripts/build_course_index.py` at the repository root, update this file.
+`set PYTHONUTF8=1 && python release.py && python qa_blocks.py` (previous deliverable moves to `archive/`), then at the repository root
+`python scripts/publish_page.py S3/PRM` (adds the analytics snippet) and `python scripts/build_course_index.py`, update this file.

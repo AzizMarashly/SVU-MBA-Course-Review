@@ -22,7 +22,7 @@ Source material and generation state for the PRM review. The published page is
 | `.review_generation_working_directory/STATE.md` | Handoff: stage checklist, decisions, known problems, exact next step. Start here. |
 | `.review_generation_working_directory/ledger.json`, `chapter_map.md` | Source ledger (hashes, independent-source groups, include/exclude reasons) and the chapter map. |
 | `.review_generation_working_directory/render/` | `bank_ch01.py` … `bank_ch14.py` (question data), `common.py` (record model), `build_bank.py` (types, merges, focus areas, importance, coverage), `render_html.py` + `meta_prm.py` (the page and every course-specific table incl. the source-files appendix), `qa_blocks.py`, `release.py`, `SOURCES.md` (what each source code means), `CHAPTER_HELPER_BRIEF.md` (the per-chapter working instructions). |
-| `.review_generation_working_directory/bank.json`, `out.html` | Build outputs. `out.html` is byte-identical to `/S3/PRM/index.html` and to the versioned file at this folder's root. |
+| `.review_generation_working_directory/bank.json`, `out.html` | Build outputs. `out.html` is byte-identical to the versioned file at this folder's root; the published `/S3/PRM/index.html` is `out.html` plus the Cloudflare analytics line appended by `scripts/publish_page.py`. |
 | `.review_generation_working_directory/extracted/` | Book text (ligature-fixed, per chapter), subsection list, text of every source, the raw question transcriptions per source group with their reports, and the per-chapter splits. Page renders (`pages_png/`) are not in the repository (regenerable). |
 | `.review_generation_working_directory/qa/` | Per-chapter reports, mechanical block checks, browser test, `summary.json` (numbers the methodology section reads). |
 | `الماده الاكاديميه/` | The textbook, the book-questions PDF (dependent copy), 14 slide decks. |
@@ -47,7 +47,7 @@ Not in the repository: `.review_generation_working_directory/archive/` (git hist
    python release.py        # must print "uncovered: 0"; moves the previous file to ../archive/
    python qa_blocks.py
    ```
-4. Copy `.review_generation_working_directory/out.html` over `/S3/PRM/index.html` at the repository root.
+4. Publish the page from the repository root: `python scripts/publish_page.py S3/PRM` (copies `out.html` to `/S3/PRM/index.html` and appends the analytics snippet).
 5. Run `python scripts/build_course_index.py` from the repository root so the home page shows the new version and counts, then commit.
 
 **Add a new exam sitting or summary**

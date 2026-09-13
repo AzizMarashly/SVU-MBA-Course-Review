@@ -13,7 +13,7 @@ Working files behind the two deliverables in the parent folder:
 
 `X.Y` is the number in `VERSION` (currently 1.4). The project folder holds exactly one version; older
 copies are in `../_old_versions/`. History is in `CHANGELOG.md`. Everything here is reproducible:
-`bank.json` and `out.html` in this folder are byte-identical to the published files.
+`bank.json` and `out.html` in this folder are the build outputs; the published page is `out.html` plus the Cloudflare analytics line (`scripts/publish_page.py` at the repository root adds it).
 
 ## 1. Release a new version (the normal workflow)
 

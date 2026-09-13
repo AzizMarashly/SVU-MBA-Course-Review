@@ -21,7 +21,7 @@ Source material and generation state for the IMT review. The published page is
 | `PROJECT_SETTINGS.md` | The PROJECT SETTINGS table the review was generated with, plus values for settings added in later prompt versions. Paste it into the current prompt to resume. |
 | `.review_generation_working_directory/README.md` | Handoff notes: folder map, release workflow, scoring rules, current state, open items. Start here. |
 | `.review_generation_working_directory/bank/` | Question data per chapter (`bank_ch01.py` … `bank_ch12.py`, `bank_extra.py`), `build_bank.py`, `render_html.py`, `release.py`, `qa_blocks.py`. |
-| `.review_generation_working_directory/bank.json`, `.review_generation_working_directory/out.html` | Build outputs. `out.html` is byte-identical to the published `/S3/IMT/index.html`. |
+| `.review_generation_working_directory/bank.json`, `.review_generation_working_directory/out.html` | Build outputs. The published `/S3/IMT/index.html` is `out.html` plus the Cloudflare analytics line appended by `scripts/publish_page.py`. |
 | `.review_generation_working_directory/notes/ledger.md` | Source ledger: every input, duplicate groups, include/exclude decisions, chapter map. |
 | `.review_generation_working_directory/notes/textbook_keys.md` | Book review questions per chapter with answer keys read from the book. |
 | `.review_generation_working_directory/notes/f19_transcription.md` | Transcription of the handwritten F19 exam scan. |
@@ -55,7 +55,7 @@ summary as cross-check. Full detail and the reasons for every exclusion: `.revie
    python release.py        # must print "uncovered: 0"
    python qa_blocks.py
    ```
-4. Publish the page: copy `.review_generation_working_directory/out.html` over `/S3/IMT/index.html` at the repository root.
+4. Publish the page from the repository root: `python scripts/publish_page.py S3/IMT` (copies `out.html` to `/S3/IMT/index.html` and appends the analytics snippet).
 5. Run `python scripts/build_course_index.py` from the repository root (or let the GitHub Action do it after the push) so the home page shows the new version and counts, then commit.
 
 **Add a new exam sitting or summary**
