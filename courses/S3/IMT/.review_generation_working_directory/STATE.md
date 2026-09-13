@@ -48,6 +48,11 @@ directory; this file only says where the run stands.
 - v1.4 browser test (Chrome, served over `http://127.0.0.1`, desktop 1394 px and a 390 px iframe): answers hidden by default, single reveal, mode counts 107/142/50/15, importance ≥5 → 3, ≥2 hides all generated, repetition ≥5 → 1, combined filter count matches a manual count, badge and summary, panel closed by default on phone and open on desktop, panel state / filters / mode / chapter state survive reload, reset, collapse/expand chapters without touching answers, search opens a collapsed chapter, all 524 source links resolve to the 39 rows, reference lists and appendix start collapsed, theme toggle. Not tested: printing, screen readers.
 - PDF / DOCX still not requested.
 
+## 4b. Pending source (added 2026-09-13)
+
+`../اسئلة سابقة/دورة F25.txt`: dorat F25, 20 recalled questions, not extracted, not in the bank or the
+ledger. Next run: process it as a new exam source `F25` (see `../README.md`, Open items).
+
 ## 5. To continue
 
 Nothing pending. For a fix: edit the chapter file in `bank/`, bump `VERSION`, add a `CHANGELOG.md` line, run

@@ -109,6 +109,13 @@ Rules that apply: cite the book page for every answer; never invent options, ans
 personal data in the review or file names; keep source files unchanged; `out.html` without the
 Cloudflare snippet (`publish_page.py` adds it); never import the older-curriculum answer keys.
 
+## B2. IMT: new exam source waiting
+
+`courses/S3/IMT/اسئلة سابقة/دورة F25.txt` (20 recalled questions, two students merged) was added on
+2026-09-13 without a run. It needs the "add a new exam sitting" procedure in the IMT README: extract,
+deduplicate against the bank, verify, add source code F25 + appendix row + ledger entry, release v1.6.
+Cheap: one session, no helpers.
+
 ## C. Token note
 
 The chapter-helper stage is the expensive part (roughly 150k–300k tokens per chapter). Everything

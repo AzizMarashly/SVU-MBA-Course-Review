@@ -76,6 +76,12 @@ data normally does not need to change.
 
 ## Open items
 
+- **F25 exam not yet in the bank.** `اسئلة سابقة/دورة F25.txt` (20 questions recalled by two
+  students, merged, added 2026-09-13) waits for a resume run: extract, deduplicate against the 292
+  records, verify against the book, add the `F25` source code to `SRC_NAMES`, a row to `FILES` and
+  `SRC_ROW` in `bank/render_html.py`, a ledger entry in `notes/ledger.md`, then release as v1.6.
+  Until then `qa_blocks.py` reports the appendix as one file short of the folder listing.
+
 - F19 Q6, Q7 (Porter, Dunning), F19 Q23, F17 Q3 (turnkey): topic known, question text not
   reconstructed with confidence.
 - F17 Q20 is about chapter 8, which is out of scope.
