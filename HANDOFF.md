@@ -3,39 +3,19 @@
 Written for the next agent. Read `CLAUDE.md` first, then this file. Delete this file (or empty it)
 when everything below is committed and the MIS run is finished.
 
-## A. Uncommitted, finished work: prompt v0.10 + IMT v1.5 + PRM v02
+## A. Committed: prompt v0.10 + IMT v1.5 + PRM v02 (commit "Prompt v0.10: collapsible page sections", tag v0.10)
 
 Prompt **v0.10** adds one rule to §13a ("Collapsible page sections"): the seven prose blocks of the
 HTML (how to use, scope, methodology, source files, reference lists, contents, file metadata) fold
 like chapters; intro blocks open and end blocks closed by default; state remembered per block;
 toolbar buttons "طيّ الكل" / "فتح الكل" fold chapters, question sections and blocks together and leave
 answers alone; the metadata summary line keeps version, spec and licence visible when folded.
-`prompt/CHANGELOG.md` has the entry. Implemented in both renderers by a `fold_sections()`
-post-processing step at the end of `build()`, so the two copies stay identical:
+Implemented by a `fold_sections()` post-processing step at the end of `build()` in both renderers,
+so the two copies stay identical. IMT v1.5 and PRM v02 are re-renders with no content change,
+verified field by field and tested in Chrome.
 
-- `courses/S3/IMT/.review_generation_working_directory/bank/render_html.py`, `build_bank.py` (SPEC v0.10),
-  `VERSION` 1.5, `CHANGELOG.md`; `S3/IMT/index.html` republished; `out.html`, `bank.json` rebuilt.
-- `courses/S3/PRM/.review_generation_working_directory/render/render_html.py`, `build_bank.py` (SPEC v0.10),
-  `VERSION` 02, `VERSIONS.md`; `S3/PRM/index.html` republished; `out.html`, `bank.json` rebuilt.
-- `courses.json` regenerated; `.gitignore` gained `courses/**/*_v[0-9].[0-9]_bank.json`; `CLAUDE.md`
-  version references updated.
-
-Verified: all 292 IMT and 442 PRM question blocks, chapter summaries, openers, appendix rows and
-reference lists are byte-identical to v1.4 / v01; only wrappers, 8 CSS lines, 2 buttons + script, one
-how-to paragraph, one methodology sentence and version stamps changed. Tested in Chrome (defaults,
-fold all, open all, persistence across reload, `#src-n` link opening a folded appendix).
-
-**To commit this batch** (excludes the MIS paths, which are mid-run):
-
-```
-git pull --rebase
-git add prompt .gitignore CLAUDE.md HANDOFF.md courses.json S3/IMT S3/PRM courses/S3/IMT courses/S3/PRM
-git commit -m "Prompt v0.10: collapsible page sections; IMT v1.5 and PRM v02 re-rendered"
-git tag v0.10
-```
-
-MIS v0.2 (published, committed in 91121cb) does **not** have the v0.10 sections; it is superseded by
-the regeneration below rather than patched.
+MIS v0.2 (published) does **not** have the v0.10 sections; it is superseded by the regeneration
+below rather than patched.
 
 ## B. In progress: MIS regeneration under prompt v0.10 (target v1.0)
 
