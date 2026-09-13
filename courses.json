@@ -42,20 +42,36 @@
       "title": "مراجعه كامله لماده ال MIS",
       "name_ar": "نظم المعلومات الإدارية",
       "name_en": "Management Information Systems",
-      "version": "0.1",
+      "version": "0.2",
+      "spec_version": "pre-v0.1",
       "generated": "2026-09-06",
       "questions": 269,
+      "questions_by_type": {
+        "exam": 91,
+        "textbook": 141,
+        "generated": 33,
+        "other": 23
+      },
       "chapters": 8,
-      "sources": 4,
+      "sources": 11,
       "source_ids": [
-        "BOOK",
-        "HAL_DAWRAT",
+        "BKQ",
+        "S25",
+        "HD",
+        "R44",
         "F24",
-        "ASEM"
+        "ASM",
+        "OQ1",
+        "OQ2",
+        "OQ3",
+        "OQ4",
+        "OQ5"
       ],
-      "download_name": "مراجعه كامله لماده ال MIS-v0.1.html",
-      "note": "Hand-maintained: this course has no working directory in courses/ yet. Replace with a bank.json under courses/S3/MIS/ when the source material is added.",
-      "data": "manual"
+      "source_files": 36,
+      "low_confidence": 0,
+      "data": "bank",
+      "sources_path": "courses/S3/MIS/",
+      "download_name": "مراجعه كامله لماده ال MIS_v0.2.html"
     },
     {
       "semester": 3,
