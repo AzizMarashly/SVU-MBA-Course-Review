@@ -3,6 +3,17 @@
 Each version is a git tag on this repository. Diff any two versions with a compare link such as
 https://github.com/AzizMarashly/SVU-MBA-Course-Review/compare/v0.5...v0.6
 
+## v0.11 — 2026-09-14
+- §7d (new): questions with tabular data show it as a real table under the stem; numeric answers
+  open with the full working table (when there is one) and a "Calculation" block — given values
+  with their origin, then one row per step: formula → substitution → result — and the "Why" line
+  names the rule only; an always-visible chip row under the table names every symbol the question uses; tapping a
+  chip or an underlined symbol opens a bottom sheet (touch-first) with the symbol's name, English
+  name, formula and note from a structured course glossary; pointer devices also get a hover card. §15: mechanical checks for flattened stems, numeric answers without a
+  calculation block, and arithmetic left in "Why". Tooling: `T()` / `C()` / `S()` in `common.py`,
+  `table` / `ans_table` / `calc` record fields, `SYMBOLS` (four fields per symbol) in the course meta file, renderer, and
+  `qa_blocks.py` checks including glossary coverage (PRM and MIS render folders).
+
 ## v0.10 — 2026-09-13
 - §13a: every prose block of the HTML (how to use, scope, methodology, source files, reference
   lists, contents, file metadata) is collapsible like a chapter, intro blocks open and end blocks

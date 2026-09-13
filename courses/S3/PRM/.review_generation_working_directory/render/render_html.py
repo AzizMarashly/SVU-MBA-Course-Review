@@ -25,6 +25,92 @@ def md(s):
     return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
 def stars(n): return "★"*n + "☆"*(5-n)
 
+def render_table(t, cls):
+    """Data table of a question (§7d): header row; numeric/code cells left-to-right, Arabic cells right-to-left."""
+    if not t: return ""
+    cell = (lambda c: f'<td class="ltr">{esc(str(c))}</td>') if t["ltr"] else (lambda c: f'<td>{esc(str(c))}</td>')
+    cap = f'<caption>{esc(t["caption"])}</caption>' if t["caption"] else ""
+    head = "".join(f'<th>{abbr(esc(str(h)))}</th>' for h in t["head"])
+    body = "".join("<tr>" + "".join(cell(c) for c in r) + "</tr>" for r in t["rows"])
+    return f'<div class="tw"><table class="{cls}">{cap}<thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>'
+
+SYMBOLS = globals().get("SYMBOLS", {})
+_SYM_RE = re.compile(r"(?<![A-Za-z])([A-Z][A-Za-z]{0,4})(?![A-Za-z])")
+def symbols_used(q):
+    """Symbols (from the course SYMBOLS glossary) that this record's tables and calculation actually use, first-appearance order."""
+    texts = []
+    for t in (q.get("table"), q.get("ans_table")):
+        if t: texts.append(" ".join(str(h) for h in t["head"]))
+    c = q.get("calc")
+    if c:
+        texts += c["given"] + [st["what"] + " " + st["eq"] for st in c["steps"]]
+    texts.append(q["stem"])
+    seen, out = set(), []
+    for tok in _SYM_RE.findall(" ".join(texts)):
+        if tok in SYMBOLS and tok not in seen:
+            seen.add(tok); out.append(tok)
+    return out
+
+def sym_lines(k):
+    d = SYMBOLS[k]
+    return [d["ar"] + " (" + d["en"] + ")"] + ([d["f"]] if d["f"] else []) + [d["note"]]
+
+def abbr(text):
+    """Wrap every glossary symbol in already-escaped text with <abbr> whose tooltip has one line per field (each line keeps its own direction)."""
+    if not SYMBOLS: return text
+    def w(m):
+        k = m.group(1)
+        if k not in SYMBOLS: return m.group(0)
+        return f'<abbr data-k="{k}" title="{esc(chr(10).join(sym_lines(k)))}">{k}</abbr>'
+    return _SYM_RE.sub(w, text)
+
+def render_symbols(q, cls):
+    syms = symbols_used(q)
+    if not syms: return ""
+    chips = []
+    for k in syms:
+        d = SYMBOLS[k]
+        f = f'<span class="p-f ltr">{esc(d["f"])}</span>' if d["f"] else ""
+        chips.append(f'<span class="chip" data-k="{esc(k)}" role="button" tabindex="0"><b class="ltr">{esc(k)}</b> {esc(d["ar"])}'
+                     f'<span class="pop"><span class="p-ar"><b class="ltr">{esc(k)}</b> = {esc(d["ar"])}</span>'
+                     f'<span class="p-en ltr">{esc(d["en"])}</span>{f}<span class="p-n">{esc(d["note"])}</span></span></span>')
+    return f'<div class="{cls}"><span class="slbl">الرموز:</span> {"".join(chips)} <span class="shint">اضغط على أي رمز للشرح الكامل</span></div>'
+
+SYM_JS = r"""(function(){
+var sheet=document.getElementById('symsheet');if(!sheet)return;
+var body=sheet.querySelector('.sh-body'),nav=sheet.querySelector('.sh-nav');
+function esc(t){return t.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function show(k,q){var d=window.SYMS[k];if(!d)return;
+ body.innerHTML='<span class="p-ar"><b class="ltr">'+esc(k)+'</b> = '+esc(d.ar)+'</span><span class="p-en ltr">'+esc(d.en)+'</span>'+(d.f?'<span class="p-f">'+esc(d.f)+'</span>':'')+'<span class="p-n">'+esc(d.note)+'</span>';
+ nav.innerHTML='';var chips=q?q.querySelectorAll('.syms .chip'):[];
+ if(chips.length>1){nav.innerHTML='<span class="slbl">رموز هذا السؤال:</span> ';chips.forEach(function(c){var kk=c.getAttribute('data-k');var b=document.createElement('span');b.className='chip'+(kk===k?' open':'');b.setAttribute('data-k',kk);b.textContent=kk;nav.appendChild(b);});}
+ sheet.hidden=false;}
+function close(){sheet.hidden=true;}
+document.addEventListener('click',function(e){
+ var t=e.target.closest('.syms .chip, abbr[data-k], #symsheet .sh-nav .chip');
+ if(t){e.preventDefault();var q=t.closest('.q')||sheet._q;sheet._q=q;show(t.getAttribute('data-k'),q);return;}
+ if(e.target.closest('.sh-x')||(e.target===sheet))close();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();"""
+
+def render_calc(c):
+    """Calculation block (§7d): given values, then one row per step — المعادلة → التعويض → الناتج."""
+    if not c: return ""
+    out = ['<div class="calc"><p class="a-calc"><span class="lbl">الحساب:</span></p>']
+    if c["given"]:
+        out.append('<ul class="given">' + "".join(f'<li>{abbr(md(g))}</li>' for g in c["given"]) + "</ul>")
+    rows = []
+    for i, st in enumerate(c["steps"], 1):
+        note = f'<div class="cnote">{md(st["note"])}</div>' if st["note"] else ""
+        rows.append(f'<tr><td class="cwhat" data-l="المطلوب">{i}. {abbr(md(st["what"]))}</td>'
+                    f'<td class="ltr ceq" data-l="المعادلة"><span>{abbr(esc(st["eq"]))}</span></td>'
+                    f'<td class="ltr csub" data-l="التعويض"><span>{esc(st["sub"])}</span></td>'
+                    f'<td class="cres" data-l="الناتج"><b>{esc(st["res"])}</b>{note}</td></tr>')
+    out.append('<div class="tw"><table class="ctbl"><thead><tr><th>المطلوب</th><th>المعادلة</th><th>التعويض</th><th>الناتج</th></tr></thead><tbody>' + "".join(rows) + '</tbody></table></div>')
+    if c["note"]: out.append(f'<p class="cfinal">{md(c["note"])}</p>')
+    out.append("</div>")
+    return "".join(out)
+
 def render_q(q, num, sec):
     types = q["types"]
     tags = " ".join(f'<span class="tag t-{t}">{SEC_NAMES[t] if t!="generated" else "مولَّد"}</span>' for t in types)
@@ -39,7 +125,9 @@ def render_q(q, num, sec):
     meta1 = f'<div class="meta"><span class="qid">{esc(q["id"])}</span> · <span>{qt}</span> · {tags}{recon}{lowc}</div>'
     freq_txt = "مولَّد — التكرار: 0" if "generated" in types else f'التكرار: {q["freq"]} {"مصدر مستقل" if q["freq"]==1 else "مصادر مستقلة"}'
     meta2 = f'<div class="meta"><span>{freq_txt}</span> · <span class="imp" title="الأهمية {q["importance"]}/5">{stars(q["importance"])} <small>{q["importance"]}/5</small></span> · <span>الفقرة {esc(q["sub"])}: {esc(q["subname"])}</span></div>'
-    stem = f'<p class="stem"><span class="num">{num}.</span> {esc(q["stem"])}</p>'
+    stem = f'<p class="stem"><span class="num">{num}.</span> {esc(q["stem"])}</p>' + render_table(q.get("table"), "qtbl")
+    if q.get("table") or q.get("calc") or q.get("ans_table"):
+        stem += render_symbols(q, "syms")
     opts = ""
     if q["qtype"] == "mcq":
         opts = '<ol class="opts">' + "".join(f'<li><span class="let">{LETTERS[i]})</span> {esc(o)}</li>' for i, o in enumerate(q["options"])) + "</ol>"
@@ -52,6 +140,7 @@ def render_q(q, num, sec):
     else:
         ans_line = esc(q["ans"])
     lines = [f'<p class="a-ans"><span class="lbl">✔ الإجابة:</span> {ans_line}</p>',
+             render_table(q.get("ans_table"), "qtbl atbl") + render_calc(q.get("calc")),
              f'<p class="a-why"><span class="lbl">لماذا:</span> {md(q["why"])}</p>',
              f'<p class="a-rem"><span class="lbl">تذكّر:</span> {md(q["remember"])}</p>']
     if q["distractors"]:
@@ -265,6 +354,53 @@ details.ans[open] > summary .show{display:none}
 .src{margin-top:6px}
 details.vars{font-size:.85em;color:var(--muted);margin-top:6px}
 details.vars summary{cursor:pointer}
+.tw{overflow-x:auto;margin:8px 0}
+.qtbl,.ctbl{border-collapse:collapse;font-size:.92em}
+.qtbl th,.qtbl td,.ctbl th,.ctbl td{border:1px solid var(--line);padding:3px 10px;text-align:center;vertical-align:top;white-space:nowrap}
+.qtbl th,.ctbl th{background:var(--chip);font-weight:600}
+.qtbl caption{caption-side:top;text-align:start;color:var(--muted);font-size:.9em;padding:2px 0}
+.qtbl.atbl{font-size:.88em}
+.syms{font-size:.85em;margin:4px 0 8px;display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;line-height:1.5}
+.syms .slbl{color:var(--why);font-weight:600}
+.syms .chip{display:inline-block;position:relative;border:1px solid var(--line);background:var(--chip);border-radius:999px;padding:1px 10px;cursor:help;color:var(--fg)}
+.syms .chip:hover,.syms .chip:focus{border-color:var(--why);outline:none}
+.syms .pop{display:none;position:absolute;top:calc(100% + 4px);inset-inline-start:0;z-index:20;width:max-content;min-width:16em;max-width:min(26em,85vw);background:var(--card);color:var(--fg);border:1px solid var(--why);border-radius:10px;padding:8px 12px;box-shadow:0 6px 18px rgba(0,0,0,.25);font-size:1em;line-height:1.6;white-space:normal;text-align:start;cursor:auto}
+@media (hover:hover){.syms .chip:hover .pop{display:block}}
+#symsheet{position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center}
+#symsheet[hidden]{display:none}
+#symsheet .sh-box{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:16px 16px 0 0;width:100%;max-width:34em;padding:12px 16px calc(16px + env(safe-area-inset-bottom));box-shadow:0 -6px 24px rgba(0,0,0,.3);line-height:1.7;max-height:70vh;overflow:auto}
+#symsheet .sh-x{float:left;border:1px solid var(--line);background:var(--chip);color:var(--fg);border-radius:999px;width:2em;height:2em;font-size:1em;cursor:pointer}
+#symsheet .sh-body > span{display:block}
+#symsheet .p-ar{font-weight:600;font-size:1.05em}
+#symsheet .p-en{color:var(--muted);font-size:.92em}
+#symsheet .p-f{font-family:Consolas,"Courier New",monospace;background:var(--chip);border-radius:6px;padding:2px 10px;margin:4px 0;display:inline-block;direction:ltr;unicode-bidi:isolate}
+#symsheet .p-n{margin-top:4px}
+#symsheet .sh-nav{margin-top:8px;display:flex;flex-wrap:wrap;gap:4px 6px;font-size:.85em}
+#symsheet .sh-nav .chip{cursor:pointer;display:inline-block;border:1px solid var(--line);background:var(--chip);border-radius:999px;padding:1px 10px;direction:ltr}
+#symsheet .sh-nav .chip.open{border-color:var(--why);color:var(--why);font-weight:600}
+#symsheet .sh-nav .slbl{color:var(--why);font-weight:600}
+@media (min-width:601px){#symsheet .sh-box{border-radius:16px;margin-bottom:6vh}}
+.syms .pop > span{display:block}
+.syms .pop .p-ar{font-weight:600}
+.syms .pop .p-en{color:var(--muted);font-size:.9em}
+.syms .pop .p-f{font-family:Consolas,"Courier New",monospace;background:var(--chip);border-radius:6px;padding:1px 8px;margin:3px 0;display:inline-block}
+.syms .pop .p-n{margin-top:2px}
+.syms .chip b{color:var(--why);margin-inline-end:4px}
+.syms .shint{color:var(--muted);flex-basis:100%;font-size:.9em}
+abbr[title]{text-decoration:underline dotted;text-underline-offset:3px;cursor:help;color:inherit}
+.qtbl th abbr,.ctbl abbr{text-decoration-color:var(--why)}
+.calc{margin:.4em 0}
+.a-calc{margin:.2em 0}
+.a-calc .lbl{color:var(--why)}
+.given{margin:.1em 0 .3em;padding-inline-start:1.4em;font-size:.95em}
+.given li{margin:1px 0}
+.ctbl td{white-space:normal}
+.ctbl td.cwhat{text-align:start}
+.ctbl td.ceq,.ctbl td.csub{white-space:nowrap}
+.ctbl td.ceq span,.ctbl td.csub span{font-family:Consolas,"Courier New",monospace;font-size:.95em}
+.ctbl td.cres{color:var(--ans);white-space:nowrap}
+.ctbl .cnote{font-size:.85em;color:var(--muted);font-weight:normal;white-space:normal}
+.cfinal{margin:.2em 0;font-size:.95em}
 .tbl{border-collapse:collapse;width:100%;font-size:.88em;margin:10px 0;display:block;overflow-x:auto}
 .tbl th,.tbl td{border:1px solid var(--line);padding:4px 8px;text-align:right;vertical-align:top}
 .tbl th{background:var(--chip)}
@@ -288,7 +424,7 @@ details.reflist summary{cursor:pointer;font-weight:600}
 .chapter.hidden{display:none!important}
 footer{margin-top:60px;color:var(--muted);font-size:.85em;border-top:1px solid var(--line);padding-top:12px}
 [dir="ltr"],.ltr{direction:ltr;text-align:left;unicode-bidi:isolate}
-@media (max-width:600px){body{font-size:16px}main{padding:10px 12px 60px}.q{padding:12px}.toolbar input{min-width:120px}}
+@media (max-width:600px){.ctbl thead{display:none}.ctbl,.ctbl tbody,.ctbl tr,.ctbl td{display:block;width:100%;box-sizing:border-box}.ctbl tr{border:1px solid var(--line);border-radius:8px;margin:6px 0;padding:4px 8px}.ctbl td{border:0;padding:2px 0;text-align:start;white-space:normal!important}.ctbl td.ltr{direction:rtl;text-align:start}.ctbl td.ltr::after{content:none}.ctbl td::before{content:attr(data-l) ": ";color:var(--muted);font-size:.85em}.ctbl td.ceq span,.ctbl td.csub span{direction:ltr;unicode-bidi:isolate}body{font-size:16px}main{padding:10px 12px 60px}.q{padding:12px}.toolbar input{min-width:120px}}
 @media print{.toolbar,.noprint{display:none!important}.tbl.files{display:table}details.ans,details.reflist,details.vars,details.chd,details.secd,details.pgd{display:block}.tog{display:none}details.ans > summary{display:none}details > *:not(summary){display:block}.q{break-inside:avoid;border-color:#bbb}.hidden{display:block!important}body{background:#fff;color:#000}a{color:#000;text-decoration:none}}
 """
 
@@ -416,6 +552,7 @@ def build():
       f'''<section id="howto"><h2>كيف تستخدم هذا الملف</h2>
 <p>كل سؤال يحمل ثلاث علامات: <b>التكرار</b> = عدد المصادر المستقلة التي سألته (ست دورات امتحانية منقولة من الذاكرة: نحو 2015 والدورة التالية لها و2016 وS19 وF24 ومجموعة أسئلة الفحص المتداولة، ثم الكتاب والملخصات)؛ <b>الأهمية ★</b> من 1 إلى 5 مبنية على عدد امتحانات ورد فيها السؤال، زائد نقطة إن كان من أسئلة الكتاب، زائد نقطة إن كانت فقرته من مجالات تركيز المدرّس، وهي معونة للدراسة لا توقّع للامتحان؛ <b>⚠ ثقة منخفضة</b> يظهر فقط حيث يستند الجواب إلى دليل ضعيف أو نقل غير مؤكد، وغيابه يعني أن الإجابة تُحقق منها من الكتاب بالصفحة.</p>
 <p>الإجابة مخفية خلف زر «إظهار الإجابة» ولا تحتاج جافاسكربت. الشريط الثابت في الأعلى يعرض العدّاد وزر «⚙ الفلاتر» والبحث؛ وخلف زر الفلاتر: وضع القراءة (نوع واحد من الأسئلة عبر كل الفصول: الامتحانات، الكتاب، مصادر أخرى، مولَّدة)، ومنزلقان لحدّ أدنى للأهمية (1–5) وللتكرار، واختيار فصل، وإظهار الإجابات أو إخفائها، وطيّ كل الفصول أو فتحها، وطيّ أنواع الأسئلة أو فتحها، مستقلةً عن حالة الإجابات (ويمكن طيّ أي فصل أو نوع منفرداً بالنقر على عنوانه، ويُحفظ ما طويته)، والمظهر الفاتح أو الداكن، وزر «إعادة ضبط التصفية». اختياراتك تُحفظ وتوضع في رابط الصفحة. على الهاتف تبدأ لوحة الفلاتر مطوية، وحين تكون مطوية وثمة تصفية فعّالة يظهر عددها على الزر وملخصها بجانب العدّاد. تنبيه: الأسئلة المولَّدة أهميتها 1 دائماً، فرفع منزلق الأهمية إلى 2 أو أكثر يخفيها كلها. الترتيب المقترح: أسئلة الامتحانات أولاً ثم أسئلة الكتاب ثم الباقي. الطباعة تُظهر كل الإجابات وتتجاهل التصفية.</p>
+<p>الأسئلة الحسابية (المسار الحرج، الأزمنة المبكرة والمتأخرة، القيمة المكتسبة، النقاط الثلاث، تسوية الموارد…) تعرض بياناتها في <b>جدول</b> تحت نص السؤال، وتبدأ إجابتها بجدول الحل الكامل عند وجوده ثم كتلة <b>«الحساب»</b>: المعطيات ومن أين جاء كل رقم، ثم لكل خطوة <b>المعادلة</b> بالرموز ثم <b>التعويض</b> بالأرقام ثم <b>الناتج</b>؛ وسطر «لماذا» يذكر القاعدة فقط. تحت كل جدول قائمة <b>«الرموز المستعملة»</b> مطوية تشرح معنى كل رمز (BCWS، LF، SPI…) في ذلك السؤال.</p>
 <p class="meta">الأقسام التمهيدية والختامية (كيف تستخدم هذا الملف، النطاق والمصادر، المنهجية، ملفات المصدر، القوائم المرجعية، فهرس المحتويات، بيانات الملف) تُطوى وتُفتح بالنقر على عنوانها مثل الفصول، ويُحفظ ما طويته. زرّا «طيّ الكل» و«فتح الكل» في الفلاتر يطويان الفصول وأنواع الأسئلة وهذه الأقسام معاً ويُبقيان الإجابات على حالها؛ الصفحة المطوية كلها قائمة عناوين قصيرة.</p>
 <p class="meta">إخفاء الإجابات معونة للمذاكرة وليس حمايةً: نص الإجابة موجود في الملف ويصل إليه البحث والنسخ وعرض المصدر، فلا يُعتمد عليه في امتحان حقيقي. نصوص الكتاب والامتحانات المقتبسة تبقى ملكاً لأصحابها.</p>
 <p class="pledge">شروط رخصة هذا الملف (CC BY-NC-SA 4.0): شارك هذا الملف مجاناً مع زملائك في المادة. أبقِ الإشعار الموجود في آخر الملف حتى يجد غيرك المصدر وأحدث إصدار. لا يجوز بيعه ولا وضعه خلف اشتراك أو جدار دفع.</p></section>''',
@@ -433,7 +570,9 @@ def build():
                  f'<div class="notice"><p>أُنشئ بأداة SVU MBA Course Review Generator، المواصفة {esc(SPEC)} · ملف المراجعة v{esc(VER)}</p>'
                  f'<p>المصدر وأحدث إصدار: <a href="{REPO}" class="ltr">{REPO}</a></p>'
                  f'<p>رخصة الأداة وهذا الملف: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ar" class="ltr">CC BY-NC-SA 4.0</a> — شارك بحرية، وانسب المصدر، ولا تبع أبداً. الرخصة تغطي محتوى المراجعة نفسها (الشروح والاختيار والترتيب)، أما نصوص الكتاب والامتحانات المقتبسة فتبقى لأصحابها وليست مشمولة.</p></div></footer>')
-    parts.append('</main>'); parts.append(f'<script>{JS}</script>')
+    parts.append('</main>'); parts.append('<div id="symsheet" hidden><div class="sh-box"><button class="sh-x" aria-label="إغلاق">✕</button><div class="sh-body"></div><div class="sh-nav"></div></div></div>')
+    parts.append('<script>window.SYMS=' + json.dumps(SYMBOLS, ensure_ascii=False) + ';' + SYM_JS + '</script>')
+    parts.append(f'<script>{JS}</script>')
     return fold_sections("\n".join(parts))
 
 if __name__ == "__main__":

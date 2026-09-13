@@ -20,7 +20,7 @@ Two tiers, never mix them up:
 | Published pages | `S<n>/<CODE>/index.html`, `index.html`, `courses.json` | yes | What students open |
 | Sources + generation state | `courses/S<n>/<CODE>/` | no | Course material, settings, and the working directory of the run, so a review can be resumed or regenerated |
 
-Courses today (semester 3): `IMT` (v1.5), `PRM` (v02), `MIS` (v0.2, bank generated 2026-09-06 before the
+Courses today (semester 3): `IMT` (v1.5), `PRM` (v03), `MIS` (v0.2, bank generated 2026-09-06 before the
 versioned prompt; working directory reconstructed from the session scratchpad on 2026-09-13).
 
 ## Where to look
@@ -28,7 +28,7 @@ versioned prompt; working directory reconstructed from the session scratchpad on
 | Need | File |
 |---|---|
 | Human overview, contribution rules, git etiquette | `README.md`, `CONTRIBUTING.md` |
-| The generator prompt (v0.10) and its history | `prompt/SVU-MBA-Course-Review-Generator.md`, `prompt/CHANGELOG.md`; every version is a git tag `v0.N` |
+| The generator prompt (v0.11) and its history | `prompt/SVU-MBA-Course-Review-Generator.md`, `prompt/CHANGELOG.md`; every version is a git tag `v0.N` |
 | State of a course run: stage checklist, decisions, known problems, exact next step | `courses/S3/<CODE>/.review_generation_working_directory/STATE.md` — **always read before touching a course** |
 | Folder map and release workflow of a course | `courses/S3/<CODE>/README.md` (IMT also has a working-directory `README.md`) |
 | Settings the review was generated with | `courses/S3/<CODE>/PROJECT_SETTINGS.md` |
@@ -53,7 +53,12 @@ bank.json input), `build_bank.py` only exports `bank.json` for the home page, an
 
 **For a new course, copy PRM's `render/` tooling and its `CHAPTER_HELPER_BRIEF.md` /
 `extracted/FORMAT.md`, not IMT's.** PRM's `meta_prm.py` pattern keeps course specifics out of the
-renderer. The PRM run used one owner session plus helper subagents (transcription per source
+renderer. Tables and calculations (prompt §7d, since v0.11): records carry `table=T(...)`,
+`ans_table=T(...)` and `calc=C(given, steps=[S(what, eq, sub, res)])` from `common.py`; the
+renderer draws them and adds a symbol chip row with a tap-to-open bottom sheet from the structured
+`SYMBOLS` glossary (ar / en / f / note per symbol) in the meta file; the build refuses a
+stem containing `|`. Rules and a worked example for helpers: `render/CALC_TABLE_BRIEF.md` (PRM and
+MIS). IMT's renderer does not have this yet. The PRM run used one owner session plus helper subagents (transcription per source
 group, then one per chapter writing `bank_chNN.py` from the brief); that worked well.
 
 ## The release loop (same for every course with a working directory)
@@ -106,5 +111,5 @@ Facts that bite:
 
 Bump the version in the prompt header, add a `prompt/CHANGELOG.md` entry, tag `v0.N`. Keep rules
 generic; course specifics belong in PROJECT SETTINGS. Section numbers (§0d working directory,
-§7c low confidence, §10 importance, §11d source-files appendix, §19 licence) are referenced
+§7c low confidence, §7d tables and calculations, §10 importance, §11d source-files appendix, §19 licence) are referenced
 throughout the course docs; do not renumber casually.

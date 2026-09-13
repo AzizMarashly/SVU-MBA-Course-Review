@@ -80,9 +80,9 @@
       "title": "مراجعه كامله لماده ال PRM",
       "name_ar": "إدارة المشاريع",
       "name_en": "Project Management",
-      "version": "02",
-      "spec_version": "v0.10",
-      "generated": "2026-09-09",
+      "version": "03",
+      "spec_version": "v0.11",
+      "generated": "2026-09-14",
       "questions": 442,
       "questions_by_type": {
         "exam": 166,
@@ -108,7 +108,7 @@
       "low_confidence": 69,
       "data": "bank",
       "sources_path": "courses/S3/PRM/",
-      "download_name": "مراجعه كامله لماده ال PRM_v02.html"
+      "download_name": "مراجعه كامله لماده ال PRM_v03.html"
     }
   ]
 }

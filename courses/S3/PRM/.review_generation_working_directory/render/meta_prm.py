@@ -8,7 +8,78 @@ CHAPTERS = list(range(1, 15))
 CHAPTER_LIST_AR = "1–14"
 BOOK_FILE = "MBA - Project Management - The Book.pdf"
 BOOK_PAGES = 554
-GENERATED_DATE = "2026-09-09"
+# §7d: symbols used in tables and calculations, with their Arabic meaning. The renderer lists, under every
+# question table or calculation block, only the symbols that record actually uses (first-appearance order).
+SYMBOLS = {
+    # §7d glossary. ar = Arabic name; en = English name; f = formula in symbols only (rendered left-to-right, may be "");
+    # note = Arabic explanation — name every other acronym in Arabic with the acronym in brackets.
+    # earned value (ch. 10)
+    "BCWS": dict(ar="الكلفة المخططة للعمل المخطط", en="Budgeted Cost of Work Scheduled (PV)", f="",
+                 note="قيمة معطاة من الخطة: ما كان يجب إنفاقه حتى تاريخ المراقبة. تُسمّى أيضاً القيمة المخططة (PV)."),
+    "BCWP": dict(ar="الكلفة المخططة للعمل المنجز", en="Budgeted Cost of Work Performed (EV)", f="BCWP = % × Budget",
+                 note="نسبة الإنجاز × الكلفة المخططة للنشاط. تُسمّى أيضاً القيمة المكتسبة (EV)."),
+    "ACWP": dict(ar="الكلفة الفعلية للعمل المنجز", en="Actual Cost of Work Performed (AC)", f="",
+                 note="قيمة معطاة من المحاسبة: ما أُنفق فعلاً حتى تاريخ المراقبة."),
+    "SV": dict(ar="الانحراف الزمني", en="Schedule Variance", f="SV = BCWP − BCWS",
+               note="الكلفة المخططة للعمل المنجز (BCWP) ناقص الكلفة المخططة للعمل المخطط (BCWS). سالب = متأخر، موجب = متقدم."),
+    "CV": dict(ar="انحراف الكلفة", en="Cost Variance", f="CV = BCWP − ACWP",
+               note="الكلفة المخططة للعمل المنجز (BCWP) ناقص الكلفة الفعلية (ACWP). سالب = تجاوز الموازنة، موجب = وفر."),
+    "SPI": dict(ar="مؤشر الأداء الزمني", en="Schedule Performance Index", f="SPI = BCWP ÷ BCWS",
+                note="الكلفة المخططة للعمل المنجز (BCWP) مقسومة على الكلفة المخططة للعمل المخطط (BCWS). أقل من 1 = متأخر."),
+    "CPI": dict(ar="مؤشر أداء الكلفة", en="Cost Performance Index", f="CPI = BCWP ÷ ACWP",
+                note="الكلفة المخططة للعمل المنجز (BCWP) مقسومة على الكلفة الفعلية (ACWP). أقل من 1 = يصرف أكثر من الخطة."),
+    "TAC": dict(ar="المدة الكلية المخططة للمشروع", en="Time At Completion", f="",
+                note="قيمة معطاة من الخطة."),
+    "BAC": dict(ar="الموازنة الكلية للمشروع", en="Budget At Completion", f="BAC = Σ Budget",
+                note="مجموع الكلف المخططة لكل الأنشطة."),
+    "EAC": dict(ar="الكلفة المتوقعة عند الإنجاز", en="Estimate At Completion", f="EAC = BAC ÷ CPI",
+                note="الموازنة الكلية (BAC) مقسومة على مؤشر أداء الكلفة (CPI)."),
+    "EACt": dict(ar="المدة المتوقعة عند الإنجاز", en="Estimate At Completion (time)", f="EACt = TAC ÷ SPI",
+                 note="المدة الكلية المخططة (TAC) مقسومة على مؤشر الأداء الزمني (SPI)."),
+    "ETC": dict(ar="الكلفة المتبقية المتوقعة حتى الإنجاز", en="Estimate To Complete", f="ETC = EAC − ACWP",
+                note="الكلفة المتوقعة عند الإنجاز (EAC) ناقص الكلفة الفعلية حتى الآن (ACWP)."),
+    # scheduling (ch. 7–9)
+    "ES": dict(ar="البداية المبكرة", en="Early Start", f="ES = max EF (predecessors)",
+               note="أكبر نهاية مبكرة (EF) بين الأنشطة السابقة؛ صفر للنشاط الأول."),
+    "EF": dict(ar="النهاية المبكرة", en="Early Finish", f="EF = ES + D",
+               note="البداية المبكرة (ES) زائد مدة النشاط (D)."),
+    "LS": dict(ar="البداية المتأخرة", en="Late Start", f="LS = LF − D",
+               note="النهاية المتأخرة (LF) ناقص مدة النشاط (D)."),
+    "LF": dict(ar="النهاية المتأخرة", en="Late Finish", f="LF = min LS (successors)",
+               note="أصغر بداية متأخرة (LS) بين الأنشطة اللاحقة؛ للنشاط الأخير تساوي مدة المشروع."),
+    "TF": dict(ar="العوم الكلي", en="Total Float", f="TF = LS − ES = LF − EF",
+               note="البداية المتأخرة (LS) ناقص البداية المبكرة (ES)؛ صفر على المسار الحرج."),
+    "Float": dict(ar="العوم", en="Float", f="Float = LS − ES",
+                  note="المدة التي يمكن تأخير النشاط فيها دون تأخير المشروع: البداية المتأخرة (LS) ناقص البداية المبكرة (ES)؛ صفر على المسار الحرج."),
+    "FS": dict(ar="علاقة نهاية-بداية", en="Finish-to-Start", f="Start(B) = Finish(A) + Lag",
+               note="يبدأ النشاط اللاحق بعد نهاية السابق، زائد التخلف (Lag) إن وُجد. في جداول الفصل 8 قد يعني العوم الحر (Free Slack)."),
+    "SS": dict(ar="علاقة بداية-بداية", en="Start-to-Start", f="Start(B) = Start(A) + Lag",
+               note="يبدأ النشاط اللاحق مع بداية السابق، زائد التخلف (Lag) إن وُجد."),
+    "FF": dict(ar="علاقة نهاية-نهاية", en="Finish-to-Finish", f="Finish(B) = Finish(A) + Lag",
+               note="ينتهي النشاط اللاحق مع نهاية السابق، زائد التخلف (Lag) إن وُجد."),
+    "SF": dict(ar="علاقة بداية-نهاية", en="Start-to-Finish", f="Finish(B) = Start(A) + Lag",
+               note="ينتهي النشاط اللاحق بعد بداية السابق، زائد التخلف (Lag) إن وُجد."),
+    "Lag": dict(ar="التخلف", en="Lag", f="", note="تأخير مفروض يُضاف بين نشاطين؛ قيمة معطاة."),
+    "Lead": dict(ar="القيادة", en="Lead", f="", note="تقديم (تداخل) يُطرح بين نشاطين؛ قيمة معطاة."),
+    "AON": dict(ar="الأنشطة في العقد", en="Activity-on-Node", f="", note="طريقة رسم الشبكة: العقدة نشاط والسهم علاقة."),
+    "AOA": dict(ar="الأنشطة على الأسهم", en="Activity-on-Arrow", f="", note="طريقة رسم الشبكة: السهم نشاط والعقدة حدث."),
+    "CPM": dict(ar="طريقة المسار الحرج", en="Critical Path Method", f="", note="مدة المشروع = أطول مسار في الشبكة."),
+    "OT": dict(ar="التقدير المتفائل", en="Optimistic Time", f="E = (OT + 4×AT + PT) ÷ 6",
+               note="قيمة معطاة؛ يدخل في المدة التقديرية (E) مع التقدير الأكثر ترجيحاً (AT) والمتشائم (PT)."),
+    "AT": dict(ar="التقدير الأكثر ترجيحاً", en="Most-likely Time", f="E = (OT + 4×AT + PT) ÷ 6",
+               note="قيمة معطاة؛ وزنه 4 في المدة التقديرية (E) مع المتفائل (OT) والمتشائم (PT)."),
+    "PT": dict(ar="التقدير المتشائم", en="Pessimistic Time", f="E = (OT + 4×AT + PT) ÷ 6",
+               note="قيمة معطاة؛ يدخل في المدة التقديرية (E) مع المتفائل (OT) والأكثر ترجيحاً (AT)."),
+    # selection (ch. 3)
+    "NPV": dict(ar="صافي القيمة الحالية", en="Net Present Value", f="NPV = Σ PV(cash flows) − I0",
+                note="مجموع التدفقات المخصومة ناقص الاستثمار الأولي؛ الأكبر أفضل."),
+    "PP": dict(ar="فترة الاسترداد", en="Payback Period", f="", note="عدد السنوات حتى استرداد الاستثمار؛ الأقصر أفضل."),
+    "PB": dict(ar="فترة الاسترداد", en="Payback", f="", note="عدد السنوات حتى استرداد الاستثمار؛ الأقصر أفضل."),
+    "IRR": dict(ar="معدل العائد الداخلي", en="Internal Rate of Return", f="NPV(IRR) = 0",
+                note="المعدل الذي يجعل صافي القيمة الحالية (NPV) صفراً؛ الأكبر أفضل."),
+}
+
+GENERATED_DATE = "2026-09-14"
 
 CH_TITLES = {1:"مقدمة في إدارة المشاريع – الجزء الأول", 2:"مقدمة في إدارة المشاريع – الجزء الثاني", 3:"إستراتيجية المنظمة واختيار المشاريع",
  4:"دورة حياة المشروع", 5:"تعريف المشروع – الجزء الأول", 6:"تعريف المشروع – الجزء الثاني", 7:"تخطيط الزمن في المشروع – الجزء الأول",

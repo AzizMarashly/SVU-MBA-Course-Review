@@ -41,6 +41,10 @@ Set PYTHONUTF8=1 for python. Output: `W\render\bank_chNN.py` (+ a short `W\qa\ch
 4. **Calculation items** (critical path, EVA, three-point estimate, NPV/payback, resource levelling): solve them
    with the book's method, show the working briefly in `why` (numbers), and cite the book page of the method.
    Put the full data table in the stem so the question is self-contained.
+4b. **Tables and calculations (§7d)** — any item whose stem carries tabular data or whose answer is a number:
+   put the data in `table=T(head, rows)` (the stem keeps only the question sentence), the full working in
+   `ans_table=T(...)` when there is one, and the steps in `calc=C(given=[...], steps=[S(what, eq, sub, res)])`;
+   `why` then names the rule only. Exact rules and finished examples: `CALC_TABLE_BRIEF.md` in this folder.
 5. **Answer block** (§7): `why` ≤ 2 sentences (3 for reconstructed) naming the deciding concept, never starting
    with «الإجابة الصحيحة»; `remember` = 2–5 **bold** keywords; `distractors` only for confusable options, one
    clause each («ب — ذلك هو **X** لا Y»); whole block 40–80 words. Bold (**…**) ONLY in why/remember/distractors,

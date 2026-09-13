@@ -1,7 +1,24 @@
-# HANDOFF — work in progress as of 2026-09-13 (evening, Damascus time)
+# HANDOFF — work in progress as of 2026-09-14
 
 Written for the next agent. Read `CLAUDE.md` first, then this file. Delete this file (or empty it)
 when everything below is committed and the MIS run is finished.
+
+## A0. Uncommitted, ready to commit: prompt v0.11 + PRM v03 (2026-09-14) — MIS paths must stay OUT of this commit
+
+Prompt **v0.11** adds §7d "Tables and calculations" (data as a real table under the stem; answer opens with the
+working table, then a «الحساب» block: given values with origin, then المعادلة → التعويض → الناتج per step; an
+always-visible «الرموز» chip row; tapping a chip or an underlined symbol opens a bottom sheet with name / English
+name / formula / note from the structured `SYMBOLS` glossary — touch-first; §15 QA checks incl. glossary coverage). PRM **v03** is the
+re-render: 44 records converted (ch. 3, 7, 8, 9, 10), no answer/page/source changed, all numbers recomputed by the
+helpers and matched. Details: PRM `STATE.md` §3, `VERSIONS.md`, `render/CALC_TABLE_BRIEF.md`.
+
+Commit these (owner's call) and then tag `v0.11`:
+`prompt/SVU-MBA-Course-Review-Generator.md`, `prompt/CHANGELOG.md`, `CLAUDE.md`, `HANDOFF.md`, `S3/PRM/index.html`,
+`courses.json`, `courses/S3/PRM/README.md`, and under `courses/S3/PRM/.review_generation_working_directory/`:
+`STATE.md`, `VERSION`, `VERSIONS.md`, `bank.json`, `out.html`, `qa/qa_blocks_v03.txt`, `render/*` (common, build_bank,
+render_html, qa_blocks, meta_prm, bank_ch03/07/08/09/10, CHAPTER_HELPER_BRIEF.md, new CALC_TABLE_BRIEF.md).
+**Do not add anything under `courses/S3/MIS/`** (its working directory is mid-regeneration; see B/B1). `courses.json`
+was rebuilt against the committed MIS bank on purpose, so it is correct as is.
 
 ## A. Committed: prompt v0.10 + IMT v1.5 + PRM v02 (commit "Prompt v0.10: collapsible page sections", tag v0.10)
 
@@ -88,6 +105,16 @@ which is the authoritative eight-step sequence. In short:
 Rules that apply: cite the book page for every answer; never invent options, answers or pages; no
 personal data in the review or file names; keep source files unchanged; `out.html` without the
 Cloudflare snippet (`publish_page.py` adds it); never import the older-curriculum answer keys.
+
+## B1. MIS tooling already carries prompt v0.11 §7d (2026-09-14)
+
+`courses/S3/MIS/.review_generation_working_directory/render/` was patched together with PRM: `common.py`
+(`T`, `C`, `S`, `table` / `ans_table` / `calc` fields), `render_html.py` (tables, calculation block, symbol
+legend), `build_bank.py` (refuses `|` in stems unless `PRM_LENIENT=1`), `qa_blocks.py` (§7d lines),
+`meta_mis.py` (`SYMBOLS` glossary — currently PRM's list; trim/extend for MIS), `CALC_TABLE_BRIEF.md` and a
+§7d paragraph in `CHAPTER_HELPER_BRIEF.md`. Chapter helpers for 7–10 must write calculation items in that form.
+The partial MIS `bank.json` / `out.html` were rebuilt during the smoke test (same four chapters; still not
+publishable). `courses.json` in the working tree was rebuilt against the committed MIS bank on purpose.
 
 ## B2. IMT: new exam source waiting
 

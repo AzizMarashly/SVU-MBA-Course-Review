@@ -6,7 +6,7 @@ Source material and generation state for the PRM review. The published page is
 | | |
 |---|---|
 | Semester | 3 |
-| Published review | v01 (2026-09-09) — https://azizmarashly.github.io/SVU-MBA-Course-Review/S3/PRM/ |
+| Published review | v03 (2026-09-14) — https://azizmarashly.github.io/SVU-MBA-Course-Review/S3/PRM/ |
 | Prompt used | v0.9, DECIDE mode, no pilot, Arabic interface — settings in `PROJECT_SETTINGS.md` |
 | Chapters in scope | 1–14 (the whole book, 554 pages, د. إياد زوكار) |
 | Bank | 442 questions: exam 166, textbook 145, other 187, generated 21 (a question may carry several types); 69 low-confidence; 79 reconstructed; 79/79 subsections covered |

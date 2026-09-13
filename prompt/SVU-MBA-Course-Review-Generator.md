@@ -1,4 +1,4 @@
-# PROMPT — Complete Course Review Generator (v0.10)
+# PROMPT — Complete Course Review Generator (v0.11)
 
 > Reusable spec for building a consolidated, verified, interactive review file from a folder
 > of course material. Fill in **PROJECT SETTINGS**, then paste the whole document as your prompt.
@@ -15,6 +15,15 @@
 > for every review file generated with it**. Full text in `LICENSE.md` at the repository root;
 > what it means for the output in §19.
 
+> **Changes in v0.11:** questions that carry a data table or a numeric calculation get a fixed
+> presentation (§7d): the data is a real table under the stem, never a sentence of values; the
+> answer block opens with the full working as a table where there is one, then a "Calculation"
+> block — given values with their origin, then one row per step: formula → substitution → result;
+> the "Why" line names the rule only. Every symbol used (BCWS, LF, SPI …) appears as a chip under
+> the table; tapping a chip or an underlined symbol opens a sheet with its name, English name,
+> formula and note from a structured course glossary. QA checks that no stem is a flattened
+> table, no numeric answer lacks a calculation block, and every symbol is in the glossary (§15).
+>
 > **Changes in v0.10:** every prose section of the HTML (how to use, scope, methodology, source
 > files, reference lists, contents, file metadata) is collapsible like a chapter, with "Collapse
 > all" / "Expand all" buttons that fold chapters, sections and these blocks together, so a
@@ -398,6 +407,66 @@ these is true:
 State the reason in one clause. Do not add the line to confident answers, and do not add a
 "high confidence" label anywhere — silence means confident. Report the count of flagged
 questions in the completion summary.
+
+### 7d. Tables and calculations — show the data as a table and the working as steps
+
+Applies to every question whose stem carries tabular data (activities with durations and
+predecessors, earned-value figures per task, cash flows …) and to every question whose answer is a
+number or a set of numbers (critical path, early/late times, float, three-point estimate, earned
+value indices, payback, forecast at completion, resource levelling …).
+
+**Data table.** The stem keeps only the question sentence and a short lead-in ("According to the
+following activity table …"). The values go into a real table under the stem: a header row, one row
+per item, numbers and codes left-to-right inside cells, no bold. Never flatten a table into a
+sentence of "X1: —, 4, 3; X2: X1, 2, 4 …". Sibling questions on the same data set share one table,
+repeated under each of them so every question stays self-contained.
+
+**Answer block order for these questions** (the labels are in the interface language):
+
+```
+✔ Answer: …
+<Working table>      the full working when there is one — early/late times and float for every
+                     activity, SV / CV / SPI / CPI for every task — shared by sibling questions
+Calculation:
+  • given values, one per line, each with its origin: "BCWP = 12 (given)", "project duration =
+    20 = largest EF in the table", "the only successor of X3 is X6 (predecessor column)"
+  | Required | Formula | Substitution | Result |          one row per step, in solving order
+  | SPI      | SPI = BCWP ÷ BCWS | 12 ÷ 10 | 1.2 |
+  | Expected duration | EACt = TAC ÷ SPI | 100 ÷ 1.2 | ≈ 83 days |
+  optional one-clause closing note (which item satisfies the condition)
+Why: the rule that decides the question, in words — no arithmetic here
+Remember / Distractors / Ref as in §7a
+```
+
+Rules:
+
+- **Formula and substitution cells hold symbols and numbers only** (Latin letters, digits,
+  `+ − × ÷ = ≈ min max`); they render left-to-right in a monospace face. Words in the
+  explanation language go in the *Required* cell, the given lines and the notes.
+- **Every number has an origin.** A value that is not in the question or its table is introduced
+  in a given line or a step note saying where it came from (a previous step, the table, the
+  book's convention such as a linear cost split).
+- **One step per quantity**, in the order a student would solve it; the final step's result may
+  end with "= the answer". A one-line calculation (three-point estimate, payback comparison) is
+  still a calculation block with one step.
+- **The "Why" line no longer carries the arithmetic**; it names the deciding rule
+  ("late finish of an activity = the smallest late start among its successors").
+- **Essay-type calculation questions** (draw the network, level the resources) keep a short prose
+  answer (levels, critical path, duration, conclusion); path sums become steps, per-activity
+  times a working table, and resource levelling shows a per-period resource table before and after.
+- **Symbols legend.** The course keeps one glossary of symbols; each entry has four separate
+  fields — name in the explanation language, English name, formula in symbols only, and a
+  one-sentence note in the explanation language that names every other acronym it mentions in
+  words with the acronym in brackets ("the early finish (EF) of the predecessors"). Never mix the
+  two languages in one field: the renderer shows each field on its own line with its own
+  direction. Under every question table the file shows an always-visible row of chips, one per
+  symbol that question actually uses (symbol + short name). Tapping a chip, or any underlined
+  symbol inside the tables and calculation cells, opens a bottom sheet with the four fields, a
+  close button and the other symbols of that question — this is the primary path, since most
+  readers are on phones; on pointer devices hovering a chip shows the same card inline.
+- On a phone the step table stacks into one card per step (Required / Formula / Substitution /
+  Result on separate lines); wide data tables scroll horizontally inside the question card.
+- The word target of §7b does not count the working table, the calculation block or the legend.
 
 ---
 
@@ -830,6 +899,13 @@ without an optional line or a reconstruction justifying it; every *Remember* lin
 least one bold keyword; no bold inside stems or options; no *Why* line repeats the answer text;
 low-confidence lines appear only with a stated reason. Run these as mechanical checks and report
 counts, then read a random sample of 20 blocks by eye.
+
+**Tables and calculations (§7d):** no stem contains a flattened table (a run of separator-delimited
+numeric groups, or `|` characters); every numeric answer has a calculation block; no *Why* line
+carries an arithmetic chain when a calculation block exists; formula and substitution cells contain
+no bold and no explanation-language words; every symbol used in a table header, a given line or a
+formula cell is in the course glossary (the check lists the ones that are not). Report the counts of
+records with a data table, a working table and a calculation block.
 
 **Reconstructed exam questions (§3b):** each carries the label and the recalled original text;
 no distractor is a made-up term; the *Why* line would still identify the answer with different

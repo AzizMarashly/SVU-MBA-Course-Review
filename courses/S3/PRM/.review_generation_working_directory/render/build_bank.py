@@ -5,7 +5,7 @@ import importlib, json, os, re, sys, collections
 sys.path.insert(0, os.path.dirname(__file__))
 import meta_prm as M
 CHAPTERS = M.CHAPTERS
-SPEC = "v0.10"
+SPEC = "v0.11"
 VERSION = open(os.path.join(os.path.dirname(__file__), "..", "VERSION"), encoding="utf-8").read().strip()
 LEDGER = json.load(open(os.path.join(os.path.dirname(__file__), "..", "ledger.json"), encoding="utf-8"))
 EXAM_CODES = {e["id"] for e in LEDGER["sources"] if e.get("kind") == "exam" and e["decision"].startswith("included")}
@@ -80,6 +80,9 @@ def check_basic(qs, subs):
             assert ("textbook" in q["types"]) == ("BOOK" in q["sources"]), q["id"]
         # no bold in stem/options
         assert "**" not in q["stem"], q["id"]
+        if "|" in q["stem"] or chr(10) in q["stem"]:
+            if os.environ.get("PRM_LENIENT"): print("WARNING (lenient):", q["id"], "tabular stem")
+            else: raise AssertionError((q["id"], "tabular data belongs in table=T(...), not in the stem (§7d)"))
         if q["options"]:
             assert all("**" not in o for o in q["options"]), q["id"]
         if q["qtype"] == "mcq":
