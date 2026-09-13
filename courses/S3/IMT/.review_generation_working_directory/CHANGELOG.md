@@ -5,6 +5,12 @@ The current version number lives in `VERSION` and is stamped into the file names
 `bank/release.py` publishes the current version to the project folder and moves any older copies
 into `../_old_versions/`, so the project folder always holds exactly one version.
 
+## v1.5 — 2026-09-13 (rendered under prompt v0.10; bank unchanged)
+- §13a (v0.10): the seven prose blocks (how to use, scope, methodology, source files, reference lists,
+  contents, file metadata) are collapsible like chapters; intro blocks open, end blocks closed by default,
+  state remembered; "طيّ الكل" / "فتح الكل" buttons fold chapters, types and blocks together. The metadata
+  summary line keeps version, spec and licence visible. No question, answer or score changed.
+
 ## v1.4 — 2026-09-09 (rendered under prompt v0.9; bank unchanged)
 - §19 (v0.9): the review file itself is under CC BY-NC-SA 4.0 — the "how to use" text states the
   licence conditions (share free, keep the notice, never sell) and the footer notice says the licence

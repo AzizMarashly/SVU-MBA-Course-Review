@@ -8,8 +8,8 @@
       "title": "مراجعه كامله لماده ال IMT",
       "name_ar": "التسويق والتجارة الدولية",
       "name_en": "International Marketing and Trading",
-      "version": "1.4",
-      "spec_version": "v0.9",
+      "version": "1.5",
+      "spec_version": "v0.10",
       "generated": "2026-09-09",
       "questions": 292,
       "questions_by_type": {
@@ -33,7 +33,7 @@
       "low_confidence": 24,
       "data": "bank",
       "sources_path": "courses/S3/IMT/",
-      "download_name": "مراجعه كامله لماده ال IMT_v1.4.html"
+      "download_name": "مراجعه كامله لماده ال IMT_v1.5.html"
     },
     {
       "semester": 3,
@@ -80,8 +80,8 @@
       "title": "مراجعه كامله لماده ال PRM",
       "name_ar": "إدارة المشاريع",
       "name_en": "Project Management",
-      "version": "01",
-      "spec_version": "v0.9",
+      "version": "02",
+      "spec_version": "v0.10",
       "generated": "2026-09-09",
       "questions": 442,
       "questions_by_type": {
@@ -108,7 +108,7 @@
       "low_confidence": 69,
       "data": "bank",
       "sources_path": "courses/S3/PRM/",
-      "download_name": "مراجعه كامله لماده ال PRM_v01.html"
+      "download_name": "مراجعه كامله لماده ال PRM_v02.html"
     }
   ]
 }

@@ -5,7 +5,7 @@ import importlib, json, os, re, sys, collections
 sys.path.insert(0, os.path.dirname(__file__))
 import meta_prm as M
 CHAPTERS = M.CHAPTERS
-SPEC = "v0.9"
+SPEC = "v0.10"
 VERSION = open(os.path.join(os.path.dirname(__file__), "..", "VERSION"), encoding="utf-8").read().strip()
 LEDGER = json.load(open(os.path.join(os.path.dirname(__file__), "..", "ledger.json"), encoding="utf-8"))
 EXAM_CODES = {e["id"] for e in LEDGER["sources"] if e.get("kind") == "exam" and e["decision"].startswith("included")}

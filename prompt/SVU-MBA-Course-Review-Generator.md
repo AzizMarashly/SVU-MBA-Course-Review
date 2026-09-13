@@ -1,4 +1,4 @@
-# PROMPT — Complete Course Review Generator (v0.9)
+# PROMPT — Complete Course Review Generator (v0.10)
 
 > Reusable spec for building a consolidated, verified, interactive review file from a folder
 > of course material. Fill in **PROJECT SETTINGS**, then paste the whole document as your prompt.
@@ -15,6 +15,11 @@
 > for every review file generated with it**. Full text in `LICENSE.md` at the repository root;
 > what it means for the output in §19.
 
+> **Changes in v0.10:** every prose section of the HTML (how to use, scope, methodology, source
+> files, reference lists, contents, file metadata) is collapsible like a chapter, with "Collapse
+> all" / "Expand all" buttons that fold chapters, sections and these blocks together, so a
+> collapsed page is a short list of headings (§13a). No change to content rules.
+>
 > **Changes in v0.9:** the generated review files carry the same CC BY-NC-SA 4.0 licence as the
 > prompt, as a condition: share freely, never sell. The notice and the "how to use" text say so
 > (§19); the former community pledge is replaced by these terms.
@@ -62,7 +67,7 @@
 | Output base name | `<<< title >>>` — files are named `<base>_v<NN>.<ext>`, see §0e |
 | Working directory | `.review_generation_working_directory` (inside the course folder, §0d) |
 | PDF / DOCX | `<<< ASK AT END (default) / ALWAYS / NEVER >>>` |
-| Spec version | `v0.9` — write this into the output metadata (§16) |
+| Spec version | `v0.10` — write this into the output metadata (§16) |
 
 ---
 
@@ -511,9 +516,10 @@ the reader will meet on every question, each in one or two sentences:
 - **⚠ Low confidence** — that it appears only where the answer rests on thin evidence (§7c), and
   that its absence means the answer was verified normally.
 
-It also names the reading modes, the two sliders and the chapter collapse controls in the toolbar
-(§13a), notes that the importance slider at 2 or more hides generated questions, and suggests a
-reading order: exam questions first, then textbook, then the rest.
+It also names the reading modes, the two sliders, the chapter collapse controls and the
+"Collapse all" / "Expand all" buttons in the toolbar (§13a), notes that the importance slider
+at 2 or more hides generated questions, and suggests a reading order: exam questions first,
+then textbook, then the rest.
 
 ### 11a. Chapter opener — two-line context summary
 
@@ -684,6 +690,28 @@ native `<details>`/`<summary>` mechanism as the answers, so it works without scr
   view. Without scripting, everything opens as per the default.
 - Search and filters must **never leave a matching question hidden inside a collapsed parent**:
   when a filter or search changes, open every chapter and section that contains a visible match.
+
+#### Collapsible page sections — a collapsed page is a list of headings
+
+Every block of the document that is not a chapter (§11: how to use, scope and sources,
+methodology, source files, reference lists, table of contents, file metadata) is collapsible with
+the same native `<details>`/`<summary>` mechanism and the same look as a chapter heading, so
+that a reader who folds everything is left with a short list of headings and can open only what
+they need.
+
+- The section heading is the `<summary>`; nothing else of the section is visible when folded.
+  For the file-metadata block the summary line also shows the review-file version, the spec
+  version and the licence name, so the §19 notice stays visible even when the block is folded.
+- **Default state on open:** the introductory blocks (how to use, scope) open; every block after
+  the last chapter closed. Chapters keep their own default (open).
+- Open/closed state per block is remembered across reloads, like chapters.
+- The toolbar offers **Collapse all** and **Expand all**, which fold or open chapters, question
+  sections and these blocks together and leave the answers untouched; the existing per-level
+  buttons stay.
+- A link to a folded block or to anything inside it (table of contents, `#src-n` file
+  references, URL hash) opens it before scrolling.
+- Print opens every block. Without scripting the blocks open as per the default and the
+  `<details>` control still works.
 
 #### Reading-mode filter — one question section at a time
 

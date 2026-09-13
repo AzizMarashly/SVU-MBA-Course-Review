@@ -3,6 +3,13 @@
 Each version is a git tag on this repository. Diff any two versions with a compare link such as
 https://github.com/AzizMarashly/SVU-MBA-Course-Review/compare/v0.5...v0.6
 
+## v0.10 — 2026-09-13
+- §13a: every prose block of the HTML (how to use, scope, methodology, source files, reference
+  lists, contents, file metadata) is collapsible like a chapter, intro blocks open and end blocks
+  closed by default, state remembered; "Collapse all" / "Expand all" fold chapters, sections and
+  blocks together. The metadata summary line keeps version, spec and licence visible when folded.
+  §11: the "how to use" text names the new buttons. No content rule changed.
+
 ## v0.9 — 2026-09-09
 - §19 / `LICENSE.md`: the generated review files are released under the same CC BY-NC-SA 4.0
   licence as the prompt. "Share freely, never sell" becomes a licence condition of every review

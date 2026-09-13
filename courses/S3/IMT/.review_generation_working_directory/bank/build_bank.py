@@ -4,7 +4,7 @@ importance scores, coverage audit and mechanical checks."""
 import importlib, json, os, re, sys, collections
 sys.path.insert(0, os.path.dirname(__file__))
 CHAPTERS = [1,2,3,4,5,6,7,9,10,11,12]
-SPEC = "v0.9"
+SPEC = "v0.10"
 VERSION = open(os.path.join(os.path.dirname(__file__), "..", "VERSION"), encoding="utf-8").read().strip()
 EXAM_CODES = {"F17","F19","S24","F24"}
 

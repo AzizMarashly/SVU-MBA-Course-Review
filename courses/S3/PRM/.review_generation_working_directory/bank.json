@@ -1,11 +1,11 @@
 {
  "_notice": [
-  "Generated with the SVU MBA Course Review Generator, prompt v0.9 · deliverable v01",
+  "Generated with the SVU MBA Course Review Generator, prompt v0.10 · deliverable v02",
   "Source and latest version: https://github.com/AzizMarashly/SVU-MBA-Course-Review",
   "Licence of the prompt and of this file: CC BY-NC-SA 4.0 — share freely, credit the source, never sell. Quoted textbook and exam content stays with its owners and is not covered."
  ],
- "spec_version": "v0.9",
- "file_version": "01",
+ "spec_version": "v0.10",
+ "file_version": "02",
  "title": "مراجعه كامله لماده ال PRM",
  "generated": "2026-09-09",
  "source_ledger": [

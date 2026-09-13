@@ -3,6 +3,9 @@
 Read this first. It is the map; the files it points to hold the detail. Do not re-derive any of it
 by exploring.
 
+**If `HANDOFF.md` exists at the repository root, read it next: it describes work left in progress
+and how to resume it.**
+
 ## What this is
 
 Student-made, AI-generated exam review pages for the SVU MBA programme (Syrian Virtual
@@ -17,7 +20,7 @@ Two tiers, never mix them up:
 | Published pages | `S<n>/<CODE>/index.html`, `index.html`, `courses.json` | yes | What students open |
 | Sources + generation state | `courses/S<n>/<CODE>/` | no | Course material, settings, and the working directory of the run, so a review can be resumed or regenerated |
 
-Courses today (semester 3): `IMT` (v1.4), `PRM` (v01), `MIS` (v0.2, bank generated 2026-09-06 before the
+Courses today (semester 3): `IMT` (v1.5), `PRM` (v02), `MIS` (v0.2, bank generated 2026-09-06 before the
 versioned prompt; working directory reconstructed from the session scratchpad on 2026-09-13).
 
 ## Where to look
@@ -25,7 +28,7 @@ versioned prompt; working directory reconstructed from the session scratchpad on
 | Need | File |
 |---|---|
 | Human overview, contribution rules, git etiquette | `README.md`, `CONTRIBUTING.md` |
-| The generator prompt (v0.9) and its history | `prompt/SVU-MBA-Course-Review-Generator.md`, `prompt/CHANGELOG.md`; every version is a git tag `v0.N` |
+| The generator prompt (v0.10) and its history | `prompt/SVU-MBA-Course-Review-Generator.md`, `prompt/CHANGELOG.md`; every version is a git tag `v0.N` |
 | State of a course run: stage checklist, decisions, known problems, exact next step | `courses/S3/<CODE>/.review_generation_working_directory/STATE.md` — **always read before touching a course** |
 | Folder map and release workflow of a course | `courses/S3/<CODE>/README.md` (IMT also has a working-directory `README.md`) |
 | Settings the review was generated with | `courses/S3/<CODE>/PROJECT_SETTINGS.md` |

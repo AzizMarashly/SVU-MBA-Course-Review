@@ -147,7 +147,7 @@ def methodology():
 <h3>الخصوصية وحقوق المادة</h3>
 <p>إخفاء الإجابات معونة للمذاكرة وليس حمايةً: نص الإجابات موجود داخل الملف ويمكن الوصول إليه بالبحث أو النسخ أو أدوات الوصول أو عرض المصدر، فلا يُعتمد عليه في امتحان حقيقي. لا يحوي الملف أي بيانات شخصية عن المؤلف أو الجهاز. نصوص الكتاب وأسئلة الامتحانات المقتبسة هنا تبقى ملكاً لمؤلفيها والجامعة، وعلى القارئ احترام حقوقها عند مشاركة الملف.</p>
 <h3>إصدار المواصفة ووضع التشغيل</h3>
-<p>بُني هذا الملف بالمواصفة {esc(SPEC)} في وضع DECIDE (بلا توقف لأخذ رأي المستخدم): لا فصل تجريبي، والأسئلة المولَّدة وفق القاعدة أعلاه، وHTML هو الصيغة الوحيدة المنتَجة. نسخة PDF أو DOCX تُنتج عند الطلب من البنك نفسه.</p>
+<p>بُني هذا الملف بالمواصفة v0.9 في وضع DECIDE، ثم أُعيد تصييره بالمواصفة {esc(SPEC)} دون تغيير في المحتوى (الأقسام التمهيدية والختامية قابلة للطيّ وزرّا «طيّ الكل» و«فتح الكل»، البند 13أ). وضع التشغيل (بلا توقف لأخذ رأي المستخدم): لا فصل تجريبي، والأسئلة المولَّدة وفق القاعدة أعلاه، وHTML هو الصيغة الوحيدة المنتَجة. نسخة PDF أو DOCX تُنتج عند الطلب من البنك نفسه.</p>
 </section>"""
 
 def sources_appendix():
@@ -274,6 +274,14 @@ details.vars summary{cursor:pointer}
 .notice{margin-top:10px;padding:8px 12px;border:1px dashed var(--line);border-radius:8px}
 .notice p{margin:.2em 0}
 .pledge{border-inline-start:3px solid var(--line);padding-inline-start:10px;color:var(--muted);font-size:.92em}
+details.pgd > summary{cursor:pointer;list-style:none}
+details.pgd > summary::-webkit-details-marker{display:none}
+details.pgd > summary h2{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+details.pgd:not([open]) > summary h2{margin-bottom:0;border-bottom-color:transparent}
+details.pgd > summary .tog .hide{display:none}
+details.pgd[open] > summary .tog .hide{display:inline}
+details.pgd[open] > summary .tog .show{display:none}
+footer details.pgd > summary h2{margin-top:0}
 details.reflist{margin:10px 0}
 details.reflist summary{cursor:pointer;font-weight:600}
 .hidden{display:none!important}
@@ -281,7 +289,7 @@ details.reflist summary{cursor:pointer;font-weight:600}
 footer{margin-top:60px;color:var(--muted);font-size:.85em;border-top:1px solid var(--line);padding-top:12px}
 [dir="ltr"],.ltr{direction:ltr;text-align:left;unicode-bidi:isolate}
 @media (max-width:600px){body{font-size:16px}main{padding:10px 12px 60px}.q{padding:12px}.toolbar input{min-width:120px}}
-@media print{.toolbar,.noprint{display:none!important}.tbl.files{display:table}details.ans,details.reflist,details.vars,details.chd,details.secd{display:block}.tog{display:none}details.ans > summary{display:none}details > *:not(summary){display:block}.q{break-inside:avoid;border-color:#bbb}.hidden{display:block!important}body{background:#fff;color:#000}a{color:#000;text-decoration:none}}
+@media print{.toolbar,.noprint{display:none!important}.tbl.files{display:table}details.ans,details.reflist,details.vars,details.chd,details.secd,details.pgd{display:block}.tog{display:none}details.ans > summary{display:none}details > *:not(summary){display:block}.q{break-inside:avoid;border-color:#bbb}.hidden{display:block!important}body{background:#fff;color:#000}a{color:#000;text-decoration:none}}
 """
 
 JS = """
@@ -349,6 +357,11 @@ document.getElementById('foldch').addEventListener('click',function(){setAll('de
 document.getElementById('opench').addEventListener('click',function(){setAll('details.chd',true);});
 document.getElementById('foldsec').addEventListener('click',function(){setAll('details.secd',false);});
 document.getElementById('opensec').addEventListener('click',function(){setAll('details.secd',true);});
+var pgOpen={};try{pgOpen=JSON.parse(localStorage.getItem('prm_pg_open')||'{}');}catch(e){}
+document.querySelectorAll('details.pgd').forEach(function(d){var id=d.getAttribute('data-pg');if(pgOpen[id]===true)d.open=true;if(pgOpen[id]===false)d.open=false;
+ d.addEventListener('toggle',function(){pgOpen[id]=d.open;try{localStorage.setItem('prm_pg_open',JSON.stringify(pgOpen));}catch(e){}});});
+document.getElementById('foldall').addEventListener('click',function(){setAll('details.chd,details.secd,details.pgd',false);});
+document.getElementById('openall').addEventListener('click',function(){setAll('details.chd,details.secd,details.pgd',true);});
 window.addEventListener('hashchange',function(){var el=document.getElementById(location.hash.slice(1));if(el){var p=el;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement;}el.scrollIntoView();}});
 var theme=document.getElementById('theme');
 function setTheme(v){if(v)root.setAttribute('data-theme',v);else root.removeAttribute('data-theme');try{localStorage.setItem('prm_theme',v||'');}catch(e){}theme.textContent=v==='dark'?'☀ فاتح':v==='light'?'🌙 داكن':'◐ المظهر';}
@@ -359,6 +372,25 @@ document.querySelectorAll('#toc a').forEach(function(a){a.addEventListener('clic
 apply(false);
 })();
 """
+
+
+# ---- §13a (v0.10): collapsible page sections, applied to the assembled page so IMT and PRM stay identical ----
+PG_OPEN = {"howto": True, "scope": True, "method": False, "sources": False, "lists": False, "toc": False, "metadata": False}
+def fold_sections(page):
+    tog = '<span class="tog meta"><span class="hide">طيّ ▲</span><span class="show">فتح ▼</span></span>'
+    def sec(m):
+        sid, title = m.group(1), m.group(2)
+        extra = f' <small class="meta">v{esc(VER)} · المواصفة {esc(SPEC)} · CC BY-NC-SA 4.0</small>' if sid == "metadata" else ""
+        op = " open" if PG_OPEN.get(sid, True) else ""
+        tag = "footer" if sid == "metadata" else "section"
+        return f'<{tag} id="{sid}"><details class="pgd" data-pg="{sid}"{op}><summary><h2>{title}{extra}{tog}</h2></summary>'
+    page = re.sub(r'<(?:section|footer) id="(howto|scope|method|sources|lists|toc|metadata)"><h2>(.*?)</h2>', sec, page)
+    for sid in PG_OPEN:
+        tag = "footer" if sid == "metadata" else "section"
+        i = page.find(f'id="{sid}"'); j = page.find(f"</{tag}>", i)
+        assert i > 0 and j > 0, sid
+        page = page[:j] + "</details>" + page[j:]
+    return page
 
 def build():
     c = counts(); total = len(QS); FMAX = max(q['freq'] for q in QS); cov_total = QA.get('subs_covered_total', sum(len(v) for v in SUBS.values()))
@@ -379,11 +411,12 @@ def build():
       '<div class="grp sliders" aria-label="التصفية"><label class="sl">الأهمية <span id="impv">الكل</span><input id="imp" type="range" min="1" max="5" step="1" value="1" aria-label="الحد الأدنى للأهمية"></label>'
       f'<label class="sl">التكرار <span id="freqv">الكل</span><input id="freq" type="range" min="0" max="{FMAX}" step="1" value="0" aria-label="الحد الأدنى للتكرار"></label></div>'
       f'<select id="chsel" aria-label="الفصل" class="jsonly"><option value="all">كل الفصول</option>{ch_opts}</select>'
-      '<div class="grp jsonly"><button class="chip" id="expand">إظهار الإجابات</button><button class="chip" id="collapse">إخفاء الإجابات</button><button class="chip" id="foldch">طيّ كل الفصول</button><button class="chip" id="opench">فتح كل الفصول</button><button class="chip" id="foldsec">طيّ الأنواع</button><button class="chip" id="opensec">فتح الأنواع</button><button class="chip" id="theme">◐ المظهر</button><button class="chip" id="reset">↺ إعادة ضبط التصفية</button></div>'
+      '<div class="grp jsonly"><button class="chip" id="expand">إظهار الإجابات</button><button class="chip" id="collapse">إخفاء الإجابات</button><button class="chip" id="foldch">طيّ كل الفصول</button><button class="chip" id="opench">فتح كل الفصول</button><button class="chip" id="foldsec">طيّ الأنواع</button><button class="chip" id="opensec">فتح الأنواع</button><button class="chip" id="foldall">⊟ طيّ الكل</button><button class="chip" id="openall">⊞ فتح الكل</button><button class="chip" id="theme">◐ المظهر</button><button class="chip" id="reset">↺ إعادة ضبط التصفية</button></div>'
       '</div></div>',
       f'''<section id="howto"><h2>كيف تستخدم هذا الملف</h2>
 <p>كل سؤال يحمل ثلاث علامات: <b>التكرار</b> = عدد المصادر المستقلة التي سألته (ست دورات امتحانية منقولة من الذاكرة: نحو 2015 والدورة التالية لها و2016 وS19 وF24 ومجموعة أسئلة الفحص المتداولة، ثم الكتاب والملخصات)؛ <b>الأهمية ★</b> من 1 إلى 5 مبنية على عدد امتحانات ورد فيها السؤال، زائد نقطة إن كان من أسئلة الكتاب، زائد نقطة إن كانت فقرته من مجالات تركيز المدرّس، وهي معونة للدراسة لا توقّع للامتحان؛ <b>⚠ ثقة منخفضة</b> يظهر فقط حيث يستند الجواب إلى دليل ضعيف أو نقل غير مؤكد، وغيابه يعني أن الإجابة تُحقق منها من الكتاب بالصفحة.</p>
 <p>الإجابة مخفية خلف زر «إظهار الإجابة» ولا تحتاج جافاسكربت. الشريط الثابت في الأعلى يعرض العدّاد وزر «⚙ الفلاتر» والبحث؛ وخلف زر الفلاتر: وضع القراءة (نوع واحد من الأسئلة عبر كل الفصول: الامتحانات، الكتاب، مصادر أخرى، مولَّدة)، ومنزلقان لحدّ أدنى للأهمية (1–5) وللتكرار، واختيار فصل، وإظهار الإجابات أو إخفائها، وطيّ كل الفصول أو فتحها، وطيّ أنواع الأسئلة أو فتحها، مستقلةً عن حالة الإجابات (ويمكن طيّ أي فصل أو نوع منفرداً بالنقر على عنوانه، ويُحفظ ما طويته)، والمظهر الفاتح أو الداكن، وزر «إعادة ضبط التصفية». اختياراتك تُحفظ وتوضع في رابط الصفحة. على الهاتف تبدأ لوحة الفلاتر مطوية، وحين تكون مطوية وثمة تصفية فعّالة يظهر عددها على الزر وملخصها بجانب العدّاد. تنبيه: الأسئلة المولَّدة أهميتها 1 دائماً، فرفع منزلق الأهمية إلى 2 أو أكثر يخفيها كلها. الترتيب المقترح: أسئلة الامتحانات أولاً ثم أسئلة الكتاب ثم الباقي. الطباعة تُظهر كل الإجابات وتتجاهل التصفية.</p>
+<p class="meta">الأقسام التمهيدية والختامية (كيف تستخدم هذا الملف، النطاق والمصادر، المنهجية، ملفات المصدر، القوائم المرجعية، فهرس المحتويات، بيانات الملف) تُطوى وتُفتح بالنقر على عنوانها مثل الفصول، ويُحفظ ما طويته. زرّا «طيّ الكل» و«فتح الكل» في الفلاتر يطويان الفصول وأنواع الأسئلة وهذه الأقسام معاً ويُبقيان الإجابات على حالها؛ الصفحة المطوية كلها قائمة عناوين قصيرة.</p>
 <p class="meta">إخفاء الإجابات معونة للمذاكرة وليس حمايةً: نص الإجابة موجود في الملف ويصل إليه البحث والنسخ وعرض المصدر، فلا يُعتمد عليه في امتحان حقيقي. نصوص الكتاب والامتحانات المقتبسة تبقى ملكاً لأصحابها.</p>
 <p class="pledge">شروط رخصة هذا الملف (CC BY-NC-SA 4.0): شارك هذا الملف مجاناً مع زملائك في المادة. أبقِ الإشعار الموجود في آخر الملف حتى يجد غيرك المصدر وأحدث إصدار. لا يجوز بيعه ولا وضعه خلف اشتراك أو جدار دفع.</p></section>''',
       f'''<section id="scope"><h2>النطاق والمصادر</h2>
@@ -401,7 +434,7 @@ def build():
                  f'<p>المصدر وأحدث إصدار: <a href="{REPO}" class="ltr">{REPO}</a></p>'
                  f'<p>رخصة الأداة وهذا الملف: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ar" class="ltr">CC BY-NC-SA 4.0</a> — شارك بحرية، وانسب المصدر، ولا تبع أبداً. الرخصة تغطي محتوى المراجعة نفسها (الشروح والاختيار والترتيب)، أما نصوص الكتاب والامتحانات المقتبسة فتبقى لأصحابها وليست مشمولة.</p></div></footer>')
     parts.append('</main>'); parts.append(f'<script>{JS}</script>')
-    return "\n".join(parts)
+    return fold_sections("\n".join(parts))
 
 if __name__ == "__main__":
     out = build()
