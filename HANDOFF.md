@@ -1,26 +1,31 @@
 # HANDOFF — work in progress as of 2026-09-14
 
-Written for the next agent. Read `CLAUDE.md` first, then this file. Delete this file (or empty it)
-when everything below is committed and the MIS run is finished.
+Written for the next agent. Read `CLAUDE.md` first, then this file. Section A is history (committed); B is the
+live work. Delete this file (or empty it) when the MIS run is finished and IMT F25 is in.
 
-## A0. Uncommitted, ready to commit: prompt v0.11 + PRM v03 (2026-09-14) — MIS paths must stay OUT of this commit
+## A. Committed: prompt v0.11 + PRM v03 (commit 614262b, tag v0.11, 2026-09-14)
 
-Prompt **v0.11** adds §7d "Tables and calculations" (data as a real table under the stem; answer opens with the
-working table, then a «الحساب» block: given values with origin, then المعادلة → التعويض → الناتج per step; an
-always-visible «الرموز» chip row; tapping a chip or an underlined symbol opens a bottom sheet with name / English
-name / formula / note from the structured `SYMBOLS` glossary — touch-first; §15 QA checks incl. glossary coverage). PRM **v03** is the
-re-render: 44 records converted (ch. 3, 7, 8, 9, 10), no answer/page/source changed, all numbers recomputed by the
-helpers and matched. Details: PRM `STATE.md` §3, `VERSIONS.md`, `render/CALC_TABLE_BRIEF.md`.
+Prompt **v0.11** adds §7d "Tables and calculations": data as a real table under the stem; the answer opens with
+the working table, then a «الحساب» block (given values with their origin, then المعادلة → التعويض → الناتج per
+step); «لماذا» names the rule only; an always-visible «الرموز» chip row under the table, and tapping a chip or any
+underlined symbol opens a bottom sheet (Arabic name / English name / formula / note) built from the structured
+`SYMBOLS` glossary — designed touch-first because students read on phones; §15 has the matching QA checks,
+including glossary coverage. PRM **v03** is the re-render: 44 records in chapters 3, 7, 8, 9, 10 converted, no
+answer/page/source/low-confidence flag changed, every number recomputed by the helpers and matched.
+Where things are: PRM `STATE.md` §3 (decisions), `VERSIONS.md`, `render/CALC_TABLE_BRIEF.md` (rules for helpers),
+`render/common.py` (`T`, `C`, `S`), `render/meta_prm.py` (`SYMBOLS`), `render/render_html.py` (`render_table`,
+`render_calc`, `render_symbols`, `SYM_JS`). Cost of the conversion: three opus helpers, ~390k tokens.
 
-Commit these (owner's call) and then tag `v0.11`:
-`prompt/SVU-MBA-Course-Review-Generator.md`, `prompt/CHANGELOG.md`, `CLAUDE.md`, `HANDOFF.md`, `S3/PRM/index.html`,
-`courses.json`, `courses/S3/PRM/README.md`, and under `courses/S3/PRM/.review_generation_working_directory/`:
-`STATE.md`, `VERSION`, `VERSIONS.md`, `bank.json`, `out.html`, `qa/qa_blocks_v03.txt`, `render/*` (common, build_bank,
-render_html, qa_blocks, meta_prm, bank_ch03/07/08/09/10, CHAPTER_HELPER_BRIEF.md, new CALC_TABLE_BRIEF.md).
-**Do not add anything under `courses/S3/MIS/`** (its working directory is mid-regeneration; see B/B1). `courses.json`
-was rebuilt against the committed MIS bank on purpose, so it is correct as is.
+**Open follow-ups from this batch (small, none urgent):**
+- IMT's renderer does not have §7d. IMT has few calculation items; port `common.py` / `render_html.py` /
+  `build_bank.py` / `qa_blocks.py` changes from PRM when IMT is next touched (same patch as MIS, see B1), then
+  convert its numeric records and add a `SYMBOLS` table to its meta.
+- 22 PRM answer blocks over 80 words remain (list in `qa/qa_blocks_v03.txt`), accepted under §0a; trim if a
+  content pass is ever done.
+- `SYMBOLS` avoids single-letter keys on purpose (activity names A, B, D, E would collide with the legend
+  scanner). If a course needs one, extend `_SYM_RE` / `symbols_used()` to scan only formula cells for it.
 
-## A. Committed: prompt v0.10 + IMT v1.5 + PRM v02 (commit "Prompt v0.10: collapsible page sections", tag v0.10)
+## A1. Committed earlier: prompt v0.10 + IMT v1.5 + PRM v02 (tag v0.10)
 
 Prompt **v0.10** adds one rule to §13a ("Collapsible page sections"): the seven prose blocks of the
 HTML (how to use, scope, methodology, source files, reference lists, contents, file metadata) fold
@@ -106,15 +111,19 @@ Rules that apply: cite the book page for every answer; never invent options, ans
 personal data in the review or file names; keep source files unchanged; `out.html` without the
 Cloudflare snippet (`publish_page.py` adds it); never import the older-curriculum answer keys.
 
-## B1. MIS tooling already carries prompt v0.11 §7d (2026-09-14)
+## B1. MIS tooling already carries prompt v0.11 §7d (2026-09-14) — uncommitted, part of the MIS run
 
-`courses/S3/MIS/.review_generation_working_directory/render/` was patched together with PRM: `common.py`
+`courses/S3/MIS/.review_generation_working_directory/render/` was patched together with PRM (it goes into the
+MIS v1.0 commit, not separately): `common.py`
 (`T`, `C`, `S`, `table` / `ans_table` / `calc` fields), `render_html.py` (tables, calculation block, symbol
 legend), `build_bank.py` (refuses `|` in stems unless `PRM_LENIENT=1`), `qa_blocks.py` (§7d lines),
 `meta_mis.py` (`SYMBOLS` glossary — currently PRM's list; trim/extend for MIS), `CALC_TABLE_BRIEF.md` and a
 §7d paragraph in `CHAPTER_HELPER_BRIEF.md`. Chapter helpers for 7–10 must write calculation items in that form.
 The partial MIS `bank.json` / `out.html` were rebuilt during the smoke test (same four chapters; still not
-publishable). `courses.json` in the working tree was rebuilt against the committed MIS bank on purpose.
+publishable). When running `scripts/build_course_index.py` before MIS v1.0 is ready, keep the committed MIS entry in
+`courses.json` (swap in `git show HEAD:…/MIS/…/bank.json` for the build, as done on 2026-09-14) — otherwise the home
+page would advertise a four-chapter MIS bank. The MIS `SYMBOLS` glossary is PRM's list verbatim; trim it to MIS terms
+(the helper brief tells chapter helpers to add what they use).
 
 ## B2. IMT: new exam source waiting
 
