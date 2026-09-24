@@ -1,5 +1,6 @@
 {
   "generated_by": "scripts/build_course_index.py",
+  "prompt_version": "v0.12",
   "courses": [
     {
       "semester": 3,

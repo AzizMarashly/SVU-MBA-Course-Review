@@ -18,6 +18,7 @@ from collections import Counter
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WORK = ".review_generation_working_directory"
 OUT = os.path.join(ROOT, "courses.json")
+PROMPT = os.path.join(ROOT, "prompt", "SVU-MBA-Course-Review-Generator.md")
 SOURCE_EXT = {".pdf", ".docx", ".doc", ".ppt", ".pptx", ".txt", ".jpg", ".jpeg", ".png", ".md", ".xlsx"}
 
 
@@ -83,6 +84,15 @@ def from_bank(bank, course_dir):
     }
 
 
+def prompt_version():
+    """Version in the prompt header, e.g. 'v0.12' from '# PROMPT — ... (v0.12)'; '' if not found."""
+    if not os.path.isfile(PROMPT):
+        return ""
+    with io.open(PROMPT, encoding="utf-8") as f:
+        m = re.search(r"\((v\d+\.\d+)\)", f.readline())
+    return m.group(1) if m else ""
+
+
 def main():
     quiet = "--quiet" in sys.argv
     courses = []
@@ -107,7 +117,7 @@ def main():
             entry["download_name"] = entry.get("download_name") or f"{entry.get('title') or code}_v{entry.get('version','')}.html"
             courses.append(entry)
 
-    result = {"generated_by": "scripts/build_course_index.py", "courses": courses}
+    result = {"generated_by": "scripts/build_course_index.py", "prompt_version": prompt_version(), "courses": courses}
     new = json.dumps(result, ensure_ascii=False, indent=2) + "\n"
     old = io.open(OUT, encoding="utf-8").read() if os.path.isfile(OUT) else None
     changed = new != old
