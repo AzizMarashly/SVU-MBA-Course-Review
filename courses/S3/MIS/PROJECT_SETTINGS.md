@@ -1,27 +1,28 @@
 # PROJECT SETTINGS — MIS review
 
-The MIS review was generated on 2026-09-06, **before the versioned prompt existed**: the owner gave
-the instructions ad hoc (a 15-section brief with the same intent as prompt v0.1), and the generic
-prompt in `prompt/` was written from this run at its end. The table below restates those
-instructions in the current PROJECT SETTINGS form, with values for settings added in later prompt
-versions, so the run can be resumed with the current prompt.
+Settings of the **v1.0 regeneration** (2026-09-13 … 2026-09-24), in the prompt's PROJECT SETTINGS form. The first
+bank (v0.1, 2026-09-06, republished as v0.2) was generated before the versioned prompt from an ad hoc 15-section brief;
+its settings differed only in the interaction mode (ASK), the spec (pre-v0.1) and the DOCX/PDF outputs.
 
 | Setting | Value |
 |---|---|
 | Review title | `مراجعه كامله لماده ال MIS` |
 | Course / subject | `نظم المعلومات الإدارية — Management Information Systems` |
 | Chapters in scope | `1,2,3,5,7,8,9,10` (4, 6, 11, 12 excluded by the owner) |
-| Primary reference | `Dr Iyad Zoukar - MBA - MIS - The Book.pdf` (507 pages; printed page = PDF page) |
+| Primary reference | `Dr Iyad Zoukar - MBA - MIS - The Book.pdf` (507 pages; printed page = PDF page; end-of-chapter answers marked inline: tick for true/false, yellow highlight for MCQ) |
 | Expected exam format | mostly MULTIPLE CHOICE, with true/false |
 | Question language | `MIXED` (Arabic with English terms) |
 | Explanation language | `ARABIC` |
 | Interface language | `ARABIC` |
-| Interaction mode | `ASK` (the owner answered questions during the run) |
+| Interaction mode | `DECIDE` (no stops for the owner; defaults recorded in `STATE.md` §3) |
 | Pilot chapter | `NONE` |
-| Output base name | `مراجعه كامله لماده ال MIS` — the original deliverables were named `…-v0.1.html/.docx/.pdf`; from this repository on they follow §0e: `…_v0.1.html` |
-| Working directory | `.review_generation_working_directory` (reconstructed from the session's scratchpad, see `README.md`) |
-| PDF / DOCX | produced in v0.1 (DOCX with collapsible answers, PDF with no-JavaScript show/hide buttons, plain PDF); not regenerated since |
-| Spec version | `pre-v0.1` |
+| Output base name | `مراجعه كامله لماده ال MIS` → `…_v1.0.html`; older files move to `.review_generation_working_directory/archive/` |
+| Version scheme | `vMAJOR.MINOR` per `VERSIONING.md` (MAJOR 1 = first full generation under the versioned prompt) |
+| Working directory | `.review_generation_working_directory` (§0d layout; the v0.2 build in `legacy_v0/`) |
+| PDF / DOCX | `NEVER` (HTML only) |
+| Spec version | run under `v0.10`; tooling and page at `v0.11` (§7d; no MIS record has a table or calculation) |
+| Sources | 10 independent: BOOK, S25, R44 («حل دورات» is R44's key, one source), F24, ASM (cross-check only, never a type), OQ1–OQ5 (older curriculum: in-book concepts only, keys never imported) |
+| Duplicate rule | prompt idea I-11: one record per claim; true duplicates across chapters merged in one consolidation pass (`qa/consolidation_v1.0.md`), checked by the build |
 
 ## Owner instructions that are not in the prompt
 
@@ -48,5 +49,4 @@ Byte-identical copies, verified by MD5; the kept file is named first.
 | `دورات/اسئلة سابقة/MISS/IMG-20150830-WA0001.jpg` | `…/IMG-20150830-WA0004.jpg` |
 | `دورات/اسئلة سابقة/MISS/IMG-20150830-WA0002.jpg` | `…/IMG-20150830-WA0005.jpg` |
 
-The run itself saw all 45 files (its methodology says so); the counts in the published page refer
-to that original folder.
+The v0.1 run saw all 45 files; the v1.0 run hashed the 37 files left after the removal (`ledger.json`).

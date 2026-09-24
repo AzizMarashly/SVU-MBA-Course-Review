@@ -1,0 +1,228 @@
+{
+ "note": "final after the stage-3 helper reports (2026-09-13); hashes from extracted/hashes.json (37 files, no duplicate hashes)",
+ "sources": [
+  {
+   "id": "BOOK",
+   "kind": "textbook",
+   "files": [
+    "Dr Iyad Zoukar - MBA - MIS - The Book.pdf",
+    "دورات/_⁨أسئلة الكتاب - MIS ⁩.pdf (dependent copy: the book's own review pages; text layer unusable)"
+   ],
+   "md5": [
+    "1269ba6902368b3f2d30e469cbf84f90",
+    "d98e1b05f98bd0ab475294726d13070e"
+   ],
+   "type": "primary reference (507 pages, printed = PDF) + end-of-chapter questions; no printed answer key",
+   "decision": "included (authority)",
+   "items": "137 review items in scope (65 T/F, 48 MCQ, 24 essay); answers marked inline (tick / yellow highlight), read from page images"
+  },
+  {
+   "id": "S25",
+   "kind": "exam",
+   "files": [
+    "دورات/دورات.txt (block 1: «S25», 38 items)"
+   ],
+   "md5": [
+    "b0a66a657a5fc04febf8082171c99083"
+   ],
+   "type": "exam recollection, sitting S25, student-recalled answers",
+   "decision": "included as an independent exam source",
+   "items": "37 raw items (1 mcq, 35 short, 1 topic)"
+  },
+  {
+   "id": "R44",
+   "kind": "exam",
+   "files": [
+    "دورات/دورات.txt (block 3: the 44-question sitting, recall; block 2 «حل دورات»: its answer key, 35 items in the same order)",
+    "دورات/حل دورتين Mis.pdf pp. 1–3 (verbatim copy of block 2)"
+   ],
+   "md5": [
+    "b0a66a657a5fc04febf8082171c99083",
+    "14f66e79b42d53f67254e0c8768d1435"
+   ],
+   "type": "exam recollection + its solved key (the v0.2 run counted the key «HD» and the recall «R44» as two sources; they are one sitting)",
+   "decision": "included as ONE independent exam source",
+   "items": "43 raw items (37 key entries + 6 topic lines)"
+  },
+  {
+   "id": "F24",
+   "kind": "exam",
+   "files": [
+    "دورات/دورات.txt (block 4: «F24 مركز خارجي», 60 items; block 5: untitled topic list, kept as topic evidence only)",
+    "دورات/حل دورة mis )38-60_260825_183636.pdf (50 scanned pages: book excerpts answering items 38–60)",
+    "دورات/حل دورتين Mis.pdf pp. 3–11 (copy of the F24 list with book definitions pasted under 42 items)"
+   ],
+   "md5": [
+    "b0a66a657a5fc04febf8082171c99083",
+    "bf272cec74781f77da397f05449f5128"
+   ],
+   "type": "exam recollection F24 with student answers + scanned key for 38–60",
+   "decision": "included as ONE independent exam source",
+   "items": "60 raw items + 17 topic lines (block 5)"
+  },
+  {
+   "id": "ASM",
+   "kind": "cross-check",
+   "files": [
+    "ملخصات سابقة/_⁨ملخص_عاصم_نظم_المعلومات_الإدارية_MIS⁩.pdf"
+   ],
+   "md5": [
+    "3980905b4da9fc48670f7ebc0e2d7c7f"
+   ],
+   "type": "summary of the current book with worked answers to its review questions",
+   "decision": "included as an independent cross-check source (§8): added to sources of the book questions it confirms; disagreements shown as «مصدر آخر»",
+   "items": "155 worked items, 113 in scope = verbatim copies of the book's T/F+MCQ sets; answers identical to the book's marks in all 113"
+  },
+  {
+   "id": "OQ1",
+   "kind": "other",
+   "files": [
+    "دورات/_⁨اسئلة_دورات_مجمعة_MIS⁩.pdf",
+    "دورات/_⁨تجميعة اسئلة دورات_MIS_2⁩.pdf (dependent copy)"
+   ],
+   "md5": [
+    "480cad637b3201414979269caf5511f2",
+    "49755c8b4a47694f546eac7cf7b4d8a5"
+   ],
+   "type": "older-curriculum exam compilation",
+   "decision": "included partially: only items whose concept exists in the current book, answers re-verified from the book, keys not used",
+   "items": "193 raw items (src06 is verbatim inside src05 items 107–201)"
+  },
+  {
+   "id": "OQ2",
+   "kind": "other",
+   "files": [
+    "دورات/_⁨أسئلة_من_مقرر_نظم_المعلومات_الإدارية_MIS⁩.pdf",
+    "دورات/_⁨حل أسئلة MIS⁩.docx (its solutions)"
+   ],
+   "md5": [
+    "87194a97f86afcbb8beab634d721ecff",
+    "2fd73e0acfd6aba77ebc4d268c971169"
+   ],
+   "type": "older-curriculum question file + key",
+   "decision": "included partially (same rule)",
+   "items": "146 raw items (134 + 12 key-only); src03 marks its own answers in green"
+  },
+  {
+   "id": "OQ3",
+   "kind": "other",
+   "files": [
+    "ملخصات سابقة/MIS Q.pdf"
+   ],
+   "md5": [
+    "22221b3dd301dae767c06784a8fd6202"
+   ],
+   "type": "older-curriculum Q&A compilation",
+   "decision": "included partially (same rule)",
+   "items": "194 raw items"
+  },
+  {
+   "id": "OQ4",
+   "kind": "other",
+   "files": [
+    "دورات/اسئلة سابقة/دورات.pdf (24 scanned pages)",
+    "دورات/اسئلة سابقة/MISS/*.jpg (7 photos of the same key; 5 duplicates removed at import)"
+   ],
+   "md5": [
+    "d45db6673b17eaae66fa9e6c2d56d067",
+    "7a098bb4405666008b3abd521107f027",
+    "602239161b6bc57e349a56e00dc7b2ac",
+    "7916d52e6e7f1406e90585bd2d6a0919",
+    "4fbfb9e0548b503b8b5eee88a3c6e1cb",
+    "59d4774616e548bd9b482ccd1617e1b8",
+    "193f19b76b810586ef1bf177a8f84efa",
+    "47d93fdf80a1880c913bdbb2a1202f30"
+   ],
+   "type": "older-curriculum answer key, photographed",
+   "decision": "included partially (same rule)",
+   "items": "58 raw items; the 7 photos are pixel-identical to the 7 images embedded in the PDF (checked programmatically)"
+  },
+  {
+   "id": "OQ5",
+   "kind": "other",
+   "files": [
+    "دورات/ملاحظات_مقرر_MIS.pdf",
+    "دورات/_⁨اسئلة MIS_امتحان_2019⁩.docx"
+   ],
+   "md5": [
+    "6f9b75c82fd85dbb26f2d5d4608f7a29",
+    "edf6c20866983db9aede2497a04d75e7"
+   ],
+   "type": "older-curriculum lecturer notes + exam recollection of 2019-01-24",
+   "decision": "included partially (same rule)",
+   "items": "100 raw items (76 notes/recall + 24 from the 2019 exam)"
+  },
+  {
+   "id": "EXCLUDED-OLD",
+   "kind": "excluded",
+   "files": [
+    "دورات/_⁨MIS_محدد عليه اسئلة الدورات⁩.pdf"
+   ],
+   "md5": [
+    "19e36e8205ecc12a63aaf2fea0a77c81"
+   ],
+   "type": "older-curriculum textbook with exam questions marked",
+   "decision": "excluded: the older textbook (د. سليمان عوض); its annotation layer holds 52 exam-question notes answered by the old book's highlighted text — importing them would import the old curriculum's key; 30 transcribed as OQ6-CANDIDATE in extracted/questions/others_b.json for the owner, not used"
+  },
+  {
+   "id": "EXCLUDED-NOTES",
+   "kind": "excluded",
+   "files": [
+    "دورات/تعريفات_مادة_نظم_المعلومات_MIS.pdf",
+    "ملخصات سابقة/MIS_F19_Anan.pdf"
+   ],
+   "md5": [
+    "97d8790adc3e6913c8e52fbddbbc2f39",
+    "b27101528934c72607d24d8cd01d8f32"
+   ],
+   "type": "definitions list; handwritten summary",
+   "decision": "excluded: no questions"
+  },
+  {
+   "id": "ABOUT",
+   "kind": "context",
+   "files": [
+    "دورات/info.txt"
+   ],
+   "md5": [
+    "e76dd1079137b83dcd0ea678c7a92c1c"
+   ],
+   "type": "students' notes on the course",
+   "decision": "context only"
+  },
+  {
+   "id": "SLIDES",
+   "kind": "reference",
+   "files": [
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch01 - Introduction to Information Systems I.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch02 - Types of Information Systems.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch03 - Information Systems in the Organization.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch04 - Hardware and Software.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch05 - Databases.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch06 - Networks.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch07 - E-Business and E-Commerce.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch08 - Enterprise Applications.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch09 - Knowledge Management.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch10 - Decision Support System _ Business Intelligence.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch11 - Information Systems Development.pdf",
+    "ملفات بوربوينت لمقرر نظم المعلومات الإدارية-20260623/Dr Iyad Zoukar - MBA - MIS - Ch12 - Information Systems Security.pdf"
+   ],
+   "md5": [
+    "3c9a80c1e8bc6bb197084b6062bf9edc",
+    "9e63c7d9d17b756ac4da6c38e6926d86",
+    "78eadb9e9db6cdfd558940bbe95a1361",
+    "429dc18bf3cb1a619df828032b4099a5",
+    "066d0350710db1ec3d0bb29e90029d9f",
+    "a0894625af4bbcffd5bfe15e510df002",
+    "8a0010dc23b9d1d14de0524cff82d8be",
+    "dcf954d3809e6eff91ea4915e41aa3cf",
+    "55f93a77a6da2e93428da21ad5471c65",
+    "980f296656540c5304c0aa9e70274483",
+    "944db968d17900bf12350f222c5a7e42",
+    "9404b75ec0f0a8fd51f34430cb835c0f"
+   ],
+   "type": "12 lecture decks of the current course",
+   "decision": "auxiliary reference; checked for questions, none"
+  }
+ ]
+}

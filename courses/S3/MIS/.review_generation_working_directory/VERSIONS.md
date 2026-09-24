@@ -1,0 +1,7 @@
+# Deliverable versions — MIS review (scheme: `VERSIONING.md` at the repository root)
+
+| Version | Date | Formats | Changed since previous | Bank checkpoint and spec version |
+|---|---|---|---|---|
+| v0.1 | 2026-09-06 | HTML + DOCX + interactive PDF (outside the repository) | first release, generated from an ad hoc brief before the versioned prompt: 269 questions in 8 chapters | `legacy_v0/bank/bank_a..e.py`; no spec (before the versioned prompt) |
+| v0.2 | 2026-09-13 | HTML (published as `/S3/MIS/index.html`) | re-render of v0.1 with the licence notice and the source-files appendix; no content change | `legacy_v0/bank.json`; no spec (before the versioned prompt) |
+| v1.0 | 2026-09-24 | HTML (`../مراجعه كامله لماده ال MIS_v1.0.html`, published as `/S3/MIS/index.html`) | full regeneration (new MAJOR) from the v0.2 bank and a re-transcription of every source: 255 questions in 8 chapters (v0.2: 269); record model of prompt v0.10/v0.11 (why / remember / distractors, importance, focus areas, low-confidence flag, reconstructed exam items with the original text, 105-unit coverage audit, 105/105 covered); «حل دورات» merged into the R44 sitting; book inline answer marks used as the book's key; cross-chapter consolidation (4 true duplicates merged, `qa/consolidation_v1.0.md`) and duplicate checks in the build; collapsible page sections and sliders | `bank.json` (spec v0.11, file_version 1.0) |
