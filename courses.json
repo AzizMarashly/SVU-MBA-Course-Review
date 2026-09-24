@@ -8,32 +8,33 @@
       "title": "مراجعه كامله لماده ال IMT",
       "name_ar": "التسويق والتجارة الدولية",
       "name_en": "International Marketing and Trading",
-      "version": "1.5",
-      "spec_version": "v0.10",
-      "generated": "2026-09-09",
-      "questions": 292,
+      "version": "1.6",
+      "spec_version": "v0.11",
+      "generated": "2026-09-24",
+      "questions": 304,
       "questions_by_type": {
-        "exam": 107,
+        "exam": 121,
         "other": 50,
         "textbook": 142,
         "generated": 15
       },
       "chapters": 11,
-      "sources": 7,
+      "sources": 8,
       "source_ids": [
         "BOOK",
         "F17",
         "F19",
         "S24",
         "F24",
+        "F25",
         "EMAD",
         "ASEM"
       ],
       "source_files": 40,
-      "low_confidence": 24,
+      "low_confidence": 27,
       "data": "bank",
       "sources_path": "courses/S3/IMT/",
-      "download_name": "مراجعه كامله لماده ال IMT_v1.5.html"
+      "download_name": "مراجعه كامله لماده ال IMT_v1.6.html"
     },
     {
       "semester": 3,
@@ -80,18 +81,18 @@
       "title": "مراجعه كامله لماده ال PRM",
       "name_ar": "إدارة المشاريع",
       "name_en": "Project Management",
-      "version": "03",
+      "version": "1.4",
       "spec_version": "v0.11",
-      "generated": "2026-09-14",
-      "questions": 442,
+      "generated": "2026-09-24",
+      "questions": 419,
       "questions_by_type": {
-        "exam": 166,
-        "other": 187,
+        "exam": 181,
+        "other": 176,
         "textbook": 145,
-        "generated": 21
+        "generated": 20
       },
       "chapters": 14,
-      "sources": 10,
+      "sources": 11,
       "source_ids": [
         "BOOK",
         "EX15",
@@ -99,16 +100,17 @@
         "Y16",
         "S19",
         "F24",
+        "F25",
         "TATI",
         "ASEM",
         "EMAD",
         "MURAJA"
       ],
-      "source_files": 34,
-      "low_confidence": 69,
+      "source_files": 35,
+      "low_confidence": 67,
       "data": "bank",
       "sources_path": "courses/S3/PRM/",
-      "download_name": "مراجعه كامله لماده ال PRM_v03.html"
+      "download_name": "مراجعه كامله لماده ال PRM_v1.4.html"
     }
   ]
 }
