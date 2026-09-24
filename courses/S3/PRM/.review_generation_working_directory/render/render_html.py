@@ -7,6 +7,8 @@ QS = B["questions"]; SUBS = {int(k): v for k, v in B["subsections"].items()}
 CHAPTERS = sorted(int(k) for k in B["subsections"])  # chapters actually present in the bank
 OPENERS_BANK = {int(k): tuple(v) for k, v in B.get("openers", {}).items()}
 FOCUS = set(tuple(x) for x in B["focus_areas"])
+BYID = {q["id"]: q for q in QS}
+GROUPS = B.get("groups", {})  # shared data table -> sub-questions shown under it once (I-11, v1.4)
 TITLE = B["title"]; SPEC = B["spec_version"]; VER = B["file_version"]
 LETTERS = ["أ", "ب", "ج", "د", "هـ", "و"]
 from meta_prm import GENERATED_DATE
@@ -111,7 +113,32 @@ def render_calc(c):
     out.append("</div>")
     return "".join(out)
 
-def render_q(q, num, sec):
+QT_NAMES = {"mcq": "اختيار من متعدد", "tf": "صح / خطأ", "short": "سؤال قصير", "essay": "مقالي"}
+
+def render_also(also):
+    """I-11: the same claim asked in another form -> one line per folded form (form, wording, key, sources), inside the answer block."""
+    items = []
+    for a in also:
+        srcs = "، ".join(esc(SRC_NAMES.get(s, s)) for s in a["sources"])
+        opts = ""
+        if a["options"]:
+            opts = '<span class="ao-opts">' + " · ".join(f'{LETTERS[i]}) {esc(o)}' for i, o in enumerate(a["options"])) + "</span>"
+        extra = ""
+        if a.get("original"): extra += f'<span class="ao-orig">نص الطالب: {esc(a["original"])}</span>'
+        if a.get("other_source"): extra += f'<span class="ao-red">مصدر آخر: {md(a["other_source"])}</span>'
+        if a.get("book_says"): extra += f'<span class="ao-red">يقول الكتاب: {md(a["book_says"])}</span>'
+        if a.get("low_conf"): extra += f'<span class="ao-amber">⚠ ثقة منخفضة: {esc(a["low_conf"])}</span>'
+        items.append(f'<li id="also-{esc(a["id"])}"><span class="ao-head"><span class="tag">{QT_NAMES[a["qtype"]]}</span> <span class="meta">{srcs} · <span class="ltr">{esc(a["id"])}</span></span></span>'
+                     f'<span class="ao-stem">{esc(a["stem"])}</span>{opts}<span class="ao-ans">✔ {esc(a["ans"])}</span>{extra}</li>')
+    return f'<div class="a-also"><p><span class="lbl">سُئل أيضاً بصيغة أخرى:</span> <span class="meta">الفكرة نفسها بصيغة مختلفة، مدمجة هنا</span></p><ul>{"".join(items)}</ul></div>'
+
+def render_see(q):
+    """Cross-link: the same sitting asked this claim in another form too, so both records stay (I-11)."""
+    if not q["see"]: return ""
+    links = " ".join(f'<a class="xref" href="#{esc(s)}"><span class="ltr">{esc(s)}</span> · {QT_NAMES[BYID[s]["qtype"]]}</a>' for s in q["see"])
+    return f'<p class="a-see"><span class="lbl">سُئل معه في الدورة نفسها بصيغة أخرى:</span> {links}</p>'
+
+def render_q(q, num, sec, grouped=False):
     types = q["types"]
     tags = " ".join(f'<span class="tag t-{t}">{SEC_NAMES[t] if t!="generated" else "مولَّد"}</span>' for t in types)
     data_sec = " ".join(types)
@@ -122,10 +149,12 @@ def render_q(q, num, sec):
     qt = {"mcq":"اختيار من متعدد","tf":"صح / خطأ","short":"سؤال قصير","essay":"مقالي"}[q["qtype"]]
     recon = ' <span class="tag recon">خيارات معاد بناؤها</span>' if q["reconstructed"] else ""
     lowc = ' <span class="tag lowc">⚠</span>' if q["low_conf"] else ""
-    meta1 = f'<div class="meta"><span class="qid">{esc(q["id"])}</span> · <span>{qt}</span> · {tags}{recon}{lowc}</div>'
+    grp = f' · <a class="grpref" href="#{esc(q["group"])}">↑ الجدول المشترك</a>' if grouped else ""
+    meta1 = f'<div class="meta"><span class="qid">{esc(q["id"])}</span> · <span>{qt}</span> · {tags}{recon}{lowc}{grp}</div>'
     freq_txt = "مولَّد — التكرار: 0" if "generated" in types else f'التكرار: {q["freq"]} {"مصدر مستقل" if q["freq"]==1 else "مصادر مستقلة"}'
     meta2 = f'<div class="meta"><span>{freq_txt}</span> · <span class="imp" title="الأهمية {q["importance"]}/5">{stars(q["importance"])} <small>{q["importance"]}/5</small></span> · <span>الفقرة {esc(q["sub"])}: {esc(q["subname"])}</span></div>'
-    stem = f'<p class="stem"><span class="num">{num}.</span> {esc(q["stem"])}</p>' + render_table(q.get("table"), "qtbl")
+    own = grouped and GROUPS[q["group"]]["own"]  # the shared table is drawn once above the group
+    stem = f'<p class="stem"><span class="num">{num}.</span> {esc(q["stem"])}</p>' + ("" if own else render_table(q.get("table"), "qtbl"))
     if q.get("table") or q.get("calc") or q.get("ans_table"):
         stem += render_symbols(q, "syms")
     opts = ""
@@ -156,13 +185,18 @@ def render_q(q, num, sec):
         lines.append(f'<p class="a-sci"><span class="lbl">تصحيح علمي:</span> {md(q["sci"])}</p>')
     if q["low_conf"]:
         lines.append(f'<p class="a-amber"><span class="lbl">⚠ ثقة منخفضة:</span> {esc(q["low_conf"])}</p>')
+    if q.get("see"): lines.append(render_see(q))
+    if q.get("also"): lines.append(render_also(q["also"]))
     vars_html = ""
     if q["variants"]:
         vars_html = '<details class="vars"><summary>صيغ أخرى في المصادر</summary><ul>' + "".join(f"<li>{esc(v)}</li>" for v in q["variants"]) + "</ul></details>"
-    srcline = f'<p class="meta src">{srcs}</p>'
+    al = q.get("aliases") or []
+    olds = f' · <span>يضم أيضاً المعرّف السابق: {"، ".join(f"<span class=ltr>{esc(a)}</span>" for a in al)}</span>' if al else ""
+    srcline = f'<p class="meta src">{srcs}{olds}</p>'
+    anchors = "".join(f'<span class="alias" id="{esc(a)}"></span>' for a in al)  # old ids of merged records still resolve
     return (f'<article class="q" id="{esc(q["id"])}" data-section="{data_sec}" data-chapter="{q["ch"]}" '
             f'data-importance="{q["importance"]}" data-freq="{q["freq"]}" data-sec="{sec}">'
-            f'{meta1}{stem}{opts}{orig}{meta2}'
+            f'{anchors}{meta1}{stem}{opts}{orig}{meta2}'
             f'<details class="ans"><summary><span class="show">إظهار الإجابة</span><span class="hide">إخفاء الإجابة</span></summary>'
             f'<div class="ablock">{"".join(lines)}{srcline}{vars_html}</div></details></article>')
 
@@ -184,9 +218,22 @@ def render_chapter(n):
             continue
         parts.append(f'<details class="secd" data-sec="{sec}" open><summary><h3 class="sech s-{sec}" data-sec="{sec}">{SEC_NAMES[sec]} <small class="meta cnt" data-total="{len(sq)}">({len(sq)})</small><span class="tog meta"><span class="hide">طيّ ▲</span><span class="show">فتح ▼</span></span></h3></summary>')
         if sec in ("other","generated"): parts.append(f'<p class="secintro">{esc(SEC_INTRO[sec])}</p>')
+        shown = set()
         for q in sq:
-            num += 1
-            parts.append(render_q(q, num, sec))
+            if q["id"] in shown: continue
+            g = GROUPS.get(q.get("group"))
+            if not g:
+                num += 1; shown.add(q["id"]); parts.append(render_q(q, num, sec)); continue
+            members = [BYID[i] for i in g["ids"]]
+            assert all(m in sq for m in members), (q["group"], "group split across sections")
+            ids = [m["id"] for m in members]
+            head = (f'<div class="tgroup" id="{esc(q["group"])}"><div class="tg-head"><p class="tg-lbl">'
+                    f'<span class="lbl">جدول مشترك</span> {len(members)} أسئلة على البيانات نفسها '
+                    f'<span class="meta"><span class="ltr">{esc(ids[0])}</span> إلى <span class="ltr">{esc(ids[-1])}</span></span></p>{render_table(g["table"], "qtbl")}</div>')
+            parts.append(head)
+            for m in members:
+                num += 1; shown.add(m["id"]); parts.append(render_q(m, num, sec, grouped=True))
+            parts.append('</div>')
         parts.append('</details>')
     parts.append("</details></section>")
     return "\n".join(parts)
@@ -219,6 +266,7 @@ def methodology():
 <h3>خريطة الفصول</h3>{chmap}
 <h3>التكرار والتحقق</h3>
 <p>حُسبت بصمة MD5 لكل ملف قبل العدّ (حُذفت قبل التشغيل ست نسخ مكررة بطلب صاحب المجلد). النسخ التابعة (قائمة الأسئلة نفسها بخط اليد، أو منسوخة داخل ملف طالب آخر) عُدّت مصدراً واحداً. <b>التكرار</b> = عدد المصادر المستقلة التي وردت فيها فكرة السؤال (الدورات الست، الكتاب، ملخص عماد، مجموعة المراجعة، ملخص عاصم) لا عدد الملفات. كل إجابة تُحقق منها من نص الكتاب بصفحته؛ حين يخالف مصدرٌ الكتاب يُعرض جواب الكتاب مع سطر «مصدر آخر» أحمر. حين يخالف نص الفصل تظليل الكتاب نفسه عُرض الاثنان مع سطر «يقول الكتاب».</p>
+<p><b>سؤال واحد لكل فكرة:</b> في الإصدار 1.4 روجع البنك كله دفعة واحدة (لا فصلاً فصلاً) بحثاً عن أسئلة تختبر الفكرة نفسها من الكتاب. التكرار الحقيقي (الصيغة نفسها) دُمج في سؤال واحد وحُفظت صيغته الأخرى ضمن «صيغ أخرى»، والفكرة نفسها بصيغة مختلفة صارت سطر «سُئل أيضاً بصيغة أخرى» تحت السؤال الرئيسي، ويُحسب التكرار من اتحاد المصادر لا من جمعها. سؤالان متطابقان بمفتاحين مختلفين حُسما من الكتاب قبل الدمج. المسائل التي نقلها الطالب دون أرقامها (نوع المسألة فقط) تُحسب دليلاً على تكرار الأسئلة من النوع نفسه مع ملاحظة أن بياناتها لم تُنقل، ولا تُخترع لها بيانات.</p>
 <p><b>التحقق المتقاطع مع ملخص عاصم:</b> {esc(asem)}</p>
 <h3>إعادة بناء أسئلة الامتحانات</h3>
 <p>الأسئلة التي نقلها الطلاب بصيغة حرة وكان واضحاً أنها اختيار من متعدد أُعيد بناؤها بخيارات من مصطلحات الفصل نفسه، مع وسم «خيارات معاد بناؤها» وإبقاء نص الطالب الأصلي أسفل السؤال. عدد الأسئلة المعاد بناؤها: <b>{recon}</b>. المسائل الحسابية المنقولة (الشبكات، جداول القيمة المكتسبة، تسوية الموارد، التقدير بثلاث نقاط) حُلّت بطريقة الكتاب وذُكرت خطوات الحل باختصار في سطر «لماذا».</p>
@@ -244,7 +292,7 @@ def sources_appendix():
     rows = "".join(f'<tr id="src-{n}"><td>{n}</td><td class="fn">{esc(path)}</td><td>{esc(kind)}</td><td>{esc(role)}</td><td class="ltr">{esc(grp)}</td><td>{esc(pages)}</td><td>{esc(note)}</td></tr>' for n, path, kind, role, grp, pages, note in FILES)
     return f"""<section id="sources"><h2>ملفات المصدر</h2>
 <p>كل ملف وُجد في مجلد المادة مذكور هنا، بما فيها المستبعد والمكرر، ليعرف القارئ ممّ بُنيت المراجعة وما ينقصها. رقم كل ملف هو الرقم الذي يظهر عند كل سؤال في سطر «المصادر». أسماء الملفات كما وُردت؛ المادة نفسها غير منشورة مع المراجعة.</p>
-<p class="meta">{s["files"]} ملفاً · {s["sources"]} مصادر مستقلة استُخدمت للأسئلة (الكتاب، ست دورات امتحانية، ملخص عماد، مجموعة المراجعة، ملخص عاصم) · {s["excluded"]} ملفاً مستبعداً · {s["duplicates"]} نسخ مكررة أو تابعة · {s["images"]} صورة فُحصت بصرياً.</p>
+<p class="meta">{s["files"]} ملفاً · {s["sources"]} مصادر مستقلة استُخدمت للأسئلة (الكتاب، سبع دورات امتحانية، ملخص عماد، مجموعة المراجعة، ملخص عاصم) · {s["excluded"]} ملفاً مستبعداً · {s["duplicates"]} نسخ مكررة أو تابعة · {s["images"]} صورة فُحصت بصرياً.</p>
 <details class="reflist"><summary>جدول الملفات ({s["files"]})</summary>
 <table class="tbl files"><thead><tr><th>#</th><th>اسم الملف</th><th>النوع</th><th>الدور</th><th>مجموعة المصدر</th><th>الصفحات / البنود</th><th>ملاحظة</th></tr></thead><tbody>{rows}</tbody></table>
 </details></section>"""
@@ -352,6 +400,29 @@ details.ans[open] > summary .show{display:none}
 .a-amber{color:var(--amber)}
 .a-sci{color:var(--red)}
 .src{margin-top:6px}
+.alias{display:none}
+.q,.tgroup{scroll-margin-top:100px}
+.a-also{margin:.5em 0;border-inline-start:3px solid var(--why);padding-inline-start:10px}
+.a-also p{margin:.1em 0}
+.a-also .lbl{color:var(--why)}
+.a-also ul{list-style:none;margin:.2em 0;padding:0}
+.a-also li{margin:.35em 0;padding:6px 10px;background:var(--chip);border-radius:10px}
+.a-also li > span{display:block}
+.a-also .ao-stem{margin:.15em 0}
+.a-also .ao-opts{color:var(--muted);font-size:.9em}
+.a-also .ao-ans{color:var(--ans);font-weight:600}
+.a-also .ao-orig{color:var(--muted);font-size:.85em}
+.a-also .ao-red{color:var(--red);font-size:.92em}
+.a-also .ao-amber{color:var(--amber);font-size:.92em}
+.a-see .lbl{color:var(--why)}
+a.xref,a.grpref{display:inline-block;border:1px solid var(--line);background:var(--chip);border-radius:999px;padding:2px 12px;text-decoration:none;min-height:32px;line-height:26px}
+a.grpref{font-size:.95em;padding:0 10px;min-height:0;line-height:1.7}
+.tgroup{border:2px solid var(--line);border-radius:16px;padding:6px 12px 2px;margin:22px 0;background:var(--tint)}
+.tgroup > .tg-head{padding:4px 2px}
+.tgroup .tg-lbl{margin:.2em 0}
+.tgroup .tg-lbl .lbl{color:var(--why)}
+.tgroup > .q{margin:12px 0}
+.tgroup.hidden{display:none!important}
 details.vars{font-size:.85em;color:var(--muted);margin-top:6px}
 details.vars summary{cursor:pointer}
 .tw{overflow-x:auto;margin:8px 0}
@@ -424,7 +495,7 @@ details.reflist summary{cursor:pointer;font-weight:600}
 .chapter.hidden{display:none!important}
 footer{margin-top:60px;color:var(--muted);font-size:.85em;border-top:1px solid var(--line);padding-top:12px}
 [dir="ltr"],.ltr{direction:ltr;text-align:left;unicode-bidi:isolate}
-@media (max-width:600px){.ctbl thead{display:none}.ctbl,.ctbl tbody,.ctbl tr,.ctbl td{display:block;width:100%;box-sizing:border-box}.ctbl tr{border:1px solid var(--line);border-radius:8px;margin:6px 0;padding:4px 8px}.ctbl td{border:0;padding:2px 0;text-align:start;white-space:normal!important}.ctbl td.ltr{direction:rtl;text-align:start}.ctbl td.ltr::after{content:none}.ctbl td::before{content:attr(data-l) ": ";color:var(--muted);font-size:.85em}.ctbl td.ceq span,.ctbl td.csub span{direction:ltr;unicode-bidi:isolate}body{font-size:16px}main{padding:10px 12px 60px}.q{padding:12px}.toolbar input{min-width:120px}}
+@media (max-width:600px){.tgroup{padding:4px 6px 2px;margin:16px -4px}.ctbl thead{display:none}.ctbl,.ctbl tbody,.ctbl tr,.ctbl td{display:block;width:100%;box-sizing:border-box}.ctbl tr{border:1px solid var(--line);border-radius:8px;margin:6px 0;padding:4px 8px}.ctbl td{border:0;padding:2px 0;text-align:start;white-space:normal!important}.ctbl td.ltr{direction:rtl;text-align:start}.ctbl td.ltr::after{content:none}.ctbl td::before{content:attr(data-l) ": ";color:var(--muted);font-size:.85em}.ctbl td.ceq span,.ctbl td.csub span{direction:ltr;unicode-bidi:isolate}body{font-size:16px}main{padding:10px 12px 60px}.q{padding:12px}.toolbar input{min-width:120px}}
 @media print{.toolbar,.noprint{display:none!important}.tbl.files{display:table}details.ans,details.reflist,details.vars,details.chd,details.secd,details.pgd{display:block}.tog{display:none}details.ans > summary{display:none}details > *:not(summary){display:block}.q{break-inside:avoid;border-color:#bbb}.hidden{display:block!important}body{background:#fff;color:#000}a{color:#000;text-decoration:none}}
 """
 
@@ -452,6 +523,7 @@ function apply(reveal){
   if(nq&&norm(a.textContent).indexOf(nq)<0)ok=false;
   a.classList.toggle('hidden',!ok);if(ok)shown++;
  });
+ document.querySelectorAll('.tgroup').forEach(function(g){g.classList.toggle('hidden',!g.querySelector('article.q:not(.hidden)'));});
  document.querySelectorAll('section.chapter').forEach(function(s){var n=s.querySelectorAll('article.q:not(.hidden)').length;s.classList.toggle('hidden',n===0);
   var c=s.querySelector('details.chd > summary .cnt');if(c)cntText(c,n);
   if(reveal&&n>0){s.querySelector('details.chd').open=true;}
@@ -469,7 +541,7 @@ function apply(reveal){
  chSel.value=state.ch;if(search.value!==state.q)search.value=state.q;
  try{localStorage.setItem('prm_review_state',JSON.stringify({mode:state.mode,imp:state.imp,freq:state.freq,ch:state.ch}));}catch(e){}
  var frag='mode='+state.mode+'&imp='+state.imp+'&freq='+state.freq+'&ch='+state.ch;
- if(location.hash.replace('#','')!==frag&&!/^Q\\d\\d-\\d\\d\\d$/.test(location.hash.replace('#',''))){history.replaceState(null,'','#'+frag);}
+ if(location.hash.replace('#','')!==frag&&!/^(tbl-)?Q\\d\\d-\\d\\d\\d$/.test(location.hash.replace('#',''))){history.replaceState(null,'','#'+frag);}
 }
 var tb=document.querySelector('.toolbar'),ftog=document.getElementById('ftog'),fbadge=document.getElementById('fbadge'),fsum=document.getElementById('fsum');
 modeBtns.forEach(function(b){b.addEventListener('click',function(){state.mode=b.getAttribute('data-mode');apply(true);});});
@@ -498,7 +570,8 @@ document.querySelectorAll('details.pgd').forEach(function(d){var id=d.getAttribu
  d.addEventListener('toggle',function(){pgOpen[id]=d.open;try{localStorage.setItem('prm_pg_open',JSON.stringify(pgOpen));}catch(e){}});});
 document.getElementById('foldall').addEventListener('click',function(){setAll('details.chd,details.secd,details.pgd',false);});
 document.getElementById('openall').addEventListener('click',function(){setAll('details.chd,details.secd,details.pgd',true);});
-window.addEventListener('hashchange',function(){var el=document.getElementById(location.hash.slice(1));if(el){var p=el;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement;}el.scrollIntoView();}});
+function goHash(){var el=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(el){if(el.classList.contains('alias'))el=el.parentElement;var p=el;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement;}window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-tb.offsetHeight-8,behavior:'instant'});}}
+window.addEventListener('hashchange',goHash);
 var theme=document.getElementById('theme');
 function setTheme(v){if(v)root.setAttribute('data-theme',v);else root.removeAttribute('data-theme');try{localStorage.setItem('prm_theme',v||'');}catch(e){}theme.textContent=v==='dark'?'☀ فاتح':v==='light'?'🌙 داكن':'◐ المظهر';}
 try{setTheme(localStorage.getItem('prm_theme')||'');}catch(e){}
@@ -506,6 +579,7 @@ theme.addEventListener('click',function(){var cur=root.getAttribute('data-theme'
 window.addEventListener('beforeprint',function(){document.querySelectorAll('details').forEach(function(d){d.open=true;});});
 document.querySelectorAll('#toc a').forEach(function(a){a.addEventListener('click',function(){var el=document.getElementById(a.getAttribute('href').slice(1));if(el){el.querySelectorAll('details.chd').forEach(function(d){d.open=true;});}});});
 apply(false);
+if(/^#(Q\\d\\d-\\d\\d\\d|tbl-)/.test(location.hash))setTimeout(goHash,0);
 })();
 """
 
@@ -550,14 +624,15 @@ def build():
       '<div class="grp jsonly"><button class="chip" id="expand">إظهار الإجابات</button><button class="chip" id="collapse">إخفاء الإجابات</button><button class="chip" id="foldch">طيّ كل الفصول</button><button class="chip" id="opench">فتح كل الفصول</button><button class="chip" id="foldsec">طيّ الأنواع</button><button class="chip" id="opensec">فتح الأنواع</button><button class="chip" id="foldall">⊟ طيّ الكل</button><button class="chip" id="openall">⊞ فتح الكل</button><button class="chip" id="theme">◐ المظهر</button><button class="chip" id="reset">↺ إعادة ضبط التصفية</button></div>'
       '</div></div>',
       f'''<section id="howto"><h2>كيف تستخدم هذا الملف</h2>
-<p>كل سؤال يحمل ثلاث علامات: <b>التكرار</b> = عدد المصادر المستقلة التي سألته (ست دورات امتحانية منقولة من الذاكرة: نحو 2015 والدورة التالية لها و2016 وS19 وF24 ومجموعة أسئلة الفحص المتداولة، ثم الكتاب والملخصات)؛ <b>الأهمية ★</b> من 1 إلى 5 مبنية على عدد امتحانات ورد فيها السؤال، زائد نقطة إن كان من أسئلة الكتاب، زائد نقطة إن كانت فقرته من مجالات تركيز المدرّس، وهي معونة للدراسة لا توقّع للامتحان؛ <b>⚠ ثقة منخفضة</b> يظهر فقط حيث يستند الجواب إلى دليل ضعيف أو نقل غير مؤكد، وغيابه يعني أن الإجابة تُحقق منها من الكتاب بالصفحة.</p>
+<p>كل سؤال يحمل ثلاث علامات: <b>التكرار</b> = عدد المصادر المستقلة التي سألته (سبع دورات امتحانية منقولة من الذاكرة: نحو 2015 والدورة التالية لها و2016 وS19 وF24 وF25 ومجموعة أسئلة الفحص المتداولة، ثم الكتاب والملخصات)؛ <b>الأهمية ★</b> من 1 إلى 5 مبنية على عدد امتحانات ورد فيها السؤال، زائد نقطة إن كان من أسئلة الكتاب، زائد نقطة إن كانت فقرته من مجالات تركيز المدرّس، وهي معونة للدراسة لا توقّع للامتحان؛ <b>⚠ ثقة منخفضة</b> يظهر فقط حيث يستند الجواب إلى دليل ضعيف أو نقل غير مؤكد، وغيابه يعني أن الإجابة تُحقق منها من الكتاب بالصفحة.</p>
 <p>الإجابة مخفية خلف زر «إظهار الإجابة» ولا تحتاج جافاسكربت. الشريط الثابت في الأعلى يعرض العدّاد وزر «⚙ الفلاتر» والبحث؛ وخلف زر الفلاتر: وضع القراءة (نوع واحد من الأسئلة عبر كل الفصول: الامتحانات، الكتاب، مصادر أخرى، مولَّدة)، ومنزلقان لحدّ أدنى للأهمية (1–5) وللتكرار، واختيار فصل، وإظهار الإجابات أو إخفائها، وطيّ كل الفصول أو فتحها، وطيّ أنواع الأسئلة أو فتحها، مستقلةً عن حالة الإجابات (ويمكن طيّ أي فصل أو نوع منفرداً بالنقر على عنوانه، ويُحفظ ما طويته)، والمظهر الفاتح أو الداكن، وزر «إعادة ضبط التصفية». اختياراتك تُحفظ وتوضع في رابط الصفحة. على الهاتف تبدأ لوحة الفلاتر مطوية، وحين تكون مطوية وثمة تصفية فعّالة يظهر عددها على الزر وملخصها بجانب العدّاد. تنبيه: الأسئلة المولَّدة أهميتها 1 دائماً، فرفع منزلق الأهمية إلى 2 أو أكثر يخفيها كلها. الترتيب المقترح: أسئلة الامتحانات أولاً ثم أسئلة الكتاب ثم الباقي. الطباعة تُظهر كل الإجابات وتتجاهل التصفية.</p>
-<p>الأسئلة الحسابية (المسار الحرج، الأزمنة المبكرة والمتأخرة، القيمة المكتسبة، النقاط الثلاث، تسوية الموارد…) تعرض بياناتها في <b>جدول</b> تحت نص السؤال، وتبدأ إجابتها بجدول الحل الكامل عند وجوده ثم كتلة <b>«الحساب»</b>: المعطيات ومن أين جاء كل رقم، ثم لكل خطوة <b>المعادلة</b> بالرموز ثم <b>التعويض</b> بالأرقام ثم <b>الناتج</b>؛ وسطر «لماذا» يذكر القاعدة فقط. تحت كل جدول قائمة <b>«الرموز المستعملة»</b> مطوية تشرح معنى كل رمز (BCWS، LF، SPI…) في ذلك السؤال.</p>
+<p>الأسئلة الحسابية (المسار الحرج، الأزمنة المبكرة والمتأخرة، القيمة المكتسبة، النقاط الثلاث، تسوية الموارد…) تعرض بياناتها في <b>جدول</b> تحت نص السؤال، وتبدأ إجابتها بجدول الحل الكامل عند وجوده ثم كتلة <b>«الحساب»</b>: المعطيات ومن أين جاء كل رقم، ثم لكل خطوة <b>المعادلة</b> بالرموز ثم <b>التعويض</b> بالأرقام ثم <b>الناتج</b>؛ وسطر «لماذا» يذكر القاعدة فقط. تحت كل جدول قائمة <b>«الرموز المستعملة»</b> مطوية تشرح معنى كل رمز (BCWS، LF، SPI…) في ذلك السؤال. الأسئلة التي تسأل عن جدول واحد تُعرض معاً داخل إطار <b>«جدول مشترك»</b>: الجدول مرة واحدة في أعلى الإطار والأسئلة تحته، وفي كل سؤال رابط «↑ الجدول المشترك» يعيدك إليه.</p>
+<p>حين سُئلت الفكرة نفسها بصيغة أخرى (صح وخطأ، سؤال قصير، أو تعريف بالاتجاه المعاكس) تجد تحت الإجابة سطر <b>«سُئل أيضاً بصيغة أخرى»</b> بنص تلك الصيغة ومصادرها وجوابها، ولا تتكرر الفكرة سؤالاً مستقلاً؛ وإن سألت الدورة نفسها الفكرة بصيغتين بقي السؤالان مع رابط بينهما. روابط المعرّفات القديمة للأسئلة المدمجة (مثل <span class="ltr">#Q09-006</span>) ما زالت تفتح السؤال الذي دُمجت فيه.</p>
 <p class="meta">الأقسام التمهيدية والختامية (كيف تستخدم هذا الملف، النطاق والمصادر، المنهجية، ملفات المصدر، القوائم المرجعية، فهرس المحتويات، بيانات الملف) تُطوى وتُفتح بالنقر على عنوانها مثل الفصول، ويُحفظ ما طويته. زرّا «طيّ الكل» و«فتح الكل» في الفلاتر يطويان الفصول وأنواع الأسئلة وهذه الأقسام معاً ويُبقيان الإجابات على حالها؛ الصفحة المطوية كلها قائمة عناوين قصيرة.</p>
 <p class="meta">إخفاء الإجابات معونة للمذاكرة وليس حمايةً: نص الإجابة موجود في الملف ويصل إليه البحث والنسخ وعرض المصدر، فلا يُعتمد عليه في امتحان حقيقي. نصوص الكتاب والامتحانات المقتبسة تبقى ملكاً لأصحابها.</p>
 <p class="pledge">شروط رخصة هذا الملف (CC BY-NC-SA 4.0): شارك هذا الملف مجاناً مع زملائك في المادة. أبقِ الإشعار الموجود في آخر الملف حتى يجد غيرك المصدر وأحدث إصدار. لا يجوز بيعه ولا وضعه خلف اشتراك أو جدار دفع.</p></section>''',
       f'''<section id="scope"><h2>النطاق والمصادر</h2>
-<p>المرجع الحاكم هو كتاب المقرر ({esc(BOOK_FILE)}، {BOOK_PAGES} صفحة، 14 فصلاً). النطاق: الفصول {CHAPTER_LIST_AR} ({total_subs} فقرة). أُدرجت أسئلة ست دورات امتحانية منقولة من الذاكرة (دورة نحو 2015 والدورة التالية لها، ودورة 2016، ودورة S19 بتاريخ 2020-02-04، ودورة F24، ومجموعة «الأسئلة التي تأتي في الفحص»)، وأسئلة مراجعة الكتاب في نهاية كل فصل بإجاباته المظلَّلة، وأسئلة ملخص عماد جبور ومجموعة أسئلة المراجعة التي يوجد مفهومها في الكتاب، مع تحقق متقاطع من ملخص عاصم. استُبعدت الملفات التي لا تحوي أسئلة أو تخص مقرراً آخر. التفاصيل في قسم المنهجية.</p>
+<p>المرجع الحاكم هو كتاب المقرر ({esc(BOOK_FILE)}، {BOOK_PAGES} صفحة، 14 فصلاً). النطاق: الفصول {CHAPTER_LIST_AR} ({total_subs} فقرة). أُدرجت أسئلة سبع دورات امتحانية منقولة من الذاكرة (دورة نحو 2015 والدورة التالية لها، ودورة 2016، ودورة S19 بتاريخ 2020-02-04، ودورة F24، ودورة F25، ومجموعة «الأسئلة التي تأتي في الفحص»)، وأسئلة مراجعة الكتاب في نهاية كل فصل بإجاباته المظلَّلة، وأسئلة ملخص عماد جبور ومجموعة أسئلة المراجعة التي يوجد مفهومها في الكتاب، مع تحقق متقاطع من ملخص عاصم. استُبعدت الملفات التي لا تحوي أسئلة أو تخص مقرراً آخر. التفاصيل في قسم المنهجية.</p>
 <table class="tbl"><thead><tr><th>القسم</th><th>العدد</th><th>ما هو</th></tr></thead><tbody>
 <tr><td>أسئلة الامتحانات</td><td>{c["exam"]}</td><td>{esc(SEC_INTRO["exam"])}</td></tr>
 <tr><td>أسئلة الكتاب</td><td>{c["textbook"]}</td><td>{esc(SEC_INTRO["textbook"])}</td></tr>

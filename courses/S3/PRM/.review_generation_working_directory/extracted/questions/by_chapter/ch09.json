@@ -1169,5 +1169,73 @@
   "raw_id": "others#412",
   "code": "ASEM",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 18",
+  "item": "18",
+  "qtype": "mcq",
+  "stem": "موارد المشروع كل مايلي ماعدا:",
+  "options": [
+   "الاموال",
+   "الموارد البشرية",
+   "الزمن",
+   "التجهيزات والمعدات"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 9,
+  "sub_guess": "9-1",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#17",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 19",
+  "item": "19",
+  "qtype": "mcq",
+  "stem": "المؤشر مجموع عدد يوم- عامل المنفذة فعليا في المشروع مقسوما على العدد الإجمالي ل يوم- عامل المتاحة للمشروع:",
+  "options": [
+   "نسبة ضياع الموارد",
+   "نسبة استهلاك الموارد",
+   "نسبة استخدام الموارد",
+   "نسبة أداء الموارد"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 9,
+  "sub_guess": "9-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#18",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 20",
+  "item": "20",
+  "qtype": "mcq",
+  "stem": "في طريقة تسوية الموارد من نوع يمكن اضافة موارد لضمان اكتمال المشروع قبل موعد زمني محدد:",
+  "options": [
+   "القيد على الزمن",
+   "القيد على الموارد",
+   "لاتوجد قيود على الموارد والزمن"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 9,
+  "sub_guess": "9-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled",
+  "raw_id": "f25#19",
+  "code": "F25",
+  "role": "source"
  }
 ]

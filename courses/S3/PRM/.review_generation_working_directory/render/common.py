@@ -11,9 +11,13 @@ def Q(id, ch, sub, types, qtype, stem, ans, why, remember, pages,
       options=None, distractors=None, sources=(), exam_sources=(),
       reconstructed=False, original=None, variants=(), book_says=None,
       other_source=None, sci=None, low_conf=None, notes=None, subname=None,
-      table=None, calc=None, ans_table=None):
+      table=None, calc=None, ans_table=None, raw=None, see=None):
     """table / ans_table: T(...) — data table shown after the stem / inside the answer block (§7d).
-    calc: C(...) — structured calculation: given values, then steps المعادلة → التعويض → الناتج (§7d)."""
+    calc: C(...) — structured calculation: given values, then steps المعادلة → التعويض → الناتج (§7d).
+    raw (optional, I-11): the raw source items this record came from, as `<file>#<index>` of extracted/questions/*.json
+      (e.g. "soufi#16"); `<id>/<label>` names one sub-question of a multi-question raw item; a leading "~" marks an
+      I-10 frequency credit (a problem recalled without its data), which may sit on several records.
+    see (optional): ids of records the same exam sitting asked in another form; the page cross-links them."""
     if qtype == "mcq":
         assert options and isinstance(ans, int) and 0 <= ans < len(options), id
     if qtype == "tf":
@@ -27,7 +31,8 @@ def Q(id, ch, sub, types, qtype, stem, ans, why, remember, pages,
                 pages=list(pages), sources=list(sources), exam_sources=list(exam_sources),
                 reconstructed=reconstructed, original=original, variants=list(variants),
                 book_says=book_says, other_source=other_source, sci=sci, low_conf=low_conf, notes=notes,
-                table=_check_table(table, id), calc=_check_calc(calc, id), ans_table=_check_table(ans_table, id))
+                table=_check_table(table, id), calc=_check_calc(calc, id), ans_table=_check_table(ans_table, id),
+                raw=list(raw or []), see=list(see or []), also=[], aliases=[])
 
 def T(head, rows, caption=None, ltr=True):
     """A data table. head: column titles; rows: equal-length lists (numbers or short text).

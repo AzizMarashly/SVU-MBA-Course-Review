@@ -1506,5 +1506,91 @@
   "raw_id": "others#408",
   "code": "ASEM",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 13",
+  "item": "13",
+  "qtype": "mcq",
+  "stem": "لمعظم الأنشطة بعض المرونة وفترة سماحية بين زمن بدايتها وزمن نهايتها تسمى:",
+  "options": [
+   "Lag",
+   "Lead",
+   "Float/slack"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 7,
+  "sub_guess": "7-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled; wording = book p.253",
+  "raw_id": "f25#12",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 14",
+  "item": "14",
+  "qtype": "mcq",
+  "stem": "كل ممايلي من مميزات مخطط نقاط العلام ماعدا:",
+  "options": [
+   "سرد نقاط العلام في صف عمودي أيسر الرسم البياني",
+   "عرض موحز لنقاط العلام الرئيسية وربطها بالمواعيد المخططة",
+   "يستخدم ترميز معين لبيان مدى إنجاز كل نقطة علام رئيسية",
+   "اظهار جدول تفصيلي للمشروع لأصحاب المصلحة وللادارة العليا"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 7,
+  "sub_guess": "7-7-2",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#13",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 15",
+  "item": "15",
+  "qtype": "topic",
+  "stem": "نشاط A ونشاط B بعلاقة تبعية من نمط finish to finish متضمنة فترة lag",
+  "options": [],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 7,
+  "sub_guess": "7-8",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "stem only: FF relation between A and B with a lag; no question, no numbers, no options",
+  "raw_id": "f25#14",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 16",
+  "item": "16",
+  "qtype": "mcq",
+  "stem": "التسلسل الذي يمكن ان تنفذ به حزم العمل:",
+  "options": [
+   "WBS",
+   "PLE",
+   "DMS",
+   "OBS"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 7,
+  "sub_guess": "7-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#15",
+  "code": "F25",
+  "role": "source"
  }
 ]

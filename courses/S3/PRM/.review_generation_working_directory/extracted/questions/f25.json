@@ -1,0 +1,651 @@
+[
+ {
+  "src": "src34",
+  "loc": "item 1",
+  "item": "1",
+  "qtype": "mcq",
+  "stem": "من أهم الأسباب التي تدفع للاهتمام المتزايد بإدارة المشاريع فكرة اقتصار المنظمات على أعمالها الأساسية وإعادة الهيكلة الجذرية للحياة التنظيمية بالعقد الماضي تبديل الإدارة الوسطى بإدارة المشاريع لضمان إنجاز الأمور ، ينطوي تحت فكرة:",
+  "options": [
+   "الانفجار المعرفي",
+   "استدامة الأعمال",
+   "تقليص حجم الشركات",
+   "زيادة التركيز على الزبائن"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 1,
+  "sub_guess": "1-2",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 2",
+  "item": "2",
+  "qtype": "mcq",
+  "stem": "عندما يكون من غير المرجح استمرار الطلب على منتج معين وهناك ضرورة لإدخال التعديلات من فترة لأخرى مثل صناعة الألبسة, شكل نظام الإنتاج في هذه الحالة:",
+  "options": [
+   "الإنتاج بالمشاريع",
+   "الإنتاج بدفعات",
+   "الإنتاج الكمي",
+   "الإنتاج التراكمي"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 1,
+  "sub_guess": "1-3",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 3",
+  "item": "3",
+  "qtype": "mcq",
+  "stem": "من أصحاب المصلحة الذين لهم تأثير كبير على المشروع ويعرّفون استراتيجيات العمل:",
+  "options": [
+   "مدير المشروع",
+   "أعضاء فريق العمل",
+   "كبار المديرين",
+   "الزبائن"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 1,
+  "sub_guess": "1-5-2",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 4",
+  "item": "4",
+  "qtype": "mcq",
+  "stem": "من الأجزاء الخمسة لنهج الحس السليم لإدارة المشاريع أنه يجب على مدير المشروع توفير الحوافز اللازمة لإبقاء دوران الموظفين في الحد الأدنى وأن يراعي فريق العمل موضوع الجودة في كل مهمو يقوم بها وان تبذل الإدارة العليا كل جهد لتكون بعيدة عن فريق العمل:",
+  "options": [
+   "ابدا بالقدم اليمنى",
+   "تتبع التقدم المحرز",
+   "حافظ على الزخم",
+   "اتخاذ قرارات ذكية"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 2,
+  "sub_guess": "2-1",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 5",
+  "item": "5",
+  "qtype": "mcq",
+  "stem": "من الأسباب التي تدعو مدراء المشاريع لفهم استراتيجية المنظمة كل مايلي ماعدا:",
+  "options": [
+   "تحفيز فريق المشروع وتمكينه",
+   "اتخاذ القرارات والتعديلات المناسبة",
+   "يستطيعوا الدفاع عن مشاريعهم",
+   "تخصيص موارد المشروع"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 3,
+  "sub_guess": "3-2",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 6",
+  "item": "6",
+  "qtype": "mcq",
+  "stem": "يُطلق عليهم عادة مشاريع مايجب القيام به وتصنف ضمن المشاريع اللازمة لتلبية الشروط التنظيمية المطلوبة للعمل في منطقة معينة:",
+  "options": [
+   "المشاريع الاستراتيجية",
+   "مشاريع الامتثال",
+   "المشاريع التشغيلية",
+   "مشاريع إدارة الجودة"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 3,
+  "sub_guess": "3-5-1",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 7",
+  "item": "7",
+  "qtype": "mcq",
+  "stem": "مشروع A القيمة الحالية الصافية تساوي 300 ألف ومشروع B القيمة الحالية الصافية له سالب 200 ألف ويبلغ معدل الفائدة 13%:",
+  "options": [
+   "نقبل المشروع B ونرفض المشروع A",
+   "نرفض المشروع B ونقبل المشروع A",
+   "نرفض المشروعين",
+   "نقبل المشروعين"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 3,
+  "sub_guess": "3-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 8",
+  "item": "8",
+  "qtype": "mcq",
+  "stem": "PMI:",
+  "options": [
+   "الدليل المعرفي لإدارة المشاريع",
+   "شهادة في احتراف المشاريع",
+   "معهد ادارة المشاريع"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 4,
+  "sub_guess": "4-4-1",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled"
+ },
+ {
+  "src": "src34",
+  "loc": "item 9",
+  "item": "9",
+  "qtype": "mcq",
+  "stem": "موقف غير مؤكد يمكن أن يؤثر إيجابياً او سلبياً على المشروع في حال حدوثه:",
+  "options": [
+   "القيد",
+   "المخاطرة",
+   "الافتراضات",
+   "التعديلات"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 5,
+  "sub_guess": "5-4",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "wording = book p.172 (risks, assumptions, constraints)"
+ },
+ {
+  "src": "src34",
+  "loc": "item 10",
+  "item": "10",
+  "qtype": "mcq",
+  "stem": "العوامل التي تحد من طريقة التعامل مع المشروع وتتعلق بالوقت والتكلفة والجودة والموارد:",
+  "options": [
+   "حدود المشروع",
+   "معايير قبول المنتج",
+   "القيود للمشروع",
+   "افتراضات المشروع"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 5,
+  "sub_guess": "5-4",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 11",
+  "item": "11",
+  "qtype": "mcq",
+  "stem": "في مصفوفة أولويات المشروع المعيار في هذه الحالة ثابت لايمكن تجاوزه بالنسبة للوقت والكلفة زيادة وبالنسبة للنطاق نقصاناً الصفة التي تنطبق على هذا المعيار :",
+  "options": [
+   "تحسين",
+   "قيد",
+   "قبول",
+   "كل ماسبق"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 5,
+  "sub_guess": "5-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 12",
+  "item": "12",
+  "qtype": "mcq",
+  "stem": "كل ممايلي ينطبق على حزمة العمل ماعدا:",
+  "options": [
+   "يمكن تخصيصه لفرد او مجموعة من عدة اختصاصات",
+   "ادنى مستوى في هيكل تقسيم العمل",
+   "تربط كل مجموعة بحساب تكلفة",
+   "تحديد الموارد اللازمة"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 6,
+  "sub_guess": "6-1-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 13",
+  "item": "13",
+  "qtype": "mcq",
+  "stem": "لمعظم الأنشطة بعض المرونة وفترة سماحية بين زمن بدايتها وزمن نهايتها تسمى:",
+  "options": [
+   "Lag",
+   "Lead",
+   "Float/slack"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 7,
+  "sub_guess": "7-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled; wording = book p.253"
+ },
+ {
+  "src": "src34",
+  "loc": "item 14",
+  "item": "14",
+  "qtype": "mcq",
+  "stem": "كل ممايلي من مميزات مخطط نقاط العلام ماعدا:",
+  "options": [
+   "سرد نقاط العلام في صف عمودي أيسر الرسم البياني",
+   "عرض موحز لنقاط العلام الرئيسية وربطها بالمواعيد المخططة",
+   "يستخدم ترميز معين لبيان مدى إنجاز كل نقطة علام رئيسية",
+   "اظهار جدول تفصيلي للمشروع لأصحاب المصلحة وللادارة العليا"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 7,
+  "sub_guess": "7-7-2",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 15",
+  "item": "15",
+  "qtype": "topic",
+  "stem": "نشاط A ونشاط B بعلاقة تبعية من نمط finish to finish متضمنة فترة lag",
+  "options": [],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 7,
+  "sub_guess": "7-8",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "stem only: FF relation between A and B with a lag; no question, no numbers, no options"
+ },
+ {
+  "src": "src34",
+  "loc": "item 16",
+  "item": "16",
+  "qtype": "mcq",
+  "stem": "التسلسل الذي يمكن ان تنفذ به حزم العمل:",
+  "options": [
+   "WBS",
+   "PLE",
+   "DMS",
+   "OBS"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 7,
+  "sub_guess": "7-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 17",
+  "item": "17",
+  "qtype": "mcq",
+  "stem": "من طرق تقدير مدة الأنشطة تقدير المدة الزمنية للنشاط على أساس المعلومات المسجلة لأعمال مماثلة من المرات السابقة:",
+  "options": [
+   "تقنية النمذجة",
+   "التقدير المماثل",
+   "تقنية المقارنة",
+   "تقنية التقسيم"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 8,
+  "sub_guess": "8-2-3",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 18",
+  "item": "18",
+  "qtype": "mcq",
+  "stem": "موارد المشروع كل مايلي ماعدا:",
+  "options": [
+   "الاموال",
+   "الموارد البشرية",
+   "الزمن",
+   "التجهيزات والمعدات"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 9,
+  "sub_guess": "9-1",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 19",
+  "item": "19",
+  "qtype": "mcq",
+  "stem": "المؤشر مجموع عدد يوم- عامل المنفذة فعليا في المشروع مقسوما على العدد الإجمالي ل يوم- عامل المتاحة للمشروع:",
+  "options": [
+   "نسبة ضياع الموارد",
+   "نسبة استهلاك الموارد",
+   "نسبة استخدام الموارد",
+   "نسبة أداء الموارد"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 9,
+  "sub_guess": "9-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 20",
+  "item": "20",
+  "qtype": "mcq",
+  "stem": "في طريقة تسوية الموارد من نوع يمكن اضافة موارد لضمان اكتمال المشروع قبل موعد زمني محدد:",
+  "options": [
+   "القيد على الزمن",
+   "القيد على الموارد",
+   "لاتوجد قيود على الموارد والزمن"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 9,
+  "sub_guess": "9-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled"
+ },
+ {
+  "src": "src34",
+  "loc": "item 21",
+  "item": "21",
+  "qtype": "mcq",
+  "stem": "BCWP - ACWP =",
+  "options": [
+   "AC",
+   "CV",
+   "SPI",
+   "CPI"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 10,
+  "sub_guess": "10-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "first of the two items numbered 21"
+ },
+ {
+  "src": "src34",
+  "loc": "item 21 (2nd)",
+  "item": "21",
+  "qtype": "mcq",
+  "stem": "في الهيكل التنظيمي يكون دور مدير المشروع أكثر من منسق وتتسع صلاحياته أكثر بقليل:",
+  "options": [
+   "هيكل مصفوفي متوسط",
+   "هيكل مصفوفي قوي",
+   "هيكل مصوفي ضعيف",
+   "هيكل تنظيمي وظيفي"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 11,
+  "sub_guess": "11-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "second of the two items numbered 21"
+ },
+ {
+  "src": "src34",
+  "loc": "item 22",
+  "item": "22",
+  "qtype": "mcq",
+  "stem": "في هذا الهيكل التنظيمي تدفع المنظمة اجور الافراد كاملة ويكلفون بدوام كامل على الرغم من وجود فترات مؤقتة لايكلفون بأي مهام فيها:",
+  "options": [
+   "هيكل مشاريع",
+   "هيكل وظيفي",
+   "هيكل مصفوفي"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 11,
+  "sub_guess": "11-4",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled"
+ },
+ {
+  "src": "src34",
+  "loc": "item 23",
+  "item": "23",
+  "qtype": "mcq",
+  "stem": "أداة لتحديد المخاطر على شكل قائمة من الأسئلة من مشاريع سابقة مماثلة:",
+  "options": [
+   "ملف المخاطر",
+   "سجل المخاطر",
+   "قاعدة المخاطر"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 12,
+  "sub_guess": "12-3",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled"
+ },
+ {
+  "src": "src34",
+  "loc": "item 24",
+  "item": "24",
+  "qtype": "mcq",
+  "stem": "في تحديد أولويات المخاطر اذا تم التركيز على المخاطر التي لها تأثير كبير واحتمال حدوث كبير نكون:",
+  "options": [
+   "الأولوية الأولى",
+   "الأولوية الثانية",
+   "الأولوية الثالثة",
+   "الأولوية الرابعة"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 12,
+  "sub_guess": "12-4",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 25",
+  "item": "25",
+  "qtype": "mcq",
+  "stem": "من مخرجات خطة الاستجابة التي تصف الاجراءات التي ينبغي اتخاذها عند حدوث المخاطر:",
+  "options": [
+   "خطة ادارة المخاطر",
+   "خطط الطوارىء",
+   "الاحتياطيات",
+   "ملف المخاطر"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 12,
+  "sub_guess": "12-5-3",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 26",
+  "item": "26",
+  "qtype": "mcq",
+  "stem": "تتطلب طريقة ادارة القيمة المكتسبة عملية من ٤ خطوات ماهو التسلسل:",
+  "options": [
+   "قياس أداء وتقدم العمل- وضع الخطة الزمنية والمالية - المقارنة بين الفعلي والمخطط ـ اتخاذ الاجراءات التصحيحية",
+   "وضع الخطة الزمنية والمالية - المقارنة بين الفعلي والمخطط - قياس اداء وتقدم العمل ـ اتخاذ الاجراءات التصحيحية",
+   "وضع الخطة الزمنية والمالية ـ قياس أداء وتقدم العمل ـ المقارنة بين الفعلي والمخطط- اتخاذ الاجراءات التصحيحي."
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 10,
+  "sub_guess": "10-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled"
+ },
+ {
+  "src": "src34",
+  "loc": "item 27",
+  "item": "27",
+  "qtype": "mcq",
+  "stem": "من نموذج المراحل الخمسة لتطوير الفريق يقبل الافراد انهم جزء من مجموعة المشروع ولكن يقاومون القيود المفروضة من المشروع والفريق:",
+  "options": [
+   "التشكيل",
+   "الاقتحام",
+   "التطبيع",
+   "الأداء"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 13,
+  "sub_guess": "13-2",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 28",
+  "item": "28",
+  "qtype": "mcq",
+  "stem": "نمط اغلاق المشروع يتميز بأن الانتهاء من المشروع تم في وقت مبكر بعد التخلي عن بعض اجزاء المشروع من خلال تقليص النطاق:",
+  "options": [
+   "الاغلاق العادي",
+   "الاغلاق المبكر",
+   "الاغلاق الابدي",
+   "تغير الاولويات"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 14,
+  "sub_guess": "14-3",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 29",
+  "item": "29",
+  "qtype": "mcq",
+  "stem": "من العوائق التي تحول دون الاستفادة من الدروس والعبر المستخلصة في نهاية المشروع بشكل فعال ماعدا:",
+  "options": [
+   "تثبيت الدروس عند اكتمال المشروع",
+   "تتحول لجلسات لوم",
+   "عدم الاقتناع باهمية التعلم من الفشل",
+   "نادرا ماتستخدم اثناء تنفيذ المشروع لتحسين العمل"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 14,
+  "sub_guess": "14-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null
+ },
+ {
+  "src": "src34",
+  "loc": "item 30",
+  "item": "30",
+  "qtype": "topic",
+  "stem": "سؤال كان جوابه: طلب استدراج عروض RFP",
+  "options": [],
+  "marked_answer": "طلب استدراج عروض RFP",
+  "marked_by": "student-recall",
+  "ch_guess": 3,
+  "sub_guess": null,
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "answer only; the question itself was not recalled"
+ },
+ {
+  "src": "src34",
+  "loc": "item 31",
+  "item": "31",
+  "qtype": "calc",
+  "stem": "المسألة من الفصل العاشر عبارة عن جدول لعدة مشاريع المعطيات بتكون قيم ال BCWP وال BCWS وال ACWP لكل مشروع (بيجيب شي ٤ مشاريع): المطلوب ماهو المشروع الأكثر كلفة المتأخر زمنيا عن الخطة الزمنية الموضوعة",
+  "options": [],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 10,
+  "sub_guess": "10-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "multi-project EVA table (about 4 projects) with BCWP, BCWS, ACWP per project; NUMBERS NOT RECALLED. Asked: which project is the most over cost and behind schedule."
+ },
+ {
+  "src": "src34",
+  "loc": "item 32",
+  "item": "32",
+  "qtype": "calc",
+  "stem": "مسألة تخطيط الزمن جدول فيه الانشطة ومدة كل نشاط والنشاط السابق لكل منها: الاسئلة عليها ( بحدود ال ١٠ أسئلة) تسوية موارد ماجاب صح وخطأ مافي عدد الأسئلة ٦٠ وخيارات من متعدد — حددالمسار الحرج / البداية المبكرة للنشاط ... / البداية المتاخرة للنشاط... / النهاية المبكرة للنشاط ... / النهاية المتأخرة للنشاط.... / فترة العوم للنشاط.... / مدة المشروع....",
+  "options": [],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 8,
+  "sub_guess": "8-4",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "activity table: activity, duration, predecessor; about 10 sub-questions (critical path, ES, LS, EF, LF, float of named activities, project duration); NUMBERS NOT RECALLED."
+ },
+ {
+  "src": "src34",
+  "loc": "closing notes",
+  "item": null,
+  "qtype": "topic",
+  "stem": "تسوية موارد ما جاب؛ صح وخطأ ما في؛ عدد الأسئلة 60 وخيارات من متعدد",
+  "options": [],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": null,
+  "sub_guess": null,
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "exam shape: 60 MCQs, no true/false, no resource-levelling problem"
+ }
+]

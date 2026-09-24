@@ -174,5 +174,23 @@
   "raw_id": "others#389",
   "code": "MURAJA",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "closing notes",
+  "item": null,
+  "qtype": "topic",
+  "stem": "تسوية موارد ما جاب؛ صح وخطأ ما في؛ عدد الأسئلة 60 وخيارات من متعدد",
+  "options": [],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": null,
+  "sub_guess": null,
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "exam shape: 60 MCQs, no true/false, no resource-levelling problem",
+  "raw_id": "f25#33",
+  "code": "F25",
+  "role": "source"
  }
 ]

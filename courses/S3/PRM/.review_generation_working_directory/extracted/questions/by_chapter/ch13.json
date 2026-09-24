@@ -466,5 +466,28 @@
   "raw_id": "others#419",
   "code": "ASEM",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 27",
+  "item": "27",
+  "qtype": "mcq",
+  "stem": "من نموذج المراحل الخمسة لتطوير الفريق يقبل الافراد انهم جزء من مجموعة المشروع ولكن يقاومون القيود المفروضة من المشروع والفريق:",
+  "options": [
+   "التشكيل",
+   "الاقتحام",
+   "التطبيع",
+   "الأداء"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 13,
+  "sub_guess": "13-2",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#27",
+  "code": "F25",
+  "role": "source"
  }
 ]

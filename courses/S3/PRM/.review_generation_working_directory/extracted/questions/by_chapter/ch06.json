@@ -1178,5 +1178,28 @@
   "raw_id": "others#406",
   "code": "ASEM",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 12",
+  "item": "12",
+  "qtype": "mcq",
+  "stem": "كل ممايلي ينطبق على حزمة العمل ماعدا:",
+  "options": [
+   "يمكن تخصيصه لفرد او مجموعة من عدة اختصاصات",
+   "ادنى مستوى في هيكل تقسيم العمل",
+   "تربط كل مجموعة بحساب تكلفة",
+   "تحديد الموارد اللازمة"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 6,
+  "sub_guess": "6-1-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#11",
+  "code": "F25",
+  "role": "source"
  }
 ]

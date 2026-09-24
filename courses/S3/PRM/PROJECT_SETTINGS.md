@@ -18,7 +18,7 @@ this folder in Claude Code; §0d of the prompt makes the agent resume from
 | Interface language | `ARABIC` |
 | Interaction mode | `DECIDE` — the owner asked for an unattended run; every default applied is listed in `STATE.md` and the completion summary |
 | Pilot chapter | `NONE` |
-| Output base name | `مراجعه كامله لماده ال PRM` — files are named `<base>_vNN.html` (§0e) |
+| Output base name | `مراجعه كامله لماده ال PRM` — files are named `<base>_vMAJOR.MINOR.html` (`VERSIONING.md` at the repository root; two-digit `_vNN` until v04 = v1.3) |
 | Working directory | `.review_generation_working_directory` (inside this folder, §0d layout) |
 | PDF / DOCX | `ASK AT END` — in DECIDE mode this means HTML only unless asked later |
 | Spec version | `v0.9` |

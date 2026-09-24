@@ -2113,5 +2113,68 @@
   "raw_id": "others#414",
   "code": "ASEM",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 21",
+  "item": "21",
+  "qtype": "mcq",
+  "stem": "BCWP - ACWP =",
+  "options": [
+   "AC",
+   "CV",
+   "SPI",
+   "CPI"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 10,
+  "sub_guess": "10-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "first of the two items numbered 21",
+  "raw_id": "f25#20",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 26",
+  "item": "26",
+  "qtype": "mcq",
+  "stem": "تتطلب طريقة ادارة القيمة المكتسبة عملية من ٤ خطوات ماهو التسلسل:",
+  "options": [
+   "قياس أداء وتقدم العمل- وضع الخطة الزمنية والمالية - المقارنة بين الفعلي والمخطط ـ اتخاذ الاجراءات التصحيحية",
+   "وضع الخطة الزمنية والمالية - المقارنة بين الفعلي والمخطط - قياس اداء وتقدم العمل ـ اتخاذ الاجراءات التصحيحية",
+   "وضع الخطة الزمنية والمالية ـ قياس أداء وتقدم العمل ـ المقارنة بين الفعلي والمخطط- اتخاذ الاجراءات التصحيحي."
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 10,
+  "sub_guess": "10-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled",
+  "raw_id": "f25#26",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 31",
+  "item": "31",
+  "qtype": "calc",
+  "stem": "المسألة من الفصل العاشر عبارة عن جدول لعدة مشاريع المعطيات بتكون قيم ال BCWP وال BCWS وال ACWP لكل مشروع (بيجيب شي ٤ مشاريع): المطلوب ماهو المشروع الأكثر كلفة المتأخر زمنيا عن الخطة الزمنية الموضوعة",
+  "options": [],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 10,
+  "sub_guess": "10-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "multi-project EVA table (about 4 projects) with BCWP, BCWS, ACWP per project; NUMBERS NOT RECALLED. Asked: which project is the most over cost and behind schedule.",
+  "raw_id": "f25#31",
+  "code": "F25",
+  "role": "source"
  }
 ]

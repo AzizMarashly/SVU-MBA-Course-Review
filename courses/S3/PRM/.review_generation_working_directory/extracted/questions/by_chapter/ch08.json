@@ -1648,5 +1648,46 @@
   "raw_id": "others#410",
   "code": "ASEM",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 17",
+  "item": "17",
+  "qtype": "mcq",
+  "stem": "من طرق تقدير مدة الأنشطة تقدير المدة الزمنية للنشاط على أساس المعلومات المسجلة لأعمال مماثلة من المرات السابقة:",
+  "options": [
+   "تقنية النمذجة",
+   "التقدير المماثل",
+   "تقنية المقارنة",
+   "تقنية التقسيم"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 8,
+  "sub_guess": "8-2-3",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#16",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 32",
+  "item": "32",
+  "qtype": "calc",
+  "stem": "مسألة تخطيط الزمن جدول فيه الانشطة ومدة كل نشاط والنشاط السابق لكل منها: الاسئلة عليها ( بحدود ال ١٠ أسئلة) تسوية موارد ماجاب صح وخطأ مافي عدد الأسئلة ٦٠ وخيارات من متعدد — حددالمسار الحرج / البداية المبكرة للنشاط ... / البداية المتاخرة للنشاط... / النهاية المبكرة للنشاط ... / النهاية المتأخرة للنشاط.... / فترة العوم للنشاط.... / مدة المشروع....",
+  "options": [],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 8,
+  "sub_guess": "8-4",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "activity table: activity, duration, predecessor; about 10 sub-questions (critical path, ES, LS, EF, LF, float of named activities, project duration); NUMBERS NOT RECALLED.",
+  "raw_id": "f25#32",
+  "code": "F25",
+  "role": "source"
  }
 ]

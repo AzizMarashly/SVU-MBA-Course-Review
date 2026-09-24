@@ -534,5 +534,51 @@
   "raw_id": "others#422",
   "code": "ASEM",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 28",
+  "item": "28",
+  "qtype": "mcq",
+  "stem": "نمط اغلاق المشروع يتميز بأن الانتهاء من المشروع تم في وقت مبكر بعد التخلي عن بعض اجزاء المشروع من خلال تقليص النطاق:",
+  "options": [
+   "الاغلاق العادي",
+   "الاغلاق المبكر",
+   "الاغلاق الابدي",
+   "تغير الاولويات"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 14,
+  "sub_guess": "14-3",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#28",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 29",
+  "item": "29",
+  "qtype": "mcq",
+  "stem": "من العوائق التي تحول دون الاستفادة من الدروس والعبر المستخلصة في نهاية المشروع بشكل فعال ماعدا:",
+  "options": [
+   "تثبيت الدروس عند اكتمال المشروع",
+   "تتحول لجلسات لوم",
+   "عدم الاقتناع باهمية التعلم من الفشل",
+   "نادرا ماتستخدم اثناء تنفيذ المشروع لتحسين العمل"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 14,
+  "sub_guess": "14-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#29",
+  "code": "F25",
+  "role": "source"
  }
 ]

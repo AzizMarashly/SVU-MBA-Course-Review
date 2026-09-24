@@ -68,7 +68,7 @@ disk = set()
 for root, dirs, files in os.walk(PROJ):
     dirs[:] = [d for d in dirs if d not in (".review_generation_working_directory", "_old_versions", "archive")]
     for f in files:
-        if f.endswith(".md") or re.match(r".*_v\d\d(\.html|\.pdf|\.docx)$", f): continue
+        if f.endswith(".md") or re.match(r".*_v(\d\d|\d+\.\d+)(\.html|\.pdf|\.docx)$", f): continue
         disk.add(unicodedata.normalize("NFC", os.path.relpath(os.path.join(root, f), PROJ).replace("\\", "/")))
 listed = set(unicodedata.normalize("NFC", row[1]) for row in render_html.FILES)  # NFC: some names on disk are decomposed
 print("source appendix rows:", len(listed), "| files on disk:", len(disk))

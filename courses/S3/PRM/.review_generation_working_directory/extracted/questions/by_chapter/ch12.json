@@ -1123,5 +1123,73 @@
   "raw_id": "others#415",
   "code": "ASEM",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 23",
+  "item": "23",
+  "qtype": "mcq",
+  "stem": "أداة لتحديد المخاطر على شكل قائمة من الأسئلة من مشاريع سابقة مماثلة:",
+  "options": [
+   "ملف المخاطر",
+   "سجل المخاطر",
+   "قاعدة المخاطر"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 12,
+  "sub_guess": "12-3",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled",
+  "raw_id": "f25#23",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 24",
+  "item": "24",
+  "qtype": "mcq",
+  "stem": "في تحديد أولويات المخاطر اذا تم التركيز على المخاطر التي لها تأثير كبير واحتمال حدوث كبير نكون:",
+  "options": [
+   "الأولوية الأولى",
+   "الأولوية الثانية",
+   "الأولوية الثالثة",
+   "الأولوية الرابعة"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 12,
+  "sub_guess": "12-4",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#24",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 25",
+  "item": "25",
+  "qtype": "mcq",
+  "stem": "من مخرجات خطة الاستجابة التي تصف الاجراءات التي ينبغي اتخاذها عند حدوث المخاطر:",
+  "options": [
+   "خطة ادارة المخاطر",
+   "خطط الطوارىء",
+   "الاحتياطيات",
+   "ملف المخاطر"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 12,
+  "sub_guess": "12-5-3",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#25",
+  "code": "F25",
+  "role": "source"
  }
 ]

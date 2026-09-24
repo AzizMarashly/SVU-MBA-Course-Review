@@ -6,11 +6,11 @@ Source material and generation state for the PRM review. The published page is
 | | |
 |---|---|
 | Semester | 3 |
-| Published review | v03 (2026-09-14) — https://azizmarashly.github.io/SVU-MBA-Course-Review/S3/PRM/ |
+| Published review | v1.4 (2026-09-24; consolidation pass: one record per claim, F24 credits — see `VERSIONS.md`) — https://azizmarashly.github.io/SVU-MBA-Course-Review/S3/PRM/ |
 | Prompt used | v0.9, DECIDE mode, no pilot, Arabic interface — settings in `PROJECT_SETTINGS.md` |
 | Chapters in scope | 1–14 (the whole book, 554 pages, د. إياد زوكار) |
-| Bank | 442 questions: exam 166, textbook 145, other 187, generated 21 (a question may carry several types); 69 low-confidence; 79 reconstructed; 79/79 subsections covered |
-| Independent sources | 10: the book (with its highlighted review answers), six exam sittings (c. 2015, the following term, 2016, S19 of 4 Feb 2020, F24, an undated exam pool), the Asem summary (cross-check, 20/20 agree), the Emad S18 question-and-answer summary, a 20-item review set |
+| Bank | 419 questions: exam 181, textbook 145, other 176, generated 20 (a question may carry several types); 67 low-confidence; 74 reconstructed; 79/79 subsections covered; 24 records carry «also asked as» lines, 6 shared-table groups |
+| Independent sources | 11: the book (with its highlighted review answers), seven exam sittings (c. 2015, the following term, 2016, S19 of 4 Feb 2020, F24, F25, an undated exam pool), the Asem summary (cross-check, 20/20 agree), the Emad S18 question-and-answer summary, a 20-item review set |
 | Working directory | `.review_generation_working_directory/` — read its `STATE.md` first (stage checklist, decisions, how to continue) |
 | Origin of the material | Student-run shared drive "SVU Files" (PRM folder) plus files circulated in the course groups. Unofficial; see `../../DISCLAIMER.md` for copyright and takedown. |
 
@@ -26,7 +26,7 @@ Source material and generation state for the PRM review. The published page is
 | `.review_generation_working_directory/extracted/` | Book text (ligature-fixed, per chapter), subsection list, text of every source, the raw question transcriptions per source group with their reports, and the per-chapter splits. Page renders (`pages_png/`) are not in the repository (regenerable). |
 | `.review_generation_working_directory/qa/` | Per-chapter reports, mechanical block checks, browser test, `summary.json` (numbers the methodology section reads). |
 | `الماده الاكاديميه/` | The textbook, the book-questions PDF (dependent copy), 14 slide decks. |
-| `اسئلة سابقة/` | Past-exam recollections (c. 2015 list + its handwritten scan, kifah, 2016, S19 Soufi ×2, F24, the "questions that come in the exam" pool) and one misfiled IMT exam (excluded). |
+| `اسئلة سابقة/` | Past-exam recollections (c. 2015 list + its handwritten scan, kifah, 2016, S19 Soufi ×2, F24, F25, the "questions that come in the exam" pool) and one misfiled IMT exam (excluded). |
 | `ملخصات سابقة/` | Asem (cross-check), Emad (S18 Q&A), the review set, and five notes/summaries without questions (excluded). |
 | `متفرقات/` | A PMP certification guide (excluded). |
 | `about.txt` | Two students' notes on the course (exam shape, workload); context only. |
@@ -39,7 +39,7 @@ Not in the repository: `.review_generation_working_directory/archive/` (git hist
 **Fix an answer or add questions**
 
 1. Edit the chapter file in `.review_generation_working_directory/render/` (`bank_ch08.py` for chapter 8, and so on).
-2. Bump `.review_generation_working_directory/VERSION` (two digits) and add a row to `VERSIONS.md`.
+2. Bump `.review_generation_working_directory/VERSION` (`MAJOR.MINOR`, see `VERSIONING.md` at the repository root) and add a row to `VERSIONS.md`.
 3. Build and check:
    ```
    cd .review_generation_working_directory/render

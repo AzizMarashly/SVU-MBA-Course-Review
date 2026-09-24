@@ -1009,5 +1009,74 @@
   "raw_id": "others#146",
   "code": "EMAD",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 9",
+  "item": "9",
+  "qtype": "mcq",
+  "stem": "موقف غير مؤكد يمكن أن يؤثر إيجابياً او سلبياً على المشروع في حال حدوثه:",
+  "options": [
+   "القيد",
+   "المخاطرة",
+   "الافتراضات",
+   "التعديلات"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 5,
+  "sub_guess": "5-4",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "wording = book p.172 (risks, assumptions, constraints)",
+  "raw_id": "f25#8",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 10",
+  "item": "10",
+  "qtype": "mcq",
+  "stem": "العوامل التي تحد من طريقة التعامل مع المشروع وتتعلق بالوقت والتكلفة والجودة والموارد:",
+  "options": [
+   "حدود المشروع",
+   "معايير قبول المنتج",
+   "القيود للمشروع",
+   "افتراضات المشروع"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 5,
+  "sub_guess": "5-4",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#9",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 11",
+  "item": "11",
+  "qtype": "mcq",
+  "stem": "في مصفوفة أولويات المشروع المعيار في هذه الحالة ثابت لايمكن تجاوزه بالنسبة للوقت والكلفة زيادة وبالنسبة للنطاق نقصاناً الصفة التي تنطبق على هذا المعيار :",
+  "options": [
+   "تحسين",
+   "قيد",
+   "قبول",
+   "كل ماسبق"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 5,
+  "sub_guess": "5-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#10",
+  "code": "F25",
+  "role": "source"
  }
 ]

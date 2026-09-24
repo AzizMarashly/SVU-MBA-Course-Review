@@ -1242,5 +1242,92 @@
   "raw_id": "others#100",
   "code": "EMAD",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 5",
+  "item": "5",
+  "qtype": "mcq",
+  "stem": "من الأسباب التي تدعو مدراء المشاريع لفهم استراتيجية المنظمة كل مايلي ماعدا:",
+  "options": [
+   "تحفيز فريق المشروع وتمكينه",
+   "اتخاذ القرارات والتعديلات المناسبة",
+   "يستطيعوا الدفاع عن مشاريعهم",
+   "تخصيص موارد المشروع"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 3,
+  "sub_guess": "3-2",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#4",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 6",
+  "item": "6",
+  "qtype": "mcq",
+  "stem": "يُطلق عليهم عادة مشاريع مايجب القيام به وتصنف ضمن المشاريع اللازمة لتلبية الشروط التنظيمية المطلوبة للعمل في منطقة معينة:",
+  "options": [
+   "المشاريع الاستراتيجية",
+   "مشاريع الامتثال",
+   "المشاريع التشغيلية",
+   "مشاريع إدارة الجودة"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 3,
+  "sub_guess": "3-5-1",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#5",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 7",
+  "item": "7",
+  "qtype": "mcq",
+  "stem": "مشروع A القيمة الحالية الصافية تساوي 300 ألف ومشروع B القيمة الحالية الصافية له سالب 200 ألف ويبلغ معدل الفائدة 13%:",
+  "options": [
+   "نقبل المشروع B ونرفض المشروع A",
+   "نرفض المشروع B ونقبل المشروع A",
+   "نرفض المشروعين",
+   "نقبل المشروعين"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 3,
+  "sub_guess": "3-6",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": null,
+  "raw_id": "f25#6",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 30",
+  "item": "30",
+  "qtype": "topic",
+  "stem": "سؤال كان جوابه: طلب استدراج عروض RFP",
+  "options": [],
+  "marked_answer": "طلب استدراج عروض RFP",
+  "marked_by": "student-recall",
+  "ch_guess": 3,
+  "sub_guess": null,
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "answer only; the question itself was not recalled",
+  "raw_id": "f25#30",
+  "code": "F25",
+  "role": "source"
  }
 ]

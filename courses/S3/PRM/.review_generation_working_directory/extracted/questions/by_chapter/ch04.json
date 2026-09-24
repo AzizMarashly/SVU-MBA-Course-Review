@@ -1872,5 +1872,27 @@
   "raw_id": "others#405",
   "code": "ASEM",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 8",
+  "item": "8",
+  "qtype": "mcq",
+  "stem": "PMI:",
+  "options": [
+   "الدليل المعرفي لإدارة المشاريع",
+   "شهادة في احتراف المشاريع",
+   "معهد ادارة المشاريع"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 4,
+  "sub_guess": "4-4-1",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled",
+  "raw_id": "f25#7",
+  "code": "F25",
+  "role": "source"
  }
 ]

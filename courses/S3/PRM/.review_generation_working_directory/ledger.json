@@ -1,5 +1,5 @@
 {
- "note": "final after stage-3 helper reports (2026-09-09)",
+ "note": "final after stage-3 helper reports (2026-09-09); F25 added 2026-09-24 (v04)",
  "sources": [
   {
    "id": "BOOK",
@@ -85,6 +85,19 @@
    "type": "F24 sitting, external centre, 43 numbered items + practical section",
    "decision": "included as an independent exam source",
    "items": "48 raw items"
+  },
+  {
+   "id": "F25",
+   "kind": "exam",
+   "files": [
+    "اسئلة سابقة/دورة F25.txt"
+   ],
+   "md5": [
+    "0a871251966e3e43126fce5adb584843"
+   ],
+   "type": "F25 sitting (2026-09-16), one student's recall: 32 numbered items (21 used twice) + closing notes (60 MCQs, no true/false, no levelling problem); options as remembered, no key except item 30",
+   "decision": "included as an independent exam source (added 2026-09-24, v1.3)",
+   "items": "33 numbered items + 1 note line"
   },
   {
    "id": "TATI",

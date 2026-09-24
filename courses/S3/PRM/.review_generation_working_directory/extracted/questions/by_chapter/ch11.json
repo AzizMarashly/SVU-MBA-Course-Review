@@ -1325,5 +1325,50 @@
   "raw_id": "others#401",
   "code": "MURAJA",
   "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 21 (2nd)",
+  "item": "21",
+  "qtype": "mcq",
+  "stem": "في الهيكل التنظيمي يكون دور مدير المشروع أكثر من منسق وتتسع صلاحياته أكثر بقليل:",
+  "options": [
+   "هيكل مصفوفي متوسط",
+   "هيكل مصفوفي قوي",
+   "هيكل مصوفي ضعيف",
+   "هيكل تنظيمي وظيفي"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 11,
+  "sub_guess": "11-5",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "second of the two items numbered 21",
+  "raw_id": "f25#21",
+  "code": "F25",
+  "role": "source"
+ },
+ {
+  "src": "src34",
+  "loc": "item 22",
+  "item": "22",
+  "qtype": "mcq",
+  "stem": "في هذا الهيكل التنظيمي تدفع المنظمة اجور الافراد كاملة ويكلفون بدوام كامل على الرغم من وجود فترات مؤقتة لايكلفون بأي مهام فيها:",
+  "options": [
+   "هيكل مشاريع",
+   "هيكل وظيفي",
+   "هيكل مصفوفي"
+  ],
+  "marked_answer": null,
+  "marked_by": null,
+  "ch_guess": 11,
+  "sub_guess": "11-4",
+  "dup_of": null,
+  "book_dup": false,
+  "notes": "only three options recalled",
+  "raw_id": "f25#22",
+  "code": "F25",
+  "role": "source"
  }
 ]
