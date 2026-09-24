@@ -21,7 +21,7 @@ Every review is rendered from a question bank kept in `courses/S<n>/<CODE>/`. Th
 1. Fork and clone the repository.
 2. Edit the chapter file, e.g. `courses/S3/IMT/.review_generation_working_directory/bank/bank_ch05.py`. Keep the record
    structure; the build asserts on it.
-3. Bump `VERSION`, add a changelog line, and run the release script (see the course README).
+3. Bump `VERSION` (`MAJOR.MINOR`, see `VERSIONING.md`), add a row to the course `VERSIONS.md`, and run the release script (see the course README).
    The build must print `uncovered: 0` and the QA script must pass.
 4. Publish with `python scripts/publish_page.py S3/<CODE>` from the repository root: it copies
    `out.html` to `S3/<CODE>/index.html` and appends the Cloudflare Web Analytics snippet every
