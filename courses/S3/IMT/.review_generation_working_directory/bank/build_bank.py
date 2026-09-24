@@ -3,10 +3,11 @@
 importance scores, coverage audit and mechanical checks."""
 import importlib, json, os, re, sys, collections
 sys.path.insert(0, os.path.dirname(__file__))
+from common import _check_table, _check_calc  # §7d shape checks (records in bank_ch01..07 are plain dicts)
 CHAPTERS = [1,2,3,4,5,6,7,9,10,11,12]
-SPEC = "v0.10"
+SPEC = "v0.11"
 VERSION = open(os.path.join(os.path.dirname(__file__), "..", "VERSION"), encoding="utf-8").read().strip()
-EXAM_CODES = {"F17","F19","S24","F24"}
+EXAM_CODES = {"F17","F19","S24","F24","F25"}
 
 def load():
     subs, qs = {}, []
@@ -37,6 +38,12 @@ def check_basic(qs, subs):
             assert ("textbook" in q["types"]) == ("BOOK" in q["sources"]), q["id"]
         # no bold in stem/options
         assert "**" not in q["stem"], q["id"]
+        # §7d (prompt v0.11): tabular data belongs in table=T(...), never in the stem
+        if "|" in q["stem"] or chr(10) in q["stem"]:
+            raise AssertionError((q["id"], "tabular data belongs in table=T(...), not in the stem (§7d)"))
+        for k in ("table", "ans_table"):
+            q[k] = _check_table(q.get(k), q["id"])
+        q["calc"] = _check_calc(q.get("calc"), q["id"])
         if q["options"]:
             assert all("**" not in o for o in q["options"]), q["id"]
         if q["qtype"] == "mcq":
@@ -127,6 +134,7 @@ def main():
       dict(id="F19", files=["اسئلة سابقة/دورات  F19.pdf","اسئلة سابقة/أسئلة_دورات_F19_تسويق_دولي_MIS.pdf (identical MD5)"], type="exam recall, handwritten scan (30 q, read visually)", decision="included"),
       dict(id="S24", files=["اسئلة سابقة/دورات.txt (part 2)"], type="exam recall (Telegram export)", decision="included"),
       dict(id="F24", files=["اسئلة سابقة/دورات.txt (part 1)"], type="exam recall with answers (Telegram export)", decision="included"),
+      dict(id="F25", files=["اسئلة سابقة/دورة F25.txt"], type="exam recall, 20 items from two students merged, no answer key (added in v1.6)", decision="included: 8 merged into existing records, 12 new records"),
       dict(id="EMAD", files=["اسئلة سابقة/ملخصIMT عماد جبور كامل.pdf"], type="Q&A summary S18", decision="included only for items whose concept exists in the current book"),
       dict(id="ASEM", files=["ملخصات سابقة/ملخص_عاصم_التسويق_والتجارة_الدولية_IMT.pdf"], type="summary with solved book review questions", decision="included as cross-check for textbook questions (59/60 T/F agree)"),
       dict(id="EXCLUDED-WAEL", files=["ملخصات سابقة/IMT_F19_وائل منصور.pdf"], type="handwritten summary, 56 scanned pages", decision="no questions; older chapter layout; all pages inspected visually"),
@@ -145,12 +153,12 @@ def main():
       dict(source="Slides Ch09..Ch14", book_chapter=[7,8,9,10,11,12], evidence="titles"),
       dict(source="photo_2024-06-05 topic list", book_chapter="same numbering as book (1-12 without 8)", evidence="ch5 = information systems"),
       dict(source="EMAD/WAEL (S18-era)", book_chapter="older layout; mapped by content", evidence="e.g. Wael ch6 = culture"),
-      dict(source="Exam recalls F17/F19/S24/F24", book_chapter="no chapter numbers; assigned by content to book subsection", evidence="content"),
+      dict(source="Exam recalls F17/F19/S24/F24/F25", book_chapter="no chapter numbers; assigned by content to book subsection", evidence="content"),
     ]
     notice = [f"Generated with the SVU MBA Course Review Generator, prompt {SPEC} · deliverable v{VERSION}",
               "Source and latest version: https://github.com/AzizMarashly/SVU-MBA-Course-Review",
               "Licence of the prompt and of this file: CC BY-NC-SA 4.0 — share freely, credit the source, never sell. Quoted textbook and exam content stays with its owners and is not covered."]
-    out = dict(_notice=notice, spec_version=SPEC, file_version=VERSION, title="مراجعه كامله لماده ال IMT", generated="2026-09-09",
+    out = dict(_notice=notice, spec_version=SPEC, file_version=VERSION, title="مراجعه كامله لماده ال IMT", generated="2026-09-24",
                source_ledger=ledger, chapter_map=chapter_map,
                course="التسويق والتجارة الدولية — INTERNATIONAL MARKETING AND TRADING",
                chapters_in_scope=CHAPTERS, subsections=subs, questions=qs,

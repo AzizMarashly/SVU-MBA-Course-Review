@@ -6,11 +6,11 @@ Source material and generation state for the IMT review. The published page is
 | | |
 |---|---|
 | Semester | 3 |
-| Published review | v1.4 (2026-09-09) — https://azizmarashly.github.io/SVU-MBA-Course-Review/S3/IMT/ |
-| Prompt used | bank built with v0.4, page rendered with v0.9; ASK mode, Arabic interface — settings in `PROJECT_SETTINGS.md` |
-| Latest prompt in repo | v0.9 — this review is in line with it (source-files appendix, per-question source labels, licence notice, `STATE.md`) |
+| Published review | v1.6 (2026-09-24) — https://azizmarashly.github.io/SVU-MBA-Course-Review/S3/IMT/ |
+| Prompt used | bank built with v0.4 (F25 added in v1.6), page rendered with v0.11; ASK mode, Arabic interface — settings in `PROJECT_SETTINGS.md` |
+| Latest prompt in repo | v0.11 — this review is in line with it (v0.10 collapsible sections, v0.11 §7d answer tables and symbol legend) |
 | Chapters in scope | 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12 (chapter 8 skipped by the owner) |
-| Bank | 292 questions: exam 107, textbook 142, other 50, generated 15; 24 low-confidence; 109/109 subsections covered |
+| Bank | 304 questions: exam 121, textbook 142, other 50, generated 15; 27 low-confidence; 109/109 subsections covered |
 | Working directory | `.review_generation_working_directory/` — read its `STATE.md` (where the run stands) and `README.md` (folder map, workflow) |
 | Origin of the material | Student-run shared drive "SVU Files" (IMT folder) plus files circulated in the course groups. Unofficial; see `../../DISCLAIMER.md` for copyright and takedown. |
 
@@ -28,17 +28,17 @@ Source material and generation state for the IMT review. The published page is
 | `.review_generation_working_directory/txt/`, `.review_generation_working_directory/ocr/` | Text extraction of every input and full OCR of the textbook (page-separated). |
 | `.review_generation_working_directory/source_index.txt` | Maps the short working names (`ex00`, `sum02`, …) to the real file names below. |
 | `المنهاج الٱكاديمي/` | The textbook (423 pages), the book-questions PDF, and the 14 slide decks. |
-| `اسئلة سابقة/` | Past exams: F17, F19 (scan), S24 and F24 (Telegram export), plus older-curriculum essay files (excluded, see ledger). |
+| `اسئلة سابقة/` | Past exams: F17, F19 (scan), S24 and F24 (Telegram export), F25 (text recall), plus older-curriculum essay files (excluded, see ledger). |
 | `ملخصات سابقة/` | Two summaries: one used as an answer-key cross-check, one inspected and excluded (no questions). |
 | `ملفات متعلقة بالمادة/` | Related files: a photo of recalled exam topics (used), chapters of an older textbook and two slide decks from another course (excluded). |
 
 Not in the repository: `_old_versions/` (git history has every version) and the two versioned
-deliverables at the folder root (`…_v1.4.html`, `…_v1.4_bank.json`), which are identical to
+deliverables at the folder root (`…_v1.6.html`, `…_v1.6_bank.json`), which are identical to
 `.review_generation_working_directory/out.html`, `.review_generation_working_directory/bank.json` and the published page. `release.py` recreates them.
 
 ## Exam sittings and sources
 
-F17 (27 questions), F19 (30, handwritten), S24 (32), F24 (40); textbook review questions per
+F17 (27 questions), F19 (30, handwritten), S24 (32), F24 (40), F25 (20, recalled by two students, no answer key; added in v1.6); textbook review questions per
 chapter; the Emad summary (S18, only items whose concept exists in the current book); the Asem
 summary as cross-check. Full detail and the reasons for every exclusion: `.review_generation_working_directory/notes/ledger.md`.
 
@@ -47,7 +47,7 @@ summary as cross-check. Full detail and the reasons for every exclusion: `.revie
 **Fix an answer or add questions**
 
 1. Edit the chapter file in `.review_generation_working_directory/bank/` (`bank_ch05.py` for chapter 5, and so on).
-2. Bump `.review_generation_working_directory/VERSION` and add a line at the top of `.review_generation_working_directory/CHANGELOG.md`.
+2. Bump `.review_generation_working_directory/VERSION` (`MAJOR.MINOR`, see `VERSIONING.md` at the repository root) and add an entry at the top of `.review_generation_working_directory/VERSIONS.md`.
 3. Build and check:
    ```
    cd .review_generation_working_directory/bank
@@ -75,12 +75,6 @@ notice, §19; `STATE.md`, §0d). For a later prompt version, compare its changel
 data normally does not need to change.
 
 ## Open items
-
-- **F25 exam not yet in the bank.** `اسئلة سابقة/دورة F25.txt` (20 questions recalled by two
-  students, merged, added 2026-09-13) waits for a resume run: extract, deduplicate against the 292
-  records, verify against the book, add the `F25` source code to `SRC_NAMES`, a row to `FILES` and
-  `SRC_ROW` in `bank/render_html.py`, a ledger entry in `notes/ledger.md`, then release as v1.6.
-  Until then `qa_blocks.py` reports the appendix as one file short of the folder listing.
 
 - F19 Q6, Q7 (Porter, Dunning), F19 Q23, F17 Q3 (turnkey): topic known, question text not
   reconstructed with confidence.

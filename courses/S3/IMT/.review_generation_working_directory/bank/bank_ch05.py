@@ -39,14 +39,18 @@ QS = [
    179
   ],
   "sources": [
-   "F24"
+   "F24",
+   "F25"
   ],
   "exam_sources": [
-   "F24"
+   "F24",
+   "F25"
   ],
   "reconstructed": false,
   "original": null,
-  "variants": [],
+  "variants": [
+   "F25: يختلف البحث التسويقي الدولي عن المحلي في: أدوات البحث / أهداف البحث / مصادر المعلومات / ليس أي مما سبق (الخيارات نفسها، ولم يُنقل جواب)"
+  ],
   "book_says": null,
   "other_source": "طالب F24 اختار «لا شيء مما سبق» وصرّح بأنه غير متأكد — الكتاب يذكر اختلاف مصادر المعلومات والتنفيذ (ص178).",
   "sci": null,
@@ -490,6 +494,7 @@ QS = [
   "sub": "5-2",
   "subname": null,
   "types": [
+   "exam",
    "textbook"
   ],
   "qtype": "mcq",
@@ -509,13 +514,18 @@ QS = [
    176
   ],
   "sources": [
+   "F25",
    "BOOK",
    "ASEM"
   ],
-  "exam_sources": [],
+  "exam_sources": [
+   "F25"
+  ],
   "reconstructed": false,
   "original": null,
-  "variants": [],
+  "variants": [
+   "F25: ليس من خصائص البيانات الضخمة: الحجم / التنوع / السرعة / الملاءمة — هنا الجواب «الملاءمة»: مبدأ 3V في الكتاب هو الحجم والتنوع والسرعة فقط (ص175–176)"
+  ],
   "book_says": null,
   "other_source": null,
   "sci": null,

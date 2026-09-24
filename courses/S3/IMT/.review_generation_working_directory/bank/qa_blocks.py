@@ -38,6 +38,25 @@ def sc(q):
     return min(5, base + (1 if "textbook" in q["types"] else 0) + (1 if (q["ch"],q["sub"]) in foc else 0))
 print("importance mismatches:", [q["id"] for q in qs if sc(q)!=q["importance"]])
 print("freq mismatches:", [q["id"] for q in qs if q["freq"] != (0 if "generated" in q["types"] else len(q["sources"]))])
+# §7d (prompt v0.11): data tables and calculation blocks (checks ported from the PRM tooling)
+tab = [q["id"] for q in qs if q.get("table")]; calc = [q["id"] for q in qs if q.get("calc")]
+print("records with a data table:", len(tab), "| with a calculation block:", len(calc), "| with an answer table:", [q["id"] for q in qs if q.get("ans_table")])
+print("stems that still look tabular (no table field, 3+ ';'-separated groups, 8+ digits):",
+      [q["id"] for q in qs if not q.get("table") and len(re.findall(r"[؛;]\s*\S+[:،|]", q["stem"])) >= 3 and len(re.findall(r"\d", q["stem"])) >= 8])
+print("numeric why without a calc block (3+ '=' signs):", [q["id"] for q in qs if not q.get("calc") and q["why"].count("=") >= 3])
+print("calc blocks whose why still carries the arithmetic (2+ '=' signs):", [q["id"] for q in qs if q.get("calc") and q["why"].count("=") >= 2])
+sys.path.insert(0, os.path.dirname(__file__))
+import render_html as _rh
+_missing = set()
+for q in qs:
+    _texts = []
+    for t_ in (q.get("table"), q.get("ans_table")):
+        if t_: _texts.append(" ".join(map(str, t_["head"])))
+    if q.get("calc"): _texts += q["calc"]["given"] + [st["eq"] + " " + st["what"] for st in q["calc"]["steps"]]
+    for tok in re.findall(r"(?<![A-Za-z])([A-Z][A-Za-z]{1,4})(?![A-Za-z])", " ".join(_texts)):
+        if tok not in _rh.SYMBOLS and not re.fullmatch(r"[A-Z]\d*", tok): _missing.add(tok)
+print("symbols used in tables/calc but missing from SYMBOLS:", sorted(_missing))
+print("SYMBOLS entries never used by a table/calc:", sorted(set(_rh.SYMBOLS) - {k for q in qs for k in _rh.symbols_used(q)}))
 print("leftover literal ** count in stems:", sum(q["stem"].count("**") for q in qs))
 random.seed(7); sample = random.sample(qs, 20)
 print("RANDOM SAMPLE IDS:", [q["id"] for q in sample])

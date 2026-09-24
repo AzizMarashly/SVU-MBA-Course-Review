@@ -1,13 +1,13 @@
 {
  "_notice": [
-  "Generated with the SVU MBA Course Review Generator, prompt v0.10 · deliverable v1.5",
+  "Generated with the SVU MBA Course Review Generator, prompt v0.11 · deliverable v1.6",
   "Source and latest version: https://github.com/AzizMarashly/SVU-MBA-Course-Review",
   "Licence of the prompt and of this file: CC BY-NC-SA 4.0 — share freely, credit the source, never sell. Quoted textbook and exam content stays with its owners and is not covered."
  ],
- "spec_version": "v0.10",
- "file_version": "1.5",
+ "spec_version": "v0.11",
+ "file_version": "1.6",
  "title": "مراجعه كامله لماده ال IMT",
- "generated": "2026-09-09",
+ "generated": "2026-09-24",
  "source_ledger": [
   {
    "id": "BOOK",
@@ -52,6 +52,14 @@
    ],
    "type": "exam recall with answers (Telegram export)",
    "decision": "included"
+  },
+  {
+   "id": "F25",
+   "files": [
+    "اسئلة سابقة/دورة F25.txt"
+   ],
+   "type": "exam recall, 20 items from two students merged, no answer key (added in v1.6)",
+   "decision": "included: 8 merged into existing records, 12 new records"
   },
   {
    "id": "EMAD",
@@ -188,7 +196,7 @@
    "evidence": "e.g. Wael ch6 = culture"
   },
   {
-   "source": "Exam recalls F17/F19/S24/F24",
+   "source": "Exam recalls F17/F19/S24/F24/F25",
    "book_chapter": "no chapter numbers; assigned by content to book subsection",
    "evidence": "content"
   }
@@ -370,23 +378,29 @@
    ],
    "sources": [
     "F24",
+    "F25",
     "EMAD"
    ],
    "exam_sources": [
-    "F24"
+    "F24",
+    "F25"
    ],
    "reconstructed": false,
    "original": null,
    "variants": [
-    "ملخص عماد: ما هي أهم أسباب تحول الأعمال إلى دولية؟ (تشبع السوق، المنافسة الأجنبية، أسواق جديدة، العولمة، أسباب أخرى)"
+    "ملخص عماد: ما هي أهم أسباب تحول الأعمال إلى دولية؟ (تشبع السوق، المنافسة الأجنبية، أسواق جديدة، العولمة، أسباب أخرى)",
+    "F25: ليس من دوافع الأعمال الدولية: تشبع السوق / تقسيم السوق / المنافسة الأجنبية / ظهور أسواق جديدة — هنا الجواب «تقسيم السوق»: ليس بين الدوافع الخمسة في الكتاب (ص13–18)، والخيارات الثلاثة الأخرى دوافع مذكورة"
    ],
    "book_says": null,
    "other_source": null,
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 3,
-   "freq": 2,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
+   "importance": 4,
+   "freq": 3,
    "focus": true
   },
   {
@@ -431,6 +445,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": false
@@ -474,6 +491,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -519,6 +539,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -567,6 +590,9 @@
    "sci": null,
    "low_conf": "صيغة السؤال منقولة من الذاكرة (يذكر «التجارة الدولية» بينما الكتاب يتحدث عن الشركات عابرة القومية).",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -612,6 +638,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -649,6 +678,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -688,6 +720,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -725,6 +760,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -763,6 +801,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -805,6 +846,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -840,6 +884,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -886,6 +933,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -922,6 +972,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -957,6 +1010,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -978,7 +1034,7 @@
     "ألمانيا"
    ],
    "ans": 0,
-   "why": "الجدول 1-1: **الولايات المتحدة** (21.4 تريليون دولار، 24.4% من الناتج العالمي) ثم الصين (14.3) ثم اليابان ثم ألمانيا.",
+   "why": "يرتّب **الجدول 1-1** أكبر عشرة اقتصادات في العالم لعام 2019 بالناتج المحلي الإجمالي، و**الولايات المتحدة** في المرتبة الأولى بفارق واضح عن **الصين**.",
    "remember": "2019: **أمريكا 24.4%** → **الصين 16.3%** → اليابان → ألمانيا.",
    "distractors": "ج — الصين الثانية بـ 16.3%.",
    "pages": [
@@ -997,6 +1053,44 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "ans_table": {
+    "head": [
+     "#",
+     "الدولة",
+     "GDP (تريليون $)",
+     "% من GDP العالم"
+    ],
+    "rows": [
+     [
+      1,
+      "الولايات المتحدة",
+      "21.4",
+      "24.4%"
+     ],
+     [
+      2,
+      "الصين",
+      "14.3",
+      "16.3%"
+     ],
+     [
+      3,
+      "اليابان",
+      "5.1",
+      "5.8%"
+     ],
+     [
+      4,
+      "ألمانيا",
+      "3.9",
+      "4.4%"
+     ]
+    ],
+    "caption": "الجدول 1-1: أكبر اقتصاديات العالم لعام 2019 — أول أربع دول (ص16)",
+    "ltr": false
+   },
+   "table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -1040,6 +1134,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -1077,6 +1174,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -1116,6 +1216,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -1153,6 +1256,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -1188,6 +1294,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -1222,6 +1331,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -1256,6 +1368,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -1292,6 +1407,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -1331,6 +1449,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -1370,6 +1491,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -1420,6 +1544,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 4,
    "focus": false
@@ -1467,6 +1594,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 2,
    "focus": true
@@ -1514,6 +1644,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": false
@@ -1562,6 +1695,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": false
@@ -1606,6 +1742,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -1653,6 +1792,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": false
@@ -1698,6 +1840,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -1743,6 +1888,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -1792,6 +1940,9 @@
    "sci": null,
    "low_conf": "صيغة F17 منقولة من الذاكرة وخياراتها تتضمن «البحوث التسويقية» التي يذكرها الكتاب أيضاً كمجال يتأثر بالتعليم.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": false
@@ -1841,6 +1992,9 @@
    "sci": null,
    "low_conf": "الخيار «متكاملة» غير موجود في خصائص الكتاب الحالي، والإجابة منقولة من ذاكرة الطلاب.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -1890,6 +2044,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -1929,6 +2086,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -1976,6 +2136,9 @@
    "sci": null,
    "low_conf": "السؤال مدوَّن من الذاكرة كقائمة أبعاد مع شطب أحدها، فصيغته الأصلية غير مؤكدة.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -2023,6 +2186,9 @@
    "sci": null,
    "low_conf": "الخيارات منقولة جزئياً من الذاكرة ولم يُحفظ نصها كاملاً.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -2062,6 +2228,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 3,
    "focus": false
@@ -2101,6 +2270,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 3,
    "focus": false
@@ -2137,6 +2309,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 3,
    "focus": false
@@ -2176,6 +2351,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 3,
    "focus": false
@@ -2212,6 +2390,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -2252,6 +2433,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -2295,6 +2479,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -2338,6 +2525,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -2384,6 +2574,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -2424,6 +2617,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -2462,6 +2658,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -2498,6 +2697,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -2533,6 +2735,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -2570,6 +2775,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -2606,6 +2814,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -2642,6 +2853,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -2676,6 +2890,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -2710,6 +2927,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -2744,6 +2964,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -2779,6 +3002,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -2815,6 +3041,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -2849,6 +3078,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -2898,6 +3130,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -2945,6 +3180,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -2987,6 +3225,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -3033,6 +3274,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -3082,6 +3326,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 5,
    "freq": 4,
    "focus": true
@@ -3121,6 +3368,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -3166,6 +3416,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -3213,6 +3466,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -3258,6 +3514,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -3304,6 +3563,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -3340,6 +3602,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -3350,6 +3615,7 @@
    "sub": "3-1-2",
    "subname": "المخاطر السياسية (نزع الملكية، المصادرة، التأميم، الأهلنة)",
    "types": [
+    "exam",
     "other"
    ],
    "qtype": "short",
@@ -3364,21 +3630,28 @@
     95
    ],
    "sources": [
+    "F25",
     "EMAD"
    ],
-   "exam_sources": [],
+   "exam_sources": [
+    "F25"
+   ],
    "reconstructed": false,
    "original": null,
    "variants": [
-    "ملخص عماد: الأهلنة مثل نزع الملكية والتأميم لكن بطرق دبلوماسية باستخدام القانون (تقنين عدد العاملين، منع تحويل الأرباح) مما يسبب انسحاب الشركة"
+    "ملخص عماد: الأهلنة مثل نزع الملكية والتأميم لكن بطرق دبلوماسية باستخدام القانون (تقنين عدد العاملين، منع تحويل الأرباح) مما يسبب انسحاب الشركة",
+    "F25 (تذكّر): تعريف الأهلنة"
    ],
    "book_says": null,
    "other_source": null,
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 2,
-   "freq": 1,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
+   "importance": 3,
+   "freq": 2,
    "focus": true
   },
   {
@@ -3413,6 +3686,9 @@
    "sci": null,
    "low_conf": "الطالب دوّن كلمة «التزييف؟» فقط دون نص السؤال أو خياراته.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -3455,6 +3731,9 @@
    "sci": null,
    "low_conf": "السؤال منقول من الذاكرة بخيارين فقط وأُكملت الخيارات الباقية من مصطلحات الفصل.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -3500,6 +3779,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -3538,6 +3820,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 3,
    "focus": false
@@ -3574,6 +3859,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -3610,6 +3898,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -3645,6 +3936,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -3681,6 +3975,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -3716,6 +4013,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -3751,6 +4051,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -3787,6 +4090,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -3822,6 +4128,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -3860,6 +4169,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -3902,6 +4214,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -3951,6 +4266,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 5,
    "freq": 3,
    "focus": true
@@ -4001,6 +4319,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -4048,6 +4369,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -4092,6 +4416,9 @@
    "sci": null,
    "low_conf": "الكتاب يذكر «طريقتين» صراحةً للاستفادة من بيانات الاتصالات، أما الخدمات المساعدة فيذكرها كعامل مستقل «بنفس الأهمية»؛ الإجابة (جميع ما سبق) هي ما أورده طالب S24.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -4137,6 +4464,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 2,
    "focus": true
@@ -4186,6 +4516,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -4213,24 +4546,32 @@
    "pages": [
     132,
     141,
-    143
+    143,
+    156
    ],
    "sources": [
-    "F17"
+    "F17",
+    "F25"
    ],
    "exam_sources": [
-    "F17"
+    "F17",
+    "F25"
    ],
    "reconstructed": true,
    "original": "F17: متوسط دخل الفرد من العوامل المؤثرة في؟ حجم السوق",
-   "variants": [],
+   "variants": [
+    "F25: من العوامل المؤثرة على حجم السوق: عدد السكان / دخل الفرد / إجمالي الدخل القومي / كل ما سبق — هنا الجواب «كل ما سبق»: محددات حجم السوق في الكتاب هي السكان (4-1-1) والدخل بما فيه متوسط دخل الفرد وإجمالي الدخل القومي (4-1-2، ص132 و141 و156)"
+   ],
    "book_says": null,
    "other_source": null,
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 3,
-   "freq": 1,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
+   "importance": 4,
+   "freq": 2,
    "focus": true
   },
   {
@@ -4271,6 +4612,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -4316,6 +4660,9 @@
    "sci": null,
    "low_conf": "الكتاب لا يذكر منتجات المسنين صراحةً، والإجابة مستنتَجة من نمط التوزيع العمري (ص138).",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -4351,6 +4698,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -4386,6 +4736,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -4426,6 +4779,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -4463,6 +4819,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -4498,6 +4857,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -4534,6 +4896,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -4573,6 +4938,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -4613,6 +4981,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -4634,7 +5005,7 @@
     "المتوسط الأعلى"
    ],
    "ans": 3,
-   "why": "تصنيف البنك الدولي: منخفض **<1,036**، متوسط منخفض **1,036–4,045**، متوسط أعلى **4,046–12,535**، مرتفع **≥12,535** دولاراً؛ والبرازيل أكبر دولة في أمريكا اللاتينية ضمن **المتوسط الأعلى**.",
+   "why": "يذكر الكتاب **البرازيل**، أكبر دولة في أمريكا اللاتينية اقتصاداً وسكاناً ومساحة، مثالاً على البلدان ذات **الدخل المتوسط الأعلى** في تصنيف البنك الدولي بحسب نصيب الفرد من الدخل القومي الإجمالي.",
    "remember": "**البرازيل = متوسط أعلى** (4,046–12,535$)؛ الحدود: **1,036 / 4,045 / 12,535**.",
    "distractors": null,
    "pages": [
@@ -4654,6 +5025,34 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "ans_table": {
+    "head": [
+     "فئة الدخل",
+     "نصيب الفرد من GNI (دولار)"
+    ],
+    "rows": [
+     [
+      "منخفض",
+      "أقل من 1,036"
+     ],
+     [
+      "متوسط منخفض",
+      "من 1,036 إلى 4,045"
+     ],
+     [
+      "متوسط أعلى",
+      "من 4,046 إلى 12,535"
+     ],
+     [
+      "مرتفع",
+      "أكثر من 12,535"
+     ]
+    ],
+    "caption": "تصنيف البنك الدولي للدول تبعاً للدخل الفردي، 2020 (الشكل 4-4، ص143)",
+    "ltr": false
+   },
+   "table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -4691,6 +5090,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -4730,6 +5132,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -4768,6 +5173,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -4804,6 +5212,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -4840,6 +5251,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -4877,6 +5291,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -4912,6 +5329,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -4947,6 +5367,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -4984,6 +5407,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -5023,6 +5449,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -5052,21 +5481,28 @@
     179
    ],
    "sources": [
-    "F24"
+    "F24",
+    "F25"
    ],
    "exam_sources": [
-    "F24"
+    "F24",
+    "F25"
    ],
    "reconstructed": false,
    "original": null,
-   "variants": [],
+   "variants": [
+    "F25: يختلف البحث التسويقي الدولي عن المحلي في: أدوات البحث / أهداف البحث / مصادر المعلومات / ليس أي مما سبق (الخيارات نفسها، ولم يُنقل جواب)"
+   ],
    "book_says": null,
    "other_source": "طالب F24 اختار «لا شيء مما سبق» وصرّح بأنه غير متأكد — الكتاب يذكر اختلاف مصادر المعلومات والتنفيذ (ص178).",
    "sci": null,
    "low_conf": "دعم الكتاب لخيار «مصادر المعلومات» جملة عابرة (ص178)، وطالب F24 لم يكن متأكداً من إجابته.",
    "notes": null,
-   "importance": 2,
-   "freq": 1,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
+   "importance": 3,
+   "freq": 2,
    "focus": false
   },
   {
@@ -5111,6 +5547,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 2,
    "focus": true
@@ -5157,6 +5596,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": false
@@ -5198,6 +5640,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -5241,6 +5686,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -5281,6 +5729,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -5316,6 +5767,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -5351,6 +5805,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -5386,6 +5843,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -5422,6 +5882,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -5457,6 +5920,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -5492,6 +5958,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -5532,6 +6001,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -5542,6 +6014,7 @@
    "sub": "5-2",
    "subname": "قواعد البيانات ومخازنها والبيانات الضخمة",
    "types": [
+    "exam",
     "textbook"
    ],
    "qtype": "mcq",
@@ -5561,20 +6034,28 @@
     176
    ],
    "sources": [
+    "F25",
     "BOOK",
     "ASEM"
    ],
-   "exam_sources": [],
+   "exam_sources": [
+    "F25"
+   ],
    "reconstructed": false,
    "original": null,
-   "variants": [],
+   "variants": [
+    "F25: ليس من خصائص البيانات الضخمة: الحجم / التنوع / السرعة / الملاءمة — هنا الجواب «الملاءمة»: مبدأ 3V في الكتاب هو الحجم والتنوع والسرعة فقط (ص175–176)"
+   ],
    "book_says": null,
    "other_source": null,
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 3,
-   "freq": 2,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
+   "importance": 4,
+   "freq": 3,
    "focus": true
   },
   {
@@ -5616,6 +6097,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -5651,6 +6135,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -5689,6 +6176,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -5728,6 +6218,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -5768,6 +6261,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -5821,6 +6317,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 5,
    "freq": 5,
    "focus": false
@@ -5869,6 +6368,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -5914,6 +6416,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -5960,6 +6465,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -6005,6 +6513,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -6052,6 +6563,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -6097,6 +6611,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -6142,6 +6659,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -6183,6 +6703,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -6233,6 +6756,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -6283,6 +6809,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 4,
    "focus": true
@@ -6329,6 +6858,9 @@
    "sci": null,
    "low_conf": "الطالب دوّن الفكرة لا نص السؤال، فالصياغة والخيارات مُعادة البناء.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -6374,6 +6906,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -6409,6 +6944,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -6446,6 +6984,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -6487,6 +7028,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 3,
    "focus": false
@@ -6526,6 +7070,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 3,
    "focus": false
@@ -6561,6 +7108,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -6597,6 +7147,9 @@
    "sci": null,
    "low_conf": "تناقض بين نص الفصل ومفتاح مراجعته؛ في الامتحان اختر الصيغة المطابقة لنص الفصل (عقود التصنيع) إن وُجدت.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -6634,6 +7187,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -6673,6 +7229,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -6711,6 +7270,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -6750,6 +7312,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -6791,6 +7356,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -6832,6 +7400,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -6878,6 +7449,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -6917,6 +7491,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -6954,6 +7531,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -6990,6 +7570,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -7027,6 +7610,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -7064,6 +7650,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -7101,6 +7690,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -7138,6 +7730,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -7172,6 +7767,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -7208,6 +7806,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -7245,6 +7846,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -7279,6 +7883,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -7321,6 +7928,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -7370,6 +7980,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 4,
    "focus": true
@@ -7416,6 +8029,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 2,
    "focus": true
@@ -7458,6 +8074,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -7489,24 +8108,30 @@
    ],
    "sources": [
     "F24",
+    "F25",
     "EMAD"
    ],
    "exam_sources": [
-    "F24"
+    "F24",
+    "F25"
    ],
    "reconstructed": false,
    "original": null,
    "variants": [
-    "ملخص عماد: يمكن لبلد المنشأ أن تؤثر بتقييم المنتج في ذهن المستهلك (صح – كإنتاج فرنسا للعطور)"
+    "ملخص عماد: يمكن لبلد المنشأ أن تؤثر بتقييم المنتج في ذهن المستهلك (صح – كإنتاج فرنسا للعطور)",
+    "F25 (تذكّر، بلا خيارات): سؤال عن تأثير دولة المنشأ، مثاله: السيارات الألمانية جيدة"
    ],
    "book_says": null,
    "other_source": null,
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 2,
-   "freq": 2,
-   "focus": false
+   "table": null,
+   "ans_table": null,
+   "calc": null,
+   "importance": 4,
+   "freq": 3,
+   "focus": true
   },
   {
    "id": "Q07-006",
@@ -7548,6 +8173,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -7593,6 +8221,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -7639,6 +8270,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -7676,6 +8310,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -7719,6 +8356,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -7756,6 +8396,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -7801,6 +8444,9 @@
    "sci": null,
    "low_conf": "صيغة السؤال منقولة من الذاكرة بتعبير «أو فيما معناه».",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -7846,6 +8492,9 @@
    "sci": null,
    "low_conf": "السؤال منقول من الذاكرة بخيار واحد فقط، وأُكملت الخيارات.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -7895,6 +8544,9 @@
    "sci": null,
    "low_conf": "الإجابة مستندة إلى المنهاج الأقدم وذاكرة الطلاب، والكتاب الحالي لا يحسمها.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -7942,6 +8594,9 @@
    "sci": null,
    "low_conf": "السؤال من المنهاج الأقدم ولا يقابله نص مطابق في الكتاب الحالي.",
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -7982,6 +8637,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -8020,6 +8678,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -8056,6 +8717,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -8092,6 +8756,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -8132,6 +8799,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -8173,6 +8843,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -8218,6 +8891,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 3,
    "focus": false
@@ -8253,6 +8929,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -8294,6 +8973,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -8330,9 +9012,12 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 2,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
+   "importance": 3,
    "freq": 1,
-   "focus": false
+   "focus": true
   },
   {
    "id": "Q07-027",
@@ -8365,6 +9050,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -8399,6 +9087,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -8434,6 +9125,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -8474,6 +9168,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "ans_table": null,
+   "calc": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -8523,6 +9220,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -8575,9 +9275,12 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 4,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 5,
    "freq": 4,
-   "focus": false
+   "focus": true
   },
   {
    "id": "Q09-003",
@@ -8623,6 +9326,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 3,
    "focus": false
@@ -8674,6 +9380,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 4,
    "freq": 4,
    "focus": true
@@ -8720,6 +9429,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -8769,6 +9481,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -8811,6 +9526,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 3,
    "focus": false
@@ -8859,6 +9577,9 @@
    "sci": null,
    "low_conf": "الطالب دوّن موضوع السؤال فقط، والخيارات مُعادة البناء من نص الكتاب.",
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 4,
    "freq": 4,
    "focus": true
@@ -8895,6 +9616,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -8931,6 +9655,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -8966,6 +9693,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -9010,6 +9740,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 3,
    "focus": false
@@ -9050,9 +9783,12 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 2,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
    "freq": 2,
-   "focus": false
+   "focus": true
   },
   {
    "id": "Q09-014",
@@ -9090,6 +9826,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -9127,6 +9866,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -9161,6 +9903,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -9198,6 +9943,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -9235,6 +9983,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -9271,7 +10022,98 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
+   "freq": 1,
+   "focus": true
+  },
+  {
+   "id": "Q09-020",
+   "ch": 9,
+   "sub": "9-3-1",
+   "subname": "العوامل الداخلية المؤثرة على الأسعار",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "ليس من أهداف التسعير:",
+   "options": [
+    "نمو المبيعات",
+    "زيادة الأرباح",
+    "بناء العلامة الذهنية للشركة",
+    "ليس أي مما سبق"
+   ],
+   "ans": 3,
+   "why": "أهداف التسعير في الكتاب إما **مرتبطة بالمبيعات** (نمو المبيعات أو حصة سوقية) أو **مرتبطة بالأرباح** (عائد مستهدف على الاستثمار)، وقد تأخذ أشكالاً أخرى مثل **بناء صورة معينة للشركة** أو عكس الطابع الأخلاقي؛ فالخيارات الثلاثة كلها أهداف.",
+   "remember": "أهداف التسعير: **مبيعات (اليابانية) / أرباح (الأمريكية) / صورة الشركة / طابع أخلاقي**.",
+   "distractors": null,
+   "pages": [
+    304
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": false,
+   "original": null,
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": null,
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
+   "freq": 1,
+   "focus": true
+  },
+  {
+   "id": "Q09-021",
+   "ch": 9,
+   "sub": "9-3-2",
+   "subname": "العوامل الخارجية (المنافسة، الطلب، القواعد الحكومية)",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "المثال الأقرب لظروف سوق المنافسة الكاملة:",
+   "options": [
+    "أسواق الحاصلات الزراعية",
+    "صناعة السيارات والكمبيوترات",
+    "أسواق الأجهزة الكهربائية والملابس والأثاث"
+   ],
+   "ans": 0,
+   "why": "يندر أن تسود **المنافسة الكاملة** اليوم لأن المنتجين يميّزون سلعهم، والأقرب إليها أسواق السلع واسعة الانتشار التي يصعب تمييزها: **الحاصلات الزراعية** و**الأوراق المالية** و**بورصة الذهب**.",
+   "remember": "**منافسة كاملة ≈ زراعة، أسهم، ذهب**؛ **احتكار قلة = سيارات، كمبيوتر**؛ **منافسة احتكارية = غذاء، أجهزة، ملابس**.",
+   "distractors": "ب — مثال الكتاب على **احتكار القلة**؛ ج — مثال الكتاب على **المنافسة الاحتكارية**.",
+   "pages": [
+    307,
+    308
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": true,
+   "original": "F25 (تذكّر، بلا خيارات): المثال الأقرب لسوق المنافسة الكاملة (ملاحظة الطالب: سوق الحاصلات الزراعية)",
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": null,
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
    "freq": 1,
    "focus": true
   },
@@ -9313,6 +10155,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -9356,6 +10201,9 @@
    "sci": null,
    "low_conf": "الطالب غير متأكد من إجابته، والجواب مستنتَج من قول الكتاب إن الكثافة تؤثر في الطول وليس العكس.",
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -9384,21 +10232,28 @@
     334
    ],
    "sources": [
-    "F24"
+    "F24",
+    "F25"
    ],
    "exam_sources": [
-    "F24"
+    "F24",
+    "F25"
    ],
    "reconstructed": false,
    "original": null,
-   "variants": [],
+   "variants": [
+    "F25: تكاليف التوزيع هي: تكاليف الوسطاء / تكلفة الاستثمار / تكلفة الصيانة / كل ما سبق — بهذه الخيارات الأقرب «كل ما سبق»: الكتاب يميّز في تكلفة القناة تكلفة رأس المال أو الاستثمار لتطوير القناة والتكلفة المستمرة لصيانتها، وتكاليف التوزيع تشمل تكاليف الوسطاء (ص334)؛ لم يُنقل جواب الطلاب"
+   ],
    "book_says": null,
    "other_source": null,
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 3,
-   "freq": 1,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 4,
+   "freq": 2,
    "focus": true
   },
   {
@@ -9443,6 +10298,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 3,
    "focus": false
@@ -9487,6 +10345,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -9537,6 +10398,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 4,
    "freq": 4,
    "focus": true
@@ -9582,6 +10446,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -9627,6 +10494,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -9672,6 +10542,9 @@
    "sci": null,
    "low_conf": "الطالب دوّن «عدة خيارات» دون نصها، فالخيارات مُعادة البناء من نص الكتاب.",
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -9714,6 +10587,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -9758,6 +10634,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -9809,6 +10688,9 @@
    "sci": null,
    "low_conf": "السؤال من المنهاج الأقدم ولا يقابله نص مطابق في الكتاب الحالي.",
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -9845,6 +10727,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -9880,6 +10765,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -9915,6 +10803,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -9951,6 +10842,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -9991,6 +10885,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -10033,6 +10930,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -10074,6 +10974,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -10112,6 +11015,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -10150,6 +11056,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -10187,6 +11096,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -10224,6 +11136,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -10259,6 +11174,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -10293,6 +11211,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -10328,6 +11249,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -10369,9 +11293,57 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 0,
    "focus": false
+  },
+  {
+   "id": "Q10-028",
+   "ch": 10,
+   "sub": "10-2",
+   "subname": "هيكل قناة التوزيع (مباشرة/غير مباشرة)",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "من عيوب قنوات التوزيع غير المباشرة:",
+   "options": [
+    "ارتفاع الكلفة",
+    "ضعف السيطرة على المنتج",
+    "عدم الاستقرار",
+    "كل ما سبق"
+   ],
+   "ans": 1,
+   "why": "أهم عيوب القنوات **غير المباشرة** في الكتاب **فقدان السيطرة والرقابة** على المنتجات، ومعه **عدم الاستقرار**؛ أما **زيادة التكاليف** فعيب القنوات **المباشرة**.",
+   "remember": "**غير مباشرة**: كلفة تصدير منخفضة + **سيطرة ضعيفة + عدم استقرار**؛ **مباشرة**: سيطرة أكبر + **كلفة أعلى**.",
+   "distractors": "أ — عيب القنوات المباشرة؛ ج — صحيح أيضاً لكن الكتاب يقدّم فقدان السيطرة بوصفه الأهم؛ د — خطأ بسبب أ.",
+   "pages": [
+    329,
+    330
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": false,
+   "original": null,
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": "الخياران ب وج كلاهما من عيوب القنوات غير المباشرة في الكتاب (ص330)، والصيغة المنقولة تطلب خياراً واحداً؛ اختير ب لأن الكتاب يسميه «أهمها». لم يُنقل جواب الطلاب.",
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
+   "freq": 1,
+   "focus": true
   },
   {
    "id": "Q11-001",
@@ -10400,15 +11372,18 @@
    "sources": [
     "F24",
     "S24",
+    "F25",
     "EMAD"
    ],
    "exam_sources": [
     "F24",
-    "S24"
+    "S24",
+    "F25"
    ],
    "reconstructed": false,
    "original": null,
    "variants": [
+    "F25: اشتراط المكسيك وفرنسا استخدام اللغة الإسبانية والفرنسية في أسواقها هو تدخل حكومي في: الوسيلة الإعلانية / الرسالة الإعلانية / وكالة الإعلان / المنتج",
     "S24: يعتبر اشتراط كل من فرنسا والمكسيك استخدام لغة فرنسية وإسبانية تدخلاً حكومياً في: منتج / معلن عنه …",
     "ملخص عماد: تمنع بعض الدول قانونياً الإعلان المقارن (صح)"
    ],
@@ -10417,8 +11392,11 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 4,
-   "freq": 3,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 5,
+   "freq": 4,
    "focus": true
   },
   {
@@ -10466,6 +11444,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 4,
    "focus": false
@@ -10517,6 +11498,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 4,
    "freq": 3,
    "focus": true
@@ -10565,6 +11549,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 4,
    "focus": false
@@ -10615,6 +11602,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 4,
    "freq": 4,
    "focus": true
@@ -10660,6 +11650,9 @@
    "sci": null,
    "low_conf": "الطالب دوّن موضوع السؤال فقط، والخيارات مُعادة البناء من نص الكتاب.",
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -10706,6 +11699,9 @@
    "sci": null,
    "low_conf": "خيارا الطالب كانا «عالمية/دولية» ولا يميّز الكتاب بينهما، فأُعيد بناء الخيارات.",
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -10755,6 +11751,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 4,
    "freq": 4,
    "focus": true
@@ -10800,6 +11799,9 @@
    "sci": null,
    "low_conf": "الطالب دوّن السؤال دون خياراته، فالخيارات مُعادة البناء من نص الكتاب.",
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -10845,6 +11847,9 @@
    "sci": null,
    "low_conf": "الكتاب لا يذكر مزايا الطريقة صراحةً.",
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -10881,6 +11886,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -10919,6 +11927,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 3,
    "focus": true
@@ -10960,6 +11971,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -11000,6 +12014,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -11041,6 +12058,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -11081,6 +12101,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -11116,6 +12139,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -11153,6 +12179,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 1,
    "focus": false
@@ -11191,6 +12220,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -11225,6 +12257,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": true
@@ -11266,6 +12301,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -11306,9 +12344,100 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 0,
    "focus": false
+  },
+  {
+   "id": "Q11-023",
+   "ch": 11,
+   "sub": "11-4-1",
+   "subname": "اختيار وكالة الإعلان",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "من أسباب اختيار وكالة إعلان محلية:",
+   "options": [
+    "جودة الخدمة المقدمة",
+    "تنسيق الجهود الإعلانية في كل الأسواق",
+    "خلق صورة ذهنية محلية للشركة",
+    "كل ما سبق"
+   ],
+   "ans": 0,
+   "why": "**أهم أسباب** اختيار وكالة محلية في الكتاب **جودة الخدمة** بفضل مرونة الوكالة الوطنية وسرعتها، ومنها أيضاً **صورة ذهنية محلية** للشركة؛ أما **التنسيق بين الأسواق** فيدعو إلى **وكالة دولية**.",
+   "remember": "**محلية**: جودة الخدمة (الأهم) + صورة محلية + تفويض الوحدات الوطنية؛ **دولية**: تنسيق ومظهر موحد.",
+   "distractors": "ب — سبب لاختيار وكالة دولية؛ ج — صحيح أيضاً في الكتاب؛ د — خطأ بسبب ب.",
+   "pages": [
+    373,
+    374
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": false,
+   "original": null,
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": "الخياران أ وج كلاهما من أسباب اختيار الوكالة المحلية في الكتاب (ص374)، والصيغة المنقولة تطلب خياراً واحداً؛ اختير أ لأن الكتاب يسميه «أهم أسباب» الاختيار. لم يُنقل جواب الطلاب.",
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
+   "freq": 1,
+   "focus": true
+  },
+  {
+   "id": "Q11-024",
+   "ch": 11,
+   "sub": "11-3",
+   "subname": "المحددات الرئيسية للبرنامج الإعلاني",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "منع الدول للإعلان المقارن هو تدخل حكومي في:",
+   "options": [
+    "الوسيلة الإعلانية",
+    "الرسالة الإعلانية",
+    "المنتج"
+   ],
+   "ans": 1,
+   "why": "يعدّ الكتاب من الموانع على **رسالة الإعلان**: اشتراط لغة البلد (فرنسا والمكسيك)، ومنع **الإعلان المقارن** (Comparative Advertising) في دول عديدة، واشتراط موافقة هيئات قبل النشر.",
+   "remember": "**إعلان مقارن / لغة / موافقة مسبقة = الرسالة**؛ **سجائر وكحول = المنتج**؛ **منع التلفزيون = الوسيلة**.",
+   "distractors": "أ — قيود الوسيلة منعُ الإعلان في وسائل بعينها (الإذاعة والتلفزيون في خمس دول أوروبية، إندونيسيا)؛ ج — قيود المنتج منعُ الإعلان عن سلع بعينها (السجائر والكحول والعقاقير).",
+   "pages": [
+    368
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": false,
+   "original": null,
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": null,
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
+   "freq": 1,
+   "focus": true
   },
   {
    "id": "Q12-001",
@@ -11353,6 +12482,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 3,
    "focus": false
@@ -11399,9 +12531,12 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 3,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 4,
    "freq": 2,
-   "focus": false
+   "focus": true
   },
   {
    "id": "Q12-003",
@@ -11443,6 +12578,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -11485,9 +12623,12 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 3,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 2,
    "freq": 1,
-   "focus": true
+   "focus": false
   },
   {
    "id": "Q12-005",
@@ -11526,6 +12667,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -11562,6 +12706,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -11598,9 +12745,12 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 2,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
    "freq": 2,
-   "focus": false
+   "focus": true
   },
   {
    "id": "Q12-008",
@@ -11633,6 +12783,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -11669,6 +12822,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -11710,6 +12866,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 2,
    "focus": true
@@ -11751,9 +12910,12 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 3,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 2,
    "freq": 2,
-   "focus": true
+   "focus": false
   },
   {
    "id": "Q12-012",
@@ -11793,6 +12955,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
@@ -11830,6 +12995,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 1,
    "focus": false
@@ -11870,6 +13038,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 3,
    "freq": 1,
    "focus": true
@@ -11906,9 +13077,12 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
-   "importance": 3,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 2,
    "freq": 1,
-   "focus": true
+   "focus": false
   },
   {
    "id": "Q12-016",
@@ -11947,6 +13121,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -11987,9 +13164,56 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 0,
    "focus": false
+  },
+  {
+   "id": "Q12-018",
+   "ch": 12,
+   "sub": "12-2-2",
+   "subname": "تدريب مندوبي البيع",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "ليس من ميزات التدريب البيعي المخصص للمنتجات مرتفعة السعر في المركز الرئيسي:",
+   "options": [
+    "يحقق وفورات الحجم",
+    "مدربون بمستوى أعلى",
+    "تسهيلات وتجهيزات أكثر جودة",
+    "ليس أي مما سبق"
+   ],
+   "ans": 3,
+   "why": "للمنتجات **مرتفعة السعر أو عالية التقنية** (الصناعية) يتم التدريب في **المركز الرئيسي أو الإقليمي**، حيث توفر الشركة **تسهيلات وتجهيزات أكثر جودة** و**مدربين أعلى مستوى** مما يساعد على **وفورات الحجم**؛ فالخيارات الثلاثة كلها ميزات.",
+   "remember": "تدريب المركز الرئيسي = **تجهيزات أجود + مدربون أعلى + وفورات حجم** (منتجات صناعية، مرتفعة السعر، عالية التقنية).",
+   "distractors": null,
+   "pages": [
+    403
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": false,
+   "original": null,
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": null,
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
+   "freq": 1,
+   "focus": true
   },
   {
    "id": "Q02-042",
@@ -12031,9 +13255,308 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 2,
    "freq": 2,
    "focus": false
+  },
+  {
+   "id": "Q04-029",
+   "ch": 4,
+   "sub": "4-1-2-2",
+   "subname": "متوسط دخل الفرد (أوجه القصور، قانون السعر الواحد، PPP)",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "وفق تصنيف البنك الدولي للدول حسب الدخل الفردي، يبلغ نصيب الفرد من الدخل القومي الإجمالي في البلدان ذات الدخل المتوسط الأعلى:",
+   "options": [
+    "أقل من 1,036 دولاراً",
+    "من 1,036 إلى 4,045 دولاراً",
+    "من 4,046 إلى 12,535 دولاراً",
+    "أكثر من 12,535 دولاراً"
+   ],
+   "ans": 2,
+   "why": "الكتاب يقسّم الدول بحسب **نصيب الفرد من الدخل القومي الإجمالي** إلى أربع فئات، و**المتوسط الأعلى** (البلدان الصناعية أو النامية، ومثالها **البرازيل**) هي الفئة الثالثة بينها.",
+   "remember": "**متوسط أعلى = 4,046–12,535$** (البرازيل)؛ الحدود: **1,036 / 4,045 / 12,535**.",
+   "distractors": "أ — الدخل المنخفض؛ ب — الدخل المتوسط المنخفض (الصين وإندونيسيا وتايلاند)؛ د — الدخل المرتفع.",
+   "pages": [
+    143,
+    144
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": true,
+   "original": "F25 (تذكّر، بلا خيارات): يبلغ دخل الدول في المتوسط الأعلى: 4046 – 12535 (سؤال عن فئات الدخل)",
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": null,
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": {
+    "head": [
+     "فئة الدخل",
+     "نصيب الفرد من GNI (دولار)"
+    ],
+    "rows": [
+     [
+      "منخفض",
+      "أقل من 1,036"
+     ],
+     [
+      "متوسط منخفض",
+      "من 1,036 إلى 4,045"
+     ],
+     [
+      "متوسط أعلى",
+      "من 4,046 إلى 12,535"
+     ],
+     [
+      "مرتفع",
+      "أكثر من 12,535"
+     ]
+    ],
+    "caption": "تصنيف البنك الدولي للدول تبعاً للدخل الفردي، 2020 (الشكل 4-4، ص143)",
+    "ltr": false
+   },
+   "importance": 3,
+   "freq": 1,
+   "focus": true
+  },
+  {
+   "id": "Q05-031",
+   "ch": 5,
+   "sub": "5-1",
+   "subname": "نظم المعلومات الإدارية والتسويقية",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "إجراء مستمر ومنظم لاسترجاع وتحليل ونشر المعلومات يساعد في اتخاذ قرارات التسويق:",
+   "options": [
+    "نظام دعم القرار",
+    "نظام تكنولوجيا المعلومات",
+    "أبحاث التسويق",
+    "نظام معلومات التسويق"
+   ],
+   "ans": 3,
+   "why": "تعريف الكتاب للنظام الذي يزوّد **مدراء التسويق** بالمعلومات: إجراء **مستمر ومنظم** لاسترجاعها وتحليلها ونشرها وتخزينها لاستخدامها في **قرارات التسويق**.",
+   "remember": "**مستمر ومنظم** = نظام معلومات التسويق؛ **تفاعلي** = دعم القرار؛ **لتساؤل محدد** = أبحاث التسويق.",
+   "distractors": "أ — دعم القرار نظام **تفاعلي** يتيح التعامل مع البيانات مباشرة؛ ب — تقنيات جمع المعلومات وتخزينها وتبادلها؛ ج — أبحاث التسويق تُجرى **لتساؤلات محددة** لا بشكل مستمر.",
+   "pages": [
+    171,
+    172
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": false,
+   "original": null,
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": null,
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
+   "freq": 1,
+   "focus": true
+  },
+  {
+   "id": "Q05-032",
+   "ch": 5,
+   "sub": "5-3-1",
+   "subname": "تحديد المشكلة",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "ليس من أدوات تحديد مشكلة البحث:",
+   "options": [
+    "تحليل البيانات الثانوية",
+    "نقاشات مع صناع القرار",
+    "مقابلات مع الخبراء",
+    "ليس أي مما سبق"
+   ],
+   "ans": 3,
+   "why": "يتضمن **تحديد المشكلة** في الكتاب: **نقاشات مع صناع القرار**، و**مقابلات مع الخبراء** (في الصناعة مثلاً)، و**تحليل البيانات الثانوية**، وأحياناً **بحوثاً نوعية** كمجموعات التركيز؛ فالخيارات الثلاثة الأولى كلها أدوات لتحديد المشكلة.",
+   "remember": "أدوات تحديد المشكلة: **نقاشات مع صناع القرار + مقابلات الخبراء + البيانات الثانوية + بحوث نوعية**.",
+   "distractors": null,
+   "pages": [
+    181
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": true,
+   "original": "F25: ليس من أدوات تحديد مشكلة البحث: تحليل البيانات الثانوية / نقاشات مع صناع القرار / مقابلات مع الخبراء / (خيار رابع لم يُتذكّر؛ ملاحظة الطالب: الجواب هو الخيار الأخير)",
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": "الخيار الرابع لم يُتذكّر وأُعيد بناؤه بصيغة «ليس أي مما سبق»؛ الكتاب يعدّ الخيارات الثلاثة المنقولة أدواتٍ لتحديد المشكلة (ص181)، فالجواب هو الخيار الرابع أياً كانت صيغته في الامتحان.",
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 2,
+   "freq": 1,
+   "focus": false
+  },
+  {
+   "id": "Q07-031",
+   "ch": 7,
+   "sub": "7-3-3",
+   "subname": "الضمان",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "يكون الضمان موحداً في حالة:",
+   "options": [
+    "تشابه الأسواق الدولية",
+    "اختلاف ظروف الاستهلاك",
+    "المنافسة الشديدة",
+    "ليس أي مما سبق"
+   ],
+   "ans": 0,
+   "why": "من اعتبارات توحيد الضمان **طبيعة السوق**: إن عومل السوق الدولي كسوق واحد (الاتحاد الأوروبي) يُفضَّل ضمان **موحد**؛ واختلاف **ظروف الاستخدام** يدفع إلى تعديله (المكيفات في السعودية مقابل سويسرا).",
+   "remember": "**سوق واحد/متشابه ← ضمان موحد**؛ **ظروف استخدام مختلفة ← ضمان معدَّل**.",
+   "distractors": "ب — ظروف الاستخدام المختلفة تقتضي تعديل الضمان؛ ج — المنافسة قد تفرض مجاراة ضمان المنافسين في كل سوق، لا التوحيد.",
+   "pages": [
+    247,
+    248
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": false,
+   "original": null,
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": null,
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
+   "freq": 1,
+   "focus": true
+  },
+  {
+   "id": "Q07-032",
+   "ch": 7,
+   "sub": "7-3-4",
+   "subname": "الخدمة",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "الاحتياجات المطلوب تقييمها لدى وضع شروط الخدمة:",
+   "options": [
+    "اختلاف معدل الاستهلاك",
+    "الظروف الجوية",
+    "المهارات الفنية للمستهلكين",
+    "كل ما سبق"
+   ],
+   "ans": 3,
+   "why": "يحتاج وضع **سياسة الخدمة** في الأسواق الدولية إلى **تقييم موضوعي للاحتياجات** التي تختلف بين الأسواق بسبب اختلاف **معدل الاستخدام** و**الظروف الجوية** و**المهارات الفنية لمستخدمي السلعة**.",
+   "remember": "احتياجات الخدمة تختلف بـ: **معدل الاستخدام، الطقس، مهارات المستخدمين**؛ ومتطلباتها **قطع الغيار + عمالة مدربة**.",
+   "distractors": null,
+   "pages": [
+    249,
+    250
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": false,
+   "original": null,
+   "variants": [
+    "F25 (الاستذكار الثاني): تذكّر منه خياري «معدل الاستخدام» و«الظروف الجوية» فقط"
+   ],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": null,
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 2,
+   "freq": 1,
+   "focus": false
+  },
+  {
+   "id": "Q07-033",
+   "ch": 7,
+   "sub": "7-4",
+   "subname": "تأثير بلد المنشأ",
+   "types": [
+    "exam"
+   ],
+   "qtype": "mcq",
+   "stem": "تواجه العلامات التجارية الصينية Lenovo وHaier مشكلة التغلب على الصورة السلبية للمنتجات الصينية بعد مشاكل الجودة والأمان؛ يعبّر ذلك عن:",
+   "options": [
+    "قيمة الدولة (الصورة النمطية للدول)",
+    "ازدواج بلد المنشأ",
+    "قيمة العلامة التجارية",
+    "التقليد والتزييف"
+   ],
+   "ans": 0,
+   "why": "**قيمة الدولة** (Nation equity) أو **الصورة النمطية للدول** (Country stereotyping): صورة معينة للدولة تطغى على كل منتجاتها؛ إيجابية كما في انتقال تجربة السيارات والإلكترونيات **الكورية** إلى كل العلامات الكورية في أمريكا، وسلبية كما في العلامات **الصينية**.",
+   "remember": "**صورة الدولة تطغى على كل منتجاتها = قيمة الدولة / الصورة النمطية** (كوريا +، الصين −).",
+   "distractors": "ب — ازدواج بلد المنشأ منتج يُصنع في بلد غير بلد علامته (هوندا سيفيك المصنعة في الولايات المتحدة)؛ ج — قيمة العلامة التجارية الأثر التفضيلي لمعرفة العلامة نفسها؛ د — تعدٍّ على العلامة التجارية.",
+   "pages": [
+    257,
+    258
+   ],
+   "sources": [
+    "F25"
+   ],
+   "exam_sources": [
+    "F25"
+   ],
+   "reconstructed": true,
+   "original": "F25 (تذكّر، بلا خيارات): سؤال عن قيمة صورة الدولة: تواجه شركات لينوفو وهاير الصينية مشاكل بسبب الصورة النمطية للمنتجات الصينية",
+   "variants": [],
+   "book_says": null,
+   "other_source": null,
+   "sci": null,
+   "low_conf": null,
+   "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
+   "importance": 3,
+   "freq": 1,
+   "focus": true
   },
   {
    "id": "Q03-030",
@@ -12071,6 +13594,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -12112,6 +13638,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -12151,6 +13680,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -12191,6 +13723,9 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 0,
    "focus": false
@@ -12230,12 +13765,45 @@
    "sci": null,
    "low_conf": null,
    "notes": null,
+   "table": null,
+   "calc": null,
+   "ans_table": null,
    "importance": 1,
    "freq": 0,
    "focus": false
   }
  ],
  "focus_table": [
+  {
+   "ch": 4,
+   "sub": "4-1-2-2",
+   "name": "متوسط دخل الفرد (أوجه القصور، قانون السعر الواحد، PPP)",
+   "exam": 4,
+   "textbook": 4,
+   "other": 1,
+   "generated": 0,
+   "total": 8
+  },
+  {
+   "ch": 11,
+   "sub": "11-3",
+   "name": "المحددات الرئيسية للبرنامج الإعلاني",
+   "exam": 4,
+   "textbook": 2,
+   "other": 1,
+   "generated": 0,
+   "total": 7
+  },
+  {
+   "ch": 7,
+   "sub": "7-3-3",
+   "name": "الضمان",
+   "exam": 4,
+   "textbook": 2,
+   "other": 1,
+   "generated": 0,
+   "total": 6
+  },
   {
    "ch": 7,
    "sub": "7-3-5",
@@ -12247,12 +13815,22 @@
    "total": 6
   },
   {
-   "ch": 4,
-   "sub": "4-1-2-2",
-   "name": "متوسط دخل الفرد (أوجه القصور، قانون السعر الواحد، PPP)",
-   "exam": 3,
-   "textbook": 4,
+   "ch": 11,
+   "sub": "11-4-1",
+   "name": "اختيار وكالة الإعلان",
+   "exam": 4,
+   "textbook": 3,
    "other": 1,
+   "generated": 0,
+   "total": 6
+  },
+  {
+   "ch": 9,
+   "sub": "9-3-2",
+   "name": "العوامل الخارجية (المنافسة، الطلب، القواعد الحكومية)",
+   "exam": 3,
+   "textbook": 2,
+   "other": 3,
    "generated": 0,
    "total": 7
   },
@@ -12267,14 +13845,14 @@
    "total": 6
   },
   {
-   "ch": 11,
-   "sub": "11-3",
-   "name": "المحددات الرئيسية للبرنامج الإعلاني",
+   "ch": 3,
+   "sub": "3-1-2",
+   "name": "المخاطر السياسية (نزع الملكية، المصادرة، التأميم، الأهلنة)",
    "exam": 3,
-   "textbook": 2,
-   "other": 1,
+   "textbook": 1,
+   "other": 2,
    "generated": 0,
-   "total": 6
+   "total": 5
   },
   {
    "ch": 3,
@@ -12283,16 +13861,6 @@
    "exam": 3,
    "textbook": 2,
    "other": 0,
-   "generated": 0,
-   "total": 5
-  },
-  {
-   "ch": 7,
-   "sub": "7-3-3",
-   "name": "الضمان",
-   "exam": 3,
-   "textbook": 2,
-   "other": 1,
    "generated": 0,
    "total": 5
   },
@@ -12308,20 +13876,20 @@
   },
   {
    "ch": 10,
-   "sub": "10-5-1",
-   "name": "كثافة التوزيع",
+   "sub": "10-2",
+   "name": "هيكل قناة التوزيع (مباشرة/غير مباشرة)",
    "exam": 3,
-   "textbook": 2,
+   "textbook": 1,
    "other": 1,
    "generated": 0,
    "total": 5
   },
   {
-   "ch": 11,
-   "sub": "11-4-1",
-   "name": "اختيار وكالة الإعلان",
+   "ch": 10,
+   "sub": "10-5-1",
+   "name": "كثافة التوزيع",
    "exam": 3,
-   "textbook": 3,
+   "textbook": 2,
    "other": 1,
    "generated": 0,
    "total": 5
@@ -12357,6 +13925,16 @@
    "total": 7
   },
   {
+   "ch": 5,
+   "sub": "5-1",
+   "name": "نظم المعلومات الإدارية والتسويقية",
+   "exam": 2,
+   "textbook": 4,
+   "other": 0,
+   "generated": 0,
+   "total": 6
+  },
+  {
    "ch": 6,
    "sub": "6-1-2-3",
    "name": "عقود الامتياز",
@@ -12387,16 +13965,6 @@
    "total": 6
   },
   {
-   "ch": 9,
-   "sub": "9-3-2",
-   "name": "العوامل الخارجية (المنافسة، الطلب، القواعد الحكومية)",
-   "exam": 2,
-   "textbook": 2,
-   "other": 3,
-   "generated": 0,
-   "total": 6
-  },
-  {
    "ch": 1,
    "sub": "1-7-2",
    "name": "إيجابيات وسلبيات الشركات عابرة القومية",
@@ -12417,21 +13985,21 @@
    "total": 5
   },
   {
-   "ch": 3,
-   "sub": "3-1-2",
-   "name": "المخاطر السياسية (نزع الملكية، المصادرة، التأميم، الأهلنة)",
-   "exam": 2,
-   "textbook": 1,
-   "other": 2,
-   "generated": 0,
-   "total": 5
-  },
-  {
    "ch": 4,
    "sub": "4-1-1-3",
    "name": "توزيع السكان (السن، الكثافة)",
    "exam": 2,
    "textbook": 3,
+   "other": 0,
+   "generated": 0,
+   "total": 5
+  },
+  {
+   "ch": 5,
+   "sub": "5-2",
+   "name": "قواعد البيانات ومخازنها والبيانات الضخمة",
+   "exam": 2,
+   "textbook": 4,
    "other": 0,
    "generated": 0,
    "total": 5
@@ -12477,16 +14045,6 @@
    "total": 4
   },
   {
-   "ch": 10,
-   "sub": "10-2",
-   "name": "هيكل قناة التوزيع (مباشرة/غير مباشرة)",
-   "exam": 2,
-   "textbook": 1,
-   "other": 1,
-   "generated": 0,
-   "total": 4
-  },
-  {
    "ch": 2,
    "sub": "2-1-1",
    "name": "خصائص الثقافة",
@@ -12503,6 +14061,26 @@
    "exam": 2,
    "textbook": 0,
    "other": 1,
+   "generated": 0,
+   "total": 3
+  },
+  {
+   "ch": 7,
+   "sub": "7-4",
+   "name": "تأثير بلد المنشأ",
+   "exam": 2,
+   "textbook": 1,
+   "other": 0,
+   "generated": 0,
+   "total": 3
+  },
+  {
+   "ch": 9,
+   "sub": "9-3-1",
+   "name": "العوامل الداخلية المؤثرة على الأسعار",
+   "exam": 2,
+   "textbook": 2,
+   "other": 0,
    "generated": 0,
    "total": 3
   },
@@ -12530,6 +14108,16 @@
    "ch": 11,
    "sub": "11-4-4",
    "name": "تحديد مخصص الحملة الإعلانية",
+   "exam": 2,
+   "textbook": 1,
+   "other": 0,
+   "generated": 0,
+   "total": 3
+  },
+  {
+   "ch": 12,
+   "sub": "12-2-2",
+   "name": "تدريب مندوبي البيع",
    "exam": 2,
    "textbook": 1,
    "other": 0,
@@ -12573,26 +14161,6 @@
    "exam": 1,
    "textbook": 3,
    "other": 1,
-   "generated": 0,
-   "total": 5
-  },
-  {
-   "ch": 5,
-   "sub": "5-1",
-   "name": "نظم المعلومات الإدارية والتسويقية",
-   "exam": 1,
-   "textbook": 4,
-   "other": 0,
-   "generated": 0,
-   "total": 5
-  },
-  {
-   "ch": 5,
-   "sub": "5-2",
-   "name": "قواعد البيانات ومخازنها والبيانات الضخمة",
-   "exam": 1,
-   "textbook": 4,
-   "other": 0,
    "generated": 0,
    "total": 5
   },
@@ -12647,12 +14215,32 @@
    "total": 3
   },
   {
+   "ch": 5,
+   "sub": "5-3-1",
+   "name": "تحديد المشكلة",
+   "exam": 1,
+   "textbook": 2,
+   "other": 0,
+   "generated": 0,
+   "total": 3
+  },
+  {
    "ch": 7,
    "sub": "7-3-2",
    "name": "اللصاقة التعريفية",
    "exam": 1,
    "textbook": 2,
    "other": 0,
+   "generated": 0,
+   "total": 3
+  },
+  {
+   "ch": 7,
+   "sub": "7-3-4",
+   "name": "الخدمة",
+   "exam": 1,
+   "textbook": 0,
+   "other": 2,
    "generated": 0,
    "total": 3
   },
@@ -12777,26 +14365,6 @@
    "total": 2
   },
   {
-   "ch": 7,
-   "sub": "7-4",
-   "name": "تأثير بلد المنشأ",
-   "exam": 1,
-   "textbook": 1,
-   "other": 0,
-   "generated": 0,
-   "total": 2
-  },
-  {
-   "ch": 9,
-   "sub": "9-3-1",
-   "name": "العوامل الداخلية المؤثرة على الأسعار",
-   "exam": 1,
-   "textbook": 2,
-   "other": 0,
-   "generated": 0,
-   "total": 2
-  },
-  {
    "ch": 11,
    "sub": "11-4-5",
    "name": "تقييم كفاءة الحملة الإعلانية",
@@ -12812,16 +14380,6 @@
    "name": "العلاقات العامة",
    "exam": 1,
    "textbook": 2,
-   "other": 0,
-   "generated": 0,
-   "total": 2
-  },
-  {
-   "ch": 12,
-   "sub": "12-2-2",
-   "name": "تدريب مندوبي البيع",
-   "exam": 1,
-   "textbook": 1,
    "other": 0,
    "generated": 0,
    "total": 2
@@ -12913,26 +14471,6 @@
    "exam": 0,
    "textbook": 1,
    "other": 1,
-   "generated": 0,
-   "total": 2
-  },
-  {
-   "ch": 5,
-   "sub": "5-3-1",
-   "name": "تحديد المشكلة",
-   "exam": 0,
-   "textbook": 2,
-   "other": 0,
-   "generated": 0,
-   "total": 2
-  },
-  {
-   "ch": 7,
-   "sub": "7-3-4",
-   "name": "الخدمة",
-   "exam": 0,
-   "textbook": 0,
-   "other": 2,
    "generated": 0,
    "total": 2
   },
@@ -13425,8 +14963,16 @@
    "7-3-5"
   ],
   [
+   7,
+   "7-4"
+  ],
+  [
    9,
    "9-2"
+  ],
+  [
+   9,
+   "9-3-1"
   ],
   [
    9,
@@ -13470,7 +15016,7 @@
   ],
   [
    12,
-   "12-4"
+   "12-2-2"
   ]
  ],
  "coverage": {

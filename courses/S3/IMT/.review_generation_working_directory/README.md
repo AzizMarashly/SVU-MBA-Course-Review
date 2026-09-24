@@ -4,21 +4,21 @@
 > standard name from prompt v0.5+. Its layout is the one described below, not the §0d layout of the
 > current prompt. `STATE.md` next to this file is the §0d handoff (stage checklist, decisions, open
 > items); this README is the folder map and workflow. The settings used are in `../PROJECT_SETTINGS.md`.
-> Since v1.4 the page is rendered under prompt v0.9 (source-files appendix, source labels, licence notice).
+> Since v1.4 the page is rendered under prompt v0.9 (source-files appendix, source labels, licence notice); since v1.6 under v0.11 (§7d answer tables, symbol legend) with the F25 sitting added.
 
 Working files behind the two deliverables in the parent folder:
 
 - `../مراجعه كامله لماده ال IMT_vX.Y.html` — the single-file RTL review (spec v0.4, ASK mode, Arabic UI)
 - `../مراجعه كامله لماده ال IMT_vX.Y_bank.json` — the question bank the HTML is rendered from
 
-`X.Y` is the number in `VERSION` (currently 1.4). The project folder holds exactly one version; older
-copies are in `../_old_versions/`. History is in `CHANGELOG.md`. Everything here is reproducible:
+`X.Y` is the number in `VERSION` (currently 1.6). The project folder holds exactly one version; older
+copies are in `../_old_versions/`. History is in `VERSIONS.md` (scheme: `VERSIONING.md` at the repository root). Everything here is reproducible:
 `bank.json` and `out.html` in this folder are the build outputs; the published page is `out.html` plus the Cloudflare analytics line (`scripts/publish_page.py` at the repository root adds it).
 
 ## 1. Release a new version (the normal workflow)
 
 1. Edit the data or the renderer.
-2. Bump `VERSION` (e.g. `1.3`) and add an entry at the top of `CHANGELOG.md`.
+2. Bump `VERSION` (`MAJOR.MINOR`, e.g. `1.7`; MINOR for an edit, MAJOR only for a full regeneration) and add an entry at the top of `VERSIONS.md` (with the spec version).
 3. Run:
 
 ```
@@ -27,7 +27,7 @@ python release.py
 ```
 
 `release.py` runs `build_bank.py` (asserts, scoring, coverage; must print `uncovered: 0`) and
-`render_html.py`, then copies the outputs to the project folder as `…_v1.4.html` / `…_v1.4_bank.json`
+`render_html.py`, then copies the outputs to the project folder as `…_vX.Y.html` / `…_vX.Y_bank.json`
 and moves the previous version into `../_old_versions/`. Run `python qa_blocks.py` for the mechanical QA
 report. Only the standard library is needed. If you run the scripts by hand, set `PYTHONUTF8=1` first.
 
@@ -43,7 +43,7 @@ report. Only the standard library is needed. If you run the scripts by hand, set
 | `bank/render_html.py` | CSS, JS and HTML generator. All UI strings live here. |
 | `bank/qa_blocks.py` | Mechanical checks on the finished bank. |
 | `bank/release.py` | Build + publish the versioned files to the project folder, archive older ones. |
-| `VERSION`, `CHANGELOG.md` | Current version number and history. |
+| `VERSION`, `VERSIONS.md` | Current version number and history. |
 | `bank.json`, `out.html` | Build outputs (identical to deliverables). |
 | `notes/ledger.md` | Source ledger: every input file, MD5 duplicate groups, include/exclude decision, chapter map. |
 | `notes/textbook_keys.md` | Book review questions per chapter with answer keys read visually from the book pages. |
@@ -79,6 +79,7 @@ ch9 319-320, ch10 352-353, ch11 385-386, ch12 419-420.
 | F17 | دورة f17 (docx/pdf, identical) | exam sitting, 27 questions |
 | F19 | دورات F19 (handwritten scan) | exam sitting, 30 items, see `notes/f19_transcription.md` |
 | S24, F24 | دورات.txt (Telegram export) | exam sittings, 32 + 40 items |
+| F25 | دورة F25.txt (added v1.6) | exam sitting, 20 recalled items, no answer key |
 | EMAD | ملخص عماد جبور (S18) | "other" source, only items whose concept exists in the current book |
 | ASEM | ملخص عاصم | cross-check of textbook answer keys (59/60 T/F agree; disagreement ch5 TF5) |
 | GEN | — | generated questions for subsections no source covers |
@@ -100,9 +101,9 @@ the inputs mid-run and asked that it never be used or mentioned; the bank contai
 
 | Metric | Value |
 |---|---|
-| Questions | 292 (exam 107, textbook 142, other 50, generated 15; a question may have several types) |
-| Reconstructed exam items | 13 |
-| Low-confidence items | 24 (flagged in the HTML) |
+| Questions | 304 (exam 121, textbook 142, other 50, generated 15; a question may have several types) |
+| Reconstructed exam items | 17 |
+| Low-confidence items | 27 (flagged in the HTML) |
 | Subsection coverage | 109 / 109 |
 | Unresolved | F19 Q6/Q7 (Porter, Dunning: topic only), F19 Q23, F17 Q3 (turnkey), F17 Q20 (chapter 8, out of scope) |
 
