@@ -1,138 +1,47 @@
-# HANDOFF — work in progress as of 2026-09-14
+# HANDOFF — state as of 2026-09-24
 
-Written for the next agent. Read `CLAUDE.md` first, then this file. Section A is history (committed); B is the
-live work. Delete this file (or empty it) when the MIS run is finished and IMT F25 is in.
+Written for the next agent. Read `CLAUDE.md` first, then this file. Delete this file (or empty it) when section B is
+done.
 
-## A. Committed: prompt v0.11 + PRM v03 (commit 614262b, tag v0.11, 2026-09-14)
+## A. Done on 2026-09-24 (committed and pushed 2026-09-24)
 
-Prompt **v0.11** adds §7d "Tables and calculations": data as a real table under the stem; the answer opens with
-the working table, then a «الحساب» block (given values with their origin, then المعادلة → التعويض → الناتج per
-step); «لماذا» names the rule only; an always-visible «الرموز» chip row under the table, and tapping a chip or any
-underlined symbol opens a bottom sheet (Arabic name / English name / formula / note) built from the structured
-`SYMBOLS` glossary — designed touch-first because students read on phones; §15 has the matching QA checks,
-including glossary coverage. PRM **v03** is the re-render: 44 records in chapters 3, 7, 8, 9, 10 converted, no
-answer/page/source/low-confidence flag changed, every number recomputed by the helpers and matched.
-Where things are: PRM `STATE.md` §3 (decisions), `VERSIONS.md`, `render/CALC_TABLE_BRIEF.md` (rules for helpers),
-`render/common.py` (`T`, `C`, `S`), `render/meta_prm.py` (`SYMBOLS`), `render/render_html.py` (`render_table`,
-`render_calc`, `render_symbols`, `SYM_JS`). Cost of the conversion: three opus helpers, ~390k tokens.
-
-**Open follow-ups from this batch (small, none urgent):**
-- IMT's renderer does not have §7d. IMT has few calculation items; port `common.py` / `render_html.py` /
-  `build_bank.py` / `qa_blocks.py` changes from PRM when IMT is next touched (same patch as MIS, see B1), then
-  convert its numeric records and add a `SYMBOLS` table to its meta.
-- 22 PRM answer blocks over 80 words remain (list in `qa/qa_blocks_v03.txt`), accepted under §0a; trim if a
-  content pass is ever done.
-- `SYMBOLS` avoids single-letter keys on purpose (activity names A, B, D, E would collide with the legend
-  scanner). If a course needs one, extend `_SYM_RE` / `symbols_used()` to scan only formula cells for it.
-
-## A1. Committed earlier: prompt v0.10 + IMT v1.5 + PRM v02 (tag v0.10)
-
-Prompt **v0.10** adds one rule to §13a ("Collapsible page sections"): the seven prose blocks of the
-HTML (how to use, scope, methodology, source files, reference lists, contents, file metadata) fold
-like chapters; intro blocks open and end blocks closed by default; state remembered per block;
-toolbar buttons "طيّ الكل" / "فتح الكل" fold chapters, question sections and blocks together and leave
-answers alone; the metadata summary line keeps version, spec and licence visible when folded.
-Implemented by a `fold_sections()` post-processing step at the end of `build()` in both renderers,
-so the two copies stay identical. IMT v1.5 and PRM v02 are re-renders with no content change,
-verified field by field and tested in Chrome.
-
-MIS v0.2 (published) does **not** have the v0.10 sections; it is superseded by the regeneration
-below rather than patched.
-
-## B. In progress: MIS regeneration under prompt v0.10 (target v1.0)
-
-**Why:** MIS v0.2 was a re-render of a bank generated on 2026-09-06 before the versioned prompt; it has
-no importance score, focus areas, low-confidence flag, three-line answer blocks, subsection mapping,
-sliders or collapsible chapters. A regeneration under the current prompt is the only way to align it.
-
-**Where:** `courses/S3/MIS/.review_generation_working_directory/` now has the standard §0d layout
-(`STATE.md`, `ledger.json`, `chapter_map.md/json`, `extracted/`, `render/`, `qa/`, `archive/`,
-`VERSIONS.md`, `VERSION` = 1.0). The v0.2 build was moved intact to `legacy_v0/` (still buildable
-from there: `legacy_v0/bank/release.py`), its extractions to `extracted/legacy_src/` and
-`extracted/legacy_txt/`. `render/` is PRM's tooling adapted (`meta_mis.py`, `common.py` with a
-`legacy_id` field, `build_bank.py`, `render_html.py` at v0.10, `qa_blocks.py`, `release.py` for the
-`vX.Y` scheme, `CHAPTER_HELPER_BRIEF.md`, `SOURCES.md`, `EXAMPLE_RECORD.py`, plus the extraction
-scripts `extract_book.py`, `extract_sources.py`, `split_by_chapter.py`, `hash_files.py`).
-
-**Settings:** the table in `courses/S3/MIS/PROJECT_SETTINGS.md` with these overrides: DECIDE mode, no
-pilot, spec v0.10, deliverable version 1.0 (`vX.Y` kept for continuity with v0.1/v0.2, a recorded
-deviation from §0e), PDF/DOCX never.
-
-**Done (stages 0–4):** layout; book re-extracted with PyMuPDF and the lam-alef fix, page numbers
-verified for all 507 pages, 105 audit units from the finest TOC level (`extracted/book/`); chapter
-map; ledger with MD5 hashes for all 37 files (`ledger.json`, `extracted/hashes.json`); **all sources
-transcribed**: 1170 raw items (exams 157, book 137, Asem 155, OQ1–3 533, OQ4–5 and old-book
-candidates 188), 137 pages/images read visually, split into `extracted/questions/by_chapter/chNN.json`
-(710 in scope, 460 out of scope in `out_of_scope.json`), with a report per source group.
-
-**Decisions taken (also in STATE.md):** «حل دورات» (block 2 of `دورات.txt`, HD in v0.2) is the answer
-key of the 44-question sitting (block 3) → one exam source R44, so v0.2 frequencies that counted both
-drop by one. OQ1–OQ5 are older-curriculum collections → type "other", in-book concepts only, keys never
-imported. ASM = cross-check only. The book prints its own answers inline (ticks for true/false, yellow
-highlights for MCQ) and the Asem summary agrees on all 113 shared items; the helper brief and the
-scope/methodology prose must state this (the v0.2 run assumed the book had no keys). Legacy generated
-questions are kept where their unit is still uncovered by real questions.
-
-**In progress (stages 5–9):** chapter helpers writing `render/bank_chNN.py` from
-`render/CHAPTER_HELPER_BRIEF.md`, using `extracted/legacy/chNN.json` (the 269 v0.2 records) and
-`extracted/questions/by_chapter/chNN.json`. Paused on 2026-09-13 at 20:00 to save tokens.
-
-| Chapter | Status | Records |
+| Course | Release | What |
 |---|---|---|
-| 1, 2, 3, 5 | **done**: `render/bank_ch01/02/03/05.py` + `qa/ch0N_report.md` | 34, 48, 33, 34 (149 total; 45 reconstructed MCQs, 18 low-confidence) |
-| 7, 8, 9, 10 | **not started** (legacy 25 / 29 / 31 / 36 records; raw items 34 / 57 / 83 / 134) | — |
+| IMT | v1.6 | F25 exam recall added (8 merged, 12 new, 304 q); prompt v0.11 §7d tables/symbols ported to IMT's renderer; `CHANGELOG.md` renamed `VERSIONS.md` |
+| PRM | v1.3 | F25 exam recall added (12 new, 16 merged, 454 q); renumbered from the two-digit scheme (v04 → v1.3) |
+| PRM | v1.4 | answer conflict Q04-011/Q07-003 settled (p.177–178, 244) and merged; 10 true duplicates merged or folded; 25 same-fact records folded into "also asked as" lines; 6 shared-table groups on the page; F24 number-less problems credited (I-10); build checks for conflicts / raw ids; 419 q. Log: `qa/consolidation_v1.4.md` |
+| MIS | v1.0 | full regeneration under PRM's tooling (chapters 1–10 in scope, 255 q, 105/105 units); 4 cross-chapter duplicates merged; build checks; change report `qa/change_report_v0.2_to_v1.0.md`; v0.2 build kept in `legacy_v0/` |
 
-The current `bank.json` and `coverage.md` are **partial (four chapters) and must not be published**.
-Extra findings recorded in STATE.md: only Q05-020 answers against the book's own tick (shown via
-`book_says`); the annotated older textbook stays excluded (30 candidates kept aside as
-OQ6-CANDIDATE, unused); three intranet items moved from chapter 7's review set to chapter 2, so the
-chapter-7 helper must drop legacy C7-17/18/19.
+Repository: `VERSIONING.md` (one `vMAJOR.MINOR` scheme for all courses), `prompt/IDEAS.md` (backlog for the next
+prompt, I-1 … I-12), `CLAUDE.md` rule that source files are immutable (no status notes inside them), `.gitignore`
+pattern for any MINOR, `courses.json` rebuilt.
 
-**To resume** (a new session, opened at the repository root): read `CLAUDE.md`, this file, then
-`courses/S3/MIS/.review_generation_working_directory/STATE.md` and follow its **§5 "To continue"**,
-which is the authoritative eight-step sequence. In short:
+Owner decisions of the day (details in the course STATE files and IDEAS.md): problems recalled without numbers
+credit the matching table records, for every sitting (I-10); the Asem-type student summaries count toward frequency
+(I-12); raw source-item ids are not back-filled in existing banks, only added when a record is touched.
 
-1. Chapter helpers for 7, 8, 9, 10 (general-purpose subagents, 2–4 at a time; four tripped the
-   session limit once), each with the brief, `extracted/book/ch_fixed/chNN.txt`, its legacy and
-   transcribed JSON, the chapter-specific notes in STATE.md §5 step 1; each writes
-   `render/bank_chNN.py` + `qa/chNN_report.md`.
-2. Reinstate G1-01 for unit 1-1-2 (or document 104/105); replace `{asem_agree}` in `qa/summary.json`.
-3. From `render/` with `PYTHONUTF8=1`: `python build_bank.py`, `python release.py`,
-   `python qa_blocks.py`, `python change_report.py` → `qa/change_report_v0.2_to_v1.0.md`.
-4. Browser test at desktop and ~390 px; `qa/browser_test_v1.0.md`; read 20 random answer blocks.
-5. Finish `STATE.md`, `VERSIONS.md`, `../README.md`, `../PROJECT_SETTINGS.md`;
-   `render/meta_mis.py` `GENERATED_DATE` = release date.
-6. Repository root: `python scripts/publish_page.py S3/MIS`, `python scripts/build_course_index.py`.
-7. Final report to the owner: §16 completion summary + the v0.2 → v1.0 change report (the owner
-   knows v0.2 well and wants exact counts and ids). Then commit (owner's call): the MIS paths plus
-   `courses.json` and `S3/MIS/index.html`.
+## B. Next: prompt v0.12 from `prompt/IDEAS.md`
 
-Rules that apply: cite the book page for every answer; never invent options, answers or pages; no
-personal data in the review or file names; keep source files unchanged; `out.html` without the
-Cloudflare snippet (`publish_page.py` adds it); never import the older-curriculum answer keys.
+The owner wants the ideas moved into the prompt as the next version (after the releases above, so I-11 reflects
+what worked). Steps: edit `prompt/SVU-MBA-Course-Review-Generator.md` (bump header to v0.12; §0e rewritten for
+`vMAJOR.MINOR` per I-9; §0d immutable sources I-8; §5 duplicate test + consolidation pass I-11 incl. its lessons;
+frequency rules I-10, I-12; practical-chapter ideas I-1 … I-7 as the owner chooses), add a `prompt/CHANGELOG.md`
+entry, mark adopted entries in IDEAS.md, update course docs that cite changed section numbers. The owner tags
+`v0.12`. Ask the owner which of I-1 … I-7 to adopt now — they are larger (renderer work: figures from data, stepwise
+reveal, lighter view).
 
-## B1. MIS tooling already carries prompt v0.11 §7d (2026-09-14) — uncommitted, part of the MIS run
+## C. Open, small
 
-`courses/S3/MIS/.review_generation_working_directory/render/` was patched together with PRM (it goes into the
-MIS v1.0 commit, not separately): `common.py`
-(`T`, `C`, `S`, `table` / `ans_table` / `calc` fields), `render_html.py` (tables, calculation block, symbol
-legend), `build_bank.py` (refuses `|` in stems unless `PRM_LENIENT=1`), `qa_blocks.py` (§7d lines),
-`meta_mis.py` (`SYMBOLS` glossary — currently PRM's list; trim/extend for MIS), `CALC_TABLE_BRIEF.md` and a
-§7d paragraph in `CHAPTER_HELPER_BRIEF.md`. Chapter helpers for 7–10 must write calculation items in that form.
-The partial MIS `bank.json` / `out.html` were rebuilt during the smoke test (same four chapters; still not
-publishable). When running `scripts/build_course_index.py` before MIS v1.0 is ready, keep the committed MIS entry in
-`courses.json` (swap in `git show HEAD:…/MIS/…/bank.json` for the build, as done on 2026-09-14) — otherwise the home
-page would advertise a four-chapter MIS bank. The MIS `SYMBOLS` glossary is PRM's list verbatim; trim it to MIS terms
-(the helper brief tells chapter helpers to add what they use).
+- **MIS v1.1: review to apply.** `courses/S3/MIS/.review_generation_working_directory/qa/review_v0.2_vs_v1.0.md`
+  (opinion on v0.2 → v1.0; verdict: v1.0 better, but lost topics, book review items folded away, thinner essays).
+  Top 5 fixes with ids there and in MIS STATE §5 step 4.
+- **PRM v1.5: re-check the 25 folds of v1.4** against the lesson of that review: a book review item or a verbatim
+  exam item keeps its own card even when another record tests the same claim. Restore those as cards
+  (~80–120k tokens). Also add this exception to I-11 before prompt v0.12.
 
-## B2. IMT: new exam source waiting
-
-`courses/S3/IMT/اسئلة سابقة/دورة F25.txt` (20 recalled questions, two students merged) was added on
-2026-09-13 without a run. It needs the "add a new exam sitting" procedure in the IMT README: extract,
-deduplicate against the bank, verify, add source code F25 + appendix row + ledger entry, release v1.6.
-Cheap: one session, no helpers.
-
-## C. Token note
-
-The chapter-helper stage is the expensive part (roughly 150k–300k tokens per chapter). Everything
-before it is done and checkpointed; nothing is lost by pausing.
+- PRM: F24 item P1 (FF + lead) still stands as its own low-confidence record Q07-013 built on an illustrative
+  example; under I-10 it could become a credit on Q07-001 instead (owner's call).
+- MIS: spec shown as v0.11 (tooling) although the run was planned under v0.10.
+- IMT: `release.py` does not validate the VERSION format and archives to `../_old_versions/`, unlike PRM/MIS.
+- IMT has no duplicate build checks or consolidation pass yet (PRM/MIS have them); port with the next IMT release.
+- Not tested anywhere: real phone, print, Safari/Firefox, screen readers.

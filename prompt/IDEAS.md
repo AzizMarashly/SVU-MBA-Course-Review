@@ -101,6 +101,9 @@ same question" without defining "same".
   similarity ≥ 0.6 without the answer text found the one real conflict and nothing else. Word similarity missed
   about 1 in 6 real pairs and flagged look-alikes that were different claims: a review aid, never a decision.
   Number-less credits (I-10) go only to records of the same problem format (table or calculation records).
+- *Exception, from the MIS v0.2 → v1.0 review (to confirm when writing v0.12):* a book review item or a verbatim
+  exam item keeps its own card even when another record tests the same claim; exams reuse them word for word, so
+  folding them into "also asked as" lines loses practice. Fold only paraphrased recalls and summary rewordings.
 
 ### I-12. Student summaries count toward frequency
 A source that is a student summary of the book (a cross-check copy of the book's own review set) still counts as a

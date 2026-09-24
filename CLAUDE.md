@@ -20,8 +20,8 @@ Two tiers, never mix them up:
 | Published pages | `S<n>/<CODE>/index.html`, `index.html`, `courses.json` | yes | What students open |
 | Sources + generation state | `courses/S<n>/<CODE>/` | no | Course material, settings, and the working directory of the run, so a review can be resumed or regenerated |
 
-Courses today (semester 3): `IMT` (v1.5), `PRM` (v03), `MIS` (v0.2, bank generated 2026-09-06 before the
-versioned prompt; working directory reconstructed from the session scratchpad on 2026-09-13).
+Courses today (semester 3): `IMT` (v1.6), `PRM` (v1.4), `MIS` (v1.0, regenerated 2026-09-24 with PRM's tooling;
+the v0.2 build is kept in `legacy_v0/`).
 
 ## Where to look
 
@@ -29,6 +29,8 @@ versioned prompt; working directory reconstructed from the session scratchpad on
 |---|---|
 | Human overview, contribution rules, git etiquette | `README.md`, `CONTRIBUTING.md` |
 | The generator prompt (v0.11) and its history | `prompt/SVU-MBA-Course-Review-Generator.md`, `prompt/CHANGELOG.md`; every version is a git tag `v0.N` |
+| Version scheme (prompt `v0.N` vs course `vMAJOR.MINOR`, when to bump what) | `VERSIONING.md` |
+| Ideas waiting for the next prompt version (student feedback, practice) | `prompt/IDEAS.md` — read it when writing a new prompt version |
 | State of a course run: stage checklist, decisions, known problems, exact next step | `courses/S3/<CODE>/.review_generation_working_directory/STATE.md` — **always read before touching a course** |
 | Folder map and release workflow of a course | `courses/S3/<CODE>/README.md` (IMT also has a working-directory `README.md`) |
 | Settings the review was generated with | `courses/S3/<CODE>/PROJECT_SETTINGS.md` |
@@ -43,13 +45,11 @@ versioned prompt; working directory reconstructed from the session scratchpad on
 | Question data + build scripts | `.review_generation_working_directory/bank/` | `.review_generation_working_directory/render/` |
 | Per-chapter data | `bank_chNN.py` (+ `bank_extra.py`) | `bank_chNN.py`, record model in `common.py` |
 | Course-specific tables (names, source files appendix) | inside `render_html.py` (`FILES`, `SRC_ROW`) | isolated in `meta_prm.py` |
-| Version scheme | `vX.Y` (`VERSION` = `1.4`), `CHANGELOG.md` | two digits (`VERSION` = `01`), `VERSIONS.md` |
+| Version scheme (same for all, see `VERSIONING.md`) | `vX.Y` (`VERSION` = `1.6`), `VERSIONS.md` | `vX.Y` (`VERSION` = `1.4`), `VERSIONS.md` |
 | Book text | OCR in `ocr/` | PyMuPDF in `extracted/book/` with lam-alef ligature fix |
 
-MIS is a third, older layout: `bank/` holds `bank_a.py` … `bank_e.py` (a–c by chapter group, d =
-other sources, e = generated), `build_html.py` renders directly from the Python records (no
-bank.json input), `build_bank.py` only exports `bank.json` for the home page, and `build_docx.py` /
-`pipeline.py` make the DOCX and PDF (need Word via COM). Version scheme `vX.Y`, `CHANGELOG.md`.
+MIS (since v1.0) uses PRM's layout: `render/` with `bank_chNN.py`, `common.py`, `meta_mis.py`; the v0.2
+build (`bank_a.py` … `bank_e.py`, DOCX/PDF scripts) is kept intact in `legacy_v0/` and is not used.
 
 **For a new course, copy PRM's `render/` tooling and its `CHAPTER_HELPER_BRIEF.md` /
 `extracted/FORMAT.md`, not IMT's.** PRM's `meta_prm.py` pattern keeps course specifics out of the
@@ -73,7 +73,7 @@ python scripts/publish_page.py S3/<CODE>      # out.html -> S3/<CODE>/index.html
 python scripts/build_course_index.py          # regenerates courses.json (exit 1 = changed, normal)
 ```
 
-Before `release.py`: edit the chapter file, bump `VERSION`, add a changelog/VERSIONS line. After
+Before `release.py`: edit the chapter file, bump `VERSION` (`MAJOR.MINOR` per `VERSIONING.md`), add a `VERSIONS.md` row. After
 publishing: update `STATE.md` and the course `README.md` version line.
 
 Facts that bite:
@@ -85,7 +85,7 @@ Facts that bite:
 - `courses.json` is generated. Never edit it by hand; a GitHub Action also rebuilds it on push.
 - Home page course cards are read from `courses.json` at runtime; static fallback cards in
   `index.html` exist only for the no-JS case.
-- Versioned deliverables (`*_vNN.html`, `*_bank.json`) inside `courses/` are gitignored; the page
+- Versioned deliverables (`*_vX.Y.html`, `*_bank.json`) inside `courses/` are gitignored; the page
   under `S3/` and `out.html` are the tracked copies. `archive/` and `_old_versions/` are ignored too
   (git history has every version). Page renders `*.png` under `courses/` are ignored.
 - Bank files are UTF-8 without BOM; `bank.json` is read with `utf-8-sig`.
@@ -102,6 +102,10 @@ Facts that bite:
   tables, Hong framework) are not in the book; only items whose concept exists in the book were
   kept, re-verified from the book. Do not import their answer keys.
 - Do not redistribute course material separately; it is here only to verify and regenerate reviews.
+- Source files are immutable once added: never write status or workflow notes into them ("not yet in the bank",
+  "waiting for a run", "done"). Their MD5 is recorded in the ledger, so a later edit to remove the note breaks
+  the hash. A header describing the file's origin (date, who recalled it, how merged) is fine, written once when
+  the file is created. Run status belongs in `STATE.md` §5, the course `README.md` open items, and `HANDOFF.md`.
 - Keep the licence/attribution notice and the analytics snippet in every published page.
 - Git: several people and AI sessions push to `main`. `git pull --rebase` before committing and
   again before pushing. Focused commits (one course, one fix). Never force-push. Commit only when
