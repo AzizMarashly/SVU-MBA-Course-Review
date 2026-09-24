@@ -28,9 +28,9 @@ the v0.2 build is kept in `legacy_v0/`).
 | Need | File |
 |---|---|
 | Human overview, contribution rules, git etiquette | `README.md`, `CONTRIBUTING.md` |
-| The generator prompt (v0.11) and its history | `prompt/SVU-MBA-Course-Review-Generator.md`, `prompt/CHANGELOG.md`; every version is a git tag `v0.N` |
+| The generator prompt (v0.12) and its history | `prompt/SVU-MBA-Course-Review-Generator.md`, `prompt/CHANGELOG.md`; every version is a git tag `v0.N` |
 | Version scheme (prompt `v0.N` vs course `vMAJOR.MINOR`, when to bump what) | `VERSIONING.md` |
-| Ideas waiting for the next prompt version (student feedback, practice) | `prompt/IDEAS.md` — read it when writing a new prompt version |
+| Ideas waiting for the next prompt version (student feedback, practice) | `prompt/IDEAS.md` — read it when writing a new prompt version; adopted ones archived in `prompt/IDEAS_ADOPTED_v0.N.md` |
 | State of a course run: stage checklist, decisions, known problems, exact next step | `courses/S3/<CODE>/.review_generation_working_directory/STATE.md` — **always read before touching a course** |
 | Folder map and release workflow of a course | `courses/S3/<CODE>/README.md` (IMT also has a working-directory `README.md`) |
 | Settings the review was generated with | `courses/S3/<CODE>/PROJECT_SETTINGS.md` |
@@ -83,8 +83,9 @@ Facts that bite:
   Never copy `out.html` over the page by hand; use `scripts/publish_page.py`. Diffs between the two
   files that are only that line are expected.
 - `courses.json` is generated. Never edit it by hand; a GitHub Action also rebuilds it on push.
-- Home page course cards are read from `courses.json` at runtime; static fallback cards in
-  `index.html` exist only for the no-JS case.
+- Home page course cards and the prompt version on the "read the prompt" button are read from
+  `courses.json` at runtime (`prompt_version` comes from the prompt header); the static fallback
+  values in `index.html` exist only for the no-JS case — update them when a version changes.
 - Versioned deliverables (`*_vX.Y.html`, `*_bank.json`) inside `courses/` are gitignored; the page
   under `S3/` and `out.html` are the tracked copies. `archive/` and `_old_versions/` are ignored too
   (git history has every version). Page renders `*.png` under `courses/` are ignored.
@@ -115,5 +116,6 @@ Facts that bite:
 
 Bump the version in the prompt header, add a `prompt/CHANGELOG.md` entry, tag `v0.N`. Keep rules
 generic; course specifics belong in PROJECT SETTINGS. Section numbers (§0d working directory,
-§7c low confidence, §7d tables and calculations, §10 importance, §11d source-files appendix, §19 licence) are referenced
+§5a duplicate test, §5b consolidation pass, §5c frequency, §7c low confidence, §7d tables and calculations,
+§7e practical chapters, §10 importance, §11d source-files appendix, §19 licence, Appendix A HTML contract) are referenced
 throughout the course docs; do not renumber casually.

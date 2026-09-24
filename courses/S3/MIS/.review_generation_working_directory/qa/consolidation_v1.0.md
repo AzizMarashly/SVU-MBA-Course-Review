@@ -1,6 +1,6 @@
 # Cross-chapter consolidation pass — MIS v1.0 (2026-09-24)
 
-Rule: prompt idea I-11 (`prompt/IDEAS.md`). Two records are duplicates when they test the same claim of the book
+Rule: prompt idea I-11 (`prompt/IDEAS_ADOPTED_v0.12.md`; prompt §5a–§5b since v0.12). Two records are duplicates when they test the same claim of the book
 (same concept, same expected answer). Only **same-form** duplicates were merged (owner decision for v1.0); pairs that
 test the same fact in another form (MCQ vs true/false, reverse definition, essay) stay separate and are listed below.
 

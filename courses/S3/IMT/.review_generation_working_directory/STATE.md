@@ -8,7 +8,7 @@ directory; this file only says where the run stands.
 - Spec version: **v0.11** for rendering (§7d tables + symbol legend since v1.6); the bank was built and verified under v0.4 (2026-09-09) and extended with F25 in v1.6 under the same verification rules.
 - Interaction mode: ASK. Pilot chapter: NONE. Interface / question / explanation language: Arabic.
 - Chapters in scope: 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12. Primary reference: `MBA-International Marketing and Trading-The Book.pdf`.
-- Deliverable version: **v1.6** (`VERSION`); naming `<base>_vX.Y.html`, the repository-wide scheme in `VERSIONING.md` (which overrides the two-digit `_vNN` of §0e).
+- Deliverable version: **v1.6** (`VERSION`); naming `<base>_vX.Y.html`, the repository-wide scheme in `VERSIONING.md` (prompt §0e since v0.12; it overrode the two-digit `_vNN` of §0e up to v0.11).
 - PDF / DOCX: ASK AT END — never answered, none produced.
 - Last update: 2026-09-24 (v1.6: F25 added, §7d ported).
 

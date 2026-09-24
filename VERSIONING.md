@@ -53,5 +53,5 @@ The two-digit form was retired. PRM's history maps as follows (old files in `arc
 | PRM v04 (F25 source) | v1.3 |
 
 IMT (v1.0 … v1.6) and MIS (v0.1, v0.2, then v1.0 for the regeneration) already followed the scheme and keep their numbers.
-Prompt §0e still describes two-digit numbers. The change is queued as idea I-9 in `prompt/IDEAS.md` for the next prompt
-version; until then this file takes precedence.
+Prompt §0e described two-digit numbers until v0.11; since prompt v0.12 (2026-09-24, idea I-9) §0e states this scheme
+and the two agree.
