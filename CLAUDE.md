@@ -20,8 +20,9 @@ Two tiers, never mix them up:
 | Published pages | `S<n>/<CODE>/index.html`, `index.html`, `courses.json` | yes | What students open |
 | Sources + generation state | `courses/S<n>/<CODE>/` | no | Course material, settings, and the working directory of the run, so a review can be resumed or regenerated |
 
-Courses today (semester 3): `IMT` (v1.6), `PRM` (v1.4), `MIS` (v1.0, regenerated 2026-09-24 with PRM's tooling;
-the v0.2 build is kept in `legacy_v0/`).
+Courses today: semester 3 `IMT` (v1.6), `PRM` (v1.4), `MIS` (v1.0, regenerated 2026-09-24 with PRM's tooling;
+the v0.2 build is kept in `legacy_v0/`); semester 2 `ACM` (v1.0, 2026-09-25, first course under prompt v0.12 with the §7e/Appendix A
+renderer features — Methods block, figures from data, step reveal, Essentials view; scope = the F25 sitting only, see its `PROJECT_SETTINGS.md`).
 
 ## Where to look
 
@@ -36,6 +37,7 @@ the v0.2 build is kept in `legacy_v0/`).
 | Settings the review was generated with | `courses/S3/<CODE>/PROJECT_SETTINGS.md` |
 | Source ledger (what was used, excluded, why) | IMT: `…/notes/ledger.md`; PRM: `…/ledger.json` + `…/render/SOURCES.md` |
 | Copyright, takedown, origin of material (ar/en) | `courses/DISCLAIMER.md` |
+| Arabic PDF → text (use for every new extraction, replaces PRM's regex lam-alef fix) | `scripts/pdf_text/README.md`: `python scripts/pdf_text/extract_pdf.py <pdf> <out_dir>`; flagged pages go to a vision helper |
 | Licence | `LICENSE.md` (CC BY-NC-SA 4.0, covers prompt and generated pages) |
 
 ## Course layouts differ (IMT was first, PRM is the newer model)

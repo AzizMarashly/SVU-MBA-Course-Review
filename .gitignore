@@ -14,3 +14,5 @@ __pycache__/
 courses/**/*_v[0-9][0-9].html
 courses/**/*_v[0-9]*.[0-9]*.html
 courses/**/*_v[0-9]*.[0-9]*_bank.json
+# raw Telegram export of the course groups (selected content was folded into courses/S2/ACM/Exams/; archive lives outside the repo)
+courses/S2/ACM/telegram/
