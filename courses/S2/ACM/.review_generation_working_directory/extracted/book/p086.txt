@@ -1,0 +1,8 @@
+مخطط الفصل
+1-3  : دفتر الأستاذ العام General Ledger
+2-3  : الترحيل الى دفتر الأستاذ Post to General Ledger
+3-3  : ترصيد الحسابات Balancing
+4-3  : موازين المراجعة Trial Balance
+5-3  : اعداد القوائم المالية الختامية Preparing Financial Statements
+
+86

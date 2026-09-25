@@ -1,0 +1,16 @@
+# Cross-chapter neighbours (warning list, §5b) — v1.0, stem threshold 0.6
+
+Q01-016 -> Q08-019 (stem 0.44 / full 0.05 / bold 0.00)
+Q02-003 -> Q08-017 (stem 0.02 / full 0.30 / bold 0.47)
+Q02-024 -> Q08-020 (stem 0.41 / full 0.12 / bold 0.00)
+Q02-025 -> Q08-007 (stem 0.04 / full 0.24 / bold 0.48)
+Q02-029 -> Q03-010 (stem 0.05 / full 0.16 / bold 0.46)
+Q02-046 -> Q08-007 (stem 0.00 / full 0.15 / bold 0.46)
+Q03-010 -> Q02-029 (stem 0.05 / full 0.16 / bold 0.46)
+Q03-011 -> Q08-013 (stem 0.17 / full 0.17 / bold 0.53)
+Q03-014 -> Q08-017 (stem 0.00 / full 0.22 / bold 0.46)
+Q08-007 -> Q02-025 (stem 0.04 / full 0.24 / bold 0.48), Q02-046 (stem 0.00 / full 0.15 / bold 0.46)
+Q08-013 -> Q03-011 (stem 0.17 / full 0.17 / bold 0.53)
+Q08-017 -> Q02-003 (stem 0.02 / full 0.30 / bold 0.47), Q03-014 (stem 0.00 / full 0.22 / bold 0.46)
+Q08-019 -> Q01-016 (stem 0.44 / full 0.05 / bold 0.00)
+Q08-020 -> Q02-024 (stem 0.41 / full 0.12 / bold 0.00)

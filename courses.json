@@ -3,6 +3,42 @@
   "prompt_version": "v0.12",
   "courses": [
     {
+      "semester": 2,
+      "code": "ACM",
+      "path": "S2/ACM/",
+      "title": "مراجعه كامله لماده ال ACM",
+      "name_ar": "المحاسبة للمديرين",
+      "name_en": "Accounting for Managers",
+      "version": "1.0",
+      "spec_version": "v0.12",
+      "generated": "2026-09-25",
+      "questions": 209,
+      "questions_by_type": {
+        "exam": 97,
+        "textbook": 119,
+        "generated": 20,
+        "other": 1
+      },
+      "chapters": 7,
+      "sources": 9,
+      "source_ids": [
+        "BOOK",
+        "S23",
+        "F23",
+        "S24",
+        "F24",
+        "S25",
+        "OLD",
+        "SUM",
+        "SOL345"
+      ],
+      "source_files": 37,
+      "low_confidence": 16,
+      "data": "bank",
+      "sources_path": "courses/S2/ACM/",
+      "download_name": "مراجعه كامله لماده ال ACM_v1.0.html"
+    },
+    {
       "semester": 3,
       "code": "IMT",
       "path": "S3/IMT/",

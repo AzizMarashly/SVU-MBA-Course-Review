@@ -1,0 +1,101 @@
+[
+ {
+  "page": 1,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 1206,
+  "arabic_letters": 763,
+  "suspect_patterns": 0,
+  "images": 0,
+  "quality": 1.0,
+  "needs_ocr": false,
+  "needs_vision": false
+ },
+ {
+  "page": 2,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 852,
+  "arabic_letters": 488,
+  "suspect_patterns": 0,
+  "images": 0,
+  "quality": 1.0,
+  "needs_ocr": false,
+  "needs_vision": false
+ },
+ {
+  "page": 3,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 820,
+  "arabic_letters": 457,
+  "suspect_patterns": 0,
+  "images": 0,
+  "quality": 1.0,
+  "needs_ocr": false,
+  "needs_vision": false
+ },
+ {
+  "page": 4,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 836,
+  "arabic_letters": 520,
+  "suspect_patterns": 0,
+  "images": 0,
+  "quality": 1.0,
+  "needs_ocr": false,
+  "needs_vision": false
+ },
+ {
+  "page": 5,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 614,
+  "arabic_letters": 347,
+  "suspect_patterns": 0,
+  "images": 0,
+  "quality": 1.0,
+  "needs_ocr": false,
+  "needs_vision": false
+ },
+ {
+  "page": 6,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 461,
+  "arabic_letters": 230,
+  "suspect_patterns": 0,
+  "images": 0,
+  "quality": 1.0,
+  "needs_ocr": false,
+  "needs_vision": false
+ },
+ {
+  "page": 7,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 416,
+  "arabic_letters": 255,
+  "suspect_patterns": 0,
+  "images": 0,
+  "quality": 1.0,
+  "needs_ocr": false,
+  "needs_vision": false
+ },
+ {
+  "page": 8,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 586,
+  "arabic_letters": 344,
+  "suspect_patterns": 0,
+  "images": 0,
+  "quality": 1.0,
+  "needs_ocr": false,
+  "needs_vision": false
+ },
+ {
+  "page": 9,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 272,
+  "arabic_letters": 126,
+  "suspect_patterns": 0,
+  "images": 0,
+  "quality": 1.0,
+  "needs_ocr": false,
+  "needs_vision": false
+ }
+]

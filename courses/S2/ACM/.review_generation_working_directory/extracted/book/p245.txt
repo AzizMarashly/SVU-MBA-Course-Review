@@ -1,0 +1,11 @@
+4-3-8  : إعداد قائمة مركز مالي باستخدام نموذجي التقرير والحساب  Preparing A Statement of
+Financial Position Using The Report and Account Models
+4-8  : قائمة التدفقات النقدية Statement of Cash Flows
+1-4-8  : تعريف قائمة التدفقات النقدية Definition of Statement of Cash Flows
+2-4-8  : أهمية قائمة التدفقات النقدية Importance of Statement of Cash Flows
+3-4-8  : تبويب التدفقات النقدية Classification of Cash Flows
+4-4-8  : اعداد قائمة التدفقات النقدية Preparing Statement of Cash Flows
+1-4-4-8  : الطريقة المباشرة Direct Method
+2-4-4-8  : الطريقة غير المباشرة Indirect Method
+
+245

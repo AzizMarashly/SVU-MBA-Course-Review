@@ -1,0 +1,14 @@
+4-4-7  : معالجة العجز في المخزون السلعي Accounting Treatment of Inventory loss
+5-7  : الاهتلاك الأصول غير المتداولة Depreciation of Non-Current Assets
+1-5-7  : تكلفة الأصول غير المتداولة Cost of Non-Current Assets
+2-5-7  : أنواع المصروفات المتعلقة بالأصل غير المتداول -  Types of Expenses Related to of Non
+Current Asset
+3-5-7  : مفهوم الاهتلاك والاستنفاذ والاستنزاف Depreciation, Amortization and Depletion
+4-5-7  : طرق الاهتلاك Depreciation Methods
+1-4-5-7  : طريقة أسلوب النشاط Units-of-Production Method
+2-4-5-7  : طريقة القسط الثابت The Straight-Line Method
+3-4-5-7  : طريقة القسط المتناقص Declining Balance Method
+5-5-7  : استنفاذ واستنزاف الأصول Depletion, and Amortization
+6-5-7  : المعالجة المحاسبية للاستهلاك Accounting Treatment of Depreciation
+
+191

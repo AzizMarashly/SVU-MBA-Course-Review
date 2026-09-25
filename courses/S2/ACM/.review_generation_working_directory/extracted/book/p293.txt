@@ -1,0 +1,8 @@
+4-5-9  : المداخل الاستراتيجية لمحاسبة التكاليف Strategic Approach for Cost Accounting
+1-4-5-9  : أسلوب التكلفة المستهدفة Target Costing Strategic
+2-4-5-9  : أسلوب التكلفة على أساس النشاط Activity Based Costing Strategic
+3-4-5-9  : أسلوب الإنتاج بالوقت المحدد Just in Time Strategic
+4-4-5-9  : أسلوب تكلفة دورة حياة المنتج Life Cycle Costing Strategic
+5-4-5-9  : أسلوب سلاسل القيمة Value Chain Strategic
+
+293

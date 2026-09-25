@@ -1,0 +1,213 @@
+{
+ "note": "ACM review v1.0 ledger; hashes from extracted/hashes.json (37 files, no duplicate hashes).",
+ "sources": [
+  {
+   "id": "BOOK",
+   "kind": "textbook",
+   "files": [
+    "Course/كتاب المحاسبة للمديرين.pdf",
+    "Course/أسئلة كتاب ACM.pdf (dependent copy: the 12 review sections of the book, page-for-page text match)",
+    "Course/أسئلة الكتاب مع الحالات العملية ACM.pdf (dependent copy: chapter title pages, practical cases and review sections of the book)"
+   ],
+   "md5": [
+    "8b5d59744f939da4de229999b07fc1b8",
+    "4256f91c7efe8a9f7da45162f3175382",
+    "b46bf498172bc4001a8c3f4d3b850947"
+   ],
+   "type": "primary reference (447 pages, printed = PDF, د. باسل أسعد 2021) + end-of-chapter questions and cases; the review answers are marked on the pages (tick in the T/F column, green highlight on the MCQ option), each mark verified against the chapter text",
+   "decision": "included (authority)",
+   "items": "see extracted/questions/book_report.md"
+  },
+  {
+   "id": "S23",
+   "kind": "exam",
+   "files": [
+    "Exams/ACM امتحان يوم 1612.txt",
+    "Exams/S23 - تلغرام.txt"
+   ],
+   "md5": [
+    "fbb99d6941b857b13f31425ce82163b3",
+    "bf4eff49bd312f0e1d5c1184a9a9f803"
+   ],
+   "type": "exam recollection, sitting S23 (exam 2023-12-16), student answers",
+   "decision": "included as an independent exam source",
+   "items": "16 raw items (exams_a.json)"
+  },
+  {
+   "id": "F23",
+   "kind": "exam",
+   "files": [
+    "Exams/مركز خارجي – الكويت، تاريخ الامتحان 20.05.2024..txt (lines 1–17; the block «الفصل العاشر جاب منو 9 أسئلة…» is an older recall → OLD)",
+    "Exams/F23 - تلغرام.txt"
+   ],
+   "md5": [
+    "8d69562c104c51bc202e5aa541c112c2",
+    "8a4fc525b790578f71d9ec10588bd0a1"
+   ],
+   "type": "exam recollection, sitting F23 (external centres 2024-05-20, internal 2024-05-22)",
+   "decision": "included as an independent exam source",
+   "items": "33 raw items (exams_a.json)"
+  },
+  {
+   "id": "S24",
+   "kind": "exam",
+   "files": [
+    "Exams/ACM Exam S24.pdf (the written S24 questions, 9 pages)",
+    "Exams/S24.txt (10 practical questions of the same sitting)",
+    "Exams/S24 - تلغرام.txt"
+   ],
+   "md5": [
+    "2c573bbf54123030aeb09e8c45785d16",
+    "2cf979398dad87004e138596f9ee11c8",
+    "2e7d6e8e4ab950e52fc23d8087a4232f"
+   ],
+   "type": "exam questions + recollection, sitting S24 (exam 2024-11-13); the circulated answer key is AI-written and disputed (not used as a key)",
+   "decision": "included as an independent exam source",
+   "items": "see extracted/questions/exams_b_report.md"
+  },
+  {
+   "id": "F24",
+   "kind": "exam",
+   "files": [
+    "Exams/F24.txt",
+    "Exams/F24_1.jpg (the break-even chart of the F24 recall)",
+    "Exams/F24 - تلغرام.txt"
+   ],
+   "md5": [
+    "9c94b3c1ae2ef4e4cd32efd056b49c02",
+    "0c7fc388d8a7364979cdc30fc1a60426",
+    "3a5c30497b7981959d4e4628bffc0b95"
+   ],
+   "type": "exam recollection, sitting F24 (exam 2025-08-05)",
+   "decision": "included as an independent exam source",
+   "items": "see extracted/questions/exams_b_report.md"
+  },
+  {
+   "id": "S25",
+   "kind": "exam",
+   "files": [
+    "Exams/S25 - تلغرام.txt"
+   ],
+   "md5": [
+    "4b1824821f6a499efcda4399c65d91c3"
+   ],
+   "type": "exam recollection, sitting S25 (exam 2026-04-08)",
+   "decision": "included as an independent exam source",
+   "items": "see extracted/questions/exams_b_report.md"
+  },
+  {
+   "id": "OLD",
+   "kind": "exam",
+   "files": [
+    "Exams/دورات أقدم - تلغرام.txt",
+    "Exams/عام - تلغرام.txt (section «أسئلة غير منسوبة لدورة» only)",
+    "Exams/مركز خارجي – الكويت… (lines 18–117, the older block)"
+   ],
+   "md5": [
+    "3e68087dda007519d04d36d2cbc7b930",
+    "b44e20c40372198b425d5573058cde0b"
+   ],
+   "type": "recalls of sittings before S23 (WhatsApp forwards re-posted Oct 2023, one dated 2021-11-17) and recalls not attributable to a sitting — counted as ONE sitting",
+   "decision": "included as one independent exam source (older / unattributed)",
+   "items": "83 raw items (exams_a.json)"
+  },
+  {
+   "id": "SUM",
+   "kind": "summary",
+   "files": [
+    "Summaries/ملخص المحاسبة للمديرين ACM.pdf"
+   ],
+   "md5": [
+    "b5b4d4a001400c35deebff88e26f36dd"
+   ],
+   "type": "theory summary of the book (ملخص عاصم, 30 pages, p. 8 an image); reproduces the book's T/F items with a key and MCQs without",
+   "decision": "included as a cross-check only (never a type; adds to sources where it reproduces a book question; T/F key compared with the book, §8)",
+   "items": "104 items (summary.json)"
+  },
+  {
+   "id": "SOL345",
+   "kind": "other",
+   "files": [
+    "Course/حل مسائل غير محلولة الفصول 3 4 5 ACM.pdf (7 scanned pages)"
+   ],
+   "md5": [
+    "b09f688311ee73f51b2118ad3a27337c"
+   ],
+   "type": "student solutions of the book's unsolved exercises pp. 109 (ch 3), 132 (ch 4), 157 (ch 5); only the chapter-3 one in scope",
+   "decision": "included as an 'other' source for chapter 3, answer re-verified from the book",
+   "items": "3 items (solved345.json)"
+  },
+  {
+   "id": "SCOPE",
+   "kind": "context",
+   "files": [
+    "Exams/المطلوب بدوره F25 بالامتحان.txt",
+    "Exams/F25 - تلغرام.txt"
+   ],
+   "md5": [
+    "8c2b4ba1d73bf7c09c9fc29c2cac40b3",
+    "e691d690ba441ddc0edc44c7965e250b"
+   ],
+   "type": "F25 scope statements (students' report of the instructor's requirements; the governing text is group message #51026, quoted in PROJECT_SETTINGS.md)",
+   "decision": "excluded from the bank: scope only",
+   "items": "0"
+  },
+  {
+   "id": "ABOUT",
+   "kind": "context",
+   "files": [
+    "Exams/طريقة الدراسة.txt",
+    "Exams/عام - تلغرام.txt (scope history, book errata, advice sections)",
+    "Exams/كتاب - خطأ مبلَّغ 4108.jpg",
+    "Exams/كتاب - خطأ مبلَّغ 4111.jpg"
+   ],
+   "md5": [
+    "822db5c867e684dbb9a8601af903d009",
+    "1504dc12ccf01b91b4a411789e87757d",
+    "e1ba0f213caafcda513a5b3351fe1c6c"
+   ],
+   "type": "study advice, exam-format notes, book errors reported by students (p. 59, p. 81 T/F 3, p. 134, p. 156, p. 262)",
+   "decision": "excluded from the bank: context; the reported book errors are checked by the chapter helpers",
+   "items": "0"
+  },
+  {
+   "id": "SLIDES",
+   "kind": "slides",
+   "files": [
+    "Course/lectures presentations/المحاضرة الأولى- المحاسبة وبيئة الاعمال - مدخل مفاهيمي.pdf",
+    "Course/lectures presentations/المحاضرة الثانية- الدورة المحاسبية - التسجيل المحاسبي.pdf",
+    "Course/lectures presentations/المحاضرة الثالثة- الدورة المحاسبية - الترحيل والترصيد، واعداد القوائم المالية.pdf",
+    "Course/lectures presentations/المحاضرة الرابعة- المعالجة المحاسبية للعمليات الرأسمالية.pdf",
+    "Course/lectures presentations/المحاضرة الخامسة- المعالجة المحاسبية للعمليات التشغيلية.pdf",
+    "Course/lectures presentations/المحاضرة السادسة- المعالجة المحاسبية للعمليات الإيرادية_1.pdf",
+    "Course/lectures presentations/المحاضرة السابعة - التسويات الجردية.pdf",
+    "Course/lectures presentations/المحاضرة الثامنة – جرد المخزون – اهتلاك الأصول.pdf",
+    "Course/lectures presentations/المحاضرة التاسعة - القوائم المالية الختامية.pdf",
+    "Course/lectures presentations/المحاضرة العاشرة – أساسيات محاسبة التكاليف.pdf",
+    "Course/lectures presentations/المحاضرة الحادية عشر – نظريات وطرق قياس التكاليف.pdf",
+    "Course/lectures presentations/المحاضرة الثانية عشر- تخطيط الانتاج والأرباح.pdf",
+    "Course/lectures presentations/المحاضرة الثالثة عشر- الموازنات التخطيطية.pdf",
+    "Course/lectures presentations/المحاضرة الرابعة عشر - التحليل المالي وقياس الأداء.pdf"
+   ],
+   "md5": [
+    "743865c7b54cbe1c04402e6cfa301686",
+    "bfc68896fd74690c69a992e4e0ef50ac",
+    "78103dc3ceab02e6f9df6e09b776a3fc",
+    "2f80d1dc7d55d4da14502d81958d0a05",
+    "402bc6694b598ba0455ab2a977e637d9",
+    "ffa8b1fa3477d06ea3feeb761c04784e",
+    "2cd5c6e63807987bfda1fd929f0e4ab5",
+    "54d817a4115b72f4206b8b33a98fdbda",
+    "5c5dd6c8398fe5c9b0949f282dc70656",
+    "7da8ae722b595d7960638598f2886d4d",
+    "63ed1a4c2ac7e57718101cb3059ff170",
+    "e0512763cd2bf87941b3ed28643fe299",
+    "bfd2f5130b015d267bab75fed7a0e6cf",
+    "83774168e675a41656976f92782e8b35"
+   ],
+   "type": "14 lecture decks (lectures 7–8 = ch 7, 9 = ch 8, 10–11 = ch 9, 12 = ch 10, 13–14 = ch 11–12)",
+   "decision": "excluded: no questions (scanned automatically); used for the chapter map only",
+   "items": "0"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+3-12  : التحليل المالي الرأسي والأفقي Vertical and Horizontal Analysis
+1-3-12  : التحليل الرأسي (العامودي) Vertical Analysis
+2-3-12  : التحليل الأفقي Horizontal Analysis
+4-12  : المقاييس غير المالية لقياس الأداء Non-Financial Tools for Performance Measurements
+1-4-12  : مفهوم المقاييس غير المالية Concepts of Non-Financial Measurements
+2-4-12  : أنواع مقاييس الأداء غير المالية Types of Non-Financial Measurements
+1-2-4-12  : مقاييس الجودة Quality Metrics
+2-2-4-12  : مقاييس المرونة والابتكار والتعلم Flexibility, Innovation and Learning Metrics
+3-2-4-12  : مقاييس مرتبطة بزمن التشغيل Operation Period Metrics
+4-2-4-12  : مقاييس تخفيض المخزون Reduce Inventory Metrics
+5-2-4-12  : مقاييس خطية الإنتاج Production Linear Metrics
+6-2-4-12  : مقاييس أداء التسليم Delivery Performance Metrics
+
+392

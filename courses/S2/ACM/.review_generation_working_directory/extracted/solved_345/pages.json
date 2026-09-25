@@ -1,0 +1,79 @@
+[
+ {
+  "page": 1,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 0,
+  "arabic_letters": 0,
+  "suspect_patterns": 0,
+  "images": 2,
+  "quality": 0.5,
+  "needs_ocr": true,
+  "needs_vision": true
+ },
+ {
+  "page": 2,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 0,
+  "arabic_letters": 0,
+  "suspect_patterns": 0,
+  "images": 2,
+  "quality": 0.5,
+  "needs_ocr": true,
+  "needs_vision": true
+ },
+ {
+  "page": 3,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 0,
+  "arabic_letters": 0,
+  "suspect_patterns": 0,
+  "images": 2,
+  "quality": 0.5,
+  "needs_ocr": true,
+  "needs_vision": true
+ },
+ {
+  "page": 4,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 0,
+  "arabic_letters": 0,
+  "suspect_patterns": 0,
+  "images": 2,
+  "quality": 0.5,
+  "needs_ocr": true,
+  "needs_vision": true
+ },
+ {
+  "page": 5,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 0,
+  "arabic_letters": 0,
+  "suspect_patterns": 0,
+  "images": 2,
+  "quality": 0.5,
+  "needs_ocr": true,
+  "needs_vision": true
+ },
+ {
+  "page": 6,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 0,
+  "arabic_letters": 0,
+  "suspect_patterns": 0,
+  "images": 2,
+  "quality": 0.5,
+  "needs_ocr": true,
+  "needs_vision": true
+ },
+ {
+  "page": 7,
+  "method": "pymupdf-rawdict-rtl",
+  "chars": 0,
+  "arabic_letters": 0,
+  "suspect_patterns": 0,
+  "images": 2,
+  "quality": 0.5,
+  "needs_ocr": true,
+  "needs_vision": true
+ }
+]

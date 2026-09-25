@@ -1,0 +1,23 @@
+مخطط الفصل
+1-9  : نشأة وطبيعة محاسبة التكاليف the origin and evolution of cost accounting
+2-9  : تعريف محاسبة التكاليف وأهدافها Definition of Cost Accounting and Its Objectives
+3-9  : مفاهيم التكلفة Cost Concepts
+1-3-9  : مفاهيم التكلفة لجهة ارتباطها بالفترة المحاسبية  Concepts of Cost Related to The
+Accounting Period
+2-3-9  : مفاهيم التكلفة لأغراض التخطيط Concepts of Cost for Planning Purposes
+3-3-9  : مفاهيم التكلفة لأغراض قياس تكلفة الإنتاج وتقويم المخزون  Concepts of Cost for The
+Purposes of Measuring Production Cost and Inventory Valuation
+4-3-9  : مفاهيم التكلفة لأغراض الرقابة Concepts of Cost for Control Purposes
+5-3-9  : مفاهيم التكلفة لأغراض اتخاذ القرارات Cost concepts for decision-making purposes
+4-9  : نظام محاسبة التكاليف Cost Accounting System
+1-4-9  : الأركان الرئيسية (مقومات) لنظام محاسبة التكاليف  The Main Pillars (Components) of
+The Cost Accounting System
+1-1-4-9  : دليل عناصر التكاليف Cost Components Guide
+2-1-4-9  : دليل مراكز التكاليف Cost Centers Guide
+3-1-4-9  : دليل وحدات الإنتاج أو التكلفة Guide to Production Units or Cost
+5-9  : نظريات وطرق قياس التكاليف Costing Theories and Methods
+1-5-9  : طريقة التكاليف الإجمالية Total Costs Method
+2-5-9  : طريقة التكاليف المباشرة Direct Costs Method
+3-5-9  : طريقة التكاليف المتغيرة Variable Costs Method
+
+292

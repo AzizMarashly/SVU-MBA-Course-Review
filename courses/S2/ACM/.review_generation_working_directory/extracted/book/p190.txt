@@ -1,0 +1,23 @@
+2-1-7  : الإيرادات المقبوضة مقدما (الإيرادات غير المكتسبة)  Revenue Received in Advance
+(Unearned Revenue)
+3-1-7  : المصاريف المستحقة الدفع Accrued Expenses
+4-1-7  : الإيرادات مستحقة القبض Accrued Revenue
+2-7  : تسوية حسابات الذمم المدينة Adjustment of Accounts Receivable
+1-2-7  : الديون المعدومة والديون المشكوك بتحصيلها Bad Debts and Doubtful Debts
+2-2-7  : المعالجة المحاسبية لتسوية الذمم المدينة  Accounting Treatment of adjustment of
+Accounts Receivable
+3-7  : جرد الأموال النقدية Cash Count
+1-3-7  : تسوية الحسابات المصرفية Adjustment of Bank Accounts
+1-1-3-7  : المعالجة المحاسبية لأرصدة الحسابات المصرفية  Accounting Treatment of Bank
+Account Balances
+2-1-3-7  : مذكرة تسوية المصرف Bank Reconciliation
+2-3-7  : جرد النقدية في الصندوق Cash Count
+4-7  : جرد المخزون السلعي Inventory Count
+1-4-7  : مفهوم المخزون السلعي Definition of Inventory
+2-4-7  : طرق تسعير المخزون Inventory Pricing Methods
+1-2-4-7  : طريقة الوارد أولا صادر أولا First-In, First-Out, FIFO Method
+2-2-4-7  : طريقة الوارد أخيرا  صادر أولا Last-In-First-Out, LIFO Method
+3-2-4-7  : طريقة المتوسط المرجح Weighted Average Method
+3-4-7  : المعالجة المحاسبة لجرد المخزون السلعي Accounting Treatment of Inventory Count
+
+190

@@ -1,0 +1,12 @@
+مخطط الفصل:
+1-2  : النظام المحاسبي Accounting System
+1-1-2  : عناصر النظام المحاسبي Elements of The Accounting System
+2-1-2  : الدورة المحاسبية Accounting Cycle
+2-2  : مدخل الميزانية كمعيار للتمييز بين حسابات الميزانية وحسابات النتائج Balance Sheet Approach
+1-2-2  : حسابات الميزانية Balance Sheet Accounts
+2-2-2  : حسابات النتائج Income Statement Accounts
+3-2  : الدفاتر المحاسبية Accounting Books
+1-3-2  : التسجيل في دفتر اليومية Record Journal Entries
+2-3-2  : القيد المزدوج Double Entry
+
+43

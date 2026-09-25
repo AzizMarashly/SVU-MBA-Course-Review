@@ -1,0 +1,14 @@
+3-1-5  : مصاريف المشتريات Purchases Expenses
+4-1-5  : المعالجة المحاسبية لمردودات المشتريات Accounting Treatment of Purchase Returns
+5-1-5  : المعالجة المحاسبية للحسم النقدي على المشتريات (الحسم المكتسب)  Cash Discount on
+Purchases (Discount Earned)
+2-5  : المصروفات Expenses
+1-2-5  : أنواع المصروفات Types of Expenses
+2-2-5  : المعالجة المحاسبية للمصروفات Accounting Treatment of Expenses
+3-5  : تكلفة البضاعة المباعة Cost of Goods Sold
+1-3-5  : مفهوم تكلفة البضاعة The Concept of Cost of Goods
+2-3-5  : أنظمة الجرد المتعلقة بالمخزون السلعي Inventory Systems
+1-2-3-5  : نظام الجرد النهائي أو الدوري Periodic Inventory System
+2-2-3-5  : نظام الجرد الدائم أو المستمر Perpetual Inventory System
+
+136

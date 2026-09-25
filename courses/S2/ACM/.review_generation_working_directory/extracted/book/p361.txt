@@ -1,0 +1,8 @@
+5-7-11  : موازنة المصاريف الصناعية غير المباشرة Factory Overhead Cost Budget
+6-7-11  : موازنة المخزون التام آخر المدة Year End Inventory Budget
+7-7-11  : موازنة المصاريف البيعية والإدارية Selling and Administrative Expenses Budget
+8-11  : الموازنة النقدية Cash Budget
+1-8-11  : مفهوم الموازنة النقدية Concepts of Cash Budget
+2-8-11  : اعداد الموازنة النقدية Cash Budget Preparation
+
+361

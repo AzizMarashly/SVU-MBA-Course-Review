@@ -27,3 +27,51 @@ Current state: IMT v1.6, PRM v1.4, MIS v1.0, prompt v0.12 (history in git and in
 - `courses/S2/ACM/` (untracked): course material for a new semester-2 course, added outside these sessions; the
   owner decides whether it belongs in the repository.
 - Not tested anywhere: real phone, print, Safari/Firefox, screen readers.
+
+## D. ACM (S2) — new course, started 2026-09-24/25, nothing committed
+
+Sources in `courses/S2/ACM/` (cleaned by the owner's decision: big scanned `ACM تفريغ.pdf` deleted by the owner; exact
+duplicate of the book-questions PDF and the re-saved summary export deleted; three files renamed to remove hidden
+Unicode marks). Remaining: the book (447 p), `ACM Exam S24.pdf`, two question sets, the summary (p.8 is an image),
+`حل مسائل غير محلولة الفصول 3 4 5 ACM.pdf` (7 scanned pages: OCR during transcription, owner's decision), and
+`المطلوب بدوره F25 بالامتحان.txt` (F25 scope: ch 1, 2, 3, 10 in full; ch 7 depreciation only, no journal entries;
+ch 8, 9 theory only; ch 4, 5, 6 out).
+
+All text PDFs have a text layer with the lam-alef problem (`اإلجابات`, `االت`, `اهتالك`). The owner says PRM's fix
+was not accurate.
+
+In flight when this was written (check results before continuing):
+- Telegram collection from groups `MBAF22_SEM3` and a second group (link pasted mangled, probably invite
+  `+ABg1ed_nMvdkODBk`) into `courses/S2/ACM/telegram/` (one `<SESSION>.txt` per exam sitting, `other.txt`, `files/`,
+  `INDEX.md`), read-only via `~/my-os` (`./mos run messaging tg …`) in WSL. Raw, not yet selected or cleaned.
+- Arabic PDF extraction evaluation: tool plus README in `scripts/pdf_text/` (methods compared against the pages
+  read by eye; the pipeline to use for ACM and later courses). Read its README before extracting the ACM book.
+
+Next: review both outputs; set up `courses/S2/ACM/` the PRM way (README, PROJECT_SETTINGS, working directory with
+STATE.md, PRM `render/` tooling).
+
+Telegram result (2026-09-25): both groups read in full (the second link is the real public username
+`httpABg1ed_nMvdkODBk`, the MBA general group). The text is done: S23, F23, S24, F24, S25, F25, unknown_session,
+other. Only 2 of 88 media files are copied so far. Remaining steps are in `courses/S2/ACM/telegram/INDEX.md`:
+copy from the my-os archive once `export-media` finishes, check about 75 photos for names, and fetch the 23.5 MB
+lecture transcription, which was over the size cap.
+
+PDF text result (2026-09-25): `scripts/pdf_text/` is the extraction tool from now on. It uses a geometric lam-alef
+fix from `rawdict` glyph boxes; measured error was 0–1.3 % on prose and exam pages, against 2–5 % for PRM's regex
+fix and 66 % for plain get_text on the S24 exam PDF. Scanned pages: Tesseract works as a draft for printed pages;
+handwriting needs vision. Open items are in its README: full-book run and diff; direction of dates and section
+numbers; tests for the geometric patterns. PRM's `book_fixed.txt` still has errors (ثالث, خالل, عالقة, مالحظة,
+اهتالك …), so grep the PRM bank for quoted book wording with these forms and check it (no need to regenerate).
+The evaluation's ground truth is only in this session's scratchpad (`pdf_eval/`) and may be lost.
+
+### ACM v1.0 released (2026-09-25, owner stage) — not committed yet
+Released: `/S2/ACM/index.html` (v1.0, prompt v0.12, F25 scope), `courses.json` rebuilt, a semester-2 fallback card in `index.html`.
+Bank: 209 questions (exam 97, textbook 119, other 1, generated 20), 81 units covered, 16 low-confidence; consolidation log
+`courses/S2/ACM/.review_generation_working_directory/qa/consolidation_v1.0.md`, browser test `qa/browser_test_v1.0.md`. Renderer:
+`fig hide_labels` for exam charts (numbered lines, key in the answer), solution figures moved into the answer block.
+To commit (one focused commit): `S2/ACM/`, `courses/S2/`, `courses.json`, `index.html`, this file; `scripts/pdf_text/` and the
+`.gitignore` / `CLAUDE.md` changes belong to their own commits.
+Open for ACM v1.1: fold in the F25 recalls after the sitting (2026-09-26) as source `F25`; move «نص الطالب الأصلي» into the answer block
+for every reconstructed record (it can show the recalled answer); test on a real phone; the unresolved items listed on the page
+(methodology) and in STATE.md §4. The Telegram / PDF-text notes above are finished for ACM (telegram/ folded and deleted, the book
+extracted with `scripts/pdf_text`).

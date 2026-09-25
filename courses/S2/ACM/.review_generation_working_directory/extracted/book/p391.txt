@@ -1,0 +1,22 @@
+مخطط الفصل
+1-12  : التحليل المالي Financial Analysis
+1-1-12  : أهداف التحليل المالي Objectives of Financial Analysis
+2-1-12  : أدوات التحليل المالي Financial Analysis Tools
+3-1-12  : أنواع التحليل المالي Financial Analysis Types
+4-1-12  : محددات التحليل المالي Determinants of Financial Analysis
+5-1-12  : مصادر البيانات والمعلومات Data and Information Recourses
+6-1-12  : استخدامات التحليل المالي Using Financial Analysis
+7-1-12  : وظيفة المحلل المالي The Role of Financial Analyst
+2-12  : النسب المالية Financial Ratios
+1-2-12  : تعريف النسب المالية Definition of Financial Ratios
+2-2-12  : أهداف النسب المالية Objectives of Financial Ratios
+3-2-12  : اختيار النسب المالية Determining of Financial Ratios
+4-2-12  : حدود استخدام النسب المالية Limitation of Financial Ratio
+5-2-12  : أنواع النسب المالية Types of Financial Ratios
+1-5-2-12  : نسب الهيكل المالي Financial Structure Ratio
+2-5-2-12  : نسب السيولة Liquidity Ratios
+3-5-2-12  : نسب الربحية Profitability Ratios
+4-5-2-12  : نسب معدلات الدوران (نسب النشاط) )  Turnover Ratios (Activity Ratios
+5-5-2-12  : نسب السوق المالي Market Ratios
+
+391

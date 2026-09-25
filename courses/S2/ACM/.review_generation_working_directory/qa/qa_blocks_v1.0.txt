@@ -1,0 +1,37 @@
+avg block words (core lines): 55.5 | min 40 | max 87
+blocks > 80 words without justification (optional line/reconstruction/essay/calc): 0
+blocks < 40 words: 0 []
+why starting with 'الإجابة الصحيحة': []
+why repeating full answer text: []
+remember without bold: []
+bold in stem/options: []
+low_conf without reason: []
+reconstructed without original / not 4 options: []
+reconstructed with synonym-looking option pairs (shared 3+ words): ['Q02-013', 'Q10-003', 'Q10-004', 'Q10-005', 'Q10-006', 'Q10-008', 'Q10-009', 'Q10-011', 'Q10-017', 'Q10-018']
+essays without model answer: []
+model answers without a page reference (ص N): []
+fast routes without a page: []
+records without a claim: []
+generated importance >1: []
+importance >5: []
+importance mismatches: []
+freq mismatches: []
+see-links with different score: []
+ordering violations: []
+records with a data table: 33 | with a calculation block: 65 | with an answer table: 21 | with a figure: 13 | with a fast route: 22 | unsolved exercises solved: 34
+stems that still look tabular (no table field, 3+ ';'-separated groups, 8+ digits): []
+numeric answers without a calc block: []
+numeric why without a calc block (3+ '=' signs): []
+calc blocks whose why still carries the arithmetic (2+ '=' signs): []
+calc cells with Arabic letters in eq/sub: []
+procedural chapters (Methods block): {'2': ['M1', 'M2', 'M3'], '3': ['M1', 'M2', 'M3'], '7': ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12', 'M13', 'M14'], '10': ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7']}
+calc blocks without a method in a procedural chapter: []
+symbols used in tables/calc but missing from SYMBOLS: []
+glossary entries without a numeric example: []
+leftover literal ** count in stems: 0
+RANDOM SAMPLE IDS: ['Q03-013', 'Q02-017', 'Q07-015', 'Q10-004', 'Q01-013', 'Q01-019', 'Q08-013', 'Q02-002', 'Q07-007', 'Q08-025', 'Q01-015', 'Q08-005', 'Q02-033', 'Q01-010', 'Q01-023', 'Q07-025', 'Q07-021', 'Q01-018', 'Q02-040', 'Q02-001']
+source appendix rows: 37 | files on disk: 37
+  on disk but not in appendix: []
+  in appendix but not on disk: []
+  question source labels without a row: []
+  appendix summary files == rows: True
